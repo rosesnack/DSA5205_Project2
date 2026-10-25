@@ -1,0 +1,19 @@
+check,passed,detail
+all_etf_keys_unique,True,78270
+all_etf_calendars_match_spy,True,15 × 5218
+existing_etf_values_preserved,True,Observed values are unchanged by calendar alignment.
+hyg_precoverage_318_missing,True,318
+hyg_first_overnight_return_missing,True,No previous SPY open exists on the first observation date.
+vix_close_preserved,True,Exclude extra dates without changing close values.
+all_rate_zeros_preserved,True,21
+no_future_rate_match,True,5216
+valid_non_spy_rate_observations_preserved,True,10
+xlf_only_cross_event_returns_invalid,True,Exclude three cross-event returns; retain intraday and subsequent returns.
+spy_not_invalidated_by_xlf,True,SPY remains valid.
+momentum_exact_impact_interval,True,231 affected trading days; recover after the event leaves the window.
+raw_hashes_unchanged,True,47
+download_manifest_unchanged,True,True
+close_adjusted_reference_coverage,True,77936 cash-close intervals have reference coverage.
+open_cash_return_identity,True,77936 intervals; maximum absolute residual 2.22e-16; tolerance 1e-12
+opening_gap_year_counts_match_01,True,189 asset-years; six annual counts agree.
+opening_gap_reference_unchanged,True,Download-stage annual diagnostics are unchanged.

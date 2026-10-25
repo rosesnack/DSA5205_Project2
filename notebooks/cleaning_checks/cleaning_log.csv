@@ -1,0 +1,68 @@
+stage,asset,field,action,affected_rows,reason
+date,XLB,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,XLB,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,XLB,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,XLE,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,XLE,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,XLE,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,XLF,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,XLF,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,XLF,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,XLI,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,XLI,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,XLI,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,XLK,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,XLK,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,XLK,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,XLP,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,XLP,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,XLP,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,XLU,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,XLU,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,XLU,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,XLV,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,XLV,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,XLV,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,XLY,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,XLY,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,XLY,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,SPY,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,SPY,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,SPY,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,TLT,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,TLT,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,TLT,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,IEF,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,IEF,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,IEF,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,GLD,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,GLD,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,GLD,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,HYG,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,HYG,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,4900,Parse float64 values without scaling or rounding.
+price,HYG,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+date,LQD,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,LQD,"open,high,low,close,adj_close,volume,dividends,stock_splits,capital_gains",numeric_float64,5218,Parse float64 values without scaling or rounding.
+price,LQD,OHLC,isolate_invalid_fields,0,Isolate invalid fields; retain dates and genuine extreme returns.
+calendar,XLB,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,XLE,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,XLF,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,XLI,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,XLK,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,XLP,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,XLU,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,XLV,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,XLY,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,SPY,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,TLT,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,IEF,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,GLD,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+calendar,HYG,all,reindex_spy_without_fill,318,Align to SPY without imputing market observations.
+calendar,LQD,all,reindex_spy_without_fill,0,Align to SPY without imputing market observations.
+date,VIX,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+type,VIX,"open,high,low,close",numeric_float64,5251,Parse float64 values without scaling or rounding.
+price,VIX,OHLC,isolate_invalid_fields,1,Isolate invalid fields; retain dates and genuine extreme returns.
+calendar,VIX,date,exclude_non_spy_dates,33,Retain VIX close on the SPY calendar without forward filling.
+date,DGS3MO,date,normalise_sort_deduplicate,0,New York trading dates; remove identical duplicates and reject conflicts.
+text,DGS3MO,DGS3MO,strip_whitespace,5413,Strip numeric whitespace; preserve the original string in raw_value.
+missing,DGS3MO,annual_yield_pct,marker_to_null,222,Convert recognized missing markers to null and retain valid zeros.

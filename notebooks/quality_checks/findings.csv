@@ -1,0 +1,24 @@
+level,asset,check,detail
+REVIEW,VIX,price_fields,"cboe_csv: Open outside range=1, zero prices=0, missing prices=0"
+INFO,DGS3MO,rate_missing_markers,Missing rate observations: 222; valid zero rates: 21.
+INFO,HYG,dividend_check,2024-12-18: cash-minus-adjusted return = 0.52892409 bps.
+REVIEW,XLF,nonstandard_corporate_action,2016-09-19: vendor Stock Splits=1.231; a nonstandard corporate action requires separate interpretation.
+INFO,XLB,split_units_review,2025-12-05 split ratio 2; inspect price and volume units around the event.
+REVIEW,XLB,json_csv_field_difference,"Adj Close: 4171 rows exceed tolerance; maximum difference=1.90734863281e-05, null-mask mismatches=0; independent response differences retained."
+REVIEW,XLE,json_csv_field_difference,"Adj Close: 4161 rows exceed tolerance; maximum difference=2.67028808594e-05, null-mask mismatches=0; independent response differences retained."
+REVIEW,XLF,json_csv_field_difference,"Adj Close: 4136 rows exceed tolerance; maximum difference=2.09808349609e-05, null-mask mismatches=0; independent response differences retained."
+REVIEW,XLI,json_csv_field_difference,"Adj Close: 4140 rows exceed tolerance; maximum difference=5.34057617188e-05, null-mask mismatches=0; independent response differences retained."
+REVIEW,XLK,json_csv_field_difference,"Adj Close: 4009 rows exceed tolerance; maximum difference=4.57763671875e-05, null-mask mismatches=0; independent response differences retained."
+REVIEW,XLP,json_csv_field_difference,"Adj Close: 4218 rows exceed tolerance; maximum difference=3.81469726562e-05, null-mask mismatches=0; independent response differences retained."
+REVIEW,XLU,json_csv_field_difference,"Adj Close: 4178 rows exceed tolerance; maximum difference=1.71661376953e-05, null-mask mismatches=0; independent response differences retained."
+REVIEW,XLV,json_csv_field_difference,"Adj Close: 4167 rows exceed tolerance; maximum difference=6.10351562642e-05, null-mask mismatches=0; independent response differences retained."
+REVIEW,XLY,json_csv_field_difference,"Adj Close: 4184 rows exceed tolerance; maximum difference=3.81469726562e-05, null-mask mismatches=0; independent response differences retained."
+REVIEW,SPY,json_csv_field_difference,"Adj Close: 4191 rows exceed tolerance; maximum difference=0.00018310546875, null-mask mismatches=0; independent response differences retained."
+REVIEW,TLT,json_csv_field_difference,"Adj Close: 4564 rows exceed tolerance; maximum difference=0.000144958496094, null-mask mismatches=0; independent response differences retained."
+REVIEW,IEF,json_csv_field_difference,"Adj Close: 4613 rows exceed tolerance; maximum difference=0.0001220703125, null-mask mismatches=0; independent response differences retained."
+REVIEW,HYG,json_csv_field_difference,"Adj Close: 4365 rows exceed tolerance; maximum difference=7.24792480469e-05, null-mask mismatches=0; independent response differences retained."
+REVIEW,LQD,json_csv_field_difference,"Adj Close: 4521 rows exceed tolerance; maximum difference=0.000137329101562, null-mask mismatches=0; independent response differences retained."
+INFO,TLT,json_out_of_range_metadata,"dividends payload date=2026-10-01, dictionary-key date=2026-09-30; excluded from in-range event reconciliation."
+INFO,IEF,json_out_of_range_metadata,"dividends payload date=2026-10-01, dictionary-key date=2026-09-30; excluded from in-range event reconciliation."
+INFO,HYG,json_out_of_range_metadata,"dividends payload date=2026-10-01, dictionary-key date=2026-09-30; excluded from in-range event reconciliation."
+INFO,LQD,json_out_of_range_metadata,"dividends payload date=2026-10-01, dictionary-key date=2026-09-30; excluded from in-range event reconciliation."

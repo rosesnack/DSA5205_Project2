@@ -1,0 +1,21 @@
+check,passed,detail
+source_keys_unique_sorted,True,Unique ordered date/sector keys
+all_source_keys_identical,True,"46,962 matching date/sector keys"
+duplicate_metadata_identical,True,"['label_valid', 'label_within_split', 'split']"
+actual_feature_lists_safe,True,Predictor sets match the feature specification and exclude self cross columns and metadata
+metadata_merge_full_coverage,True,"{'both': 46962, 'left_only': 0, 'right_only': 0}"
+shared_panel_schema,True,"(46962, 23)"
+independent_open_dividend_labels,True,"[{'ticker': 'XLB', 'valid_labels': 5216, 'max_abs_error': 0.0}, {'ticker': 'XLE', 'valid_labels': 5216, 'max_abs_error': 0.0}, {'ticker': 'XLF', 'valid_labels': 5215, 'max_abs_error': 0.0}, {'ticker': 'XLI', 'valid_labels': 5216, 'max_abs_error': 0.0}, {'ticker': 'XLK', 'valid_labels': 5216, 'max_abs_error': 0.0}, {'ticker': 'XLP', 'valid_labels': 5216, 'max_abs_error': 0.0}, {'ticker': 'XLU', 'valid_labels': 5216, 'max_abs_error': 0.0}, {'ticker': 'XLV', 'valid_labels': 5216, 'max_abs_error': 0.0}, {'ticker': 'XLY', 'valid_labels': 5216, 'max_abs_error': 0.0}]"
+invalid_labels_preserved,True,"{'future_open_outside_data_cutoff': 18, 'xlf_in_kind_distribution': 1}"
+all_27_input_files_exact_and_safe,True,Exact feature values and missingness; no targets or self cross predictors
+shared_panel_exact_roundtrip,True,"Exact metadata round trip, including timestamps and missing values"
+common_samples_preserved,True,"{'test': {'rows': 8451, 'common_features_valid_rows': 8451, 'common_scoreable_rows': 8433}, 'train': {'rows': 22662, 'common_features_valid_rows': 21930, 'common_scoreable_rows': 21911}, 'validation': {'rows': 11331, 'common_features_valid_rows': 11331, 'common_scoreable_rows': 11313}, 'warmup': {'rows': 4518, 'common_features_valid_rows': 1476, 'common_scoreable_rows': 0}}"
+latest_prediction_rows_kept,True,18 terminal prediction rows retained without labels
+timestamp_clock_and_missing_counts,True,18:00 New York signals and 09:30 holding endpoints
+holding_dates_match_calendar,True,Next-day entry and second-next-day exit on the full calendar
+monthly_schedule_size,True,105 months and nine sectors
+monthly_labels_known_at_fit,True,All training labels are available at the fitting timestamp
+first_month_label_boundaries,True,Month-end fits exclude the two most recent unmatured signal labels
+mature_cross_split_labels_not_permanently_dropped,True,Mature cross-split labels remain eligible for later training
+all_upstream_files_unchanged,True,6
+outputs_have_unique_paths,True,29

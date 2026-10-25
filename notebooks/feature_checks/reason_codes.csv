@@ -1,0 +1,12 @@
+code,scope,definition
+OK,none,No validity restriction
+H,feature,Insufficient initial coverage or lookback history
+XO,feature,XLF own-sector window includes the unverified distribution event
+XC,feature,Cross-sector XLF window includes the unverified distribution event
+XR,feature,"Sector rank, dispersion or correlation depends on the XLF event"
+M,feature,Unexplained missing predictor; review required
+LX,label,Holding-period label affected by the XLF distribution event
+LE,label,Holding-period endpoint is beyond the data cutoff
+LM,label,Other missing label; review required
+B,scoring,Valid label crossing an evaluation boundary
+W,scoring,2006-2007 warmup observations excluded from evaluation

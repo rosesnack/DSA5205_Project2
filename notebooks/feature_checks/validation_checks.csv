@@ -1,0 +1,35 @@
+check,passed,detail
+physical_feature_count,True,107 numeric + date/ticker
+per_target_feature_counts,True,57/97/102
+self_cross_columns_excluded,True,Each target uses the other eight sectors
+no_infinite_features,True,True
+no_targets_in_feature_lists,True,True
+label_count_and_terminal_boundary,True,46943
+xlf_bad_label_signal_date,True,Signal 09-15; entry 09-16; exit 09-19
+feature_history_first_complete,True,HYG 20-day warmup; training starts in 2008
+momentum_first_available,True,True
+independent_numpy_feature_checks,True,10
+xlf_training_feature_impact_counts,True,"{'S0': 22410, 'S1': 22250, 'S2': 21930}"
+other_sector_S0_not_lost_to_XLF,True,8×2518
+XLF_momentum_recovers,True,True
+nine_sector_rank_bounds,True,True
+cross_section_missing_not_ignored,True,True
+prefix_causality_all_features,True,36 sector/cutoff comparisons
+training_label_maturity_boundaries,True,"[{'fit_date': Timestamp('2017-12-29 00:00:00'), 'latest_mature_signal': Timestamp('2017-12-27 00:00:00')}, {'fit_date': Timestamp('2022-12-30 00:00:00'), 'latest_mature_signal': Timestamp('2022-12-28 00:00:00')}]"
+validation_does_not_use_test_returns,True,True
+source_hashes_unchanged,True,5
+cleaning_manifest_unchanged,True,True
+missing_details_unique,True,33183
+missing_details_exactly_match_selected_NaNs,True,Actual target-specific S2 missing values; self-cross columns excluded
+validity_reconstructed_from_long_audit,True,Validity reconstructed from missing-feature details
+missing_details_all_explained,True,"{'H': 30879, 'XR': 1449, 'XO': 631, 'XC': 224}"
+lean_validity_schema,True,"['date', 'ticker', 'split', 'label_valid', 'label_within_split', 'features_valid_s0', 'scoreable_s0', 'features_valid_s1', 'scoreable_s1', 'features_valid_s2', 'scoreable_s2', 'common_features_valid', 'common_scoreable', 'reason_code']"
+common_masks_are_three_way_intersections,True,True
+common_sample_counts,True,"{'test': {'common_features_valid_rows': 8451, 'common_scoreable_rows': 8433}, 'train': {'common_features_valid_rows': 21930, 'common_scoreable_rows': 21911}, 'validation': {'common_features_valid_rows': 11331, 'common_scoreable_rows': 11313}, 'warmup': {'common_features_valid_rows': 1476, 'common_scoreable_rows': 0}}"
+all_main_tables_sorted_unique_same_keys,True,True
+common_prediction_and_scoring_are_distinct,True,Last two dates have predictors but no evaluable labels
+split_json_volume_matches_existing_tables,True,"Same-provider comparison, not independent vendor validation"
+split_official_date_factor_and_price,True,Official 2025-12-05 2:1 split; 11/18 prices agree within floating-point tolerance
+split_diagnostic_windows_complete,True,"Nine assets, 40 dates and three windows per asset"
+additional_audit_sources_unchanged,True,9
+reason_counts_match_known_dependencies,True,"{'H': 3042, 'XO': 252, 'XC': 160, 'XR': 540, 'M': 0, 'LX': 1, 'LE': 18, 'LM': 0, 'B': 54, 'W': 4518}"

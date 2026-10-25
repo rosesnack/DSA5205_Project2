@@ -1,0 +1,11 @@
+dependency,affected_targets,lookback,skip_recent,affected_rows,first_affected,last_affected,invalid_reason
+own_return_1d,XLF,1,0,1,2016-09-19,2016-09-19,window_contains_xlf_unverified_event_return
+own_return_5d,XLF,5,0,5,2016-09-19,2016-09-23,window_contains_xlf_unverified_event_return
+own_return_20d,XLF,20,0,20,2016-09-19,2016-10-14,window_contains_xlf_unverified_event_return
+own_return_or_volatility_60d,XLF,60,0,60,2016-09-19,2016-12-12,window_contains_xlf_unverified_event_return
+ordinary_return_252d_for_comparison,XLF,252,0,252,2016-09-19,2017-09-18,window_contains_xlf_unverified_event_return
+momentum_12_1,XLF,252,21,231,2016-10-18,2017-09-18,window_contains_xlf_unverified_event_return
+cross_sector_XLF_return_20d,other_8_sectors_S1,20,0,20,2016-09-19,2016-10-14,window_contains_xlf_unverified_event_return
+nine_sector_return_dispersion_1d,all_9_sectors_S2,1,0,1,2016-09-19,2016-09-19,window_contains_xlf_unverified_event_return
+nine_sector_rank_or_dispersion_20d,all_9_sectors_S2,20,0,20,2016-09-19,2016-10-14,window_contains_xlf_unverified_event_return
+correlation_involving_XLF_60d,dependent_targets_S0_or_S2,60,0,60,2016-09-19,2016-12-12,window_contains_xlf_unverified_event_return

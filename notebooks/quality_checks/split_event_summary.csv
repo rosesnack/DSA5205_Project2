@@ -1,0 +1,2 @@
+asset,date,split_ratio,close_event_over_previous,volume_event_over_previous,dollar_volume_event_over_previous,median_dollar_volume_3day_after_over_before,note
+XLB,2025-12-05,2.0,0.996722042370002,0.7196900913988258,0.7173309777724909,0.7247780163555178,Dollar volume varies naturally; prices may already be split-adjusted. Ratios are descriptive.

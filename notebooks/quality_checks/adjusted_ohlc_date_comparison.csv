@@ -1,0 +1,16 @@
+asset,comparison,left_rows,right_rows,left_duplicate_dates,right_duplicate_dates,left_only_dates,right_only_dates
+XLB,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+XLE,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+XLF,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+XLI,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+XLK,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+XLP,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+XLU,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+XLV,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+XLY,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+SPY,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+TLT,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+IEF,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+GLD,raw_to_adjusted_ohlc,5218,5218,0,0,0,0
+HYG,raw_to_adjusted_ohlc,4900,4900,0,0,0,0
+LQD,raw_to_adjusted_ohlc,5218,5218,0,0,0,0

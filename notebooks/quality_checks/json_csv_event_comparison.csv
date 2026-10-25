@@ -1,0 +1,46 @@
+asset,field,json_in_range_events,csv_nonzero_events,compared_event_dates,mismatched_events,duplicate_event_dates,csv_column_present,csv_null_rows
+XLB,Dividends,83,83,83,0,0,True,0
+XLB,Stock Splits,1,1,1,0,0,True,0
+XLB,Capital Gains,0,0,0,0,0,True,0
+XLE,Dividends,84,84,84,0,0,True,0
+XLE,Stock Splits,1,1,1,0,0,True,0
+XLE,Capital Gains,0,0,0,0,0,True,0
+XLF,Dividends,83,83,83,0,0,True,0
+XLF,Stock Splits,1,1,1,0,0,True,0
+XLF,Capital Gains,0,0,0,0,0,True,0
+XLI,Dividends,83,83,83,0,0,True,0
+XLI,Stock Splits,0,0,0,0,0,True,0
+XLI,Capital Gains,0,0,0,0,0,True,0
+XLK,Dividends,80,80,80,0,0,True,0
+XLK,Stock Splits,1,1,1,0,0,True,0
+XLK,Capital Gains,0,0,0,0,0,True,0
+XLP,Dividends,83,83,83,0,0,True,0
+XLP,Stock Splits,0,0,0,0,0,True,0
+XLP,Capital Gains,0,0,0,0,0,True,0
+XLU,Dividends,83,83,83,0,0,True,0
+XLU,Stock Splits,1,1,1,0,0,True,0
+XLU,Capital Gains,0,0,0,0,0,True,0
+XLV,Dividends,84,84,84,0,0,True,0
+XLV,Stock Splits,0,0,0,0,0,True,0
+XLV,Capital Gains,0,0,0,0,0,True,0
+XLY,Dividends,83,83,83,0,0,True,0
+XLY,Stock Splits,1,1,1,0,0,True,0
+XLY,Capital Gains,0,0,0,0,0,True,0
+SPY,Dividends,83,83,83,0,0,True,0
+SPY,Stock Splits,0,0,0,0,0,True,0
+SPY,Capital Gains,0,0,0,0,0,True,0
+TLT,Dividends,247,247,247,0,0,True,0
+TLT,Stock Splits,0,0,0,0,0,True,0
+TLT,Capital Gains,0,0,0,0,0,True,0
+IEF,Dividends,248,248,248,0,0,True,0
+IEF,Stock Splits,0,0,0,0,0,True,0
+IEF,Capital Gains,0,0,0,0,0,True,0
+GLD,Dividends,0,0,0,0,0,True,0
+GLD,Stock Splits,0,0,0,0,0,True,0
+GLD,Capital Gains,0,0,0,0,0,True,0
+HYG,Dividends,232,232,232,0,0,True,0
+HYG,Stock Splits,0,0,0,0,0,True,0
+HYG,Capital Gains,0,0,0,0,0,True,0
+LQD,Dividends,247,247,247,0,0,True,0
+LQD,Stock Splits,0,0,0,0,0,True,0
+LQD,Capital Gains,0,0,0,0,0,True,0

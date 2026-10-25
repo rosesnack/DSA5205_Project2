@@ -1,0 +1,5 @@
+asset,event_type,field,json_key,json_key_date,payload_date,key_payload_date_differ,json_value,in_requested_range
+TLT,dividends,Dividends,1790775000,2026-09-30,2026-10-01,True,0.312,False
+IEF,dividends,Dividends,1790775000,2026-09-30,2026-10-01,True,0.307,False
+HYG,dividends,Dividends,1790775000,2026-09-30,2026-10-01,True,0.342,False
+LQD,dividends,Dividends,1790775000,2026-09-30,2026-10-01,True,0.439,False

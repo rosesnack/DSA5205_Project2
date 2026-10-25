@@ -1,0 +1,358 @@
+{
+  "rule_version": "02-cleaning-v1.1",
+  "run_utc": "2026-10-25T02:34:07.092826+00:00",
+  "python": "3.12.10",
+  "pandas": "3.0.6",
+  "numpy": "2.5.4",
+  "requested_start": "2006-01-01",
+  "requested_end": "2026-09-30",
+  "input_hashes": {
+    "XLB_2006-01-01_2026-09-30_yahoo_chart.json": "30c342042d4cf822147f119b9c21f5f2a0e51d643aa001754185537efb210b51",
+    "XLB_2006-01-01_2026-09-30_yfinance_raw.csv": "076dd4f3f630495f1ba5c9275a3c1811ee728c6416d6f64aac008e72b6c42aee",
+    "XLB_2006-01-01_2026-09-30_yfinance_adjusted.csv": "f0bd13ecdf8865575046a31c1703842c97d2aeaeda8dcf2eb89852edbca3b0f7",
+    "XLE_2006-01-01_2026-09-30_yahoo_chart.json": "1eac3557ee579bc280538ad0a504c50d9d90492788e05677271c2bc5bbd7fd9f",
+    "XLE_2006-01-01_2026-09-30_yfinance_raw.csv": "82ad944238a0a4ee18ded32c9dbe1871dda24874bfd9ea32f06f32723d75d09b",
+    "XLE_2006-01-01_2026-09-30_yfinance_adjusted.csv": "b01579525c1a1e093c3840a5347c67d89145b0809fa6e21917eb890544c0ccae",
+    "XLF_2006-01-01_2026-09-30_yahoo_chart.json": "7718e298a9eb42118230abbeeeddcc881296fb2c8c6478e701f3ed4211911470",
+    "XLF_2006-01-01_2026-09-30_yfinance_raw.csv": "8fa9f46931a04c73f573b9d8b471715764881481635555d1966e573b4fba9e90",
+    "XLF_2006-01-01_2026-09-30_yfinance_adjusted.csv": "df4733151bd918c0a529052f259beea3d280272fc4efa0a763a17c3a19bb7ce2",
+    "XLI_2006-01-01_2026-09-30_yahoo_chart.json": "e571ba8674e4de59ae5f6f8c28f2cf5caaaa4a2df65807b1c599fa058e831515",
+    "XLI_2006-01-01_2026-09-30_yfinance_raw.csv": "7dc44b027df47a945e30823b978adac6aad5a0fc6aacee93cba8695c1de10b9a",
+    "XLI_2006-01-01_2026-09-30_yfinance_adjusted.csv": "e0d4b8eff612cdd3d9c4ffd9569be07e833f7cf81c1f83b5bfd08ed6fb30e5f8",
+    "XLK_2006-01-01_2026-09-30_yahoo_chart.json": "40180a03c4e2ec17e630c5aba96fae61b12e3d1ff2a191246f4e7957f9c8c86e",
+    "XLK_2006-01-01_2026-09-30_yfinance_raw.csv": "70bbb583630d9d2af0eb9f0588f43b2ed10fcf17a5b1677267d25fb34cac55c4",
+    "XLK_2006-01-01_2026-09-30_yfinance_adjusted.csv": "0d5eabb61ed1ce934e5faf62c4fe01d654e1d4054ce05dd5bec642f102b5c054",
+    "XLP_2006-01-01_2026-09-30_yahoo_chart.json": "cbe523748f36b8d07183d950d059bff648feb7bc73ed399f811a9a8ea92744f7",
+    "XLP_2006-01-01_2026-09-30_yfinance_raw.csv": "e56119d823d92f320e6d5e30b8c435a500e72df8a2eb17fc04492baf3970bf23",
+    "XLP_2006-01-01_2026-09-30_yfinance_adjusted.csv": "3c299d69fd0425dab0b62bbed05e5f657ad69c82747145daf92b18731d39551a",
+    "XLU_2006-01-01_2026-09-30_yahoo_chart.json": "78567888ed1138f2b6bbcc905909c423697c186a7594885ba635241c4be8c3f0",
+    "XLU_2006-01-01_2026-09-30_yfinance_raw.csv": "0d387be46a5459b334118dfb1a3fa459dee6cf8cea14836385385b4c7a3953f7",
+    "XLU_2006-01-01_2026-09-30_yfinance_adjusted.csv": "4b218933a8b8bdb669b24502c0b9371eb665ebf1e4ceea7c1ca5cb116ebbef7a",
+    "XLV_2006-01-01_2026-09-30_yahoo_chart.json": "db163eebbc24223efd6a35c9636b54a0002c471996c8fcb53b733106c9fb8b22",
+    "XLV_2006-01-01_2026-09-30_yfinance_raw.csv": "c258ce75b66c33d6068434da9a06b1ab8e9ecee27b11453f413f3a73e6ff23a9",
+    "XLV_2006-01-01_2026-09-30_yfinance_adjusted.csv": "7a80cbf577405707390fd23efe08b7dc7572289e52471ebda53d7373b923037b",
+    "XLY_2006-01-01_2026-09-30_yahoo_chart.json": "639e4295b3872e8d4142aa59dfb176d5680ad54c8a812ac0407c25b204942e4a",
+    "XLY_2006-01-01_2026-09-30_yfinance_raw.csv": "cc5044439a8f7183cbec63069743b22657f6e31180cfbd9173a7112f8edcf81b",
+    "XLY_2006-01-01_2026-09-30_yfinance_adjusted.csv": "e545103a45623306fb0b8d2a51449976327dd455bdbbb44233861da567b98418",
+    "SPY_2006-01-01_2026-09-30_yahoo_chart.json": "acf9006263f44572161e546870bf493677c012c0671bc11fd3bdc139d8a0e016",
+    "SPY_2006-01-01_2026-09-30_yfinance_raw.csv": "3a31154dcc35e3c7da98c795e8f5961ff4602cb49a15ef0b33c68e179b9b95d2",
+    "SPY_2006-01-01_2026-09-30_yfinance_adjusted.csv": "a64f08139e705cff4b05a7931b631c0f54302d795521ccb373298c9bd363fb8e",
+    "TLT_2006-01-01_2026-09-30_yahoo_chart.json": "21ef233bc12f569cf8e490a50da65be5f69e3c3aab82aa35c1df8dcb88399bc6",
+    "TLT_2006-01-01_2026-09-30_yfinance_raw.csv": "d3cf60ad793f4f9c6e65288b4d67bd98651479452a3a6f52682c2393e8f22c1c",
+    "TLT_2006-01-01_2026-09-30_yfinance_adjusted.csv": "ac00787829333421e41a73230d5e90e895744418f84db276a814c0f879aa9e16",
+    "IEF_2006-01-01_2026-09-30_yahoo_chart.json": "ec2cb186874f6a97d0a25163c7f09ad208dbf1a5b68227e58c7fe9a4e85aafba",
+    "IEF_2006-01-01_2026-09-30_yfinance_raw.csv": "bdfa16761def4e3d1f3f1bc2bcf4d012d7d9d27a64ec9aaca2a33d22ff6e09ee",
+    "IEF_2006-01-01_2026-09-30_yfinance_adjusted.csv": "fa457a1cdd561b7663619d49e6b7929f71d8da0228b95bcbc6f91f24abb24021",
+    "GLD_2006-01-01_2026-09-30_yahoo_chart.json": "685cefafb6698e4c56eb3a5b49ee00d079766eebd3726a4040d365c78fd49bfc",
+    "GLD_2006-01-01_2026-09-30_yfinance_raw.csv": "47667834787b6f17c77581df4e1c1632cec0c3d224ca493e6e5107e42b8e9e2c",
+    "GLD_2006-01-01_2026-09-30_yfinance_adjusted.csv": "bb6fced99757584ca5c76824cb1840711aad4627606f3c583d0a3bc33415c6cb",
+    "HYG_2006-01-01_2026-09-30_yahoo_chart.json": "1c4fb55c0c9063afd0970acbe084f1e47bd0b1184b1c31824adefd66fb712e78",
+    "HYG_2006-01-01_2026-09-30_yfinance_raw.csv": "05728cb330c5b4ffd2c038644a679320a7428faecb7b45ae5280f4d3ddd20d18",
+    "HYG_2006-01-01_2026-09-30_yfinance_adjusted.csv": "f5a220eac009806c89a5765197fd0e0902960ed8f50d8f48474e3520df18b129",
+    "LQD_2006-01-01_2026-09-30_yahoo_chart.json": "37547fe75baca9d373e1071a04060f8b0511910cbcbc6b46d943e4a92c311618",
+    "LQD_2006-01-01_2026-09-30_yfinance_raw.csv": "376053a5c8647f9610ca15927b486930651c7da7280fae706c43f2910c449313",
+    "LQD_2006-01-01_2026-09-30_yfinance_adjusted.csv": "105789301ac551d603ea65c40f77c398752ef4c1d62a57dcd3997600a470a40e",
+    "VIX_2006-01-01_2026-09-30_cboe.csv": "306703fd5b6a9ef7b4ecac66753cc29560a3ec510ba4cfc3602f430d953e58ab",
+    "DGS3MO_2006-01-01_2026-09-30_fred.csv": "c1a3d217f168520ed28f2a95ae285b0d9f29289ed4607b1bf2771d63b3866a53"
+  },
+  "input_download_manifest_sha256": "e18417ec82b76b440a287c97229e10d879d25331e566a4815a50b0a5b702bb73",
+  "output_files": [
+    {
+      "file": "data/interim/etf_prices_aligned.csv",
+      "kind": "interim",
+      "rows": 78270,
+      "columns": 22,
+      "first_date": "2006-01-03",
+      "last_date": "2026-09-30",
+      "sha256": "c09a1ff66e321732b3c4ee189dbe8d6792fe7c4fe9895422de18a5849773099e"
+    },
+    {
+      "file": "data/interim/etf_base_returns.csv",
+      "kind": "interim",
+      "rows": 78270,
+      "columns": 15,
+      "first_date": "2006-01-03",
+      "last_date": "2026-09-30",
+      "sha256": "ef256a8c73d3d3ae3b8559f286f39c589f31ced637ed2eefa91103e29124a826"
+    },
+    {
+      "file": "data/interim/vix_aligned.csv",
+      "kind": "interim",
+      "rows": 5218,
+      "columns": 4,
+      "first_date": "2006-01-03",
+      "last_date": "2026-09-30",
+      "sha256": "3d7760de475d69a3bc2dfaf861f91b35311b178df52ba365695f7249f003e031"
+    },
+    {
+      "file": "data/interim/dgs3mo_observations.csv",
+      "kind": "interim",
+      "rows": 5413,
+      "columns": 7,
+      "first_date": "2006-01-02",
+      "last_date": "2026-09-30",
+      "sha256": "c3726fa6b6ec227b7c5524d6d5b27997eb7057951fc643db6298ef36101a7c3f"
+    },
+    {
+      "file": "data/interim/risk_free_open_intervals.csv",
+      "kind": "interim",
+      "rows": 5218,
+      "columns": 12,
+      "first_date": "2006-01-03",
+      "last_date": "2026-09-30",
+      "sha256": "874e49b3fea6674b02dbad78aa615890e831cab29a7224e1f257cc51df6a9896"
+    },
+    {
+      "file": "notebooks/cleaning_checks/cleaning_summary.csv",
+      "kind": "quality_report",
+      "rows": 17,
+      "columns": 8,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "af9fc3b67c63f7bc39f01d31bd5c6ddf416eb98c5332ef0b75a7dd5bdcdef2f3"
+    },
+    {
+      "file": "notebooks/cleaning_checks/cleaning_log.csv",
+      "kind": "quality_report",
+      "rows": 67,
+      "columns": 6,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "a8499d606d9ed542648c109d86d555d96df91eff461da292de1200c1a2e6cfac"
+    },
+    {
+      "file": "notebooks/cleaning_checks/value_changes.csv",
+      "kind": "quality_report",
+      "rows": 223,
+      "columns": 6,
+      "first_date": "2006-01-02",
+      "last_date": "2026-09-07",
+      "sha256": "e98a8155a1261380cdcff088ed943a197605ec3542b20d847a7ad4f85f1f318a"
+    },
+    {
+      "file": "notebooks/cleaning_checks/calendar_changes.csv",
+      "kind": "quality_report",
+      "rows": 351,
+      "columns": 4,
+      "first_date": "2006-01-03",
+      "last_date": "2026-09-07",
+      "sha256": "4b026b71b6036ff0c9de957697f201783770c249255839152531a9e6c2be75a8"
+    },
+    {
+      "file": "notebooks/cleaning_checks/vix_native_cleaned_for_audit.csv",
+      "kind": "quality_report",
+      "rows": 5251,
+      "columns": 6,
+      "first_date": "2006-01-03",
+      "last_date": "2026-09-30",
+      "sha256": "7261d775ed91a8281c1141c8a3a87db783eaf2583e160a7018aa787a561c0170"
+    },
+    {
+      "file": "notebooks/cleaning_checks/missing_after_alignment.csv",
+      "kind": "quality_report",
+      "rows": 135,
+      "columns": 4,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "87b8c07d24bbaeffbac4eaad28edbdaa060345aaa352bf7f799036fff4641a83"
+    },
+    {
+      "file": "notebooks/cleaning_checks/corporate_action_checks.csv",
+      "kind": "quality_report",
+      "rows": 6,
+      "columns": 9,
+      "first_date": "2016-09-19",
+      "last_date": "2025-12-05",
+      "sha256": "12fa79b5307e01b0b64d487a9339a67ad136b00bd433c30d7969117f31f94b46"
+    },
+    {
+      "file": "notebooks/cleaning_checks/dividend_unit_checks.csv",
+      "kind": "quality_report",
+      "rows": 1803,
+      "columns": 6,
+      "first_date": "2006-02-01",
+      "last_date": "2026-09-21",
+      "sha256": "d60307a8fb9a87bc1b6609a1158f3dad7d1b5c7c3faa36670d1729111ddd517b"
+    },
+    {
+      "file": "notebooks/cleaning_checks/dividend_open_return_comparison.csv",
+      "kind": "quality_report",
+      "rows": 1803,
+      "columns": 5,
+      "first_date": "2006-02-01",
+      "last_date": "2026-09-21",
+      "sha256": "5dcb69339bb2c0864d9b30244057b25a4d401f7e9d568334f9cd527024f031be"
+    },
+    {
+      "file": "notebooks/cleaning_checks/xlf_dependency_impact.csv",
+      "kind": "quality_report",
+      "rows": 10,
+      "columns": 8,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "85af78ad86de53efaaba011ab6fdc42f753e0637b394f1467d6528a5fd783284"
+    },
+    {
+      "file": "notebooks/cleaning_checks/xlf_impact_dates.csv",
+      "kind": "quality_report",
+      "rows": 670,
+      "columns": 4,
+      "first_date": "2016-09-19",
+      "last_date": "2017-09-18",
+      "sha256": "02767901bb508bcff7b97cbd93c16a6ee2272416e65180d9912ee2398177998b"
+    },
+    {
+      "file": "notebooks/cleaning_checks/xlf_signal_timing_check.csv",
+      "kind": "quality_report",
+      "rows": 1,
+      "columns": 6,
+      "first_date": "2016-09-15",
+      "last_date": "2016-09-15",
+      "sha256": "45e76a5f38bf79bcd849dc90b6d3fe8ab90b36f43dad06ad0f98e34c6f75fb9d"
+    },
+    {
+      "file": "notebooks/cleaning_checks/risk_free_calendar_exceptions.csv",
+      "kind": "quality_report",
+      "rows": 33,
+      "columns": 3,
+      "first_date": "2007-01-02",
+      "last_date": "2025-12-26",
+      "sha256": "e3aa6e7e85cf9af8c541c0c879b824546c8ff3966e5cf4406cb78bbb69e28769"
+    },
+    {
+      "file": "notebooks/cleaning_checks/risk_free_publication_calendar.csv",
+      "kind": "quality_report",
+      "rows": 7613,
+      "columns": 4,
+      "first_date": "2005-12-17",
+      "last_date": "2026-10-20",
+      "sha256": "11b5484ff0e804f2471169bf17e9157370c365ee4147caa5b3119f7f2f447e3d"
+    },
+    {
+      "file": "notebooks/cleaning_checks/risk_free_matching_checks.csv",
+      "kind": "quality_report",
+      "rows": 12,
+      "columns": 12,
+      "first_date": "2016-01-21",
+      "last_date": "2025-10-16",
+      "sha256": "0454c0eba31b59fb3e2cfc51e1648fc682b32707473e0ef611c421ad67b69dba"
+    },
+    {
+      "file": "notebooks/cleaning_checks/validation_checks.csv",
+      "kind": "quality_report",
+      "rows": 18,
+      "columns": 3,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "1bd4a0a601d4be3f837334042bc6e9de7af85bf5a6f7ce584b38617c2cdbce22"
+    },
+    {
+      "file": "notebooks/cleaning_checks/close_return_crosscheck.csv",
+      "kind": "quality_report",
+      "rows": 77936,
+      "columns": 13,
+      "first_date": "2006-01-04",
+      "last_date": "2026-09-30",
+      "sha256": "07391002807f1f05bd1b99d166e8ddcc1b1e17fe9f424a279a53d91ef79435eb"
+    },
+    {
+      "file": "notebooks/cleaning_checks/close_return_crosscheck_summary.csv",
+      "kind": "quality_report",
+      "rows": 47,
+      "columns": 8,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "c28cfebc0ded77eba95b87481ee2d89e585cd9ed4528a9d83dffdefe39d8f9f1"
+    },
+    {
+      "file": "notebooks/cleaning_checks/close_return_crosscheck_extremes.csv",
+      "kind": "quality_report",
+      "rows": 20,
+      "columns": 14,
+      "first_date": "2006-09-29",
+      "last_date": "2022-06-21",
+      "sha256": "c84f3fac90aa7f71421e589c8d14394639f110e02934b77f823302a37b74870f"
+    },
+    {
+      "file": "notebooks/cleaning_checks/open_return_identity_summary.csv",
+      "kind": "quality_report",
+      "rows": 16,
+      "columns": 4,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "2fca524573a5d5c3cae8cf64625547758c51d82f7804055293b81aee0a561012"
+    },
+    {
+      "file": "notebooks/cleaning_checks/open_return_identity_failures.csv",
+      "kind": "quality_report",
+      "rows": 0,
+      "columns": 9,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "82cc2bbf6b316008b6172bf859c579cf41cf8f99b0af5fad42c45632372593da"
+    },
+    {
+      "file": "notebooks/cleaning_checks/return_check_coverage.csv",
+      "kind": "quality_report",
+      "rows": 30,
+      "columns": 8,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "8001e6aee55f9186db9395beb50adb8520784c3e18956860614d13a362fa5b82"
+    },
+    {
+      "file": "notebooks/cleaning_checks/opening_gap_by_year_review.csv",
+      "kind": "quality_report",
+      "rows": 189,
+      "columns": 10,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "16f9fdf481b5713eb7cec61795e171b6460860f24142aa27d6225e60e783a6c3"
+    },
+    {
+      "file": "notebooks/cleaning_checks/opening_gap_by_period_review.csv",
+      "kind": "quality_report",
+      "rows": 60,
+      "columns": 11,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "2ef9b01d4eecb279de45e476ef4c21d60fa10fb35ad51aa7166a11df0053e417"
+    },
+    {
+      "file": "notebooks/cleaning_checks/opening_gap_01_crosscheck.csv",
+      "kind": "quality_report",
+      "rows": 189,
+      "columns": 16,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "b0f09775fe3ab22e346e448cfc35897d3df95392bf9a0f63095fa52ce5531651"
+    },
+    {
+      "file": "notebooks/cleaning_checks/data_dictionary.csv",
+      "kind": "documentation",
+      "rows": 60,
+      "columns": 5,
+      "first_date": "",
+      "last_date": "",
+      "sha256": "923fe94565e877835defea01df3f0088d93da2366f9a041fd58477587cf9d482"
+    }
+  ],
+  "outputs_summary_sha256": "396b06f5e2f34e97707707326ba74076980e10cf9535817ee97007e0728252d3",
+  "diagnostic_thresholds": {
+    "cc_corrected_residual_review_bps": 0.1,
+    "oo_identity_absolute_tolerance": 1e-12,
+    "opening_gap_near_zero_return": 1e-06
+  },
+  "diagnostic_input_hashes": {
+    "notebooks/quality_checks/opening_gap_by_year.csv": "24311ee06d420afcbd07c8369e2c663a888dbb5c230f7578a26349f1241dd0f7"
+  },
+  "cc_reference": "separately downloaded yfinance_adjusted Close; same Yahoo supplier",
+  "cc_review_rows": 0,
+  "opening_decision": "retain zero gaps and overnight/intraday returns; no automatic era-based removal or weighting",
+  "publication_calendar": "USFederalHolidayCalendar + 33 verified extra nonpublication dates",
+  "rate_availability": "first later publication date, usable only after that date ends",
+  "rate_limitations": "assumed timing; final snapshot, not historical vintage; exceptions not guaranteed exhaustive",
+  "return_convention": "cash distribution accrued at face value on ex-date; no automatic open reinvestment",
+  "special_action": "XLF 2016-09-19 cross-event cash returns invalid; retain prices and calendar",
+  "next_stage": "construct features and labels; apply dependency-specific masks when forming model panel"
+}

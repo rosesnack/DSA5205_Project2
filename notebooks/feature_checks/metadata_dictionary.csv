@@ -1,0 +1,36 @@
+file,field,dtype,definition
+data/interim/prediction_targets.csv,date,datetime64[us],New York signal date; part of the primary key
+data/interim/prediction_targets.csv,ticker,str,Target sector; part of the primary key
+data/interim/prediction_targets.csv,split,str,"Signal-date partition: warmup, train, validation or test"
+data/interim/prediction_targets.csv,signal_at,str,"18:00 New York time, assuming daily inputs are available"
+data/interim/prediction_targets.csv,entry_date,datetime64[us],Next SPY trading date; missing beyond the data cutoff
+data/interim/prediction_targets.csv,exit_date,datetime64[us],Second next SPY trading date; missing beyond the data cutoff
+data/interim/prediction_targets.csv,entry_at,"datetime64[us, America/New_York]",Entry open at 09:30 New York time; missing if entry is unavailable
+data/interim/prediction_targets.csv,label_available_at,"datetime64[us, America/New_York]",Exit open at 09:30 New York time; must not exceed the fit cutoff
+data/interim/prediction_targets.csv,sector_forward_cash_return,float64,Sector cash return from the next open to the following open
+data/interim/prediction_targets.csv,spy_forward_cash_return,float64,SPY cash return over the same holding period
+data/interim/prediction_targets.csv,target_relative_return,float64,"Sector minus SPY forward cash return, in decimal units"
+data/interim/prediction_targets.csv,label_valid,bool,Label is calculable ex post; availability must be checked separately
+data/interim/prediction_targets.csv,label_within_split,bool,Valid label with exit within the signal-date evaluation partition
+data/interim/prediction_targets.csv,invalid_reason,str,Missing-label or corporate-action reason; not a predictor
+data/interim/feature_validity.csv,date,datetime64[us],New York signal date; part of the primary key
+data/interim/feature_validity.csv,ticker,str,Target sector; part of the primary key
+data/interim/feature_validity.csv,split,str,"Signal-date partition: warmup, train, validation or test"
+data/interim/feature_validity.csv,label_valid,bool,Label is calculable ex post; availability must be checked separately
+data/interim/feature_validity.csv,label_within_split,bool,Valid label with exit within the signal-date evaluation partition
+data/interim/feature_validity.csv,features_valid_s0,bool,"All selected predictors are valid, including dates without future labels"
+data/interim/feature_validity.csv,scoreable_s0,bool,"Valid predictors and label within the evaluation partition, excluding warmup"
+data/interim/feature_validity.csv,features_valid_s1,bool,"All selected predictors are valid, including dates without future labels"
+data/interim/feature_validity.csv,scoreable_s1,bool,"Valid predictors and label within the evaluation partition, excluding warmup"
+data/interim/feature_validity.csv,features_valid_s2,bool,"All selected predictors are valid, including dates without future labels"
+data/interim/feature_validity.csv,scoreable_s2,bool,"Valid predictors and label within the evaluation partition, excluding warmup"
+data/interim/feature_validity.csv,common_features_valid,bool,Intersection of S0/S1/S2 feature validity; training also requires mature labels
+data/interim/feature_validity.csv,common_scoreable,bool,Intersection of strict evaluation eligibility; not a permanent training filter
+data/interim/feature_validity.csv,reason_code,str,Validity reason code; combined with + in the main table; see reason_codes.csv
+notebooks/feature_checks/missing_feature_details.csv,date,datetime64[us],New York signal date; part of the primary key
+notebooks/feature_checks/missing_feature_details.csv,ticker,str,Target sector; part of the primary key
+notebooks/feature_checks/missing_feature_details.csv,feature,str,Missing predictor from the target-specific S2 list; audit metadata
+notebooks/feature_checks/missing_feature_details.csv,reason_code,str,Validity reason code; combined with + in the main table; see reason_codes.csv
+notebooks/feature_checks/reason_codes.csv,code,str,Individual validity code; not a predictor
+notebooks/feature_checks/reason_codes.csv,scope,str,"Restriction scope: feature, label, scoring or none"
+notebooks/feature_checks/reason_codes.csv,definition,str,Meaning of the validity code

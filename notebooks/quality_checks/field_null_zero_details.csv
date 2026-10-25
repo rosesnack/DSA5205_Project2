@@ -1,0 +1,260 @@
+asset,version,field,null_count,zero_count
+XLB,yahoo_chart_json,Open,0,0
+XLB,yahoo_chart_json,High,0,0
+XLB,yahoo_chart_json,Low,0,0
+XLB,yahoo_chart_json,Close,0,0
+XLB,yahoo_chart_json,Adj Close,0,0
+XLB,yahoo_chart_json,Volume,0,0
+XLB,yfinance_raw,Open,0,0
+XLB,yfinance_raw,High,0,0
+XLB,yfinance_raw,Low,0,0
+XLB,yfinance_raw,Close,0,0
+XLB,yfinance_raw,Adj Close,0,0
+XLB,yfinance_raw,Volume,0,0
+XLB,yfinance_adjusted,Open,0,0
+XLB,yfinance_adjusted,High,0,0
+XLB,yfinance_adjusted,Low,0,0
+XLB,yfinance_adjusted,Close,0,0
+XLB,yfinance_adjusted,Volume,0,0
+XLE,yahoo_chart_json,Open,0,0
+XLE,yahoo_chart_json,High,0,0
+XLE,yahoo_chart_json,Low,0,0
+XLE,yahoo_chart_json,Close,0,0
+XLE,yahoo_chart_json,Adj Close,0,0
+XLE,yahoo_chart_json,Volume,0,0
+XLE,yfinance_raw,Open,0,0
+XLE,yfinance_raw,High,0,0
+XLE,yfinance_raw,Low,0,0
+XLE,yfinance_raw,Close,0,0
+XLE,yfinance_raw,Adj Close,0,0
+XLE,yfinance_raw,Volume,0,0
+XLE,yfinance_adjusted,Open,0,0
+XLE,yfinance_adjusted,High,0,0
+XLE,yfinance_adjusted,Low,0,0
+XLE,yfinance_adjusted,Close,0,0
+XLE,yfinance_adjusted,Volume,0,0
+XLF,yahoo_chart_json,Open,0,0
+XLF,yahoo_chart_json,High,0,0
+XLF,yahoo_chart_json,Low,0,0
+XLF,yahoo_chart_json,Close,0,0
+XLF,yahoo_chart_json,Adj Close,0,0
+XLF,yahoo_chart_json,Volume,0,0
+XLF,yfinance_raw,Open,0,0
+XLF,yfinance_raw,High,0,0
+XLF,yfinance_raw,Low,0,0
+XLF,yfinance_raw,Close,0,0
+XLF,yfinance_raw,Adj Close,0,0
+XLF,yfinance_raw,Volume,0,0
+XLF,yfinance_adjusted,Open,0,0
+XLF,yfinance_adjusted,High,0,0
+XLF,yfinance_adjusted,Low,0,0
+XLF,yfinance_adjusted,Close,0,0
+XLF,yfinance_adjusted,Volume,0,0
+XLI,yahoo_chart_json,Open,0,0
+XLI,yahoo_chart_json,High,0,0
+XLI,yahoo_chart_json,Low,0,0
+XLI,yahoo_chart_json,Close,0,0
+XLI,yahoo_chart_json,Adj Close,0,0
+XLI,yahoo_chart_json,Volume,0,0
+XLI,yfinance_raw,Open,0,0
+XLI,yfinance_raw,High,0,0
+XLI,yfinance_raw,Low,0,0
+XLI,yfinance_raw,Close,0,0
+XLI,yfinance_raw,Adj Close,0,0
+XLI,yfinance_raw,Volume,0,0
+XLI,yfinance_adjusted,Open,0,0
+XLI,yfinance_adjusted,High,0,0
+XLI,yfinance_adjusted,Low,0,0
+XLI,yfinance_adjusted,Close,0,0
+XLI,yfinance_adjusted,Volume,0,0
+XLK,yahoo_chart_json,Open,0,0
+XLK,yahoo_chart_json,High,0,0
+XLK,yahoo_chart_json,Low,0,0
+XLK,yahoo_chart_json,Close,0,0
+XLK,yahoo_chart_json,Adj Close,0,0
+XLK,yahoo_chart_json,Volume,0,0
+XLK,yfinance_raw,Open,0,0
+XLK,yfinance_raw,High,0,0
+XLK,yfinance_raw,Low,0,0
+XLK,yfinance_raw,Close,0,0
+XLK,yfinance_raw,Adj Close,0,0
+XLK,yfinance_raw,Volume,0,0
+XLK,yfinance_adjusted,Open,0,0
+XLK,yfinance_adjusted,High,0,0
+XLK,yfinance_adjusted,Low,0,0
+XLK,yfinance_adjusted,Close,0,0
+XLK,yfinance_adjusted,Volume,0,0
+XLP,yahoo_chart_json,Open,0,0
+XLP,yahoo_chart_json,High,0,0
+XLP,yahoo_chart_json,Low,0,0
+XLP,yahoo_chart_json,Close,0,0
+XLP,yahoo_chart_json,Adj Close,0,0
+XLP,yahoo_chart_json,Volume,0,0
+XLP,yfinance_raw,Open,0,0
+XLP,yfinance_raw,High,0,0
+XLP,yfinance_raw,Low,0,0
+XLP,yfinance_raw,Close,0,0
+XLP,yfinance_raw,Adj Close,0,0
+XLP,yfinance_raw,Volume,0,0
+XLP,yfinance_adjusted,Open,0,0
+XLP,yfinance_adjusted,High,0,0
+XLP,yfinance_adjusted,Low,0,0
+XLP,yfinance_adjusted,Close,0,0
+XLP,yfinance_adjusted,Volume,0,0
+XLU,yahoo_chart_json,Open,0,0
+XLU,yahoo_chart_json,High,0,0
+XLU,yahoo_chart_json,Low,0,0
+XLU,yahoo_chart_json,Close,0,0
+XLU,yahoo_chart_json,Adj Close,0,0
+XLU,yahoo_chart_json,Volume,0,0
+XLU,yfinance_raw,Open,0,0
+XLU,yfinance_raw,High,0,0
+XLU,yfinance_raw,Low,0,0
+XLU,yfinance_raw,Close,0,0
+XLU,yfinance_raw,Adj Close,0,0
+XLU,yfinance_raw,Volume,0,0
+XLU,yfinance_adjusted,Open,0,0
+XLU,yfinance_adjusted,High,0,0
+XLU,yfinance_adjusted,Low,0,0
+XLU,yfinance_adjusted,Close,0,0
+XLU,yfinance_adjusted,Volume,0,0
+XLV,yahoo_chart_json,Open,0,0
+XLV,yahoo_chart_json,High,0,0
+XLV,yahoo_chart_json,Low,0,0
+XLV,yahoo_chart_json,Close,0,0
+XLV,yahoo_chart_json,Adj Close,0,0
+XLV,yahoo_chart_json,Volume,0,0
+XLV,yfinance_raw,Open,0,0
+XLV,yfinance_raw,High,0,0
+XLV,yfinance_raw,Low,0,0
+XLV,yfinance_raw,Close,0,0
+XLV,yfinance_raw,Adj Close,0,0
+XLV,yfinance_raw,Volume,0,0
+XLV,yfinance_adjusted,Open,0,0
+XLV,yfinance_adjusted,High,0,0
+XLV,yfinance_adjusted,Low,0,0
+XLV,yfinance_adjusted,Close,0,0
+XLV,yfinance_adjusted,Volume,0,0
+XLY,yahoo_chart_json,Open,0,0
+XLY,yahoo_chart_json,High,0,0
+XLY,yahoo_chart_json,Low,0,0
+XLY,yahoo_chart_json,Close,0,0
+XLY,yahoo_chart_json,Adj Close,0,0
+XLY,yahoo_chart_json,Volume,0,0
+XLY,yfinance_raw,Open,0,0
+XLY,yfinance_raw,High,0,0
+XLY,yfinance_raw,Low,0,0
+XLY,yfinance_raw,Close,0,0
+XLY,yfinance_raw,Adj Close,0,0
+XLY,yfinance_raw,Volume,0,0
+XLY,yfinance_adjusted,Open,0,0
+XLY,yfinance_adjusted,High,0,0
+XLY,yfinance_adjusted,Low,0,0
+XLY,yfinance_adjusted,Close,0,0
+XLY,yfinance_adjusted,Volume,0,0
+SPY,yahoo_chart_json,Open,0,0
+SPY,yahoo_chart_json,High,0,0
+SPY,yahoo_chart_json,Low,0,0
+SPY,yahoo_chart_json,Close,0,0
+SPY,yahoo_chart_json,Adj Close,0,0
+SPY,yahoo_chart_json,Volume,0,0
+SPY,yfinance_raw,Open,0,0
+SPY,yfinance_raw,High,0,0
+SPY,yfinance_raw,Low,0,0
+SPY,yfinance_raw,Close,0,0
+SPY,yfinance_raw,Adj Close,0,0
+SPY,yfinance_raw,Volume,0,0
+SPY,yfinance_adjusted,Open,0,0
+SPY,yfinance_adjusted,High,0,0
+SPY,yfinance_adjusted,Low,0,0
+SPY,yfinance_adjusted,Close,0,0
+SPY,yfinance_adjusted,Volume,0,0
+TLT,yahoo_chart_json,Open,0,0
+TLT,yahoo_chart_json,High,0,0
+TLT,yahoo_chart_json,Low,0,0
+TLT,yahoo_chart_json,Close,0,0
+TLT,yahoo_chart_json,Adj Close,0,0
+TLT,yahoo_chart_json,Volume,0,0
+TLT,yfinance_raw,Open,0,0
+TLT,yfinance_raw,High,0,0
+TLT,yfinance_raw,Low,0,0
+TLT,yfinance_raw,Close,0,0
+TLT,yfinance_raw,Adj Close,0,0
+TLT,yfinance_raw,Volume,0,0
+TLT,yfinance_adjusted,Open,0,0
+TLT,yfinance_adjusted,High,0,0
+TLT,yfinance_adjusted,Low,0,0
+TLT,yfinance_adjusted,Close,0,0
+TLT,yfinance_adjusted,Volume,0,0
+IEF,yahoo_chart_json,Open,0,0
+IEF,yahoo_chart_json,High,0,0
+IEF,yahoo_chart_json,Low,0,0
+IEF,yahoo_chart_json,Close,0,0
+IEF,yahoo_chart_json,Adj Close,0,0
+IEF,yahoo_chart_json,Volume,0,0
+IEF,yfinance_raw,Open,0,0
+IEF,yfinance_raw,High,0,0
+IEF,yfinance_raw,Low,0,0
+IEF,yfinance_raw,Close,0,0
+IEF,yfinance_raw,Adj Close,0,0
+IEF,yfinance_raw,Volume,0,0
+IEF,yfinance_adjusted,Open,0,0
+IEF,yfinance_adjusted,High,0,0
+IEF,yfinance_adjusted,Low,0,0
+IEF,yfinance_adjusted,Close,0,0
+IEF,yfinance_adjusted,Volume,0,0
+GLD,yahoo_chart_json,Open,0,0
+GLD,yahoo_chart_json,High,0,0
+GLD,yahoo_chart_json,Low,0,0
+GLD,yahoo_chart_json,Close,0,0
+GLD,yahoo_chart_json,Adj Close,0,0
+GLD,yahoo_chart_json,Volume,0,0
+GLD,yfinance_raw,Open,0,0
+GLD,yfinance_raw,High,0,0
+GLD,yfinance_raw,Low,0,0
+GLD,yfinance_raw,Close,0,0
+GLD,yfinance_raw,Adj Close,0,0
+GLD,yfinance_raw,Volume,0,0
+GLD,yfinance_adjusted,Open,0,0
+GLD,yfinance_adjusted,High,0,0
+GLD,yfinance_adjusted,Low,0,0
+GLD,yfinance_adjusted,Close,0,0
+GLD,yfinance_adjusted,Volume,0,0
+HYG,yahoo_chart_json,Open,0,0
+HYG,yahoo_chart_json,High,0,0
+HYG,yahoo_chart_json,Low,0,0
+HYG,yahoo_chart_json,Close,0,0
+HYG,yahoo_chart_json,Adj Close,0,0
+HYG,yahoo_chart_json,Volume,0,0
+HYG,yfinance_raw,Open,0,0
+HYG,yfinance_raw,High,0,0
+HYG,yfinance_raw,Low,0,0
+HYG,yfinance_raw,Close,0,0
+HYG,yfinance_raw,Adj Close,0,0
+HYG,yfinance_raw,Volume,0,0
+HYG,yfinance_adjusted,Open,0,0
+HYG,yfinance_adjusted,High,0,0
+HYG,yfinance_adjusted,Low,0,0
+HYG,yfinance_adjusted,Close,0,0
+HYG,yfinance_adjusted,Volume,0,0
+LQD,yahoo_chart_json,Open,0,0
+LQD,yahoo_chart_json,High,0,0
+LQD,yahoo_chart_json,Low,0,0
+LQD,yahoo_chart_json,Close,0,0
+LQD,yahoo_chart_json,Adj Close,0,0
+LQD,yahoo_chart_json,Volume,0,0
+LQD,yfinance_raw,Open,0,0
+LQD,yfinance_raw,High,0,0
+LQD,yfinance_raw,Low,0,0
+LQD,yfinance_raw,Close,0,0
+LQD,yfinance_raw,Adj Close,0,0
+LQD,yfinance_raw,Volume,0,0
+LQD,yfinance_adjusted,Open,0,0
+LQD,yfinance_adjusted,High,0,0
+LQD,yfinance_adjusted,Low,0,0
+LQD,yfinance_adjusted,Close,0,0
+LQD,yfinance_adjusted,Volume,0,0
+VIX,cboe_csv,Open,0,0
+VIX,cboe_csv,High,0,0
+VIX,cboe_csv,Low,0,0
+VIX,cboe_csv,Close,0,0

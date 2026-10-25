@@ -1,0 +1,284 @@
+{
+  "version": "04-panels-v1",
+  "run_utc": "2026-10-25T02:35:16.549790+00:00",
+  "python": "3.12.10",
+  "pandas": "3.0.6",
+  "numpy": "2.5.4",
+  "source_feature_version": "03-features-v2",
+  "feature_manifest_sha256": "bf5fafdb686fc66b78cb43f4db443321227bf15b6653fe488e48e0356405ac14",
+  "protected_upstream_hashes": {
+    "data/interim/sector_features.csv": "dda1d353a9680cf77a4bf091cd4537840c37bb52d911c7bc5e06df108bacaade",
+    "data/interim/prediction_targets.csv": "6b8d65fcd434dd068f28d19562791b802cdbf88c363ec7b21d0262f7344fbdc0",
+    "data/interim/feature_validity.csv": "bb02d8f71e1c7c33bcba50e579005bf1f9a957232aab37575f6a50ac9b772145",
+    "notebooks/feature_checks/feature_sets.json": "c66fa460d9748343c17a0ca00d099c7f5de512709e5843402a62ad3c8585479a",
+    "notebooks/feature_checks/feature_manifest.json": "bf5fafdb686fc66b78cb43f4db443321227bf15b6653fe488e48e0356405ac14",
+    "data/interim/etf_prices_aligned.csv": "c09a1ff66e321732b3c4ee189dbe8d6792fe7c4fe9895422de18a5849773099e"
+  },
+  "keys": [
+    "date",
+    "ticker"
+  ],
+  "rows": 46962,
+  "rows_per_sector": 5218,
+  "shared_columns": 23,
+  "input_files": 27,
+  "predictor_counts": {
+    "S0": 57,
+    "S1": 97,
+    "S2": 102
+  },
+  "export_policy": "Shared labels/metadata + per-target per-scheme pure predictors; full panel reconstructed by keys.",
+  "labels_independently_verified": 46943,
+  "validations": 20,
+  "no_rows_dropped": true,
+  "no_imputation": true,
+  "no_fitted_preprocessing": true,
+  "monthly_schedule": "Previous SPY trading day 18:00 New York before each prediction month; expanding training from 2008.",
+  "outputs": [
+    {
+      "file": "data/processed/model_panel.csv",
+      "rows": 46962,
+      "columns": 23,
+      "bytes": 11424343,
+      "sha256": "3e15a99d21e0d088768058b956540a384c00c3caef04163d9d4069f14189e4be"
+    },
+    {
+      "file": "data/processed/model_inputs/XLB_S0.csv",
+      "rows": 5218,
+      "columns": 59,
+      "bytes": 6440153,
+      "sha256": "86cd63ddc552d2121564b11ab57e59d4449d1a5b9e3881f25e87bc81d19836d3"
+    },
+    {
+      "file": "data/processed/model_inputs/XLB_S1.csv",
+      "rows": 5218,
+      "columns": 99,
+      "bytes": 10977512,
+      "sha256": "51def19bd436dbefebff9e5cb06289c31263348a6fae48eea9bc91b6a0ea54ed"
+    },
+    {
+      "file": "data/processed/model_inputs/XLB_S2.csv",
+      "rows": 5218,
+      "columns": 104,
+      "bytes": 11427790,
+      "sha256": "71631b31667ff9250ec29136b50505e1fc6dcb3d7269ae4b6946bd3162534084"
+    },
+    {
+      "file": "data/processed/model_inputs/XLE_S0.csv",
+      "rows": 5218,
+      "columns": 59,
+      "bytes": 6431995,
+      "sha256": "4403d64f2a8d9be676410a2859b2804f47fec4e3a7120aee0559958cf5310488"
+    },
+    {
+      "file": "data/processed/model_inputs/XLE_S1.csv",
+      "rows": 5218,
+      "columns": 99,
+      "bytes": 10970055,
+      "sha256": "316deef89707f7ced71b25921add7aeea6a5e004a33f15b92a5f2914c3d30cfd"
+    },
+    {
+      "file": "data/processed/model_inputs/XLE_S2.csv",
+      "rows": 5218,
+      "columns": 104,
+      "bytes": 11414715,
+      "sha256": "1b06fab7d447e94e6fde50fd7ac475d0bc240ff788872c2ad3be94ee2a702143"
+    },
+    {
+      "file": "data/processed/model_inputs/XLF_S0.csv",
+      "rows": 5218,
+      "columns": 59,
+      "bytes": 6424729,
+      "sha256": "e7084cd286f586c913a10ad8f97133b1d85f6687899178c8d03221eaf8ebac37"
+    },
+    {
+      "file": "data/processed/model_inputs/XLF_S1.csv",
+      "rows": 5218,
+      "columns": 99,
+      "bytes": 10963962,
+      "sha256": "f1c9425d3a8224bf414d0a1cb0657b75e2dffd736101e936785861071f84d787"
+    },
+    {
+      "file": "data/processed/model_inputs/XLF_S2.csv",
+      "rows": 5218,
+      "columns": 104,
+      "bytes": 11412823,
+      "sha256": "6df2bfcce3c884437e98515f815773bc0157e0fdbad92b3874c5572acc335b5a"
+    },
+    {
+      "file": "data/processed/model_inputs/XLI_S0.csv",
+      "rows": 5218,
+      "columns": 59,
+      "bytes": 6446364,
+      "sha256": "7c23a5781f8fa894246c3094755c6218750dfdc1b1e1dfd2843f47b38d5f5633"
+    },
+    {
+      "file": "data/processed/model_inputs/XLI_S1.csv",
+      "rows": 5218,
+      "columns": 99,
+      "bytes": 10981952,
+      "sha256": "12daafe9e3eefc428bf3bd411cb3ab26bbcea2de942d6aa6a37041f921732711"
+    },
+    {
+      "file": "data/processed/model_inputs/XLI_S2.csv",
+      "rows": 5218,
+      "columns": 104,
+      "bytes": 11432895,
+      "sha256": "19a45f10894a7532ee7007450d9be21d9dd86a3fc3b27d7e03493aa47345b2bd"
+    },
+    {
+      "file": "data/processed/model_inputs/XLK_S0.csv",
+      "rows": 5218,
+      "columns": 59,
+      "bytes": 6437162,
+      "sha256": "184b92b1f10310dd7ecedad0594ef55784f5bf3a21ac8fb67a6729987fae26c2"
+    },
+    {
+      "file": "data/processed/model_inputs/XLK_S1.csv",
+      "rows": 5218,
+      "columns": 99,
+      "bytes": 10975418,
+      "sha256": "fcd932db4055e4df5907d4fde3a9143ba0c1b13eb161437eb993a8cab0d5b621"
+    },
+    {
+      "file": "data/processed/model_inputs/XLK_S2.csv",
+      "rows": 5218,
+      "columns": 104,
+      "bytes": 11424181,
+      "sha256": "e84829d9435dcc0c47a67c28d7d8c0212eae259a3106276fdab873fc3cf74063"
+    },
+    {
+      "file": "data/processed/model_inputs/XLP_S0.csv",
+      "rows": 5218,
+      "columns": 59,
+      "bytes": 6455582,
+      "sha256": "0e13eba2305c7db849f68db70d42128f27b4904dace0adbe5b4ac4c8d0b03dc3"
+    },
+    {
+      "file": "data/processed/model_inputs/XLP_S1.csv",
+      "rows": 5218,
+      "columns": 99,
+      "bytes": 10989928,
+      "sha256": "7001ac55beac1855a6b07c3fa5f99b8c198b653f45920f4b486b70d484477869"
+    },
+    {
+      "file": "data/processed/model_inputs/XLP_S2.csv",
+      "rows": 5218,
+      "columns": 104,
+      "bytes": 11440545,
+      "sha256": "9d0fca66f8f01c0e824c1bfa0f32569535f295e8cacde247b04772232f383086"
+    },
+    {
+      "file": "data/processed/model_inputs/XLU_S0.csv",
+      "rows": 5218,
+      "columns": 59,
+      "bytes": 6446898,
+      "sha256": "7595a10207625221e1778494c68136a75339d19ce819410fded05582efc4b93b"
+    },
+    {
+      "file": "data/processed/model_inputs/XLU_S1.csv",
+      "rows": 5218,
+      "columns": 99,
+      "bytes": 10982336,
+      "sha256": "2bf1dd466862a5e02f0e07cfff5ac8711d3c5459f5bed38c169988e4f500d5a2"
+    },
+    {
+      "file": "data/processed/model_inputs/XLU_S2.csv",
+      "rows": 5218,
+      "columns": 104,
+      "bytes": 11429610,
+      "sha256": "4976a31e422b5ee14bfd44c1b8a2196a29823024d01811879012771383dc417f"
+    },
+    {
+      "file": "data/processed/model_inputs/XLV_S0.csv",
+      "rows": 5218,
+      "columns": 59,
+      "bytes": 6451152,
+      "sha256": "d61ee26987d800405a8633c2cfa845b4f1277be7e4677f6b9b93c8dfbcde5ab6"
+    },
+    {
+      "file": "data/processed/model_inputs/XLV_S1.csv",
+      "rows": 5218,
+      "columns": 99,
+      "bytes": 10986155,
+      "sha256": "53d3b542edf3ca44b92079780741e74d89562f3d2dd4d57f0c0a763791e98ae5"
+    },
+    {
+      "file": "data/processed/model_inputs/XLV_S2.csv",
+      "rows": 5218,
+      "columns": 104,
+      "bytes": 11435551,
+      "sha256": "f82ed72fb2ca9bc118ffbd13748e95d067ec86e23f5823851a482107d241a77a"
+    },
+    {
+      "file": "data/processed/model_inputs/XLY_S0.csv",
+      "rows": 5218,
+      "columns": 59,
+      "bytes": 6442687,
+      "sha256": "e0fa54b45969ae7ae1a391ad7f812a0c23ea06d7b59b5cb06c07e811068996b3"
+    },
+    {
+      "file": "data/processed/model_inputs/XLY_S1.csv",
+      "rows": 5218,
+      "columns": 99,
+      "bytes": 10978884,
+      "sha256": "e480043307b74e31ab372cb193dbb49a4dc26f639e967f7fe182ed1d9d3593ca"
+    },
+    {
+      "file": "data/processed/model_inputs/XLY_S2.csv",
+      "rows": 5218,
+      "columns": 104,
+      "bytes": 11428951,
+      "sha256": "0e011406bd812fd2565277867d4303e448d79abeff9b01f0148f4e13d9278622"
+    },
+    {
+      "file": "data/processed/panel_spec.json",
+      "rows": null,
+      "columns": null,
+      "bytes": 75781,
+      "sha256": "a5587fd3d669097bf94df7c8444ec41edd77f46d23e549a56c4e94f4cd0d7327"
+    },
+    {
+      "file": "notebooks/panel_checks/panel_summary.csv",
+      "rows": 36,
+      "columns": 8,
+      "bytes": 1942,
+      "sha256": "f0bbbd6c6f66966ea0de22f2844f2b931cd91696df75503300c9bdf7a7103a22"
+    },
+    {
+      "file": "notebooks/panel_checks/csv_roundtrip_checks.csv",
+      "rows": 27,
+      "columns": 7,
+      "bytes": 851,
+      "sha256": "d86a9e49c76f0d32f01501724636bc3b963a81d244d815059d18b3c16ef3ed25"
+    },
+    {
+      "file": "notebooks/panel_checks/independent_label_checks.csv",
+      "rows": 9,
+      "columns": 3,
+      "bytes": 133,
+      "sha256": "1ac6f0481833eaa6eafaddb5ceac2f3c8d5c3c0d062fe727629818733d588767"
+    },
+    {
+      "file": "notebooks/panel_checks/monthly_training_eligibility.csv",
+      "rows": 945,
+      "columns": 10,
+      "bytes": 93745,
+      "sha256": "13d3ec29fd128384d483ba5ec9f37420c4fa0aa9cd55190c8a051addf1ea5536"
+    },
+    {
+      "file": "notebooks/panel_checks/panel_preview.csv",
+      "rows": 45,
+      "columns": 7,
+      "bytes": 2271,
+      "sha256": "60f8f54fca6c909596fdd824adcdca02a9a58344b0f9d412da243a6c727140c0"
+    },
+    {
+      "file": "notebooks/panel_checks/validation_checks.csv",
+      "rows": 20,
+      "columns": 3,
+      "bytes": 2519,
+      "sha256": "2293ca25f66777b1e48d81b0dfc35f1206e64ad851a2850f183dc7f5f54dd82d"
+    }
+  ]
+}

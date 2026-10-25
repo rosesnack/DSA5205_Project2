@@ -1,0 +1,7 @@
+ticker,date,reported_split_ratio,classification,previous_close,current_open,open_over_previous_close,treatment,volume_treatment
+XLB,2025-12-05,2,ordinary_split,44.235000610351562,44.340000152587891,1.0023736756140511,retain_provider_units_no_second_adjustment,retain_provider_volume; dollar_volume_is_proxy
+XLE,2025-12-05,2,ordinary_split,46.110000610351562,46.029998779296875,0.99826497874656872,retain_provider_units_no_second_adjustment,retain_provider_volume; dollar_volume_is_proxy
+XLF,2016-09-19,1.2310000000000001,in_kind_distribution,19.187652587890625,19.180000305175781,0.99960118713428903,cross_event_returns_invalid,retain_provider_volume; dollar_volume_is_proxy
+XLK,2025-12-05,2,ordinary_split,145.53500366210938,146.21000671386719,1.0046380804258264,retain_provider_units_no_second_adjustment,retain_provider_volume; dollar_volume_is_proxy
+XLU,2025-12-05,2,ordinary_split,43.709999084472656,43.720001220703125,1.0002288294770068,retain_provider_units_no_second_adjustment,retain_provider_volume; dollar_volume_is_proxy
+XLY,2025-12-05,2,ordinary_split,119.06999969482422,119.18000030517578,1.000923831449009,retain_provider_units_no_second_adjustment,retain_provider_volume; dollar_volume_is_proxy

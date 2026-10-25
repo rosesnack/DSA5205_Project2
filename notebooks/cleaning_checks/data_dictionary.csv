@@ -1,0 +1,61 @@
+file,column,dtype,null_rows,definition
+data/interim/etf_prices_aligned.csv,date,datetime64[us],0,New York trading date on the SPY master calendar.
+data/interim/etf_prices_aligned.csv,open,float64,318,Open in supplier split-normalized units; not dividend-adjusted.
+data/interim/etf_prices_aligned.csv,high,float64,318,High in supplier split-normalized units; not dividend-adjusted.
+data/interim/etf_prices_aligned.csv,low,float64,318,Low in supplier split-normalized units; not dividend-adjusted.
+data/interim/etf_prices_aligned.csv,close,float64,318,Close in supplier split-normalized units; not dividend-adjusted.
+data/interim/etf_prices_aligned.csv,adj_close,float64,318,Supplier-adjusted close from the same raw snapshot.
+data/interim/etf_prices_aligned.csv,volume,Int64,318,Volume in supplier share units; not rescaled for dividends.
+data/interim/etf_prices_aligned.csv,dividends,float64,318,Cash dividend per share on the ex-date in supplier units; zero means no event.
+data/interim/etf_prices_aligned.csv,stock_splits,float64,318,Reported action ratio; XLF 1.231 is not an ordinary split.
+data/interim/etf_prices_aligned.csv,capital_gains,float64,318,Capital-gain distribution; currently zero; nonzero observations require review.
+data/interim/etf_prices_aligned.csv,invalid_reason,str,0,"Quality or invalidity reason; metadata, not a predictor."
+data/interim/etf_prices_aligned.csv,adjustment_factor,float64,318,adj_close / close from the same snapshot; for adjustment checks.
+data/interim/etf_prices_aligned.csv,adjusted_open,float64,318,Raw field * adjustment_factor from the same snapshot; verification only.
+data/interim/etf_prices_aligned.csv,adjusted_high,float64,318,Raw field * adjustment_factor from the same snapshot; verification only.
+data/interim/etf_prices_aligned.csv,adjusted_low,float64,318,Raw field * adjustment_factor from the same snapshot; verification only.
+data/interim/etf_prices_aligned.csv,adjusted_close,float64,318,Raw field * adjustment_factor from the same snapshot; verification only.
+data/interim/etf_prices_aligned.csv,special_action,bool,0,XLF in-kind distribution on 2016-09-19.
+data/interim/etf_prices_aligned.csv,volume_zero,bool,0,"Observed zero volume, distinct from missing volume."
+data/interim/etf_prices_aligned.csv,ticker,str,0,"Asset ticker; sector, market and auxiliary ETFs have distinct roles."
+data/interim/etf_prices_aligned.csv,observed,bool,0,True for an original observation; false for an added calendar row.
+data/interim/etf_prices_aligned.csv,ohlc_valid,bool,0,All OHLC fields are present; cross-event returns may still be invalid.
+data/interim/etf_prices_aligned.csv,quote_available_at,str,318,"Assumed quote availability at 18:00 New York time, with timezone."
+data/interim/etf_base_returns.csv,date,datetime64[us],0,New York trading date on the SPY master calendar.
+data/interim/etf_base_returns.csv,ticker,str,0,"Asset ticker; sector, market and auxiliary ETFs have distinct roles."
+data/interim/etf_base_returns.csv,previous_date,datetime64[us],15,"Previous SPY trading date, not the previous nonmissing observation."
+data/interim/etf_base_returns.csv,ret_cc_cash,float64,334,(current close + dividend) / previous SPY-date close - 1; exit-date indexed.
+data/interim/etf_base_returns.csv,ret_oo_cash,float64,334,(current open + dividend) / previous SPY-date open - 1; exit-date indexed.
+data/interim/etf_base_returns.csv,ret_overnight_cash,float64,334,(current open + dividend) / previous SPY-date close - 1; cash accrual.
+data/interim/etf_base_returns.csv,ret_intraday_price,float64,318,current close / current open - 1; no entry-day ex-dividend entitlement.
+data/interim/etf_base_returns.csv,ret_cc_cash_valid,bool,0,Validity of the corresponding return; complete windows require every needed day.
+data/interim/etf_base_returns.csv,ret_cc_cash_invalid_reason,str,0,Invalidity reason for the corresponding return; not a predictor.
+data/interim/etf_base_returns.csv,ret_oo_cash_valid,bool,0,Validity of the corresponding return; complete windows require every needed day.
+data/interim/etf_base_returns.csv,ret_oo_cash_invalid_reason,str,0,Invalidity reason for the corresponding return; not a predictor.
+data/interim/etf_base_returns.csv,ret_overnight_cash_valid,bool,0,Validity of the corresponding return; complete windows require every needed day.
+data/interim/etf_base_returns.csv,ret_overnight_cash_invalid_reason,str,0,Invalidity reason for the corresponding return; not a predictor.
+data/interim/etf_base_returns.csv,ret_intraday_price_valid,bool,0,Validity of the corresponding return; complete windows require every needed day.
+data/interim/etf_base_returns.csv,invalid_reason,str,0,"Quality or invalidity reason; metadata, not a predictor."
+data/interim/vix_aligned.csv,date,datetime64[us],0,New York trading date on the SPY master calendar.
+data/interim/vix_aligned.csv,vix_close,float64,0,"Official Cboe VIX close level, not an investable asset return."
+data/interim/vix_aligned.csv,vix_close_valid,bool,0,Whether VIX close is available.
+data/interim/vix_aligned.csv,available_at,str,0,"Assumed VIX-close availability at 18:00 New York time, with timezone."
+data/interim/dgs3mo_observations.csv,observation_date,datetime64[us],0,"FRED rate observation date, distinct from its availability date."
+data/interim/dgs3mo_observations.csv,raw_value,str,0,"Original FRED string retained for audit, not a predictor."
+data/interim/dgs3mo_observations.csv,annual_yield_pct,float64,222,DGS3MO annual percentage yield; 4.03 means 4.03%; zero is valid.
+data/interim/dgs3mo_observations.csv,assumed_release_date,datetime64[us],0,First H.15 publication day after observation; available after that day ends.
+data/interim/dgs3mo_observations.csv,observation_on_spy_date,bool,0,Whether the native observation date is a SPY trading date.
+data/interim/dgs3mo_observations.csv,rate_observed,bool,0,Whether the source rate is observed; zero is valid.
+data/interim/dgs3mo_observations.csv,invalid_reason,str,0,"Quality or invalidity reason; metadata, not a predictor."
+data/interim/risk_free_open_intervals.csv,entry_date,datetime64[us],0,Entry-open date used to match a previously released rate.
+data/interim/risk_free_open_intervals.csv,exit_date,datetime64[us],1,Next SPY open; missing at the data cutoff without October extension.
+data/interim/risk_free_open_intervals.csv,observation_date,datetime64[us],2,"FRED rate observation date, distinct from its availability date."
+data/interim/risk_free_open_intervals.csv,annual_yield_pct,float64,2,DGS3MO annual percentage yield; 4.03 means 4.03%; zero is valid.
+data/interim/risk_free_open_intervals.csv,assumed_release_date,datetime64[us],2,First H.15 publication day after observation; available after that day ends.
+data/interim/risk_free_open_intervals.csv,holding_calendar_days,Int64,1,Calendar days in the open-to-open interval; Friday to Monday is three.
+data/interim/risk_free_open_intervals.csv,rate_age_days,Int64,2,Calendar days from rate observation to entry.
+data/interim/risk_free_open_intervals.csv,rate_stale_over_7d,boolean,0,Flag for a rate older than seven days; no automatic exclusion.
+data/interim/risk_free_open_intervals.csv,rate_known_at_entry,bool,0,Whether a released rate is available under the stated timing assumption.
+data/interim/risk_free_open_intervals.csv,interval_valid,bool,0,Both a known rate and an interval exit date are available.
+data/interim/risk_free_open_intervals.csv,risk_free_return_act365,float64,3,annual_yield_pct / 100 * calendar days / 365; cash-return proxy.
+data/interim/risk_free_open_intervals.csv,invalid_reason,str,0,"Quality or invalidity reason; metadata, not a predictor."

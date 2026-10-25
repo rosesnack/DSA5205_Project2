@@ -1,0 +1,180 @@
+{
+  "version": "03-features-v2",
+  "run_utc": "2026-10-25T02:35:03.137298+00:00",
+  "python": "3.12.10",
+  "pandas": "3.0.6",
+  "numpy": "2.5.4",
+  "source_hashes": {
+    "data/interim/etf_prices_aligned.csv": "c09a1ff66e321732b3c4ee189dbe8d6792fe7c4fe9895422de18a5849773099e",
+    "data/interim/etf_base_returns.csv": "ef256a8c73d3d3ae3b8559f286f39c589f31ced637ed2eefa91103e29124a826",
+    "data/interim/vix_aligned.csv": "3d7760de475d69a3bc2dfaf861f91b35311b178df52ba365695f7249f003e031",
+    "data/interim/dgs3mo_observations.csv": "c3726fa6b6ec227b7c5524d6d5b27997eb7057951fc643db6298ef36101a7c3f",
+    "data/interim/risk_free_open_intervals.csv": "874e49b3fea6674b02dbad78aa615890e831cab29a7224e1f257cc51df6a9896"
+  },
+  "audit_source_hashes": {
+    "data/raw/XLB_2006-01-01_2026-09-30_yahoo_chart.json": "30c342042d4cf822147f119b9c21f5f2a0e51d643aa001754185537efb210b51",
+    "data/raw/XLE_2006-01-01_2026-09-30_yahoo_chart.json": "1eac3557ee579bc280538ad0a504c50d9d90492788e05677271c2bc5bbd7fd9f",
+    "data/raw/XLK_2006-01-01_2026-09-30_yahoo_chart.json": "40180a03c4e2ec17e630c5aba96fae61b12e3d1ff2a191246f4e7957f9c8c86e",
+    "data/raw/XLU_2006-01-01_2026-09-30_yahoo_chart.json": "78567888ed1138f2b6bbcc905909c423697c186a7594885ba635241c4be8c3f0",
+    "data/raw/XLY_2006-01-01_2026-09-30_yahoo_chart.json": "639e4295b3872e8d4142aa59dfb176d5680ad54c8a812ac0407c25b204942e4a",
+    "data/raw/XLI_2006-01-01_2026-09-30_yahoo_chart.json": "e571ba8674e4de59ae5f6f8c28f2cf5caaaa4a2df65807b1c599fa058e831515",
+    "data/raw/XLP_2006-01-01_2026-09-30_yahoo_chart.json": "cbe523748f36b8d07183d950d059bff648feb7bc73ed399f811a9a8ea92744f7",
+    "data/raw/XLV_2006-01-01_2026-09-30_yahoo_chart.json": "db163eebbc24223efd6a35c9636b54a0002c471996c8fcb53b733106c9fb8b22",
+    "data/raw/SPY_2006-01-01_2026-09-30_yahoo_chart.json": "acf9006263f44572161e546870bf493677c012c0671bc11fd3bdc139d8a0e016"
+  },
+  "cleaning_manifest_sha256": "acf04dc0d8c233bac3bc36f5aab7ece8b2a59440272d005b198dbbf57e189d79",
+  "definition_pdf_sha256": null,
+  "definition_note": "Definitions are recorded in feature_catalog.csv.",
+  "splits": {
+    "warmup": "2006-2007",
+    "train": "2008-2017",
+    "validation": "2018-2022",
+    "test": "2023-2026-09-30"
+  },
+  "feature_counts": {
+    "S0": 57,
+    "S1": 97,
+    "S2": 102,
+    "physical": 107
+  },
+  "feature_storage_format": "csv",
+  "feature_csv_read_options": {
+    "parse_dates": [
+      "date"
+    ],
+    "dtype": {
+      "ticker": "str"
+    },
+    "low_memory": false,
+    "float_precision": "round_trip"
+  },
+  "feature_csv_exact_roundtrip_verified": true,
+  "validity_schema": {
+    "columns": 14,
+    "missing_details": "notebooks/feature_checks/missing_feature_details.csv",
+    "reason_dictionary": "notebooks/feature_checks/reason_codes.csv",
+    "common_feature_mask": "common_features_valid",
+    "common_scoring_mask": "common_scoreable"
+  },
+  "preprocessing": "No fitted preprocessing is applied; scaling, clipping and selection use historical training windows only.",
+  "data_cutoff": "2026-09-30",
+  "label": "sector cash OO(t+1,t+2) - SPY cash OO(t+1,t+2)",
+  "beta_note": "SPY-relative returns retain residual market exposure; beta neutrality is not imposed.",
+  "validations": 34,
+  "outputs": [
+    {
+      "file": "data/interim/sector_features.csv",
+      "rows": 46962,
+      "columns": 109,
+      "sha256": "dda1d353a9680cf77a4bf091cd4537840c37bb52d911c7bc5e06df108bacaade"
+    },
+    {
+      "file": "data/interim/prediction_targets.csv",
+      "rows": 46962,
+      "columns": 14,
+      "sha256": "6b8d65fcd434dd068f28d19562791b802cdbf88c363ec7b21d0262f7344fbdc0"
+    },
+    {
+      "file": "data/interim/feature_validity.csv",
+      "rows": 46962,
+      "columns": 14,
+      "sha256": "bb02d8f71e1c7c33bcba50e579005bf1f9a957232aab37575f6a50ac9b772145"
+    },
+    {
+      "file": "notebooks/feature_checks/feature_sets.json",
+      "rows": null,
+      "columns": null,
+      "sha256": "c66fa460d9748343c17a0ca00d099c7f5de512709e5843402a62ad3c8585479a"
+    },
+    {
+      "file": "notebooks/feature_checks/feature_catalog.csv",
+      "rows": 107,
+      "columns": 13,
+      "sha256": "01d9c6c5b6ee2b2e93a775e449cc38a075ed34bc3e0b64f8ca4d87ffeb202782"
+    },
+    {
+      "file": "notebooks/feature_checks/metadata_dictionary.csv",
+      "rows": 35,
+      "columns": 4,
+      "sha256": "a6b9c45155e556422bb66976e5676a7b158a40f1ecb55231b9bddfaf1a50d20d"
+    },
+    {
+      "file": "notebooks/feature_checks/sample_counts.csv",
+      "rows": 108,
+      "columns": 8,
+      "sha256": "1351de228191e5013d1956e2fa92a89c4d16d4892386a4cfabac3e7fd24a0dbe"
+    },
+    {
+      "file": "notebooks/feature_checks/feature_diagnostics.csv",
+      "rows": 918,
+      "columns": 8,
+      "sha256": "76d349257659e465446a08a44e1bafecde41395c860bc89e0a62469f2872787e"
+    },
+    {
+      "file": "notebooks/feature_checks/feature_preview.csv",
+      "rows": 45,
+      "columns": 10,
+      "sha256": "91993ace07620778438a0f0f708eb005879fffb2198e109f9fad98eab19bd832"
+    },
+    {
+      "file": "notebooks/feature_checks/numeric_spot_checks.csv",
+      "rows": 10,
+      "columns": 6,
+      "sha256": "b52b175397e2b884a395b19b05b029b8cb72f97af5ae077efc62789dc0b39e99"
+    },
+    {
+      "file": "notebooks/feature_checks/causality_checks.csv",
+      "rows": 36,
+      "columns": 6,
+      "sha256": "d85eeb8d0d39e32f030e2d184178d5635db7298d6a8c7f2f356b10324cbad485"
+    },
+    {
+      "file": "notebooks/feature_checks/label_maturity_checks.csv",
+      "rows": 2,
+      "columns": 2,
+      "sha256": "241b7b2040d7087c67c2e0b88e7e3c8ba9278f331ad16fa5e78e00234a8e73fd"
+    },
+    {
+      "file": "notebooks/feature_checks/validation_checks.csv",
+      "rows": 34,
+      "columns": 3,
+      "sha256": "cad96b7a712e73743fc14060c216e9bb8aab3a14cb481bc4de23a76813ed4e4c"
+    },
+    {
+      "file": "notebooks/feature_checks/missing_feature_details.csv",
+      "rows": 33183,
+      "columns": 4,
+      "sha256": "f5bcbda7f41634ab53befc89e9548754b52bb7e5cacd65ec13024d150375dd5c"
+    },
+    {
+      "file": "notebooks/feature_checks/reason_codes.csv",
+      "rows": 11,
+      "columns": 3,
+      "sha256": "1270b69bef2053dc6cbfd8dbd021055c15cbee8de59597515fd472abb3739e92"
+    },
+    {
+      "file": "notebooks/feature_checks/common_sample_counts.csv",
+      "rows": 36,
+      "columns": 6,
+      "sha256": "45fb1770d856c4a413fb9eb1af47d32b1f23f04a11cd0920a72771f517a129a5"
+    },
+    {
+      "file": "notebooks/feature_checks/split_window_daily.csv",
+      "rows": 360,
+      "columns": 12,
+      "sha256": "ccb5a70d2521debaee2965403318fb17b55f0e3686bdf83eca5251227ce56051"
+    },
+    {
+      "file": "notebooks/feature_checks/split_window_summary.csv",
+      "rows": 27,
+      "columns": 23,
+      "sha256": "00ee34e01cbf5ad77572d47f5665cb57fd5367d1dfdd95e7b0b80215d0aa9208"
+    },
+    {
+      "file": "notebooks/feature_checks/split_unit_checks.csv",
+      "rows": 9,
+      "columns": 16,
+      "sha256": "095723957ac0116f557f6abe5438f1cfe25ecf35990a93295431eaea344bab8c"
+    }
+  ]
+}
