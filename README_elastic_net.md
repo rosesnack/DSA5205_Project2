@@ -1,30 +1,77 @@
-# Elastic Net contribution — notebook 03
+# 03 · Elastic Net: sector relative-return prediction
 
-`notebooks/03_elastic_net.ipynb` implements the complete forecast pipeline and prediction diagnostics for S0/S1/S2. Both the main model and Section 9 use:
+**Contribution scope:** Elastic Net modelling, time-ordered validation, forecast evaluation, diagnostics and forecast export.
 
-```python
-ALPHAS = [1e-5, 1e-4, 1e-3]
-L1_RATIOS = [0.2, 0.4, 0.6, 0.8] 
-```
+This notebook continues from the frozen outputs of notebooks 01–02 and implements the complete Elastic Net forecasting pipeline for the three pre-specified feature schemes S0, S1 and S2. It ends at model forecasts, statistical prediction diagnostics and export to `yae`. Portfolio construction, trading-threshold selection, position persistence, SPY netting and cost-aware backtesting belong to `yae`'s unified trading pipeline and are not performed here.
 
-The main validation search has 12 parameter pairs per scheme, 36 scheme/parameter combinations and 19,440 monthly-sector fits. Choose one pair per scheme by pooled 2018–2022 validation MSE; exact ties prefer larger alpha then larger rho. Retain all three schemes. Monthly expanding training fits StandardScaler only on eligible historical observations with mature labels. Test evaluation covers 2023–September 2026 with locked hyperparameters (1,215 monthly-sector fits).
+## Economic motivation
 
-Section 9 uses the same four rho values for expanding, rolling 5-year and rolling 3-year windows, alongside four Ridge penalties. There are 144 configurations and 77,760 monthly-sector validation fits, including 58,320 Elastic Net fits. All windows use identical scoring keys and the common expanding-mean baseline. These validation-selected comparisons are descriptive; they do not replace the main locked test models.
+The predictive question is whether sector-specific information and additional cross-sector information improve forecasts of next-period sector-minus-SPY returns. Because overlapping return windows, common market conditions and related sector movements generate correlated predictors, Elastic Net is used to combine L1 sparse selection with L2 coefficient stabilization.
 
-## Run
+For standardized predictors, sklearn Elastic Net minimizes
 
-Use Python 3.12.10 and the dependencies in `requirements_elastic_net.txt`. Open the notebook from the repository root or `notebooks/`, select the project Python kernel, and run all cells in order. The delivered notebook contains the executed outputs. The run manifest records the execution environment, input hashes, grid and reproduction provenance.
+\[
+\frac{1}{2n}\|y-b-X\beta\|_2^2
++
+\alpha\rho\|\beta\|_1
++
+\frac{\alpha(1-\rho)}{2}\|\beta\|_2^2,
+\]
 
-## Outputs
+where \(\rho\) is `l1_ratio`. The intercept is unpenalized and the target remains in decimal-return units. This is a predictive framework rather than a causal identification strategy.
 
-All current results are in `results/elastic_net/`:
+## Feature schemes
 
-- `validation_grid.csv`, `selected_hyperparameters.csv`, `design_config.json`, `locked_selection.json`: complete search and selected parameters.
-- `fit_audit.csv`, `monthly_eligibility_crosscheck.csv`, `monthly_coefficients.csv`: monthly training, label maturity, numerical convergence and coefficients.
-- `forecast_metrics.csv`, `sector_forecast_metrics.csv`, rolling losses, uncertainty and coefficient diagnostics, plus six main figures.
-- `elastic_net_predictions.csv`: clean handoff with columns `date,ticker,model,scheme,model_month,fit_cutoff,y_hat`.
-- `elastic_net_predictions_full.csv`: forecasts with split, parameters, targets, historical baseline, scoring eligibility and holding dates.
-- `report_summary.md`, `run_manifest.json`: computed findings and integrity checks.
-- `exploratory_validation/`: Section 9's 144-configuration validation comparison, fit audits, coefficient stability and six figures, including four-ratio sensitivity curves.
+Three pre-specified schemes are retained throughout:
 
-`y_hat` is a decimal sector-minus-SPY cash-return forecast. The last two signal dates retain forecasts but are unscored. Portfolio construction, trading thresholds and unified cost-aware backtesting belong to yae.
+- **S0:** 57 own-sector and shared market-state predictors.
+- **S1:** 97 predictors, adding information from other sectors.
+- **S2:** 102 predictors, adding relationship-summary features.
+
+The objective is not to select one overall winning scheme. Instead, each scheme receives its own validation-selected Elastic Net hyperparameters so that their subsequent forecast performance can be compared on identical observations.
+
+## Hyperparameter selection
+
+Both the main expanding-window model and the Elastic Net component of Section 9 use the same grid:
+
+\[
+\alpha \in \{10^{-5},10^{-4},10^{-3}\},
+\qquad
+\rho \in \{0.2,0.4,0.6,0.8\}.
+\]
+
+This gives 12 parameter pairs per scheme and 36 scheme/parameter combinations in the main validation search.
+
+For each scheme, one shared \((\alpha,\rho)\) pair is selected across its nine independently fitted sector models using pooled MSE over the 2018–2022 validation period. Exact numerical ties prefer the larger alpha and then the larger L1 ratio. The selected parameters are then locked before the 2023–September 2026 test evaluation.
+
+The current validation search selects
+
+- S0: `alpha = 0.001`, `rho = 0.8`
+- S1: `alpha = 0.001`, `rho = 0.8`
+- S2: `alpha = 0.001`, `rho = 0.8`
+
+The selected specification lies at the strong-regularization boundary of the preset grid and produces highly sparse fitted models. This boundary behaviour is therefore reported explicitly as a limitation of the current specification; absence of selected cross-sector coefficients should be interpreted conditional on this regularization design rather than as universal evidence that cross-sector information has no predictive value.
+
+## Time ordering and leakage control
+
+Training begins in 2008. Validation covers 2018–2022 and test evaluation covers 2023–September 2026.
+
+Models are refitted monthly using an expanding historical window. Each monthly fit occurs at the previous SPY trading day's 18:00 New York timestamp. Both the predictor observation and its target label must be available by the fitting cutoff. StandardScaler is fitted only on the eligible historical training observations for that fit, and the target is not standardized.
+
+No random cross-validation, full-sample scaling, future-label use or test-based hyperparameter selection is introduced.
+
+## Diagnostics and interpretation
+
+Prediction evaluation includes aggregate and sector-level RMSE, MAE, OOS \(R^2\), direction accuracy, rolling losses, coefficient sparsity and stability, and approximate uncertainty diagnostics.
+
+The validation-selected test models are highly sparse, with most monthly-sector fits containing only an intercept. S0, S1 and S2 consequently produce identical test forecasts under the selected specification. Sector-level diagnostics are therefore important for interpreting the aggregate result, including the concentration of negative OOS performance in XLF.
+
+These diagnostics describe the fitted models and sample period. They are not used to retune the locked test models.
+
+Section 9 provides additional **validation-only** diagnostics across expanding, rolling 5-year and rolling 3-year windows and includes Ridge comparisons. These comparisons are descriptive and do not replace the main locked Elastic Net test models.
+
+## Reproduction note
+
+The final notebook uses a unified four-value L1-ratio grid throughout the main model and Section 9. Earlier development runs had already inspected the test period before this final unified rerun. Therefore, the 2023–September 2026 test interval should not be described as a newly untouched holdout after the grid refinement.
+
+The final run records its environment, source-file hashes, selected parameters, fit counts, integrity checks and reproduction provenance in `results/elastic_net/run_manifest.json`.
