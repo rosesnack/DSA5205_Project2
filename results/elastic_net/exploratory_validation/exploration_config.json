@@ -1,0 +1,139 @@
+{
+  "scope": "validation diagnostics: regularization and training windows",
+  "validation": "2018-2022",
+  "windows": {
+    "expanding": null,
+    "rolling_5y": 5,
+    "rolling_3y": 3
+  },
+  "elastic_net_grid": [
+    [
+      1e-05,
+      0.2
+    ],
+    [
+      1e-05,
+      0.4
+    ],
+    [
+      1e-05,
+      0.6
+    ],
+    [
+      1e-05,
+      0.8
+    ],
+    [
+      0.0001,
+      0.2
+    ],
+    [
+      0.0001,
+      0.4
+    ],
+    [
+      0.0001,
+      0.6
+    ],
+    [
+      0.0001,
+      0.8
+    ],
+    [
+      0.001,
+      0.2
+    ],
+    [
+      0.001,
+      0.4
+    ],
+    [
+      0.001,
+      0.6
+    ],
+    [
+      0.001,
+      0.8
+    ]
+  ],
+  "ridge_lambdas": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "ridge_objective": "SSE/(2*n) + lambda*||beta||^2/2; intercept unpenalized",
+  "elastic_net_l1_ratios": [
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "elastic_net_alphas": [
+    1e-05,
+    0.0001,
+    0.001
+  ],
+  "candidates_per_scheme": 48,
+  "total_candidates": 144,
+  "monthly_fits": 77760,
+  "primary_selection": "pooled validation MSE within family/window/scheme",
+  "sensitivity_selection": "mean of sector MSE / common expanding-mean baseline MSE",
+  "common_baseline": "mature expanding historical mean for every window",
+  "tie_rule": "larger penalty then larger l1_ratio",
+  "seed": 5205,
+  "python": "3.12.10",
+  "sklearn": "1.9.1",
+  "source_hashes": {
+    "data/processed/panel_spec.json": "a5587fd3d669097bf94df7c8444ec41edd77f46d23e549a56c4e94f4cd0d7327",
+    "data/processed/model_panel.csv": "3e15a99d21e0d088768058b956540a384c00c3caef04163d9d4069f14189e4be",
+    "data/processed/model_inputs/XLB_S0.csv": "86cd63ddc552d2121564b11ab57e59d4449d1a5b9e3881f25e87bc81d19836d3",
+    "data/processed/model_inputs/XLB_S1.csv": "51def19bd436dbefebff9e5cb06289c31263348a6fae48eea9bc91b6a0ea54ed",
+    "data/processed/model_inputs/XLB_S2.csv": "71631b31667ff9250ec29136b50505e1fc6dcb3d7269ae4b6946bd3162534084",
+    "data/processed/model_inputs/XLE_S0.csv": "4403d64f2a8d9be676410a2859b2804f47fec4e3a7120aee0559958cf5310488",
+    "data/processed/model_inputs/XLE_S1.csv": "316deef89707f7ced71b25921add7aeea6a5e004a33f15b92a5f2914c3d30cfd",
+    "data/processed/model_inputs/XLE_S2.csv": "1b06fab7d447e94e6fde50fd7ac475d0bc240ff788872c2ad3be94ee2a702143",
+    "data/processed/model_inputs/XLF_S0.csv": "e7084cd286f586c913a10ad8f97133b1d85f6687899178c8d03221eaf8ebac37",
+    "data/processed/model_inputs/XLF_S1.csv": "f1c9425d3a8224bf414d0a1cb0657b75e2dffd736101e936785861071f84d787",
+    "data/processed/model_inputs/XLF_S2.csv": "6df2bfcce3c884437e98515f815773bc0157e0fdbad92b3874c5572acc335b5a",
+    "data/processed/model_inputs/XLI_S0.csv": "7c23a5781f8fa894246c3094755c6218750dfdc1b1e1dfd2843f47b38d5f5633",
+    "data/processed/model_inputs/XLI_S1.csv": "12daafe9e3eefc428bf3bd411cb3ab26bbcea2de942d6aa6a37041f921732711",
+    "data/processed/model_inputs/XLI_S2.csv": "19a45f10894a7532ee7007450d9be21d9dd86a3fc3b27d7e03493aa47345b2bd",
+    "data/processed/model_inputs/XLK_S0.csv": "184b92b1f10310dd7ecedad0594ef55784f5bf3a21ac8fb67a6729987fae26c2",
+    "data/processed/model_inputs/XLK_S1.csv": "fcd932db4055e4df5907d4fde3a9143ba0c1b13eb161437eb993a8cab0d5b621",
+    "data/processed/model_inputs/XLK_S2.csv": "e84829d9435dcc0c47a67c28d7d8c0212eae259a3106276fdab873fc3cf74063",
+    "data/processed/model_inputs/XLP_S0.csv": "0e13eba2305c7db849f68db70d42128f27b4904dace0adbe5b4ac4c8d0b03dc3",
+    "data/processed/model_inputs/XLP_S1.csv": "7001ac55beac1855a6b07c3fa5f99b8c198b653f45920f4b486b70d484477869",
+    "data/processed/model_inputs/XLP_S2.csv": "9d0fca66f8f01c0e824c1bfa0f32569535f295e8cacde247b04772232f383086",
+    "data/processed/model_inputs/XLU_S0.csv": "7595a10207625221e1778494c68136a75339d19ce819410fded05582efc4b93b",
+    "data/processed/model_inputs/XLU_S1.csv": "2bf1dd466862a5e02f0e07cfff5ac8711d3c5459f5bed38c169988e4f500d5a2",
+    "data/processed/model_inputs/XLU_S2.csv": "4976a31e422b5ee14bfd44c1b8a2196a29823024d01811879012771383dc417f",
+    "data/processed/model_inputs/XLV_S0.csv": "d61ee26987d800405a8633c2cfa845b4f1277be7e4677f6b9b93c8dfbcde5ab6",
+    "data/processed/model_inputs/XLV_S1.csv": "53d3b542edf3ca44b92079780741e74d89562f3d2dd4d57f0c0a763791e98ae5",
+    "data/processed/model_inputs/XLV_S2.csv": "f82ed72fb2ca9bc118ffbd13748e95d067ec86e23f5823851a482107d241a77a",
+    "data/processed/model_inputs/XLY_S0.csv": "e0fa54b45969ae7ae1a391ad7f812a0c23ea06d7b59b5cb06c07e811068996b3",
+    "data/processed/model_inputs/XLY_S1.csv": "e480043307b74e31ab372cb193dbb49a4dc26f639e967f7fe182ed1d9d3593ca",
+    "data/processed/model_inputs/XLY_S2.csv": "0e011406bd812fd2565277867d4303e448d79abeff9b01f0148f4e13d9278622"
+  },
+  "numerical_solver": {
+    "elastic_net_max_iter_retries": [
+      10000,
+      100000,
+      1000000
+    ],
+    "tol": 1e-06,
+    "precompute": true,
+    "ridge_reference_checks_against_sklearn": true,
+    "ridge_reference_check_scope": "first validation month, first sector; every window/scheme/lambda",
+    "ridge_reference_check_count": 36,
+    "ridge_reference_check_rtol": 1e-08,
+    "ridge_reference_check_atol": 1e-11
+  },
+  "minimum_required_training_rows": 252,
+  "minimum_training_rows_rationale": "Approximately one trading year of eligible observations; feasibility guard only, not a performance-tuning parameter.",
+  "actual_minimum_training_rows": {
+    "expanding": 2263,
+    "rolling_3y": 498,
+    "rolling_5y": 1003
+  }
+}

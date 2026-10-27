@@ -1,0 +1,9 @@
+{
+  "fits": 77760,
+  "candidates": 144,
+  "main_exports_unchanged": true,
+  "upstream_inputs_unchanged": true,
+  "validation_only": true,
+  "identical_scored_keys": true,
+  "mature_labels_only": true
+}

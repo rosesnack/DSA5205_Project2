@@ -1,0 +1,23 @@
+{
+  "selected_parameters": {
+    "S0": [
+      0.001,
+      0.8
+    ],
+    "S1": [
+      0.001,
+      0.8
+    ],
+    "S2": [
+      0.001,
+      0.8
+    ]
+  },
+  "retained_schemes": [
+    "S0",
+    "S1",
+    "S2"
+  ],
+  "selection_uses": "2018\u20132022 validation only; no overall scheme selection",
+  "config_sha256": "dc4933c542de7cbce8b02123518502bf74c7a7edef085b3cd92b0cb13f567b44"
+}
