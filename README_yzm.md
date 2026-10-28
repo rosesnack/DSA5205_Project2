@@ -4,14 +4,14 @@ This package prepares daily data for testing whether cross-sector information im
 
 ## Installation and execution
 
-Use Python 3.12. The package was developed with Python 3.12.10, and dependency versions are pinned in `requirements_yzm.txt`.
+Use Python 3.12. The package was developed with Python 3.12.10, and dependency versions are pinned in `requirements.txt`.
 
 From the repository root:
 
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements_yzm.txt
+python -m pip install -r requirements.txt
 python -m ipykernel install --sys-prefix --name dsa5205proj2-data --display-name "Python (DSA5205 Data)"
 python -m jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=dsa5205proj2-data --ExecutePreprocessor.timeout=900 notebooks/01_download_clean_data.ipynb
 python -m jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=dsa5205proj2-data --ExecutePreprocessor.timeout=900 notebooks/02_features_panel_data.ipynb

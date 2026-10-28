@@ -214,14 +214,14 @@ test_scored = joined.loc[
 
 ## 7. 复现与审计文件
 
-环境：Python 3.12.10；完整依赖见 [requirements_elastic_net.txt](requirements_elastic_net.txt)。当前记录使用 NumPy 2.5.4、pandas 3.0.6、scikit-learn 1.9.1。
+环境：Python 3.12.10；完整依赖见 [requirements.txt](requirements.txt)。当前记录使用 NumPy 2.5.4、pandas 3.0.6、scikit-learn 1.9.1。
 
 如需复现，从仓库根目录建立项目环境，再打开 Notebook：
 
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements_elastic_net.txt
+python -m pip install -r requirements.txt
 python -m notebook
 ```
 
@@ -249,7 +249,7 @@ python -m notebook
 
 - `notebooks/03_elastic_net.ipynb`
 - `README_elastic_net.md`
-- `requirements_elastic_net.txt`
+- `requirements.txt`
 - `results/elastic_net/` 中本次正式结果、第 9 节和第 10 节诊断
 - 现有上游数据与接口文件，保持与运行记录中的输入版本对应
 
