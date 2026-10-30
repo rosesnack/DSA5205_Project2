@@ -4,7 +4,6 @@
     "loss": "squared_error",
     "learning_rate": 0.03,
     "max_depth": 4,
-    "min_samples_leaf": 20,
     "max_bins": 127,
     "early_stopping": false,
     "max_features": 1.0,
@@ -21,52 +20,152 @@
   "grid": [
     {
       "max_leaf_nodes": 3,
+      "min_samples_leaf": 10,
       "l2_regularization": 0.0
     },
     {
       "max_leaf_nodes": 3,
+      "min_samples_leaf": 10,
       "l2_regularization": 1.0
     },
     {
       "max_leaf_nodes": 3,
+      "min_samples_leaf": 10,
+      "l2_regularization": 10.0
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 20,
+      "l2_regularization": 0.0
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 50,
+      "l2_regularization": 0.0
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 50,
+      "l2_regularization": 1.0
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 50,
       "l2_regularization": 10.0
     },
     {
       "max_leaf_nodes": 5,
+      "min_samples_leaf": 10,
       "l2_regularization": 0.0
     },
     {
       "max_leaf_nodes": 5,
+      "min_samples_leaf": 10,
       "l2_regularization": 1.0
     },
     {
       "max_leaf_nodes": 5,
+      "min_samples_leaf": 10,
+      "l2_regularization": 10.0
+    },
+    {
+      "max_leaf_nodes": 5,
+      "min_samples_leaf": 20,
+      "l2_regularization": 0.0
+    },
+    {
+      "max_leaf_nodes": 5,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0
+    },
+    {
+      "max_leaf_nodes": 5,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0
+    },
+    {
+      "max_leaf_nodes": 5,
+      "min_samples_leaf": 50,
+      "l2_regularization": 0.0
+    },
+    {
+      "max_leaf_nodes": 5,
+      "min_samples_leaf": 50,
+      "l2_regularization": 1.0
+    },
+    {
+      "max_leaf_nodes": 5,
+      "min_samples_leaf": 50,
       "l2_regularization": 10.0
     },
     {
       "max_leaf_nodes": 7,
+      "min_samples_leaf": 10,
       "l2_regularization": 0.0
     },
     {
       "max_leaf_nodes": 7,
+      "min_samples_leaf": 10,
       "l2_regularization": 1.0
     },
     {
       "max_leaf_nodes": 7,
+      "min_samples_leaf": 10,
+      "l2_regularization": 10.0
+    },
+    {
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 0.0
+    },
+    {
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0
+    },
+    {
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "l2_regularization": 10.0
+    },
+    {
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 50,
+      "l2_regularization": 0.0
+    },
+    {
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 50,
+      "l2_regularization": 1.0
+    },
+    {
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 50,
       "l2_regularization": 10.0
     }
   ],
-  "candidates_per_scheme": 9,
+  "candidates_per_scheme": 27,
   "training": "monthly expanding from 2008; mature labels only",
   "validation": "2018-2022",
   "test": "2023-2026-09",
-  "selection": "pooled validation MSE per scheme; ties: fewer leaves, fewer rounds, larger L2",
+  "selection": "pooled validation MSE per scheme; ties: fewer leaves, fewer rounds, larger L2, larger minimum leaf size",
   "provenance": "Exploratory grid; previous project test results already known",
   "primary_scheme": "S1",
   "selected": [
     {
       "scheme": "S0",
       "max_leaf_nodes": 5,
+      "min_samples_leaf": 20,
       "max_iter": 23,
       "l2_regularization": 10.0,
       "n": 11313,
@@ -77,6 +176,7 @@
     {
       "scheme": "S1",
       "max_leaf_nodes": 3,
+      "min_samples_leaf": 20,
       "max_iter": 43,
       "l2_regularization": 10.0,
       "n": 11313,
@@ -87,6 +187,7 @@
     {
       "scheme": "S2",
       "max_leaf_nodes": 3,
+      "min_samples_leaf": 20,
       "max_iter": 40,
       "l2_regularization": 10.0,
       "n": 11313,

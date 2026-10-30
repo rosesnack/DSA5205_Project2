@@ -21,7 +21,7 @@ zyx 负责的 Elastic Net 部分已经完成：读取第一棒的固定数据与
 | [data/processed/model_panel.csv](data/processed/model_panel.csv) | 日期、真实收益、成交日期、标签可得时刻及评价资格的共享来源 |
 | [data/processed/panel_spec.json](data/processed/panel_spec.json) | 预测目标、特征白名单与时间接口定义 |
 | [results/elastic_net/report_summary.md](results/elastic_net/report_summary.md) | 正式模型结果概述，含第 10 节指向 |
-| [README_elastic_net.md](README_elastic_net.md) | 环境、运行顺序及输出说明 |
+| [README.md](README.md) | 环境、运行顺序及输出说明 |
 
 文中路径均相对于仓库根目录，可直接在 GitHub 上查看。
 
@@ -248,7 +248,7 @@ python -m notebook
 建议将本文件放在仓库根目录，随以下内容提交：
 
 - `notebooks/03_elastic_net.ipynb`
-- `README_elastic_net.md`
+- `README.md`
 - `requirements.txt`
 - `results/elastic_net/` 中本次正式结果、第 9 节和第 10 节诊断
 - 现有上游数据与接口文件，保持与运行记录中的输入版本对应
