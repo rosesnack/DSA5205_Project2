@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "scope": "Step 11: main-cost six-strategy phase evaluation",
+  "authority": "../5205proj2.md: sections 2-5; existing signal, pair, execution, ledger and cost engines",
+  "models": [
+    "elastic_net",
+    "gbdt"
+  ],
+  "schemes": [
+    "S0",
+    "S1",
+    "S2"
+  ],
+  "ticker_tie_order": [
+    "XLB",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLU",
+    "XLV",
+    "XLY"
+  ],
+  "model_contract": {
+    "inputs": "original seven-column official Elastic Net and GBDT predictions; no diagnostic replacement",
+    "feature_definition": "data/processed/panel_spec.json and existing common validity flags",
+    "configurations": [
+      "results/elastic_net/design_config.json",
+      "results/elastic_net/locked_selection.json",
+      "results/gbdt/model_config.json",
+      "results/gbdt/selected_hyperparameters.csv"
+    ],
+    "fitting": "sector-specific monthly expanding fits from 2008; only labels mature by fit cutoff; existing preprocessing and locked hyperparameters",
+    "implementation": "consume the delivered monthly predictions; step 11 does not refit any model"
+  },
+  "phase_opens": {
+    "validation": [
+      "2018-01-03",
+      "2022-12-30"
+    ],
+    "test": [
+      "2023-01-04",
+      "2026-09-30"
+    ]
+  },
+  "initial_nav": 1.0,
+  "phase_reset": "each model/scheme/phase starts from cash 1 and no shares/pairs; no cross-phase carry",
+  "timezone": "America/New_York",
+  "signal_time": "18:00",
+  "execution_time": "next SPY trading day 09:30 observed open",
+  "phase_classification": "signal-day split; final open liquidates only; end-date guard independent of label availability",
+  "last_complete_test_signal": "2026-09-28",
+  "final_test_signal_handling": "2026-09-29 schedules liquidation; 2026-09-30 no order; no October prices",
+  "eligibility": {
+    "trading": "known common_features_valid, finite nine-sector predictions, correct model month and available fit cutoff",
+    "scoring": "common_scoreable is for forecast scoring only; future targets/label flags never enter replay",
+    "missing": "incomplete nine-sector signal clears all pairs at next scheduled open; execution quote errors stop the run"
+  },
+  "threshold": {
+    "source": "results/backtest/threshold_selection/selected_threshold.json",
+    "source_sha256": "af4ca951f9f17406c5a29bf83e7fa4a2a01982111a2ab786ce4d789dbe402d5f",
+    "h_in": 0.0015,
+    "h_out": 0.00075,
+    "entry_bps": 15,
+    "exit_bps": 7.5,
+    "comparisons": "strict > / <; equality fails",
+    "shared_across_all_six": true,
+    "selection_objective": "equal-weight mean of six strategy mean daily (net portfolio holding return minus same-interval cash return)",
+    "selection_tie_rule": "exact equality of unrounded float objectives; choose larger entry_bps; never round before ranking",
+    "reselection_allowed": false
+  },
+  "pairs": {
+    "maximum": 4,
+    "retain_then_exit_then_fill": true,
+    "retain": "old pairs meeting the directional exit bound remain even outside today's top four",
+    "entry": "only global top four absolute predictions, fixed ticker tie order; no rank-five backfill",
+    "reversal": "requires full opposite entry eligibility; execute final net share change once"
+  },
+  "execution": {
+    "leg_weight": 0.125,
+    "nav_basis": "settled NAV_pre",
+    "idle_capacity_rescaled": false,
+    "daily_target_restoration": true,
+    "tolerance_band": 0,
+    "fractional_shares": true,
+    "spy": "sum opposite SPY legs before sizing actual net shares and fees",
+    "quote_fields": [
+      "open",
+      "dividends"
+    ],
+    "adjusted_prices_used": false,
+    "repeat_split_adjustment": false
+  },
+  "main_cost_parameters": {
+    "execution_bps": 3.0,
+    "borrow_annual_rate": 0.01,
+    "full_cash_rebate": false
+  },
+  "accounting": {
+    "order": "old signed-share dividends, interval interest and borrow; NAV_pre; net share trades; execution fee once; NAV_post",
+    "nav": "cash plus signed shares times observed open; short proceeds carry an equal security liability",
+    "dividend": "old shares only at ex-date; long receives, short pays; new ex-date buys receive none",
+    "execution_fee": "sum(abs(delta_shares)*open) * 3/10000, including initial/final and small rebalancing trades",
+    "interest": "max(previous cash - interval-start actual net short collateral, 0) * exported interval RF return",
+    "borrow": "interval-start actual net short collateral * 0.01 * natural calendar days/365",
+    "no_double_count": "NAV changes already include prices, dividends and costs; never add target returns or adjusted total returns"
+  },
+  "statistics": {
+    "annualization": 252,
+    "initial_open": "no synthetic zero-length return; first actual interval denominator is initial capital 1",
+    "daily_return": "current NAV_post / preceding NAV_post - 1, except first real interval uses initial capital",
+    "cash_excess": "daily net return minus the same exported open-to-open RF return; all cash days retained",
+    "cumulative_net_return": "ending NAV / initial capital - 1",
+    "annualized_net_return": "(ending NAV / initial capital) ** (252 / number of holding intervals) - 1",
+    "volatility_for_step14": "sample standard deviation (ddof=1) of daily net returns times sqrt(252)",
+    "sharpe": "sqrt(252) * mean(daily cash excess) / sample std(ddof=1)",
+    "sharpe_std_zero_atol": 1e-12,
+    "zero_trade": "retain all cash intervals, report zero turnover/holding; zero excess std gives N/A Sharpe",
+    "drawdown_for_step14": "minimum NAV/running maximum NAV - 1; ordered open NAV_post path includes initial pre-fee capital 1",
+    "turnover": "sum(actual two-sided net asset trade notional/NAV_pre) *252/holding_intervals; include both ends; no half factor",
+    "holding_fraction": "all intervals as denominator; position at interval START determines whether held"
+  },
+  "deferred": {
+    "investment_benchmarks_step12": "SPY fixed shares at same opens, dividends to interest-bearing cash, same entry/exit fees; cash compounds existing RF intervals",
+    "cost_scenarios_step14": [
+      {
+        "scenario_id": "main",
+        "variation": "main",
+        "is_main": true,
+        "execution_bps": 3.0,
+        "borrow_annual_rate": 0.01,
+        "full_cash_rebate": false
+      },
+      {
+        "scenario_id": "execution_0",
+        "variation": "execution_bps",
+        "is_main": false,
+        "execution_bps": 0.0,
+        "borrow_annual_rate": 0.01,
+        "full_cash_rebate": false
+      },
+      {
+        "scenario_id": "execution_1",
+        "variation": "execution_bps",
+        "is_main": false,
+        "execution_bps": 1.0,
+        "borrow_annual_rate": 0.01,
+        "full_cash_rebate": false
+      },
+      {
+        "scenario_id": "execution_5",
+        "variation": "execution_bps",
+        "is_main": false,
+        "execution_bps": 5.0,
+        "borrow_annual_rate": 0.01,
+        "full_cash_rebate": false
+      },
+      {
+        "scenario_id": "borrow_0",
+        "variation": "borrow_annual_rate",
+        "is_main": false,
+        "execution_bps": 3.0,
+        "borrow_annual_rate": 0.0,
+        "full_cash_rebate": false
+      },
+      {
+        "scenario_id": "borrow_2",
+        "variation": "borrow_annual_rate",
+        "is_main": false,
+        "execution_bps": 3.0,
+        "borrow_annual_rate": 0.02,
+        "full_cash_rebate": false
+      },
+      {
+        "scenario_id": "borrow_3",
+        "variation": "borrow_annual_rate",
+        "is_main": false,
+        "execution_bps": 3.0,
+        "borrow_annual_rate": 0.03,
+        "full_cash_rebate": false
+      },
+      {
+        "scenario_id": "full_cash_rebate",
+        "variation": "full_cash_rebate",
+        "is_main": false,
+        "execution_bps": 3.0,
+        "borrow_annual_rate": 0.01,
+        "full_cash_rebate": true
+      }
+    ],
+    "cost_comparison": "one factor at a time, same 15/7.5 bps; independent ledgers; never select best costs",
+    "execution": "steps 12-16 are not executed by this stage; broader audit, report and figures remain later"
+  },
+  "evidence_boundary": {
+    "validation": "already used for model and threshold selection; reused evaluation is tuning evidence",
+    "test": "fixed-rule test-period strategy evaluation, not an untouched blind holdout",
+    "prior_test_predictions_and_metrics_seen": true,
+    "gbdt_provenance": "Exploratory grid; previous project test results already known",
+    "training_oof": "retrospective training-only signal-scale diagnostic; not an alternative official model",
+    "no_test_driven_changes": true,
+    "all_six_results_retained": true,
+    "freeze_timing": "frozen now before step-11 test portfolio replay; not a retrospective claim of freezing before earlier model exploration"
+  },
+  "validation_replay": false,
+  "test_replay": true,
+  "model_retraining": false,
+  "threshold_search": false,
+  "sensitivity_replay": false,
+  "investment_benchmark_replay": false,
+  "historical_snapshots": "old selected_threshold.json and unselected engineering/OOF flags are unchanged stage-specific snapshots",
+  "frozen_utc": "2026-10-31T09:45:00.086023+00:00"
+}

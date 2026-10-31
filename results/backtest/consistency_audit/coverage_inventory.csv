@@ -1,0 +1,5 @@
+phase,kind,paths,daily_rows,asset_rows,trade_rows,return_rows,source_prefix
+validation,strategies,6,7548,75480,3630,7542,threshold_selection/checkpoints/entry_15_
+test,strategies,6,5628,56280,1255,5622,phase_evaluation/test_
+test,benchmarks,2,1876,0,2,1874,investment_benchmarks/benchmark_
+validation,benchmarks,2,2516,0,2,2514,investment_benchmarks/benchmark_

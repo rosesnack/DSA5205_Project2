@@ -1,0 +1,4 @@
+phase,left,right,matched
+test,elastic_net/S0,elastic_net/S1,True
+test,elastic_net/S0,elastic_net/S2,True
+test,elastic_net/S1,elastic_net/S2,True

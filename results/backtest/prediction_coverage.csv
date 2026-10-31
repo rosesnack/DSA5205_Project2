@@ -1,0 +1,7 @@
+model,scheme,prediction_rows,signal_dates,sectors_per_date,first_signal_date,last_signal_date
+elastic_net,S0,19782,2198,9,2018-01-02,2026-09-30
+elastic_net,S1,19782,2198,9,2018-01-02,2026-09-30
+elastic_net,S2,19782,2198,9,2018-01-02,2026-09-30
+gbdt,S0,19782,2198,9,2018-01-02,2026-09-30
+gbdt,S1,19782,2198,9,2018-01-02,2026-09-30
+gbdt,S2,19782,2198,9,2018-01-02,2026-09-30

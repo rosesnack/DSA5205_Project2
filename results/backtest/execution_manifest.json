@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "scope": "Step 6: net target share/trade planner; no cash/NAV replay",
+  "created_utc": "2026-10-31T08:43:07.008221+00:00",
+  "python_version": "3.11.5",
+  "pandas_version": "2.0.3",
+  "leg_weight": 0.125,
+  "fractional_shares": true,
+  "weight_tolerance_band": null,
+  "price_field": "data/interim/etf_prices_aligned.csv: observed open only",
+  "source_signal_dates": [
+    "2018-01-02",
+    "2018-01-03",
+    "2018-01-04",
+    "2018-01-05",
+    "2018-01-08"
+  ],
+  "example_entry_bps": 10,
+  "threshold_selection_performed": false,
+  "normalized_target_example_only": true,
+  "actual_nav_ledger_implemented": false,
+  "daily_target_examples": 30,
+  "asset_target_examples": 300,
+  "worked_share_plan_rows": 70,
+  "checks": [
+    {
+      "check": "pair_direction_and_hedge",
+      "passed": true,
+      "detail": "Each sector and its opposite SPY leg have +/-12.5% weights"
+    },
+    {
+      "check": "opposite_spy_legs_cancel",
+      "passed": true,
+      "detail": "Two opposite pairs have 25% combined gross after SPY cancellation"
+    },
+    {
+      "check": "four_same_direction_pairs_cap_gross",
+      "passed": true,
+      "detail": "Four pairs have at most 100% target gross; dollar net equals zero"
+    },
+    {
+      "check": "four_mixed_pairs_can_have_lower_gross",
+      "passed": true,
+      "detail": "No rescaling after SPY netting reduces gross"
+    },
+    {
+      "check": "initial_entry_inputs_unchanged",
+      "passed": true,
+      "detail": "Planning does not mutate target pairs, old shares or observed quotes"
+    },
+    {
+      "check": "initial_shares_from_pretrade_nav",
+      "passed": true,
+      "detail": "NAV 100,000: buy 125 at 100 and short 62.5 SPY at 200"
+    },
+    {
+      "check": "few_pairs_not_rescaled_or_short_proceeds_reinvested",
+      "passed": true,
+      "detail": "One pair retains 12.5% per leg; short cash does not increase the NAV basis"
+    },
+    {
+      "check": "unchanged_prices_and_nav_inputs_unchanged",
+      "passed": true,
+      "detail": "Planning does not mutate target pairs, old shares or observed quotes"
+    },
+    {
+      "check": "unchanged_shares_no_redundant_round_trip",
+      "passed": true,
+      "detail": "No close-and-reopen when current and target shares agree"
+    },
+    {
+      "check": "retained_pair_rebalanced_inputs_unchanged",
+      "passed": true,
+      "detail": "Planning does not mutate target pairs, old shares or observed quotes"
+    },
+    {
+      "check": "retained_pair_rebalanced_at_every_open",
+      "passed": true,
+      "detail": "Same pair: new prices/NAV require actual small share adjustments"
+    },
+    {
+      "check": "no_small_trade_tolerance_band",
+      "passed": true,
+      "detail": "A nonzero share difference is retained, without a minimum trade band"
+    },
+    {
+      "check": "pair_reversal_inputs_unchanged",
+      "passed": true,
+      "detail": "Planning does not mutate target pairs, old shares or observed quotes"
+    },
+    {
+      "check": "reversal_as_one_net_delta_per_asset",
+      "passed": true,
+      "detail": "Long-to-short reversal is one signed share change per asset"
+    },
+    {
+      "check": "sector_rotation_spy_unchanged_inputs_unchanged",
+      "passed": true,
+      "detail": "Planning does not mutate target pairs, old shares or observed quotes"
+    },
+    {
+      "check": "spy_netted_before_trade_amounts",
+      "passed": true,
+      "detail": "Sector rotation does not charge fictitious SPY closing/opening notional"
+    },
+    {
+      "check": "opposite_pairs_close_old_spy_inputs_unchanged",
+      "passed": true,
+      "detail": "Planning does not mutate target pairs, old shares or observed quotes"
+    },
+    {
+      "check": "net_zero_spy_target_still_closes_old_spy",
+      "passed": true,
+      "detail": "An old SPY holding is closed when the combined target is zero"
+    },
+    {
+      "check": "final_liquidation_inputs_unchanged",
+      "passed": true,
+      "detail": "Planning does not mutate target pairs, old shares or observed quotes"
+    },
+    {
+      "check": "final_and_missing_signal_liquidation",
+      "passed": true,
+      "detail": "Empty final targets close all signed old shares"
+    },
+    {
+      "check": "flat_cash_requires_no_irrelevant_quotes",
+      "passed": true,
+      "detail": "Unheld zero-target assets do not require execution quotes"
+    },
+    {
+      "check": "fractional_shares_not_rounded",
+      "passed": true,
+      "detail": "Fractional shares preserve exact percentage targets"
+    },
+    {
+      "check": "missing_required_quote",
+      "passed": true,
+      "detail": "Invalid shares, execution quote or target configuration rejected"
+    },
+    {
+      "check": "zero_required_quote",
+      "passed": true,
+      "detail": "Invalid shares, execution quote or target configuration rejected"
+    },
+    {
+      "check": "nonfinite_required_quote",
+      "passed": true,
+      "detail": "Invalid shares, execution quote or target configuration rejected"
+    },
+    {
+      "check": "old_holding_also_requires_quote",
+      "passed": true,
+      "detail": "Invalid shares, execution quote or target configuration rejected"
+    },
+    {
+      "check": "unknown_old_asset",
+      "passed": true,
+      "detail": "Invalid shares, execution quote or target configuration rejected"
+    },
+    {
+      "check": "nonfinite_old_shares",
+      "passed": true,
+      "detail": "Invalid shares, execution quote or target configuration rejected"
+    },
+    {
+      "check": "invalid_nav",
+      "passed": true,
+      "detail": "Invalid shares, execution quote or target configuration rejected"
+    },
+    {
+      "check": "too_many_target_pairs",
+      "passed": true,
+      "detail": "Invalid shares, execution quote or target configuration rejected"
+    },
+    {
+      "check": "invalid_target_direction",
+      "passed": true,
+      "detail": "Invalid shares, execution quote or target configuration rejected"
+    }
+  ],
+  "source_hashes": {
+    "data/processed/panel_spec.json": "a5587fd3d669097bf94df7c8444ec41edd77f46d23e549a56c4e94f4cd0d7327",
+    "data/processed/model_panel.csv": "3e15a99d21e0d088768058b956540a384c00c3caef04163d9d4069f14189e4be",
+    "data/interim/etf_prices_aligned.csv": "c09a1ff66e321732b3c4ee189dbe8d6792fe7c4fe9895422de18a5849773099e",
+    "notebooks/panel_checks/monthly_training_eligibility.csv": "13d3ec29fd128384d483ba5ec9f37420c4fa0aa9cd55190c8a051addf1ea5536",
+    "results/backtest/combined_predictions.csv": "e6f9a0f5c0c9f58bc22806ee9996c44726da6be2995561d253d77995b355eb73",
+    "results/elastic_net/elastic_net_predictions.csv": "43aa2462594fecdc1f4113ca008900aabf2ff86867cec0b583d6bebd05e05abb",
+    "results/gbdt/gbdt_predictions.csv": "4b939ca8334b16b719d7a767e68010afbec6cbb94d8b7342f6300e5696e59cdd",
+    "notebooks/02_features_panel_data.ipynb": "cdfdb60dd038961db5fe1920c4212e7e94cd4c2e5dd98e427fd7557f11cc4354",
+    "notebooks/03_elastic_net.ipynb": "a60992f898b860a4045e58ea8d7e7cb825df03e98e29bec5737d2262ec65090e",
+    "notebooks/04_gbdt.ipynb": "dd69c86afcfd652dd8a3d421bd8b30c738b824f594434b185a90bba167c04081",
+    "results/backtest/predictions_with_panel.csv": "a63020918e55376976ce354eee4f6299f992f31eb3d7014e560dfdfc7ed5b5aa",
+    "results/backtest/panel_alignment_summary.csv": "dcd0592e7195df904b15dd0e05dbe8165fe99dcb7f1168954767725b7a7457fc",
+    "results/backtest/monthly_time_checks.csv": "2132e34bc59da79f0343cefd709908aa8712cfd819d227c129feffdea3c2556a",
+    "results/backtest/signal_calendar.csv": "d642677743d4e851c1adb9b88f1c7896f001522eee65b8544e79d7da1a617580",
+    "results/backtest/time_alignment_examples.csv": "bdf189ff0266c456754c17fff774e2b513b0193a6f0105b4708f91b88b6c2b15",
+    "notebooks/01_download_clean_data.ipynb": "d939dac768f0a51c57665ae2a01a2f6e93abbb3c70f44812cc54aedb7d8b00fc",
+    "results/backtest/trading_signal_inputs.csv": "58dcd618718a28d1e9ea6cb76f189ce88ca12a4cead244031eaac1992f1f69d3",
+    "results/backtest/daily_signal_status.csv": "480b6f938f93fa8dd12cec159732828089b4e2ab572d0969746df39094b9f269",
+    "results/backtest/scoring_eligibility.csv": "d415d5fb975860f81068cca30ed8550c87adff4eddfbc252f1428a598024d662",
+    "results/backtest/eligibility_summary.csv": "dbbeb877995e7148e473d442fcb2801613995a11c6ce871d8085d3c27b97a200",
+    "results/backtest/signal_status_examples.csv": "83f19ec706fe225c158305f71ac1a930893cba63e6561d95aabc05b7d390c3a9",
+    "results/backtest/signal_policy_checks.csv": "54905e921c20dbc188c33d0a5f4f21196ee7d026ee5ee9e21ab15d014a1a633a",
+    "results/elastic_net/elastic_net_predictions_full.csv": "c9342f032b192272e0936099b8c48cea8c7e3fbf4c388f1f1427b1cd1ead391b",
+    "results/elastic_net/forecast_metrics.csv": "44a008e6223aac2e6d131b303c16a869c28c819073e269bacc27dd29e0284b25",
+    "results/gbdt/gbdt_predictions_full.csv": "adcedb9cba1e47c4f17f4ab276f55e62c8e12fbdaad7e9f3091ab4f4cfd9bb26",
+    "results/gbdt/forecast_metrics.csv": "f3326fd220bef4a17b6ed1757e0a1083e90c6c77f73db59178d7b4edea7349f5",
+    "results/backtest/baseline_predictions.csv": "b56ef7bfc90da91ff24a4b8fe5df1194e708370b1bfbeb6825c732ef8c5e40b7",
+    "results/backtest/monthly_baseline_audit.csv": "af6e680b99d90cd1ccbefc4db6754a43ee13830aecad4045c27540f49d673972",
+    "results/backtest/baseline_forecast_metrics.csv": "d4588ae242c785e2b245ee44b58481c7f2aa9080038bde4f05d4258786095e5a",
+    "results/backtest/prediction_comparison_metrics.csv": "d001ab11f67ead324ff199267344a10a9c0f6d3a046a9ea79754b3b7e943214c",
+    "results/backtest/sector_baseline_metrics.csv": "0cf792e16b77df7811948a97c950b2c99a18fb6ea96b0c953daab28adccd9552",
+    "results/backtest/baseline_checks.csv": "3d70a51da419a7de3f6050161ba191ca49f93c7dc5177dc8f8780769e52d8300",
+    "../5205proj2.md": "7db7be7d3861b57b1a9f53e7daed0f9dd37c236514b4a4d00dcc64f19f8e5ed6",
+    "results/backtest/pair_decision_checks.csv": "0a8bff6270c894507f78899340618b93f8df51438559f2d9f114be4648e2ddad",
+    "results/backtest/pair_decision_demo_daily.csv": "59ec92faf694ebbfaf74a7378c3dbd07d653d49381238192cb0e9c0727926f17",
+    "results/backtest/pair_decision_demo_sectors.csv": "db7bfe030f1c17ecdf94e1ede4b5ad931c18eda1fcae9ec0897c09e36783286f"
+  },
+  "code_hashes": {
+    "scripts/prepare_backtest_inputs.py": "f98dae5caaf987c10fefff898a19e849a085c6acdb16be5f2deeda3da617a698",
+    "scripts/backtest_execution.py": "2362214cd46421e1714fb090ba0c5876f899c0dc6cf3dc1affad1284a0b6e4de"
+  },
+  "outputs": [
+    {
+      "path": "results/backtest/execution_checks.csv",
+      "rows": 31,
+      "sha256": "e28d98e76e3b424b198165642bddf56e18941f752c25753558c2886fec60f7ab"
+    },
+    {
+      "path": "results/backtest/net_trade_worked_examples.csv",
+      "rows": 70,
+      "sha256": "e6999593e22d920184af7c2cbc7785e0f8e3506ce3782e45dcf6e1d7ff4e1a47"
+    },
+    {
+      "path": "results/backtest/execution_target_demo_daily.csv",
+      "rows": 30,
+      "sha256": "44bb1acdcb300df55b2796e7812a72b6c4ab8f1a837b06227b50305efe49da5a"
+    },
+    {
+      "path": "results/backtest/execution_target_demo_assets.csv",
+      "rows": 300,
+      "sha256": "0f6a9a126ac12334d2048fe83316735672916b3e62d6f2020489f11660c98125"
+    }
+  ],
+  "notes": [
+    "Actual share planning requires caller-supplied settled NAV_pre and current signed shares",
+    "Target dollars use NAV_pre before new trading fees; fees never change the sizing basis here",
+    "SPY is netted before target shares and actual traded notional are computed",
+    "No rounding or minimum trade band; fractional shares are supported",
+    "Invalid required opens raise an error; prices are never filled or adjusted again",
+    "Normalized examples show weights and shares per unit NAV only, not actual historical holdings",
+    "Worked net trade cases use explicit hypothetical NAV/old shares and are marked as examples"
+  ],
+  "not_yet_checked": [
+    "cash/shares/dividend/interest/borrow-fee settlement and NAV ledger (step 7)",
+    "execution cost and financing assumptions in portfolio results (step 8)",
+    "public threshold selection and formal portfolio runs"
+  ]
+}

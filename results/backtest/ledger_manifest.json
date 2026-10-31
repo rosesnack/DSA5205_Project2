@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "scope": "Step 7: open-to-open cash/share/NAV accounting",
+  "created_utc": "2026-10-31T08:43:09.281593+00:00",
+  "python_version": "3.11.5",
+  "pandas_version": "2.0.3",
+  "example_only": true,
+  "truncated_preview": true,
+  "formal_phase_evaluation": false,
+  "threshold_selection_performed": false,
+  "initial_nav": 1.0,
+  "example_entry_bps": 10,
+  "engineering_cost_parameters": {
+    "execution_bps": 3.0,
+    "borrow_annual_rate": 0.01,
+    "full_cash_rebate": false
+  },
+  "source_signal_dates": [
+    "2018-01-02",
+    "2018-01-03",
+    "2018-01-04",
+    "2018-01-05",
+    "2018-01-08"
+  ],
+  "actual_share_ledger_implemented": true,
+  "daily_ledger_rows": 30,
+  "asset_ledger_rows": 300,
+  "actual_nonzero_trade_rows": 4,
+  "matched_rate_intervals": 24,
+  "max_pre_reconciliation_error": 0.0,
+  "max_post_reconciliation_error": 0.0,
+  "checks": [
+    {
+      "check": "initial_entry_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "short_proceeds_are_not_profit",
+      "passed": true,
+      "detail": "Equal long/short principal cash flows preserve initial capital"
+    },
+    {
+      "check": "initial_entry_fee_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "entry_fee_and_pre_fee_sizing",
+      "passed": true,
+      "detail": "Size from NAV_pre, deduct the initial fee once afterward"
+    },
+    {
+      "check": "no_buy_day_dividend_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "new_positions_receive_no_ex_day_dividend",
+      "passed": true,
+      "detail": "Dividends apply only to old shares, never newly purchased shares"
+    },
+    {
+      "check": "long_ex_dividend_exit_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "old_long_dividend_offsets_ex_price_drop",
+      "passed": true,
+      "detail": "Old long earns dividend even when sold at the ex-date open; no double counting"
+    },
+    {
+      "check": "short_ex_dividend_exit_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "old_short_pays_dividend",
+      "passed": true,
+      "detail": "Short dividends are signed expenses"
+    },
+    {
+      "check": "spy_dividend_expense_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "short_spy_dividend_is_included",
+      "passed": true,
+      "detail": "SPY short dividends are treated like any other short asset"
+    },
+    {
+      "check": "own_cash_interest_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "collateral_excluded_from_main_interest",
+      "passed": true,
+      "detail": "Use starting cash minus starting actual short market value; no second day-count division"
+    },
+    {
+      "check": "full_cash_rebate_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "full_cash_rebate_not_double_interest",
+      "passed": true,
+      "detail": "Full rebate accrues on total book cash once"
+    },
+    {
+      "check": "own_available_cash_floor_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "negative_own_available_cash_does_not_earn_interest",
+      "passed": true,
+      "detail": "Main interest base is max(cash minus collateral, zero)"
+    },
+    {
+      "check": "weekend_borrow_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "borrow_uses_starting_short_and_natural_days",
+      "passed": true,
+      "detail": "Borrow uses interval-start collateral, not the changed end-open short value"
+    },
+    {
+      "check": "netted_short_collateral_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "financing_uses_actual_netted_holdings",
+      "passed": true,
+      "detail": "Opposing SPY legs create no phantom collateral or borrow expense"
+    },
+    {
+      "check": "fee_driven_small_rebalance_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "small_rebalance_fee_is_not_omitted",
+      "passed": true,
+      "detail": "Retained pair rebalances after prior fee reduces NAV"
+    },
+    {
+      "check": "final_liquidation_fee_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "initial_and_final_fees_both_in_nav",
+      "passed": true,
+      "detail": "Round trip at unchanged prices loses exactly both 7.5 fees"
+    },
+    {
+      "check": "cash_compound_one_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "cash_compound_two_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "cash_interest_compounds",
+      "passed": true,
+      "detail": "Interest uses last post-trade cash"
+    },
+    {
+      "check": "valid_zero_rate_reconciles",
+      "passed": true,
+      "detail": "Self-financing NAV identity holds and input states are unchanged"
+    },
+    {
+      "check": "zero_cash_rate_remains_valid",
+      "passed": true,
+      "detail": "Zero is a valid rate, not a missing-value sentinel"
+    },
+    {
+      "check": "missing_old_dividend",
+      "passed": true,
+      "detail": "Incomplete accounting inputs/configuration rejected"
+    },
+    {
+      "check": "missing_old_open",
+      "passed": true,
+      "detail": "Incomplete accounting inputs/configuration rejected"
+    },
+    {
+      "check": "invalid_interval_rate",
+      "passed": true,
+      "detail": "Incomplete accounting inputs/configuration rejected"
+    },
+    {
+      "check": "negative_execution_fee",
+      "passed": true,
+      "detail": "Incomplete accounting inputs/configuration rejected"
+    },
+    {
+      "check": "negative_borrow_rate",
+      "passed": true,
+      "detail": "Incomplete accounting inputs/configuration rejected"
+    },
+    {
+      "check": "invalid_calendar_days",
+      "passed": true,
+      "detail": "Incomplete accounting inputs/configuration rejected"
+    },
+    {
+      "check": "zero_day_old_shares",
+      "passed": true,
+      "detail": "Incomplete accounting inputs/configuration rejected"
+    },
+    {
+      "check": "return_product_includes_both_end_fees",
+      "passed": true,
+      "detail": "Initial entry fee is included in the first actual holding return"
+    },
+    {
+      "check": "phase_cash_shares_and_pairs_reset",
+      "passed": true,
+      "detail": "Test begins from independent unit cash, without validation holdings"
+    },
+    {
+      "check": "first_open_has_no_holding_interval",
+      "passed": true,
+      "detail": "No zero-length synthetic daily return is inserted before first holding interval"
+    },
+    {
+      "check": "final_trade_logged_once_per_asset",
+      "passed": true,
+      "detail": "Final exit records the two actual net trades"
+    },
+    {
+      "check": "future_outcomes_do_not_enter_ledger",
+      "passed": true,
+      "detail": "Future-label fields added to signals leave all ledger records unchanged"
+    },
+    {
+      "check": "full_phase_requires_final_liquidation",
+      "passed": true,
+      "detail": "Complete validation fixture exits all shares at its scheduled final open"
+    },
+    {
+      "check": "missing_exact_rate_interval",
+      "passed": true,
+      "detail": "Rate alignment/availability error stops the ledger instead of skipping or filling it"
+    },
+    {
+      "check": "rate_not_known_at_entry",
+      "passed": true,
+      "detail": "Rate alignment/availability error stops the ledger instead of skipping or filling it"
+    },
+    {
+      "check": "mismatched_rate_day_count",
+      "passed": true,
+      "detail": "Rate alignment/availability error stops the ledger instead of skipping or filling it"
+    },
+    {
+      "check": "truncated_phase_rejected_as_formal_full_run",
+      "passed": true,
+      "detail": "The test fixture is deliberately incomplete and cannot be labeled a completed full phase"
+    }
+  ],
+  "source_hashes": {
+    "data/processed/panel_spec.json": "a5587fd3d669097bf94df7c8444ec41edd77f46d23e549a56c4e94f4cd0d7327",
+    "data/processed/model_panel.csv": "3e15a99d21e0d088768058b956540a384c00c3caef04163d9d4069f14189e4be",
+    "data/interim/etf_prices_aligned.csv": "c09a1ff66e321732b3c4ee189dbe8d6792fe7c4fe9895422de18a5849773099e",
+    "notebooks/panel_checks/monthly_training_eligibility.csv": "13d3ec29fd128384d483ba5ec9f37420c4fa0aa9cd55190c8a051addf1ea5536",
+    "results/backtest/combined_predictions.csv": "e6f9a0f5c0c9f58bc22806ee9996c44726da6be2995561d253d77995b355eb73",
+    "results/elastic_net/elastic_net_predictions.csv": "43aa2462594fecdc1f4113ca008900aabf2ff86867cec0b583d6bebd05e05abb",
+    "results/gbdt/gbdt_predictions.csv": "4b939ca8334b16b719d7a767e68010afbec6cbb94d8b7342f6300e5696e59cdd",
+    "notebooks/02_features_panel_data.ipynb": "cdfdb60dd038961db5fe1920c4212e7e94cd4c2e5dd98e427fd7557f11cc4354",
+    "notebooks/03_elastic_net.ipynb": "a60992f898b860a4045e58ea8d7e7cb825df03e98e29bec5737d2262ec65090e",
+    "notebooks/04_gbdt.ipynb": "dd69c86afcfd652dd8a3d421bd8b30c738b824f594434b185a90bba167c04081",
+    "results/backtest/predictions_with_panel.csv": "a63020918e55376976ce354eee4f6299f992f31eb3d7014e560dfdfc7ed5b5aa",
+    "results/backtest/panel_alignment_summary.csv": "dcd0592e7195df904b15dd0e05dbe8165fe99dcb7f1168954767725b7a7457fc",
+    "results/backtest/monthly_time_checks.csv": "2132e34bc59da79f0343cefd709908aa8712cfd819d227c129feffdea3c2556a",
+    "results/backtest/signal_calendar.csv": "d642677743d4e851c1adb9b88f1c7896f001522eee65b8544e79d7da1a617580",
+    "results/backtest/time_alignment_examples.csv": "bdf189ff0266c456754c17fff774e2b513b0193a6f0105b4708f91b88b6c2b15",
+    "notebooks/01_download_clean_data.ipynb": "d939dac768f0a51c57665ae2a01a2f6e93abbb3c70f44812cc54aedb7d8b00fc",
+    "results/backtest/trading_signal_inputs.csv": "58dcd618718a28d1e9ea6cb76f189ce88ca12a4cead244031eaac1992f1f69d3",
+    "results/backtest/daily_signal_status.csv": "480b6f938f93fa8dd12cec159732828089b4e2ab572d0969746df39094b9f269",
+    "results/backtest/scoring_eligibility.csv": "d415d5fb975860f81068cca30ed8550c87adff4eddfbc252f1428a598024d662",
+    "results/backtest/eligibility_summary.csv": "dbbeb877995e7148e473d442fcb2801613995a11c6ce871d8085d3c27b97a200",
+    "results/backtest/signal_status_examples.csv": "83f19ec706fe225c158305f71ac1a930893cba63e6561d95aabc05b7d390c3a9",
+    "results/backtest/signal_policy_checks.csv": "54905e921c20dbc188c33d0a5f4f21196ee7d026ee5ee9e21ab15d014a1a633a",
+    "results/elastic_net/elastic_net_predictions_full.csv": "c9342f032b192272e0936099b8c48cea8c7e3fbf4c388f1f1427b1cd1ead391b",
+    "results/elastic_net/forecast_metrics.csv": "44a008e6223aac2e6d131b303c16a869c28c819073e269bacc27dd29e0284b25",
+    "results/gbdt/gbdt_predictions_full.csv": "adcedb9cba1e47c4f17f4ab276f55e62c8e12fbdaad7e9f3091ab4f4cfd9bb26",
+    "results/gbdt/forecast_metrics.csv": "f3326fd220bef4a17b6ed1757e0a1083e90c6c77f73db59178d7b4edea7349f5",
+    "results/backtest/baseline_predictions.csv": "b56ef7bfc90da91ff24a4b8fe5df1194e708370b1bfbeb6825c732ef8c5e40b7",
+    "results/backtest/monthly_baseline_audit.csv": "af6e680b99d90cd1ccbefc4db6754a43ee13830aecad4045c27540f49d673972",
+    "results/backtest/baseline_forecast_metrics.csv": "d4588ae242c785e2b245ee44b58481c7f2aa9080038bde4f05d4258786095e5a",
+    "results/backtest/prediction_comparison_metrics.csv": "d001ab11f67ead324ff199267344a10a9c0f6d3a046a9ea79754b3b7e943214c",
+    "results/backtest/sector_baseline_metrics.csv": "0cf792e16b77df7811948a97c950b2c99a18fb6ea96b0c953daab28adccd9552",
+    "results/backtest/baseline_checks.csv": "3d70a51da419a7de3f6050161ba191ca49f93c7dc5177dc8f8780769e52d8300",
+    "../5205proj2.md": "7db7be7d3861b57b1a9f53e7daed0f9dd37c236514b4a4d00dcc64f19f8e5ed6",
+    "results/backtest/pair_decision_checks.csv": "0a8bff6270c894507f78899340618b93f8df51438559f2d9f114be4648e2ddad",
+    "results/backtest/pair_decision_demo_daily.csv": "59ec92faf694ebbfaf74a7378c3dbd07d653d49381238192cb0e9c0727926f17",
+    "results/backtest/pair_decision_demo_sectors.csv": "db7bfe030f1c17ecdf94e1ede4b5ad931c18eda1fcae9ec0897c09e36783286f",
+    "results/backtest/execution_checks.csv": "e28d98e76e3b424b198165642bddf56e18941f752c25753558c2886fec60f7ab",
+    "results/backtest/net_trade_worked_examples.csv": "e6999593e22d920184af7c2cbc7785e0f8e3506ce3782e45dcf6e1d7ff4e1a47",
+    "results/backtest/execution_target_demo_daily.csv": "44bb1acdcb300df55b2796e7812a72b6c4ab8f1a837b06227b50305efe49da5a",
+    "results/backtest/execution_target_demo_assets.csv": "0f6a9a126ac12334d2048fe83316735672916b3e62d6f2020489f11660c98125",
+    "data/interim/risk_free_open_intervals.csv": "874e49b3fea6674b02dbad78aa615890e831cab29a7224e1f257cc51df6a9896"
+  },
+  "code_hashes": {
+    "scripts/prepare_backtest_inputs.py": "f98dae5caaf987c10fefff898a19e849a085c6acdb16be5f2deeda3da617a698",
+    "scripts/backtest_ledger.py": "abd37ef8afd66c5e550498d72bbba539741c2eab8d4af76b8b5a1ae125fcf476",
+    "scripts/backtest_execution.py": "2362214cd46421e1714fb090ba0c5876f899c0dc6cf3dc1affad1284a0b6e4de",
+    "scripts/backtest_pair_decisions.py": "e4f3c31cc93671e3870b80d9690ddac24546d9bed63550de4bdca6b5eed942fc",
+    "scripts/backtest_signal_policy.py": "40f2d52f8115a0ac6618331d3a51021fa03602cce39cb8920339aaa2df80de04",
+    "scripts/backtest_costs.py": "1204666ded31363a626bebdb5b82ff1872d7af9a7e5019751f204584b4715d09"
+  },
+  "outputs": [
+    {
+      "path": "results/backtest/ledger_checks.csv",
+      "rows": 48,
+      "sha256": "713b18515bc38158405937ede126702075b0f32326cd110224742a41d0a79e77"
+    },
+    {
+      "path": "results/backtest/ledger_worked_examples.csv",
+      "rows": 16,
+      "sha256": "5fcc0c10bda7678d31c6fc41502239cf111e9e33133c63051fcef032ae9c1604"
+    },
+    {
+      "path": "results/backtest/ledger_replay_fixture.csv",
+      "rows": 3,
+      "sha256": "879cb17d66abeeec4a8b218bf033daaf38921905f6df9e2d92430b91b0cd8bd8"
+    },
+    {
+      "path": "results/backtest/ledger_demo_daily.csv",
+      "rows": 30,
+      "sha256": "0397705c9711fb3cda4585d894c9c775162040439213cb2b100c48301bfb61e4"
+    },
+    {
+      "path": "results/backtest/ledger_demo_assets.csv",
+      "rows": 300,
+      "sha256": "2129084c9b44add14ce774c2ac6c3f2b0e8e7b6bb63065794c419896c73dbaee"
+    },
+    {
+      "path": "results/backtest/ledger_demo_trades.csv",
+      "rows": 4,
+      "sha256": "5ec7e708af14d7d7a75c9a0e1f06bad3f6576dee773182d17c137056ce37c3bc"
+    },
+    {
+      "path": "results/backtest/ledger_rate_alignment.csv",
+      "rows": 24,
+      "sha256": "4f6ca521538d399f303a6f114d4052b345502e949a66c5105093ad8e7b3dc373"
+    }
+  ],
+  "notes": [
+    "Signal-time decisions and open execution remain separate; labels never enter accounting",
+    "Dividends are accrued on old signed shares before any new target trade",
+    "Interest uses last post-trade cash and starting net short collateral",
+    "Borrow fees use starting net short value times natural days / 365",
+    "Exported risk-free interval returns are not divided a second time",
+    "Target shares use settled NAV_pre; execution fees reduce cash once afterward",
+    "First holding return includes initial entry cost; no zero-length initial return is inserted",
+    "Only the first five validation signals are replayed; this is not a complete phase result"
+  ],
+  "not_yet_checked": [
+    "formal cost/financing configuration and sensitivity comparisons (step 8)",
+    "training-period OOF signal-scale checks and public threshold selection (steps 9-10)",
+    "frozen full validation/test portfolio evaluation and investment benchmarks"
+  ]
+}

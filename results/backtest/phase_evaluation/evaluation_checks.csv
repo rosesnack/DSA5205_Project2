@@ -1,0 +1,60 @@
+phase,check,passed,detail
+validation,fixed_phase_opens,True,"Exact protocol endpoints, not inferred from future labels"
+validation,six_original_signal_groups,True,"All six models/schemes, no performance selection"
+validation,signal_day_split,True,Respect the existing signal-day split
+validation,scheduled_actions_cover_each_open,True,Exactly one action at every phase open for each strategy
+validation,observed_execution_quotes,True,Ten observed open/dividend quotes per execution date; no adjusted prices or fills
+validation,exact_available_cash_intervals,True,All adjacent phase opens have exported cash returns available at entry
+validation,official_predictions_exact,True,"Trading y_hat exactly equals the original delivered forecast, with no refitting"
+validation,no_future_scoring_fields,True,"Replay receives no common_scoreable, future target, label_valid or label_within_split"
+validation,phase_only_six_strategies,True,Keep all six results in the prescribed phase
+validation,complete_open_and_interval_counts,True,All execution opens and cash-only intervals retained
+validation,independent_cash_and_no_old_shares,True,"No prior-phase NAV, pair or share state enters any strategy"
+validation,scheduled_final_liquidation,True,"Final open liquidates all actual shares, with no new position"
+validation,common_adjacent_intervals_and_fee_inclusion,True,Return product reconstructs NAV from capital 1; initial/final costs retained; no zero-length return
+validation,cash_excess_definition,True,Arithmetic same-interval cash subtraction
+validation,cash_rates_match_original_intervals,True,"No rate shifting, extra annualization or missing interval"
+validation,nav_and_pnl_reconcile,True,Phase acceptance check on existing cash/price/dividend/financing NAV identities
+validation,pair_capacity_and_gross,True,At most four unscaled pairs; netted gross no greater than one
+validation,fixed_sector_leg_weights,True,Every sector leg is zero or 12.5% of NAV_pre; idle capacity is not rescaled
+validation,daily_target_shares,True,Daily sizing uses NAV_pre without a tolerance band
+validation,spy_netted_dollar_neutral_targets,True,The single SPY target offsets the combined sector targets before actual trades
+validation,actual_net_trade_fees,True,"Charge the actual net asset share difference once, after SPY netting"
+validation,asset_totals_match_portfolio,True,"Net asset fees, market values and signed dividends reconcile with portfolio totals"
+validation,collateral_cash_interest,True,Only available own cash earns the exported interval return
+validation,natural_day_borrow,True,"Actual net starting short collateral, annual 1%, natural days/365"
+validation,observed_prices_and_signed_dividends,True,Use observed prices and old signed shares; no adjusted-return or new-buy dividend double count
+validation,fixed_public_threshold,True,Only the selected public threshold and main cost case
+validation,zero_trade_reporting,True,Cash-only strategies remain valid results with N/A zero-variance Sharpe
+validation,force_flat_instructions_respected,True,Incomplete signals and phase-end guards result in zero pairs
+test,fixed_phase_opens,True,"Exact protocol endpoints, not inferred from future labels"
+test,six_original_signal_groups,True,"All six models/schemes, no performance selection"
+test,signal_day_split,True,Respect the existing signal-day split
+test,scheduled_actions_cover_each_open,True,Exactly one action at every phase open for each strategy
+test,observed_execution_quotes,True,Ten observed open/dividend quotes per execution date; no adjusted prices or fills
+test,exact_available_cash_intervals,True,All adjacent phase opens have exported cash returns available at entry
+test,official_predictions_exact,True,"Trading y_hat exactly equals the original delivered forecast, with no refitting"
+test,no_future_scoring_fields,True,"Replay receives no common_scoreable, future target, label_valid or label_within_split"
+test,phase_only_six_strategies,True,Keep all six results in the prescribed phase
+test,complete_open_and_interval_counts,True,All execution opens and cash-only intervals retained
+test,independent_cash_and_no_old_shares,True,"No prior-phase NAV, pair or share state enters any strategy"
+test,scheduled_final_liquidation,True,"Final open liquidates all actual shares, with no new position"
+test,common_adjacent_intervals_and_fee_inclusion,True,Return product reconstructs NAV from capital 1; initial/final costs retained; no zero-length return
+test,cash_excess_definition,True,Arithmetic same-interval cash subtraction
+test,cash_rates_match_original_intervals,True,"No rate shifting, extra annualization or missing interval"
+test,nav_and_pnl_reconcile,True,Phase acceptance check on existing cash/price/dividend/financing NAV identities
+test,pair_capacity_and_gross,True,At most four unscaled pairs; netted gross no greater than one
+test,fixed_sector_leg_weights,True,Every sector leg is zero or 12.5% of NAV_pre; idle capacity is not rescaled
+test,daily_target_shares,True,Daily sizing uses NAV_pre without a tolerance band
+test,spy_netted_dollar_neutral_targets,True,The single SPY target offsets the combined sector targets before actual trades
+test,actual_net_trade_fees,True,"Charge the actual net asset share difference once, after SPY netting"
+test,asset_totals_match_portfolio,True,"Net asset fees, market values and signed dividends reconcile with portfolio totals"
+test,collateral_cash_interest,True,Only available own cash earns the exported interval return
+test,natural_day_borrow,True,"Actual net starting short collateral, annual 1%, natural days/365"
+test,observed_prices_and_signed_dividends,True,Use observed prices and old signed shares; no adjusted-return or new-buy dividend double count
+test,fixed_public_threshold,True,Only the selected public threshold and main cost case
+test,zero_trade_reporting,True,Cash-only strategies remain valid results with N/A zero-variance Sharpe
+test,force_flat_instructions_respected,True,Incomplete signals and phase-end guards result in zero pairs
+cross_phase,identical_en_test_predictions_give_identical_ledgers,True,"The delivered EN S0/S1/S2 test predictions are identical, and produce identical deterministic cash/NAV ledgers"
+cross_phase,protocol_frozen_before_test_replay,True,Freeze timestamp precedes the first step-11 test portfolio replay; earlier model exploration is disclosed
+cross_phase,protected_inputs_old_results_and_engines_unchanged,True,"All registered old outputs, data, official predictions, original notebooks and existing engines retain their hashes"

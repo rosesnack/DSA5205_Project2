@@ -1,0 +1,1050 @@
+category,phase,identity,check,passed,rows,max_abs_error,atol,rtol,detail
+signal_inputs,both,all,future_fields_and_row_order_do_not_change_signals,True,118692,,,,Exact value equality
+signal_inputs,both,all,future_fields_and_row_order_do_not_change_daily_actions,True,13188,,,,Exact value equality
+signal_inputs,both,all,rebuilt_sector_readiness_matches_registered_signals,True,118692,,,,Exact value equality
+signal_inputs,both,all,rebuilt_phase_guards_match_registered_actions,True,13188,,,,Exact value equality
+signal_inputs,both,all,signal_at_utc_matches,True,13188,,,,
+signal_inputs,both,all,action_at_utc_matches,True,13188,,,,
+source_data,validation,all,all_execution_quotes_observed,True,12580,,,,
+pair_rules,validation,elastic_net/S0,independent_targets_match_saved_weights,True,1258,,,,
+pair_rules,validation,elastic_net/S0,engine_matches_independent_pair_reference,True,1259,,,,
+pair_rules,validation,elastic_net/S0,all_decisions_exact_under_input_order_and_future_field_changes,True,1259,,,,
+pair_rules,validation,elastic_net/S0,decision_inputs_not_mutated,True,1259,,,,
+pair_rules,validation,elastic_net/S1,independent_targets_match_saved_weights,True,1258,,,,
+pair_rules,validation,elastic_net/S1,engine_matches_independent_pair_reference,True,1259,,,,
+pair_rules,validation,elastic_net/S1,all_decisions_exact_under_input_order_and_future_field_changes,True,1259,,,,
+pair_rules,validation,elastic_net/S1,decision_inputs_not_mutated,True,1259,,,,
+pair_rules,validation,elastic_net/S2,independent_targets_match_saved_weights,True,1258,,,,
+pair_rules,validation,elastic_net/S2,engine_matches_independent_pair_reference,True,1259,,,,
+pair_rules,validation,elastic_net/S2,all_decisions_exact_under_input_order_and_future_field_changes,True,1259,,,,
+pair_rules,validation,elastic_net/S2,decision_inputs_not_mutated,True,1259,,,,
+pair_rules,validation,gbdt/S0,independent_targets_match_saved_weights,True,1258,,,,
+pair_rules,validation,gbdt/S0,engine_matches_independent_pair_reference,True,1259,,,,
+pair_rules,validation,gbdt/S0,all_decisions_exact_under_input_order_and_future_field_changes,True,1259,,,,
+pair_rules,validation,gbdt/S0,decision_inputs_not_mutated,True,1259,,,,
+pair_rules,validation,gbdt/S1,independent_targets_match_saved_weights,True,1258,,,,
+pair_rules,validation,gbdt/S1,engine_matches_independent_pair_reference,True,1259,,,,
+pair_rules,validation,gbdt/S1,all_decisions_exact_under_input_order_and_future_field_changes,True,1259,,,,
+pair_rules,validation,gbdt/S1,decision_inputs_not_mutated,True,1259,,,,
+pair_rules,validation,gbdt/S2,independent_targets_match_saved_weights,True,1258,,,,
+pair_rules,validation,gbdt/S2,engine_matches_independent_pair_reference,True,1259,,,,
+pair_rules,validation,gbdt/S2,all_decisions_exact_under_input_order_and_future_field_changes,True,1259,,,,
+pair_rules,validation,gbdt/S2,decision_inputs_not_mutated,True,1259,,,,
+strategy,validation,elastic_net/S0,unique_keys_and_ten_assets_per_open,True,12580,,,,
+strategy,validation,elastic_net/S0,complete_source_calendar_and_joins,True,1258,,,,
+strategy,validation,elastic_net/S0,shares_carry_from_previous_targets,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,dividends_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,held_previous_opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,weights_match_independent_signal_reference,True,12580,0,0,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,asset_price_pnl_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,asset_dividend_cash_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,asset_market_value_post,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,asset_delta_shares,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,asset_trade_notional,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,asset_cash_change_before_costs,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,asset_execution_fee,True,12580,1.3552527156068805e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,asset_cash_after_fee,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,actual_post_fee_weights,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,pair_count_from_independent_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,gross_from_independent_netted_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,cash_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,nav_previous,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,nav_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,interval_rf,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,calendar_days,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,starting_short_collateral,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,price_pnl,True,1258,4.3368086899420177e-19,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,dividends,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,interest,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,borrow,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,cash_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,nav_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,execution_fee,True,1258,5.4210108624275222e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,traded_notional,True,1258,8.6736173798840355e-19,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,cash_post,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,nav_post,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,targets_from_independently_settled_nav,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,first_fee_included_denominator,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,holding_returns,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,available_all_rf_intervals,True,1257,,,,
+strategy,validation,elastic_net/S0,cash_one_empty_start_final_flat,True,1258,,,,
+strategy,validation,elastic_net/S0,trade_export_equals_nonzero_asset_changes,True,392,,,,Exact value equality
+strategy,validation,elastic_net/S0,return_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,cash_excess_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,summary_metrics_recomputed,True,18,3.9968028886505635e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S0,ending_nav_from_independent_pnl_sum,True,1,1.5543122344752192e-15,1e-10,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,unique_keys_and_ten_assets_per_open,True,12580,,,,
+strategy,validation,elastic_net/S1,complete_source_calendar_and_joins,True,1258,,,,
+strategy,validation,elastic_net/S1,shares_carry_from_previous_targets,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,dividends_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,held_previous_opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,weights_match_independent_signal_reference,True,12580,0,0,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,asset_price_pnl_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,asset_dividend_cash_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,asset_market_value_post,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,asset_delta_shares,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,asset_trade_notional,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,asset_cash_change_before_costs,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,asset_execution_fee,True,12580,1.3552527156068805e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,asset_cash_after_fee,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,actual_post_fee_weights,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,pair_count_from_independent_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,gross_from_independent_netted_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,cash_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,nav_previous,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,nav_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,interval_rf,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,calendar_days,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,starting_short_collateral,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,price_pnl,True,1258,4.3368086899420177e-19,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,dividends,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,interest,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,borrow,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,cash_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,nav_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,execution_fee,True,1258,2.7105054312137611e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,traded_notional,True,1258,1.1102230246251565e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,cash_post,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,nav_post,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,targets_from_independently_settled_nav,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,first_fee_included_denominator,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,holding_returns,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,available_all_rf_intervals,True,1257,,,,
+strategy,validation,elastic_net/S1,cash_one_empty_start_final_flat,True,1258,,,,
+strategy,validation,elastic_net/S1,trade_export_equals_nonzero_asset_changes,True,392,,,,Exact value equality
+strategy,validation,elastic_net/S1,return_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,cash_excess_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,summary_metrics_recomputed,True,18,3.9968028886505635e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S1,ending_nav_from_independent_pnl_sum,True,1,2.886579864025407e-15,1e-10,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,unique_keys_and_ten_assets_per_open,True,12580,,,,
+strategy,validation,elastic_net/S2,complete_source_calendar_and_joins,True,1258,,,,
+strategy,validation,elastic_net/S2,shares_carry_from_previous_targets,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,dividends_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,held_previous_opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,weights_match_independent_signal_reference,True,12580,0,0,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,asset_price_pnl_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,asset_dividend_cash_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,asset_market_value_post,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,asset_delta_shares,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,asset_trade_notional,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,asset_cash_change_before_costs,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,asset_execution_fee,True,12580,1.3552527156068805e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,asset_cash_after_fee,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,actual_post_fee_weights,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,pair_count_from_independent_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,gross_from_independent_netted_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,cash_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,nav_previous,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,nav_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,interval_rf,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,calendar_days,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,starting_short_collateral,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,price_pnl,True,1258,4.3368086899420177e-19,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,dividends,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,interest,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,borrow,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,cash_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,nav_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,execution_fee,True,1258,2.7105054312137611e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,traded_notional,True,1258,1.1102230246251565e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,cash_post,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,nav_post,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,targets_from_independently_settled_nav,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,first_fee_included_denominator,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,holding_returns,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,available_all_rf_intervals,True,1257,,,,
+strategy,validation,elastic_net/S2,cash_one_empty_start_final_flat,True,1258,,,,
+strategy,validation,elastic_net/S2,trade_export_equals_nonzero_asset_changes,True,392,,,,Exact value equality
+strategy,validation,elastic_net/S2,return_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,cash_excess_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,summary_metrics_recomputed,True,18,3.9968028886505635e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,elastic_net/S2,ending_nav_from_independent_pnl_sum,True,1,2.886579864025407e-15,1e-10,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,unique_keys_and_ten_assets_per_open,True,12580,,,,
+strategy,validation,gbdt/S0,complete_source_calendar_and_joins,True,1258,,,,
+strategy,validation,gbdt/S0,shares_carry_from_previous_targets,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,dividends_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,held_previous_opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,weights_match_independent_signal_reference,True,12580,0,0,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,asset_price_pnl_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,asset_dividend_cash_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,asset_market_value_post,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,asset_delta_shares,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,asset_trade_notional,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,asset_cash_change_before_costs,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,asset_execution_fee,True,12580,1.3552527156068805e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,asset_cash_after_fee,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,actual_post_fee_weights,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,pair_count_from_independent_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,gross_from_independent_netted_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,cash_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,nav_previous,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,nav_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,interval_rf,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,calendar_days,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,starting_short_collateral,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,price_pnl,True,1258,1.7347234759768071e-18,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,dividends,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,interest,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,borrow,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,cash_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,nav_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,execution_fee,True,1258,8.1315162936412833e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,traded_notional,True,1258,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,cash_post,True,1258,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,nav_post,True,1258,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,targets_from_independently_settled_nav,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,first_fee_included_denominator,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,holding_returns,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,available_all_rf_intervals,True,1257,,,,
+strategy,validation,gbdt/S0,cash_one_empty_start_final_flat,True,1258,,,,
+strategy,validation,gbdt/S0,trade_export_equals_nonzero_asset_changes,True,823,,,,Exact value equality
+strategy,validation,gbdt/S0,return_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,cash_excess_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,summary_metrics_recomputed,True,18,3.9968028886505635e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S0,ending_nav_from_independent_pnl_sum,True,1,2.2204460492503131e-16,1e-10,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,unique_keys_and_ten_assets_per_open,True,12580,,,,
+strategy,validation,gbdt/S1,complete_source_calendar_and_joins,True,1258,,,,
+strategy,validation,gbdt/S1,shares_carry_from_previous_targets,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,dividends_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,held_previous_opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,weights_match_independent_signal_reference,True,12580,0,0,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,asset_price_pnl_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,asset_dividend_cash_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,asset_market_value_post,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,asset_delta_shares,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,asset_trade_notional,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,asset_cash_change_before_costs,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,asset_execution_fee,True,12580,2.7105054312137611e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,asset_cash_after_fee,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,actual_post_fee_weights,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,pair_count_from_independent_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,gross_from_independent_netted_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,cash_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,nav_previous,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,nav_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,interval_rf,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,calendar_days,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,starting_short_collateral,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,price_pnl,True,1258,1.7347234759768071e-18,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,dividends,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,interest,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,borrow,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,cash_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,nav_pre,True,1258,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,execution_fee,True,1258,5.4210108624275222e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,traded_notional,True,1258,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,cash_post,True,1258,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,nav_post,True,1258,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,targets_from_independently_settled_nav,True,12580,1.7347234759768071e-18,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,first_fee_included_denominator,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,holding_returns,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,available_all_rf_intervals,True,1257,,,,
+strategy,validation,gbdt/S1,cash_one_empty_start_final_flat,True,1258,,,,
+strategy,validation,gbdt/S1,trade_export_equals_nonzero_asset_changes,True,840,,,,Exact value equality
+strategy,validation,gbdt/S1,return_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,cash_excess_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,summary_metrics_recomputed,True,18,3.9968028886505635e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S1,ending_nav_from_independent_pnl_sum,True,1,5.9952043329758453e-15,1e-10,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,unique_keys_and_ten_assets_per_open,True,12580,,,,
+strategy,validation,gbdt/S2,complete_source_calendar_and_joins,True,1258,,,,
+strategy,validation,gbdt/S2,shares_carry_from_previous_targets,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,dividends_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,held_previous_opens_match_source,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,weights_match_independent_signal_reference,True,12580,0,0,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,asset_price_pnl_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,asset_dividend_cash_old,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,asset_market_value_post,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,asset_delta_shares,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,asset_trade_notional,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,asset_cash_change_before_costs,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,asset_execution_fee,True,12580,2.7105054312137611e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,asset_cash_after_fee,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,actual_post_fee_weights,True,12580,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,pair_count_from_independent_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,gross_from_independent_netted_weights,True,1258,0,0,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,cash_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,nav_previous,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,nav_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,interval_rf,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,calendar_days,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,starting_short_collateral,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,price_pnl,True,1258,5.2041704279304213e-18,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,dividends,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,interest,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,borrow,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,cash_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,nav_pre,True,1258,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,execution_fee,True,1258,5.4210108624275222e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,traded_notional,True,1258,1.1102230246251565e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,cash_post,True,1258,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,nav_post,True,1258,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,targets_from_independently_settled_nav,True,12580,8.6736173798840355e-19,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,first_fee_included_denominator,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,holding_returns,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,available_all_rf_intervals,True,1257,,,,
+strategy,validation,gbdt/S2,cash_one_empty_start_final_flat,True,1258,,,,
+strategy,validation,gbdt/S2,trade_export_equals_nonzero_asset_changes,True,791,,,,Exact value equality
+strategy,validation,gbdt/S2,return_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,cash_excess_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,summary_metrics_recomputed,True,18,3.9968028886505635e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,validation,gbdt/S2,ending_nav_from_independent_pnl_sum,True,1,1.9984014443252818e-15,1e-10,9.9999999999999998e-13,
+determinism,validation,elastic_net/S0/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S0/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S0/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S0/2018-02-06,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-02-06,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S0/2018-02-06,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S0/2018-02-06,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-02-06,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S0/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S0/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S0/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S0/2020-03-20,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2020-03-20,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S0/2020-03-20,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S0/2020-03-20,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2020-03-20,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S0/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S0/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S0/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S1/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S1/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S1/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S1/2018-02-06,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-02-06,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S1/2018-02-06,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S1/2018-02-06,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-02-06,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S1/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S1/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S1/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S1/2020-03-20,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2020-03-20,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S1/2020-03-20,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S1/2020-03-20,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2020-03-20,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S1/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S1/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S1/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S2/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S2/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S2/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S2/2018-02-06,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-02-06,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S2/2018-02-06,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S2/2018-02-06,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-02-06,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S2/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S2/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S2/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S2/2020-03-20,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2020-03-20,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S2/2020-03-20,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S2/2020-03-20,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2020-03-20,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S2/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S2/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S2/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-02-06,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-06,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-02-06,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-02-06,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-06,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-02-08,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-08,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-02-08,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-02-08,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-08,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-10-15,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-10-15,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-10-15,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-10-15,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-10-15,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-12-21,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-12-21,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-12-21,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-12-21,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-12-21,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2018-03-27,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-03-27,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2018-03-27,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2018-03-27,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-03-27,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2018-10-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-10-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2018-10-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2018-10-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-10-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2020-02-27,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2020-02-27,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2020-02-27,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2020-02-27,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2020-02-27,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2020-03-23,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2020-03-23,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2020-03-23,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2020-03-23,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2020-03-23,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2018-03-27,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-03-27,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2018-03-27,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2018-03-27,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-03-27,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2018-11-01,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-11-01,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2018-11-01,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2018-11-01,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-11-01,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2020-02-27,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2020-02-27,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2020-02-27,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2020-02-27,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2020-02-27,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2020-03-23,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2020-03-23,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2020-03-23,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2020-03-23,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2020-03-23,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+source_data,test,all,all_execution_quotes_observed,True,9380,,,,
+pair_rules,test,elastic_net/S0,independent_targets_match_saved_weights,True,938,,,,
+pair_rules,test,elastic_net/S0,engine_matches_independent_pair_reference,True,939,,,,
+pair_rules,test,elastic_net/S0,all_decisions_exact_under_input_order_and_future_field_changes,True,939,,,,
+pair_rules,test,elastic_net/S0,decision_inputs_not_mutated,True,939,,,,
+pair_rules,test,elastic_net/S1,independent_targets_match_saved_weights,True,938,,,,
+pair_rules,test,elastic_net/S1,engine_matches_independent_pair_reference,True,939,,,,
+pair_rules,test,elastic_net/S1,all_decisions_exact_under_input_order_and_future_field_changes,True,939,,,,
+pair_rules,test,elastic_net/S1,decision_inputs_not_mutated,True,939,,,,
+pair_rules,test,elastic_net/S2,independent_targets_match_saved_weights,True,938,,,,
+pair_rules,test,elastic_net/S2,engine_matches_independent_pair_reference,True,939,,,,
+pair_rules,test,elastic_net/S2,all_decisions_exact_under_input_order_and_future_field_changes,True,939,,,,
+pair_rules,test,elastic_net/S2,decision_inputs_not_mutated,True,939,,,,
+pair_rules,test,gbdt/S0,independent_targets_match_saved_weights,True,938,,,,
+pair_rules,test,gbdt/S0,engine_matches_independent_pair_reference,True,939,,,,
+pair_rules,test,gbdt/S0,all_decisions_exact_under_input_order_and_future_field_changes,True,939,,,,
+pair_rules,test,gbdt/S0,decision_inputs_not_mutated,True,939,,,,
+pair_rules,test,gbdt/S1,independent_targets_match_saved_weights,True,938,,,,
+pair_rules,test,gbdt/S1,engine_matches_independent_pair_reference,True,939,,,,
+pair_rules,test,gbdt/S1,all_decisions_exact_under_input_order_and_future_field_changes,True,939,,,,
+pair_rules,test,gbdt/S1,decision_inputs_not_mutated,True,939,,,,
+pair_rules,test,gbdt/S2,independent_targets_match_saved_weights,True,938,,,,
+pair_rules,test,gbdt/S2,engine_matches_independent_pair_reference,True,939,,,,
+pair_rules,test,gbdt/S2,all_decisions_exact_under_input_order_and_future_field_changes,True,939,,,,
+pair_rules,test,gbdt/S2,decision_inputs_not_mutated,True,939,,,,
+strategy,test,elastic_net/S0,unique_keys_and_ten_assets_per_open,True,9380,,,,
+strategy,test,elastic_net/S0,complete_source_calendar_and_joins,True,938,,,,
+strategy,test,elastic_net/S0,shares_carry_from_previous_targets,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,dividends_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,held_previous_opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,weights_match_independent_signal_reference,True,9380,0,0,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,asset_price_pnl_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,asset_dividend_cash_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,asset_market_value_post,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,asset_delta_shares,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,asset_trade_notional,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,asset_cash_change_before_costs,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,asset_execution_fee,True,9380,1.3552527156068805e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,asset_cash_after_fee,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,actual_post_fee_weights,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,pair_count_from_independent_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,gross_from_independent_netted_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,cash_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,nav_previous,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,nav_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,interval_rf,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,calendar_days,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,starting_short_collateral,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,price_pnl,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,dividends,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,interest,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,borrow,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,cash_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,nav_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,execution_fee,True,938,2.7105054312137611e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,traded_notional,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,cash_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,nav_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,targets_from_independently_settled_nav,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,first_fee_included_denominator,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,holding_returns,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,available_all_rf_intervals,True,937,,,,
+strategy,test,elastic_net/S0,cash_one_empty_start_final_flat,True,938,,,,
+strategy,test,elastic_net/S0,trade_export_equals_nonzero_asset_changes,True,34,,,,Exact value equality
+strategy,test,elastic_net/S0,return_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,cash_excess_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,summary_metrics_recomputed,True,18,4.4408920985006262e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S0,ending_nav_from_independent_pnl_sum,True,1,1.1102230246251565e-15,1e-10,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,unique_keys_and_ten_assets_per_open,True,9380,,,,
+strategy,test,elastic_net/S1,complete_source_calendar_and_joins,True,938,,,,
+strategy,test,elastic_net/S1,shares_carry_from_previous_targets,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,dividends_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,held_previous_opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,weights_match_independent_signal_reference,True,9380,0,0,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,asset_price_pnl_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,asset_dividend_cash_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,asset_market_value_post,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,asset_delta_shares,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,asset_trade_notional,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,asset_cash_change_before_costs,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,asset_execution_fee,True,9380,1.3552527156068805e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,asset_cash_after_fee,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,actual_post_fee_weights,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,pair_count_from_independent_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,gross_from_independent_netted_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,cash_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,nav_previous,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,nav_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,interval_rf,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,calendar_days,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,starting_short_collateral,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,price_pnl,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,dividends,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,interest,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,borrow,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,cash_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,nav_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,execution_fee,True,938,2.7105054312137611e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,traded_notional,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,cash_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,nav_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,targets_from_independently_settled_nav,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,first_fee_included_denominator,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,holding_returns,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,available_all_rf_intervals,True,937,,,,
+strategy,test,elastic_net/S1,cash_one_empty_start_final_flat,True,938,,,,
+strategy,test,elastic_net/S1,trade_export_equals_nonzero_asset_changes,True,34,,,,Exact value equality
+strategy,test,elastic_net/S1,return_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,cash_excess_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,summary_metrics_recomputed,True,18,4.4408920985006262e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S1,ending_nav_from_independent_pnl_sum,True,1,1.1102230246251565e-15,1e-10,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,unique_keys_and_ten_assets_per_open,True,9380,,,,
+strategy,test,elastic_net/S2,complete_source_calendar_and_joins,True,938,,,,
+strategy,test,elastic_net/S2,shares_carry_from_previous_targets,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,dividends_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,held_previous_opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,weights_match_independent_signal_reference,True,9380,0,0,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,asset_price_pnl_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,asset_dividend_cash_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,asset_market_value_post,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,asset_delta_shares,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,asset_trade_notional,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,asset_cash_change_before_costs,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,asset_execution_fee,True,9380,1.3552527156068805e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,asset_cash_after_fee,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,actual_post_fee_weights,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,pair_count_from_independent_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,gross_from_independent_netted_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,cash_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,nav_previous,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,nav_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,interval_rf,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,calendar_days,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,starting_short_collateral,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,price_pnl,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,dividends,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,interest,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,borrow,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,cash_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,nav_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,execution_fee,True,938,2.7105054312137611e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,traded_notional,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,cash_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,nav_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,targets_from_independently_settled_nav,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,first_fee_included_denominator,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,holding_returns,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,available_all_rf_intervals,True,937,,,,
+strategy,test,elastic_net/S2,cash_one_empty_start_final_flat,True,938,,,,
+strategy,test,elastic_net/S2,trade_export_equals_nonzero_asset_changes,True,34,,,,Exact value equality
+strategy,test,elastic_net/S2,return_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,cash_excess_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,summary_metrics_recomputed,True,18,4.4408920985006262e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,elastic_net/S2,ending_nav_from_independent_pnl_sum,True,1,1.1102230246251565e-15,1e-10,9.9999999999999998e-13,
+strategy,test,gbdt/S0,unique_keys_and_ten_assets_per_open,True,9380,,,,
+strategy,test,gbdt/S0,complete_source_calendar_and_joins,True,938,,,,
+strategy,test,gbdt/S0,shares_carry_from_previous_targets,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,dividends_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,held_previous_opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,weights_match_independent_signal_reference,True,9380,0,0,9.9999999999999998e-13,
+strategy,test,gbdt/S0,asset_price_pnl_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,asset_dividend_cash_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,asset_market_value_post,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,asset_delta_shares,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,asset_trade_notional,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,asset_cash_change_before_costs,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,asset_execution_fee,True,9380,2.7105054312137611e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,asset_cash_after_fee,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,actual_post_fee_weights,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,pair_count_from_independent_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,gbdt/S0,gross_from_independent_netted_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,gbdt/S0,cash_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,nav_previous,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,nav_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,interval_rf,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,calendar_days,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,starting_short_collateral,True,938,5.5511151231257827e-17,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,price_pnl,True,938,1.7347234759768071e-18,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,dividends,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,interest,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,borrow,True,938,3.3881317890172014e-21,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,cash_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,nav_pre,True,938,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,execution_fee,True,938,5.4210108624275222e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,traded_notional,True,938,8.6736173798840355e-19,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,cash_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,nav_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,targets_from_independently_settled_nav,True,9380,8.6736173798840355e-19,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,first_fee_included_denominator,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,holding_returns,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,available_all_rf_intervals,True,937,,,,
+strategy,test,gbdt/S0,cash_one_empty_start_final_flat,True,938,,,,
+strategy,test,gbdt/S0,trade_export_equals_nonzero_asset_changes,True,378,,,,Exact value equality
+strategy,test,gbdt/S0,return_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,cash_excess_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,summary_metrics_recomputed,True,18,4.4408920985006262e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S0,ending_nav_from_independent_pnl_sum,True,1,1.5543122344752192e-15,1e-10,9.9999999999999998e-13,
+strategy,test,gbdt/S1,unique_keys_and_ten_assets_per_open,True,9380,,,,
+strategy,test,gbdt/S1,complete_source_calendar_and_joins,True,938,,,,
+strategy,test,gbdt/S1,shares_carry_from_previous_targets,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,dividends_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,held_previous_opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,weights_match_independent_signal_reference,True,9380,0,0,9.9999999999999998e-13,
+strategy,test,gbdt/S1,asset_price_pnl_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,asset_dividend_cash_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,asset_market_value_post,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,asset_delta_shares,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,asset_trade_notional,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,asset_cash_change_before_costs,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,asset_execution_fee,True,9380,2.7105054312137611e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,asset_cash_after_fee,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,actual_post_fee_weights,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,pair_count_from_independent_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,gbdt/S1,gross_from_independent_netted_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,gbdt/S1,cash_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,nav_previous,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,nav_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,interval_rf,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,calendar_days,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,starting_short_collateral,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,price_pnl,True,938,8.6736173798840355e-19,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,dividends,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,interest,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,borrow,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,cash_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,nav_pre,True,938,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,execution_fee,True,938,5.4210108624275222e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,traded_notional,True,938,1.1102230246251565e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,cash_post,True,938,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,nav_post,True,938,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,targets_from_independently_settled_nav,True,9380,4.3368086899420177e-19,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,first_fee_included_denominator,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,holding_returns,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,available_all_rf_intervals,True,937,,,,
+strategy,test,gbdt/S1,cash_one_empty_start_final_flat,True,938,,,,
+strategy,test,gbdt/S1,trade_export_equals_nonzero_asset_changes,True,393,,,,Exact value equality
+strategy,test,gbdt/S1,return_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,cash_excess_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,summary_metrics_recomputed,True,18,4.4408920985006262e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S1,ending_nav_from_independent_pnl_sum,True,1,8.8817841970012523e-16,1e-10,9.9999999999999998e-13,
+strategy,test,gbdt/S2,unique_keys_and_ten_assets_per_open,True,9380,,,,
+strategy,test,gbdt/S2,complete_source_calendar_and_joins,True,938,,,,
+strategy,test,gbdt/S2,shares_carry_from_previous_targets,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,dividends_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,held_previous_opens_match_source,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,weights_match_independent_signal_reference,True,9380,0,0,9.9999999999999998e-13,
+strategy,test,gbdt/S2,asset_price_pnl_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,asset_dividend_cash_old,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,asset_market_value_post,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,asset_delta_shares,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,asset_trade_notional,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,asset_cash_change_before_costs,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,asset_execution_fee,True,9380,2.7105054312137611e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,asset_cash_after_fee,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,actual_post_fee_weights,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,pair_count_from_independent_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,gbdt/S2,gross_from_independent_netted_weights,True,938,0,0,9.9999999999999998e-13,
+strategy,test,gbdt/S2,cash_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,nav_previous,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,nav_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,interval_rf,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,calendar_days,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,starting_short_collateral,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,price_pnl,True,938,1.7347234759768071e-18,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,dividends,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,interest,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,borrow,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,cash_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,nav_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,execution_fee,True,938,5.4210108624275222e-20,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,traded_notional,True,938,1.1102230246251565e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,cash_post,True,938,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,nav_post,True,938,2.2204460492503131e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,targets_from_independently_settled_nav,True,9380,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,first_fee_included_denominator,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,holding_returns,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,available_all_rf_intervals,True,937,,,,
+strategy,test,gbdt/S2,cash_one_empty_start_final_flat,True,938,,,,
+strategy,test,gbdt/S2,trade_export_equals_nonzero_asset_changes,True,382,,,,Exact value equality
+strategy,test,gbdt/S2,return_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,cash_excess_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,summary_metrics_recomputed,True,18,4.4408920985006262e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+strategy,test,gbdt/S2,ending_nav_from_independent_pnl_sum,True,1,8.8817841970012523e-16,1e-10,9.9999999999999998e-13,
+determinism,test,elastic_net/S0/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S0/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S0/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S0/2023-03-13,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-03-13,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S0/2023-03-13,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S0/2023-03-13,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-03-13,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S0/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S0/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S0/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S0/2025-04-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2025-04-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S0/2025-04-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S0/2025-04-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2025-04-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S0/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S0/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S0/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S1/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S1/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S1/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S1/2023-03-13,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-03-13,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S1/2023-03-13,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S1/2023-03-13,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-03-13,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S1/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S1/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S1/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S1/2025-04-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2025-04-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S1/2025-04-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S1/2025-04-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2025-04-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S1/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S1/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S1/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S2/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S2/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S2/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S2/2023-03-13,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-03-13,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S2/2023-03-13,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S2/2023-03-13,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-03-13,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S2/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S2/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S2/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S2/2025-04-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2025-04-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S2/2025-04-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S2/2025-04-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2025-04-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S2/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S2/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S2/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2023-01-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-01-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2023-01-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2023-01-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-01-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2023-03-15,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-03-15,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2023-03-15,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2023-03-15,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-03-15,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2024-08-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2024-08-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2024-08-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2024-08-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2024-08-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-01-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-01-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-01-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-01-11,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-11,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-01-11,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-01-11,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-11,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-03-15,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-15,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-03-15,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-03-15,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-15,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-03-20,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-20,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-03-20,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-03-20,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-20,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2023-01-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-01-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2023-01-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2023-01-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-01-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2023-03-15,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-15,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2023-03-15,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2023-03-15,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-15,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2023-03-20,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-20,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2023-03-20,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2023-03-20,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-20,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S0 = elastic_net/S1,identical_predictions_give_exact_daily,True,938,,,,Exact value equality
+determinism,test,elastic_net/S0 = elastic_net/S1,identical_predictions_give_exact_assets,True,9380,,,,Exact value equality
+determinism,test,elastic_net/S0 = elastic_net/S2,identical_predictions_give_exact_daily,True,938,,,,Exact value equality
+determinism,test,elastic_net/S0 = elastic_net/S2,identical_predictions_give_exact_assets,True,9380,,,,Exact value equality
+determinism,test,elastic_net/S1 = elastic_net/S2,identical_predictions_give_exact_daily,True,938,,,,Exact value equality
+determinism,test,elastic_net/S1 = elastic_net/S2,identical_predictions_give_exact_assets,True,9380,,,,Exact value equality
+benchmark,test,cash,source_open,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,source_dividend,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,fixed_share_targets,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,old_shares,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,cash_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,nav_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,cash_interest,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,dividends,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,price_pnl,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,cash_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,nav_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,delta_shares,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,execution_fee,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,cash_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,nav_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,same_interval_rf,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,fee_included_returns,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,return_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,cash_excess_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,terminal_value_independent_formula,True,1,4.4408920985006262e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,pnl_sum_reconstructs_nav,True,1,4.4408920985006262e-16,1e-10,9.9999999999999998e-13,
+benchmark,test,cash,summary_metrics,True,5,4.4408920985006262e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,cash,trade_export,True,0,,,,Exact value equality
+benchmark,test,cash,same_source_calendar_initial_cash_final_flat,True,938,,,,
+benchmark,test,spy_buy_hold,source_open,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,source_dividend,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,fixed_share_targets,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,old_shares,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,cash_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,nav_carry,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,cash_interest,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,dividends,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,price_pnl,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,cash_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,nav_pre,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,delta_shares,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,execution_fee,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,cash_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,nav_post,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,same_interval_rf,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,fee_included_returns,True,938,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,return_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,cash_excess_export,True,937,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,terminal_value_independent_formula,True,1,4.4408920985006262e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,pnl_sum_reconstructs_nav,True,1,0,1e-10,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,summary_metrics,True,5,4.4408920985006262e-16,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,test,spy_buy_hold,trade_export,True,2,,,,Exact value equality
+benchmark,test,spy_buy_hold,same_source_calendar_initial_cash_final_flat,True,938,,,,
+benchmark,validation,cash,source_open,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,source_dividend,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,fixed_share_targets,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,old_shares,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,cash_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,nav_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,cash_interest,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,dividends,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,price_pnl,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,cash_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,nav_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,delta_shares,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,execution_fee,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,cash_post,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,nav_post,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,same_interval_rf,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,fee_included_returns,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,return_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,cash_excess_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,terminal_value_independent_formula,True,1,3.9968028886505635e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,pnl_sum_reconstructs_nav,True,1,2.886579864025407e-15,1e-10,9.9999999999999998e-13,
+benchmark,validation,cash,summary_metrics,True,5,3.9968028886505635e-15,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,cash,trade_export,True,0,,,,Exact value equality
+benchmark,validation,cash,same_source_calendar_initial_cash_final_flat,True,1258,,,,
+benchmark,validation,spy_buy_hold,source_open,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,source_dividend,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,fixed_share_targets,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,old_shares,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,cash_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,nav_carry,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,cash_interest,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,dividends,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,price_pnl,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,cash_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,nav_pre,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,delta_shares,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,execution_fee,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,cash_post,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,nav_post,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,same_interval_rf,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,fee_included_returns,True,1258,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,return_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,cash_excess_export,True,1257,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,terminal_value_independent_formula,True,1,0,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,pnl_sum_reconstructs_nav,True,1,2.2204460492503131e-16,1e-10,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,summary_metrics,True,5,5.5511151231257827e-17,9.9999999999999998e-13,9.9999999999999998e-13,
+benchmark,validation,spy_buy_hold,trade_export,True,2,,,,Exact value equality
+benchmark,validation,spy_buy_hold,same_source_calendar_initial_cash_final_flat,True,1258,,,,
+determinism,fixture,spy_buy_hold,three_open_benchmark_exact_under_input_row_order,True,3,,,,Exact value equality
+determinism,fixture,cash,three_open_benchmark_exact_under_input_row_order,True,3,,,,Exact value equality
+comparison,both,all,original_twelve_strategy_rows_unchanged,True,12,,,,Exact value equality
+comparison,both,spy_buy_hold,ending_nav_join,True,12,0,9.9999999999999998e-13,9.9999999999999998e-13,
+comparison,both,spy_buy_hold,net_cumulative_return_join,True,12,0,9.9999999999999998e-13,9.9999999999999998e-13,
+comparison,both,spy_buy_hold,annualized_net_return_join,True,12,0,9.9999999999999998e-13,9.9999999999999998e-13,
+comparison,both,spy_buy_hold,terminal_wealth_ratio,True,12,0,9.9999999999999998e-13,9.9999999999999998e-13,
+comparison,both,cash,ending_nav_join,True,12,0,9.9999999999999998e-13,9.9999999999999998e-13,
+comparison,both,cash,net_cumulative_return_join,True,12,0,9.9999999999999998e-13,9.9999999999999998e-13,
+comparison,both,cash,annualized_net_return_join,True,12,0,9.9999999999999998e-13,9.9999999999999998e-13,
+comparison,both,cash,terminal_wealth_ratio,True,12,0,9.9999999999999998e-13,9.9999999999999998e-13,
+comparison,both,cash,all_strategy_cash_references_agree,True,12,0,9.9999999999999998e-13,9.9999999999999998e-13,
+provenance,both,all,all_registered_history_and_code_unchanged,True,528,,,,"Original models, predictions, all candidate outputs, accepted ledgers and the nine existing code files retain their hashes"

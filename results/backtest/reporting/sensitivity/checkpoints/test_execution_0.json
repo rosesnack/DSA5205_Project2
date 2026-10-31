@@ -1,0 +1,44 @@
+{
+  "run_config_sha256": "6d669e7b8d517321fb79b92be11ccba35a2eeb8ae0035f58f313ce0aba979139",
+  "scenario": {
+    "scenario_id": "execution_0",
+    "variation": "execution_bps",
+    "is_main": false,
+    "execution_bps": 0.0,
+    "borrow_annual_rate": 0.01,
+    "full_cash_rebate": false
+  },
+  "completed_utc": "2026-10-31T11:34:01.969980+00:00",
+  "outputs": [
+    {
+      "name": "daily",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_0_daily.csv",
+      "rows": 5628,
+      "sha256": "cebfdebc39fd83a3877554625e2ace0e2fc6d290b149a961da54547b210c9ce3"
+    },
+    {
+      "name": "assets",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_0_assets.csv",
+      "rows": 56280,
+      "sha256": "dcc59f5a56cc31b4e81ca225f394ebb9dad323a5792c598824a4bf73feeb8ce3"
+    },
+    {
+      "name": "trades",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_0_trades.csv",
+      "rows": 1255,
+      "sha256": "32a1ba2b7dca9cd3404849e6dc3c62f5849eb2af535f4665a1f453815d32dcfb"
+    },
+    {
+      "name": "returns",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_0_returns.csv",
+      "rows": 5622,
+      "sha256": "22b69a1cee80f53edfa5685f0e2c9aa27a1f3317c0515c304bbf6a803483ce7e"
+    },
+    {
+      "name": "metrics",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_0_metrics.csv",
+      "rows": 6,
+      "sha256": "d21f00a13bbdb75ad089117d129ba50f12bb90727e19517ce4d4e87b0daeab60"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "backend": "persistent ProcessPoolExecutor",
+  "workers": 4,
+  "numerical_threads": 1,
+  "purpose": "Execution speed only; exact registered monthly model functions and checkpoints reused",
+  "model_implementation_sha256": "2c5d34a35a1ef2b8b564a8eb687ddce3ceff90e7b66a8344430a4e9a87a55787",
+  "execution_adapter_sha256": "ea2c2ac0c95b875c71dc80f68bbc402f2f686419fd784142d573dd99ea6fa283",
+  "registered_before_formal_process_fits": true
+}

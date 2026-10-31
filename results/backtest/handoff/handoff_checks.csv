@@ -1,0 +1,17 @@
+check,passed,detail
+existing_immutable_files_preserved,True,812 baseline hashes unchanged
+step14_registered_sources_code_outputs,True,"539 sources, 12 code files, 110 outputs"
+step_9_checks_passed,True,35
+step_10_checks_passed,True,64
+step_11_checks_passed,True,59
+step_12_checks_passed,True,72
+step_13_checks_passed,True,1049
+step_14_checks_passed,True,215
+frozen_public_threshold,True,"15 / 7.5 bps, original authority preserved"
+main_path_coverage,True,12 strategy paths + 4 benchmark paths
+cost_scenario_coverage,True,"All six strategies, both phases, eight frozen settings"
+notebook_existing_code_and_outputs_unchanged,True,17 previously executed code cells retained byte-equivalent as parsed JSON; documentation updated only
+notebook_native_kernel_caveat_preserved,True,Sequential Python execution is recorded; no native Jupyter execution claim
+review_contains_reading_and_verification_entrypoints,True,8
+full_contains_original_notebooks_and_all_books,True,"Original 01-04 notebooks, selected validation/test/benchmark books and all 14 six-file sensitivity checkpoints"
+documentation_local_links_resolve,True,60 relative links; final manifest self-link is checked again after publication

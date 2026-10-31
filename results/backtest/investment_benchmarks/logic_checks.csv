@@ -1,0 +1,13 @@
+phase,benchmark,check,passed,detail
+fixture,both,fee_funded_fixed_shares,True,Entry principal plus fee exactly consume capital without leverage
+fixture,both,initial_ex_date_no_dividend,True,A new buyer does not receive the initial-date dividend
+fixture,both,old_shares_get_dividend_even_at_exit,True,Final-open old shares get their dividend before sale
+fixture,both,dividends_not_reinvested,True,No mid-phase security trade despite price/dividend changes
+fixture,both,interest_starts_after_dividend_credit,True,"The weekend RF return is used once, on prior cash only"
+fixture,both,closed_form_spy_nav,True,Independent hand calculation includes both fees and dividend interest
+fixture,both,both_end_fees,True,Both actual entry and exit notionals are charged
+fixture,both,cash_compounds_interval_returns,True,Cash has no security fee or repeated day-count conversion
+fixture,both,first_real_interval_keeps_entry_fee,True,No initial zero-length return or omitted entry cost
+fixture,both,cash_zero_excess_sharpe_na,True,Floating-point subtraction cannot create a spurious cash Sharpe
+fixture,both,missing_rate_rejected,True,Missing/unavailable rate data must stop rather than delete a return interval
+fixture,both,unavailable_rate_rejected,True,Missing/unavailable rate data must stop rather than delete a return interval

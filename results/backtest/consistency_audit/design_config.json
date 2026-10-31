@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "scope": "Step 13: twelve selected strategy paths and four investment benchmark paths",
+  "prerequisites": "completed frozen step-11 phases and step-12 investment benchmarks; all recorded hashes intact",
+  "phase_opens": {
+    "validation": [
+      "2018-01-03",
+      "2022-12-30"
+    ],
+    "test": [
+      "2023-01-04",
+      "2026-09-30"
+    ]
+  },
+  "entry_bps": 15,
+  "exit_bps": 7.5,
+  "accounting": "independent arithmetic from source opens/dividends/RF and saved signed shares; not stored residual columns alone",
+  "state": "initial cash 1/no shares; cash and shares carry exactly within each path; all final shares zero",
+  "rules": "independent retain/exit/top-four reference; compare saved targets and existing decision function",
+  "eligibility": "rebuild using original as-of panel/forecast/calendar fields; shuffle inputs and poison future scoring fields",
+  "determinism": "all signal decisions under reversed dictionary order; selected single-open planner/ledger calls; identical-forecast paths; tiny benchmark order fixtures",
+  "case_selection": "per strategy: first/last open, first held rebalance, reversal, net-zero SPY exposure, held dividend and short-collateral interval when present; no return-based selection",
+  "numeric_tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-12,
+    "phase_total_atol": 1e-10,
+    "interpretation": "independent floating-point reconstructions use tolerance; input-order checks require exact equality in this runtime"
+  },
+  "summary_checks": "NAV product, PnL sum, annualization, cash-excess Sharpe, double-sided turnover, start-of-interval holding fraction and saved benchmark joins",
+  "historical_candidates": "all prior candidate outputs retain hashes; numeric audit focuses on the selected 15-bps formal paths",
+  "original_results_read_only": true,
+  "full_strategy_replay": false,
+  "full_benchmark_replay": false,
+  "model_retraining": false,
+  "threshold_reselection": false,
+  "cost_sensitivity": false,
+  "steps_14_to_16_executed": false,
+  "registered_utc": "2026-10-31T10:14:54.347424+00:00"
+}

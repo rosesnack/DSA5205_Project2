@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "source": "../5205proj2.md: section 3.4, 3.6-3.7",
+  "selection_split": "validation",
+  "signal_period": "2018-2022",
+  "phase_opens": [
+    "2018-01-03",
+    "2022-12-30"
+  ],
+  "entry_candidates_bps": [
+    5,
+    10,
+    15,
+    20,
+    30
+  ],
+  "exit_fraction": 0.5,
+  "candidate_source_sha256": "3157b245182e7cf8a8d9bfd4d6812c99d776c2d7c5872af8fab15b3ffb97a5a0",
+  "initial_nav": 1.0,
+  "main_cost_parameters": {
+    "execution_bps": 3.0,
+    "borrow_annual_rate": 0.01,
+    "full_cash_rebate": false
+  },
+  "objective": "equal-weight mean of six strategy mean daily (net portfolio holding return minus same-interval cash return)",
+  "daily_return": "NAV_post(current open)/NAV_post(previous open)-1; first real interval denominator is initial capital, including opening fee",
+  "return_intervals": "every adjacent validation open, including cash/flat intervals; initial zero-length opening row not scored",
+  "cash_excess": "arithmetic subtraction of exported ACT/365 open-interval cash return, not relative-to-SPY target or geometric ratio",
+  "tie_rule": "exact equality of unrounded float objectives; choose larger entry_bps; never round before ranking",
+  "sharpe": "sqrt(252)*mean(daily cash excess)/sample std(ddof=1); N/A when std <= numerical-zero tolerance",
+  "sharpe_std_zero_atol": 1e-12,
+  "annualization": 252,
+  "turnover": "two-sided actual net asset trade notional / NAV_pre, including initial/final trades; annualized sum *252/holding_intervals; no half factor",
+  "holding_fraction": "fraction of all holding intervals whose START-open target pair count is positive",
+  "no_trade_policy": "retain cash days; zero turnover/holding; zero excess-variance Sharpe is N/A; never lower grid to force trading",
+  "official_validation_predictions_used": true,
+  "training_diagnostic_forecasts_used": false,
+  "test_strategy_evaluated": false,
+  "sensitivity_scenarios_evaluated": false,
+  "protocol_freeze_step": 11,
+  "registered_utc": "2026-10-31T08:39:04.824762+00:00"
+}

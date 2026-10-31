@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "scope": "Step 5: pair decision rules; engineering example only",
+  "created_utc": "2026-10-31T08:43:05.890077+00:00",
+  "python_version": "3.11.5",
+  "pandas_version": "2.0.3",
+  "example_only": true,
+  "threshold_selection_performed": false,
+  "example_entry_bps": 10,
+  "example_exit_bps": 5.0,
+  "example_signal_dates": [
+    "2018-01-02",
+    "2018-01-03",
+    "2018-01-04",
+    "2018-01-05",
+    "2018-01-08"
+  ],
+  "daily_example_rows": 30,
+  "sector_example_rows": 270,
+  "rules": {
+    "max_pairs": 4,
+    "exit_threshold_ratio": 0.5,
+    "inequalities": "strict > / <",
+    "new_entry_candidates": "global top four absolute predictions only",
+    "tie_order": [
+      "XLB",
+      "XLE",
+      "XLF",
+      "XLI",
+      "XLK",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XLY"
+    ],
+    "preserve_old_outside_top_four": true,
+    "reversal": "exit plus full opposite-entry conditions, returned as one final target",
+    "status_source": "step-3 daily_signal_status.csv",
+    "prediction_source": "existing Elastic Net/GBDT y_hat, read from step-3 signal inputs"
+  },
+  "checks": [
+    {
+      "check": "weak_signals_remain_flat",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "zero_forecasts_do_not_create_tied_portfolio",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "strict_positive_entry_boundary",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "strict_negative_entry_boundary",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "just_above_entry_boundary",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "long_retained_inside_entry_band",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "short_retained_inside_entry_band",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "strict_long_exit_boundary",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "strict_short_exit_boundary",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "below_exit_threshold_closes",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "mixed_directions_top_four",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "held_ninth_rank_not_forced_out",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "retained_pairs_consume_capacity",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "four_retained_not_replaced_by_stronger_new_signals",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "eligible_reversal",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "reverse_entry_boundary_requires_full_entry_rule",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "opposite_signal_below_entry_threshold_exits_only",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "reverse_outside_top_four_exits_only",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "ticker_order_breaks_absolute_value_ties",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "input_row_order_does_not_change_ties",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "close_all_to_cash",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "final_liquidation",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "outside_phase_creates_no_entry",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "missing_prediction_guard",
+      "passed": true,
+      "detail": "Incomplete signal closes all targets before ranking"
+    },
+    {
+      "check": "nonfinite_prediction_guard",
+      "passed": true,
+      "detail": "Incomplete signal closes all targets before ranking"
+    },
+    {
+      "check": "reversal_is_one_final_target_change",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "future_fields_on_instruction_ignored",
+      "passed": true,
+      "detail": "Expected final pair directions and unchanged old state"
+    },
+    {
+      "check": "invalid_old_direction",
+      "passed": true,
+      "detail": "Invalid state/configuration rejected"
+    },
+    {
+      "check": "too_many_old_pairs",
+      "passed": true,
+      "detail": "Invalid state/configuration rejected"
+    },
+    {
+      "check": "invalid_threshold",
+      "passed": true,
+      "detail": "Invalid state/configuration rejected"
+    },
+    {
+      "check": "phase_replay_starts_flat",
+      "passed": true,
+      "detail": "Test phase does not inherit validation holdings"
+    }
+  ],
+  "source_hashes": {
+    "data/processed/panel_spec.json": "a5587fd3d669097bf94df7c8444ec41edd77f46d23e549a56c4e94f4cd0d7327",
+    "data/processed/model_panel.csv": "3e15a99d21e0d088768058b956540a384c00c3caef04163d9d4069f14189e4be",
+    "data/interim/etf_prices_aligned.csv": "c09a1ff66e321732b3c4ee189dbe8d6792fe7c4fe9895422de18a5849773099e",
+    "notebooks/panel_checks/monthly_training_eligibility.csv": "13d3ec29fd128384d483ba5ec9f37420c4fa0aa9cd55190c8a051addf1ea5536",
+    "results/backtest/combined_predictions.csv": "e6f9a0f5c0c9f58bc22806ee9996c44726da6be2995561d253d77995b355eb73",
+    "results/elastic_net/elastic_net_predictions.csv": "43aa2462594fecdc1f4113ca008900aabf2ff86867cec0b583d6bebd05e05abb",
+    "results/gbdt/gbdt_predictions.csv": "4b939ca8334b16b719d7a767e68010afbec6cbb94d8b7342f6300e5696e59cdd",
+    "notebooks/02_features_panel_data.ipynb": "cdfdb60dd038961db5fe1920c4212e7e94cd4c2e5dd98e427fd7557f11cc4354",
+    "notebooks/03_elastic_net.ipynb": "a60992f898b860a4045e58ea8d7e7cb825df03e98e29bec5737d2262ec65090e",
+    "notebooks/04_gbdt.ipynb": "dd69c86afcfd652dd8a3d421bd8b30c738b824f594434b185a90bba167c04081",
+    "results/backtest/predictions_with_panel.csv": "a63020918e55376976ce354eee4f6299f992f31eb3d7014e560dfdfc7ed5b5aa",
+    "results/backtest/panel_alignment_summary.csv": "dcd0592e7195df904b15dd0e05dbe8165fe99dcb7f1168954767725b7a7457fc",
+    "results/backtest/monthly_time_checks.csv": "2132e34bc59da79f0343cefd709908aa8712cfd819d227c129feffdea3c2556a",
+    "results/backtest/signal_calendar.csv": "d642677743d4e851c1adb9b88f1c7896f001522eee65b8544e79d7da1a617580",
+    "results/backtest/time_alignment_examples.csv": "bdf189ff0266c456754c17fff774e2b513b0193a6f0105b4708f91b88b6c2b15",
+    "notebooks/01_download_clean_data.ipynb": "d939dac768f0a51c57665ae2a01a2f6e93abbb3c70f44812cc54aedb7d8b00fc",
+    "results/backtest/trading_signal_inputs.csv": "58dcd618718a28d1e9ea6cb76f189ce88ca12a4cead244031eaac1992f1f69d3",
+    "results/backtest/daily_signal_status.csv": "480b6f938f93fa8dd12cec159732828089b4e2ab572d0969746df39094b9f269",
+    "results/backtest/scoring_eligibility.csv": "d415d5fb975860f81068cca30ed8550c87adff4eddfbc252f1428a598024d662",
+    "results/backtest/eligibility_summary.csv": "dbbeb877995e7148e473d442fcb2801613995a11c6ce871d8085d3c27b97a200",
+    "results/backtest/signal_status_examples.csv": "83f19ec706fe225c158305f71ac1a930893cba63e6561d95aabc05b7d390c3a9",
+    "results/backtest/signal_policy_checks.csv": "54905e921c20dbc188c33d0a5f4f21196ee7d026ee5ee9e21ab15d014a1a633a",
+    "results/elastic_net/elastic_net_predictions_full.csv": "c9342f032b192272e0936099b8c48cea8c7e3fbf4c388f1f1427b1cd1ead391b",
+    "results/elastic_net/forecast_metrics.csv": "44a008e6223aac2e6d131b303c16a869c28c819073e269bacc27dd29e0284b25",
+    "results/gbdt/gbdt_predictions_full.csv": "adcedb9cba1e47c4f17f4ab276f55e62c8e12fbdaad7e9f3091ab4f4cfd9bb26",
+    "results/gbdt/forecast_metrics.csv": "f3326fd220bef4a17b6ed1757e0a1083e90c6c77f73db59178d7b4edea7349f5",
+    "results/backtest/baseline_predictions.csv": "b56ef7bfc90da91ff24a4b8fe5df1194e708370b1bfbeb6825c732ef8c5e40b7",
+    "results/backtest/monthly_baseline_audit.csv": "af6e680b99d90cd1ccbefc4db6754a43ee13830aecad4045c27540f49d673972",
+    "results/backtest/baseline_forecast_metrics.csv": "d4588ae242c785e2b245ee44b58481c7f2aa9080038bde4f05d4258786095e5a",
+    "results/backtest/prediction_comparison_metrics.csv": "d001ab11f67ead324ff199267344a10a9c0f6d3a046a9ea79754b3b7e943214c",
+    "results/backtest/sector_baseline_metrics.csv": "0cf792e16b77df7811948a97c950b2c99a18fb6ea96b0c953daab28adccd9552",
+    "results/backtest/baseline_checks.csv": "3d70a51da419a7de3f6050161ba191ca49f93c7dc5177dc8f8780769e52d8300",
+    "../5205proj2.md": "7db7be7d3861b57b1a9f53e7daed0f9dd37c236514b4a4d00dcc64f19f8e5ed6"
+  },
+  "code_hashes": {
+    "scripts/prepare_backtest_inputs.py": "f98dae5caaf987c10fefff898a19e849a085c6acdb16be5f2deeda3da617a698",
+    "scripts/backtest_pair_decisions.py": "e4f3c31cc93671e3870b80d9690ddac24546d9bed63550de4bdca6b5eed942fc",
+    "scripts/backtest_signal_policy.py": "40f2d52f8115a0ac6618331d3a51021fa03602cce39cb8920339aaa2df80de04"
+  },
+  "outputs": [
+    {
+      "path": "results/backtest/pair_decision_checks.csv",
+      "rows": 31,
+      "sha256": "0a8bff6270c894507f78899340618b93f8df51438559f2d9f114be4648e2ddad"
+    },
+    {
+      "path": "results/backtest/pair_decision_demo_daily.csv",
+      "rows": 30,
+      "sha256": "59ec92faf694ebbfaf74a7378c3dbd07d653d49381238192cb0e9c0727926f17"
+    },
+    {
+      "path": "results/backtest/pair_decision_demo_sectors.csv",
+      "rows": 270,
+      "sha256": "db7bfe030f1c17ecdf94e1ede4b5ad931c18eda1fcae9ec0897c09e36783286f"
+    }
+  ],
+  "notes": [
+    "No new user decision or model training is needed; rules come from 5205proj2.md",
+    "The core decide_pairs API requires an explicit h_in; no final threshold is assumed",
+    "10 bps is a fixed integration example, not a validation-selected threshold",
+    "The example covers only the first five validation signals; no test-period decision replay",
+    "Logical pair targets are not actual shares, weights, transactions or returns"
+  ],
+  "not_yet_checked": [
+    "target leg weights, SPY netting and net trades (step 6)",
+    "cash/NAV ledger, dividends, execution and financing costs",
+    "public threshold selection from validation results (step 10)"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "identity": "e369e6e7d65247f6d6bef0c270edd9f59742b1464d77f3b66bc1baf0dbe72990:3a2655740c9c9d2cb7bbe5791e7031be8c9d8b7ac6d283785f5b16e2176f6345",
+  "completed_utc": "2026-10-31T08:24:22.050658+00:00",
+  "outputs": [
+    {
+      "name": "predictions",
+      "path": "checkpoints/oof_2013-09_predictions.csv",
+      "rows": 1080,
+      "sha256": "6dd775cf07c635ede9c05b2971ba9648b448b7a582d8c129d0ccab2f5d03c3df"
+    },
+    {
+      "name": "fit_audit",
+      "path": "checkpoints/oof_2013-09_fit_audit.csv",
+      "rows": 54,
+      "sha256": "880408e96489048d2cd0a7d1191e6da9746b405872dfd9a2cd796a4c20a9c494"
+    },
+    {
+      "name": "skipped",
+      "path": "checkpoints/oof_2013-09_skipped.csv",
+      "rows": 0,
+      "sha256": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3"
+    }
+  ]
+}

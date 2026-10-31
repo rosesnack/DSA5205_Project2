@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "scope": "Step 12: prescribed investment benchmarks only",
+  "authority": "../5205proj2.md: sections 3.7 and 4; frozen step-11 protocol",
+  "phase_protocol_sha256": "37bc856ca8a1ccfc002174d5517af95c1b5d4b6ce3e3bccb3678ea9f10bcf8f6",
+  "phase_opens": {
+    "validation": [
+      "2018-01-03",
+      "2022-12-30"
+    ],
+    "test": [
+      "2023-01-04",
+      "2026-09-30"
+    ]
+  },
+  "benchmarks": [
+    "spy_buy_hold",
+    "cash"
+  ],
+  "initial_nav": 1.0,
+  "phase_reset": "each benchmark and phase independently starts from cash 1 and no shares; final open liquidates",
+  "execution_bps": 3.0,
+  "timezone": "America/New_York",
+  "execution": "09:30 observed open",
+  "prices": "SPY observed open and dividends; no adjusted prices or repeated split adjustment",
+  "spy": {
+    "entry": "fixed shares = initial capital / ((1 + execution_bps/10000) * first observed open)",
+    "funding": "entry principal plus entry fee consume initial capital; no financing beyond floating-point roundoff",
+    "holding": "fixed fractional shares until final open; no daily/monthly rebalancing",
+    "dividends": "old shares times current dividend enter cash; initial ex-date purchases get no dividend",
+    "reinvest_dividends": false,
+    "cash_interest": "max(previous cash, 0) times exported same-interval RF return",
+    "interest_timing": "new dividends start earning interest in the next interval, not the interval just ended",
+    "liquidation": "sell all fixed shares at final observed open; credit old-share dividend, interest and subtract exit fee"
+  },
+  "cash": {
+    "interest": "cash_previous plus cash_previous times exported interval RF return",
+    "fees": 0,
+    "security_trades": 0,
+    "no_extra_day_count_division": true
+  },
+  "accounting": "NAV = cash + shares * observed open; price PnL, signed dividends, cash interest and fees counted once",
+  "borrow": "no short positions or borrowing fees in either benchmark",
+  "statistics": {
+    "annualization": 252,
+    "daily_return": "current NAV_post / previous NAV_post - 1; first real interval uses initial capital 1",
+    "initial_open": "no zero-length daily return; initial entry fee included in first real interval",
+    "annualized_net_return": "ending NAV ** (252 / holding_intervals) - 1",
+    "cash_excess": "net daily return minus same-interval exported RF return",
+    "sharpe": "sqrt(252) * mean(cash excess) / sample std(ddof=1); N/A if std <= zero tolerance",
+    "sharpe_std_zero_atol": 1e-12,
+    "turnover": "two-sided actual trade notional/NAV_pre summed and annualized by 252/holding_intervals; no half factor"
+  },
+  "comparison": "use saved step-11 strategies; identical endpoints/intervals and capital; no strategy replay",
+  "interpretation": "SPY is fully invested market exposure; paired strategies have different exposure; these are investable alternatives, not risk-matched portfolios",
+  "evidence_boundary": {
+    "validation": "already used for model and threshold selection; reused evaluation is tuning evidence",
+    "test": "fixed-rule test-period strategy evaluation, not an untouched blind holdout",
+    "prior_test_predictions_and_metrics_seen": true,
+    "gbdt_provenance": "Exploratory grid; previous project test results already known",
+    "training_oof": "retrospective training-only signal-scale diagnostic; not an alternative official model",
+    "no_test_driven_changes": true,
+    "all_six_results_retained": true,
+    "freeze_timing": "frozen now before step-11 test portfolio replay; not a retrospective claim of freezing before earlier model exploration"
+  },
+  "model_retraining": false,
+  "threshold_search": false,
+  "strategy_replay": false,
+  "sensitivity_replay": false,
+  "steps_13_to_16_executed": false,
+  "registered_utc": "2026-10-31T09:57:07.198815+00:00"
+}

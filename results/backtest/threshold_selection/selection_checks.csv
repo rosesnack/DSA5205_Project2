@@ -1,0 +1,65 @@
+check,passed,detail,entry_bps
+cash_fixture_keeps_all_intervals,True,Zero signals retain weekend/cash holding intervals,
+cash_fixture_no_trades_or_positions,True,Zero trading is an admissible result,
+cash_fixture_zero_excess_sharpe_na,True,Floating-point cash subtraction cannot produce a spurious Sharpe,
+exact_tie_chooses_higher_threshold,True,A completely flat/cash grid ties in favor of the largest candidate,
+no_rounding_before_ranking,True,Distinct unrounded objectives are not treated as ties,
+six_strategies_equal_weight_including_zeros,True,Weak and zero-trade strategies are not omitted from the public objective,
+reject_missing_strategy,True,Invalid candidate comparison must stop,
+reject_duplicate_strategy,True,Invalid candidate comparison must stop,
+validation_only,True,No training diagnostic or test-period portfolio return,5
+six_complete_strategies,True,Same candidate applied to all six strategies,5
+all_opens_and_intervals,True,Cash dates cannot disappear,5
+initial_capital_and_final_flat,True,Every strategy/candidate resets independently and closes on the scheduled final open,5
+identical_return_keys_and_fee_inclusion,True,Every return product reconstructs ending NAV including opening and liquidation fees,5
+cash_excess_definition,True,Subtract the same exported cash interval return from each net return,5
+nav_and_pnl_reconcile,True,Full-phase cash/price/dividend/cost totals reconcile,5
+at_most_four_pairs,True,Existing pair and weight rules remain active,5
+actual_net_trade_fees,True,One cost per actual net asset trade after SPY netting,5
+zero_trade_reporting,True,Admissible cash-only cases retain N/A Sharpe and zero turnover/holding,5
+validation_only,True,No training diagnostic or test-period portfolio return,10
+six_complete_strategies,True,Same candidate applied to all six strategies,10
+all_opens_and_intervals,True,Cash dates cannot disappear,10
+initial_capital_and_final_flat,True,Every strategy/candidate resets independently and closes on the scheduled final open,10
+identical_return_keys_and_fee_inclusion,True,Every return product reconstructs ending NAV including opening and liquidation fees,10
+cash_excess_definition,True,Subtract the same exported cash interval return from each net return,10
+nav_and_pnl_reconcile,True,Full-phase cash/price/dividend/cost totals reconcile,10
+at_most_four_pairs,True,Existing pair and weight rules remain active,10
+actual_net_trade_fees,True,One cost per actual net asset trade after SPY netting,10
+zero_trade_reporting,True,Admissible cash-only cases retain N/A Sharpe and zero turnover/holding,10
+validation_only,True,No training diagnostic or test-period portfolio return,15
+six_complete_strategies,True,Same candidate applied to all six strategies,15
+all_opens_and_intervals,True,Cash dates cannot disappear,15
+initial_capital_and_final_flat,True,Every strategy/candidate resets independently and closes on the scheduled final open,15
+identical_return_keys_and_fee_inclusion,True,Every return product reconstructs ending NAV including opening and liquidation fees,15
+cash_excess_definition,True,Subtract the same exported cash interval return from each net return,15
+nav_and_pnl_reconcile,True,Full-phase cash/price/dividend/cost totals reconcile,15
+at_most_four_pairs,True,Existing pair and weight rules remain active,15
+actual_net_trade_fees,True,One cost per actual net asset trade after SPY netting,15
+zero_trade_reporting,True,Admissible cash-only cases retain N/A Sharpe and zero turnover/holding,15
+validation_only,True,No training diagnostic or test-period portfolio return,20
+six_complete_strategies,True,Same candidate applied to all six strategies,20
+all_opens_and_intervals,True,Cash dates cannot disappear,20
+initial_capital_and_final_flat,True,Every strategy/candidate resets independently and closes on the scheduled final open,20
+identical_return_keys_and_fee_inclusion,True,Every return product reconstructs ending NAV including opening and liquidation fees,20
+cash_excess_definition,True,Subtract the same exported cash interval return from each net return,20
+nav_and_pnl_reconcile,True,Full-phase cash/price/dividend/cost totals reconcile,20
+at_most_four_pairs,True,Existing pair and weight rules remain active,20
+actual_net_trade_fees,True,One cost per actual net asset trade after SPY netting,20
+zero_trade_reporting,True,Admissible cash-only cases retain N/A Sharpe and zero turnover/holding,20
+validation_only,True,No training diagnostic or test-period portfolio return,30
+six_complete_strategies,True,Same candidate applied to all six strategies,30
+all_opens_and_intervals,True,Cash dates cannot disappear,30
+initial_capital_and_final_flat,True,Every strategy/candidate resets independently and closes on the scheduled final open,30
+identical_return_keys_and_fee_inclusion,True,Every return product reconstructs ending NAV including opening and liquidation fees,30
+cash_excess_definition,True,Subtract the same exported cash interval return from each net return,30
+nav_and_pnl_reconcile,True,Full-phase cash/price/dividend/cost totals reconcile,30
+at_most_four_pairs,True,Existing pair and weight rules remain active,30
+actual_net_trade_fees,True,One cost per actual net asset trade after SPY netting,30
+zero_trade_reporting,True,Admissible cash-only cases retain N/A Sharpe and zero turnover/holding,30
+official_validation_predictions_exact,True,Signal-time y_hat exactly matches the two original official prediction files for 2018-2022,
+fixed_five_candidates_all_six_strategies,True,"One public grid, with no per-model threshold selection",
+equal_interval_counts_across_all_candidates,True,All 30 strategies/candidates score identical-length validation intervals,
+selected_by_unrounded_registered_objective,True,Maximum equal-weight mean daily cash excess; exact ties resolved by larger threshold,
+protected_sources_and_engine_unchanged,True,All source/engine hashes verified after replays,
+validation_only_no_sensitivity_search,True,No test portfolio or alternative cost scenario evaluated,

@@ -1,0 +1,29 @@
+check,passed,detail
+protocol_main_parameters,True,"Main settings are the supplied protocol, not a performance-selected scenario"
+eight_unique_predefined_scenarios,True,Main plus seven predefined one-factor comparisons
+one_factor_at_a_time,True,No unrequested factorial grid or simultaneous parameter change
+execution_values_match_protocol,True,Execution costs are 0/1/3/5 bps
+borrow_values_match_protocol,True,Borrow rates are decimal annual 0%/1%/2%/3%
+main_settings_cannot_be_mutated_through_copy,True,Callers receive independent settings dictionaries
+public_threshold_remains_unselected,True,Cost scenarios do not select the trading threshold
+same_entry_threshold_every_scenario,True,Every scenario receives the same explicit entry threshold
+execution_fee_parameter_wired,True,Each scene charges actual net trading amounts at its own explicit bps
+borrow_parameter_and_day_count_wired,True,Borrow uses starting actual shorts and natural days
+interest_policy_wired_once,True,Interest policy changes the correct base without duplicate rate/day-count conversion
+zero_execution_does_not_zero_other_costs,True,Zero execution cost retains the main borrow and interest assumptions
+scenario_accounting_conserves_nav,True,Ending wealth reconciles with price/dividend/interest/borrow/execution components
+logical_pair_rules_unchanged,True,"Cost changes do not retune entries, exits, rankings or logical pair targets"
+hand_borrow_borrow_0,True,"First holding interval: short value 0.125, three natural days, explicit annual rate"
+hand_borrow_main,True,"First holding interval: short value 0.125, three natural days, explicit annual rate"
+hand_borrow_borrow_2,True,"First holding interval: short value 0.125, three natural days, explicit annual rate"
+hand_borrow_borrow_3,True,"First holding interval: short value 0.125, three natural days, explicit annual rate"
+hand_full_rebate_increment,True,Rebating collateral adds exactly collateral times the exported interval return
+fixture_has_real_financing_exposure,True,Synthetic comparisons include three intervals with nonzero short collateral
+fixture_includes_final_liquidation,True,Every synthetic scenario includes a complete final exit
+main_case_reproduces_step7_exactly,True,Centralized main settings reproduce every existing preview cash/NAV/fee value exactly
+all_eight_cases_for_six_strategies,True,All strategies share the same eight comparison settings
+fixed_threshold_and_market_window,True,"Same five validation signals, initial capital and threshold; no test-period replay"
+preview_accounting_reconciles,True,Every preview case accounts for all price/dividend/interest/borrow/execution changes
+asset_fees_sum_to_portfolio_fees,True,Fees use actual net asset trades with no duplicated SPY costs
+market_pair_targets_not_retuned,True,Same entry/exit and pair directions across real-data cost comparisons; NAV-dependent shares may differ
+policy_snapshot_unchanged_by_outcomes,True,Configuration remains the protocol-defined main policy after comparison runs

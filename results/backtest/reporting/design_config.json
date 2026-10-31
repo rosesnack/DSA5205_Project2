@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "scope": "Step 14: full metrics, plots and eight prespecified cost cases",
+  "phase_protocol_sha256": "37bc856ca8a1ccfc002174d5517af95c1b5d4b6ce3e3bccb3678ea9f10bcf8f6",
+  "phase_opens": {
+    "validation": [
+      "2018-01-03",
+      "2022-12-30"
+    ],
+    "test": [
+      "2023-01-04",
+      "2026-09-30"
+    ]
+  },
+  "initial_nav": 1.0,
+  "h_in": 0.0015,
+  "h_out": 0.00075,
+  "threshold_source_sha256": "af4ca951f9f17406c5a29bf83e7fa4a2a01982111a2ab786ce4d789dbe402d5f",
+  "scenarios": [
+    {
+      "scenario_id": "main",
+      "variation": "main",
+      "is_main": true,
+      "execution_bps": 3.0,
+      "borrow_annual_rate": 0.01,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "execution_0",
+      "variation": "execution_bps",
+      "is_main": false,
+      "execution_bps": 0.0,
+      "borrow_annual_rate": 0.01,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "execution_1",
+      "variation": "execution_bps",
+      "is_main": false,
+      "execution_bps": 1.0,
+      "borrow_annual_rate": 0.01,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "execution_5",
+      "variation": "execution_bps",
+      "is_main": false,
+      "execution_bps": 5.0,
+      "borrow_annual_rate": 0.01,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "borrow_0",
+      "variation": "borrow_annual_rate",
+      "is_main": false,
+      "execution_bps": 3.0,
+      "borrow_annual_rate": 0.0,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "borrow_2",
+      "variation": "borrow_annual_rate",
+      "is_main": false,
+      "execution_bps": 3.0,
+      "borrow_annual_rate": 0.02,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "borrow_3",
+      "variation": "borrow_annual_rate",
+      "is_main": false,
+      "execution_bps": 3.0,
+      "borrow_annual_rate": 0.03,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "full_cash_rebate",
+      "variation": "full_cash_rebate",
+      "is_main": false,
+      "execution_bps": 3.0,
+      "borrow_annual_rate": 0.01,
+      "full_cash_rebate": true
+    }
+  ],
+  "main_reused": true,
+  "alternative_cost_cases": 7,
+  "alternative_strategy_paths": 84,
+  "replay": "each alternative cost case independently resets cash/shares by strategy and phase; require final liquidation",
+  "engine": "existing replay_ledger; scenario_records supplies settings; engineering run_cost_scenarios wrapper is not used because its flags describe previews",
+  "statistics": {
+    "annualization": 252,
+    "initial_open": "no synthetic zero-length return; first actual interval denominator is initial capital 1",
+    "daily_return": "current NAV_post / preceding NAV_post - 1, except first real interval uses initial capital",
+    "cash_excess": "daily net return minus the same exported open-to-open RF return; all cash days retained",
+    "cumulative_net_return": "ending NAV / initial capital - 1",
+    "annualized_net_return": "(ending NAV / initial capital) ** (252 / number of holding intervals) - 1",
+    "volatility_for_step14": "sample standard deviation (ddof=1) of daily net returns times sqrt(252)",
+    "sharpe": "sqrt(252) * mean(daily cash excess) / sample std(ddof=1)",
+    "sharpe_std_zero_atol": 1e-12,
+    "zero_trade": "retain all cash intervals, report zero turnover/holding; zero excess std gives N/A Sharpe",
+    "drawdown_for_step14": "minimum NAV/running maximum NAV - 1; ordered open NAV_post path includes initial pre-fee capital 1",
+    "turnover": "sum(actual two-sided net asset trade notional/NAV_pre) *252/holding_intervals; include both ends; no half factor",
+    "holding_fraction": "all intervals as denominator; position at interval START determines whether held"
+  },
+  "full_metrics": "net total/CAGR, sample annualized net volatility, cash-excess Sharpe, signed maximum drawdown, two-sided turnover, holding fraction and fees/financing",
+  "drawdown": "include capital 1 before initial entry fee plus every open NAV_post; same-date initial pre/post points retained",
+  "annual_returns": "compound actual intervals grouped by ending-open year; no annualization; phase boundaries apply and 2026 ends September 30",
+  "sensitivity": "same forecasts, pair decisions and threshold; NAV-dependent shares/cash/fees are replayed, not subtracted from a fixed gross curve",
+  "sensitivity_comparison": "cash-excess comparison uses unchanged cash RF; SPY investment benchmark is shown only for the main-cost comparison",
+  "reporting": "all six strategies and both main investment benchmarks, each phase separately; no omission of weak results",
+  "evidence_boundary": {
+    "validation": "already used for model and threshold selection; reused evaluation is tuning evidence",
+    "test": "fixed-rule test-period strategy evaluation, not an untouched blind holdout",
+    "prior_test_predictions_and_metrics_seen": true,
+    "gbdt_provenance": "Exploratory grid; previous project test results already known",
+    "training_oof": "retrospective training-only signal-scale diagnostic; not an alternative official model",
+    "no_test_driven_changes": true,
+    "all_six_results_retained": true,
+    "freeze_timing": "frozen now before step-11 test portfolio replay; not a retrospective claim of freezing before earlier model exploration"
+  },
+  "selection_by_sensitivity_performance": false,
+  "original_results_read_only": true,
+  "model_retraining": false,
+  "threshold_reselection": false,
+  "steps_15_to_16_executed": false,
+  "registered_utc": "2026-10-31T11:29:42.351109+00:00"
+}

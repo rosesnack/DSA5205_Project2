@@ -1,0 +1,73 @@
+phase,benchmark,check,passed,detail
+fixture,both,fee_funded_fixed_shares,True,Entry principal plus fee exactly consume capital without leverage
+fixture,both,initial_ex_date_no_dividend,True,A new buyer does not receive the initial-date dividend
+fixture,both,old_shares_get_dividend_even_at_exit,True,Final-open old shares get their dividend before sale
+fixture,both,dividends_not_reinvested,True,No mid-phase security trade despite price/dividend changes
+fixture,both,interest_starts_after_dividend_credit,True,"The weekend RF return is used once, on prior cash only"
+fixture,both,closed_form_spy_nav,True,Independent hand calculation includes both fees and dividend interest
+fixture,both,both_end_fees,True,Both actual entry and exit notionals are charged
+fixture,both,cash_compounds_interval_returns,True,Cash has no security fee or repeated day-count conversion
+fixture,both,first_real_interval_keeps_entry_fee,True,No initial zero-length return or omitted entry cost
+fixture,both,cash_zero_excess_sharpe_na,True,Floating-point subtraction cannot create a spurious cash Sharpe
+fixture,both,missing_rate_rejected,True,Missing/unavailable rate data must stop rather than delete a return interval
+fixture,both,unavailable_rate_rejected,True,Missing/unavailable rate data must stop rather than delete a return interval
+validation,both,same_execution_opens,True,Exact same phase opens as the saved strategies
+validation,both,observed_spy_prices_and_dividends,True,Only observed raw-unit execution fields; no adjusted prices or forward filling
+validation,both,adjacent_available_cash_intervals,True,All exact RF intervals already available at entry
+validation,both,natural_day_metadata,True,"RF is an interval return, not an annual yield to divide again"
+test,both,same_execution_opens,True,Exact same phase opens as the saved strategies
+test,both,observed_spy_prices_and_dividends,True,Only observed raw-unit execution fields; no adjusted prices or forward filling
+test,both,adjacent_available_cash_intervals,True,All exact RF intervals already available at entry
+test,both,natural_day_metadata,True,"RF is an interval return, not an annual yield to divide again"
+test,cash,same_phase_coverage,True,Same open and interval counts as all six strategies
+test,cash,cash_one_empty_start_final_flat,True,Each benchmark/phase resets and liquidates independently
+test,cash,cash_nonnegative_no_borrow,True,No short exposure or cash financing
+test,cash,return_product_and_end_fees,True,All initial/final costs enter the reconstructed return product
+test,cash,nav_identities,True,"Cash, price PnL, dividends, interest and fees reconcile"
+test,cash,prior_cash_interest,True,New dividends are not credited a preceding interval's interest
+test,cash,old_share_dividends,True,"Old shares earn dividends once, including final-open entitlement"
+test,cash,exact_adjacent_rf_keys,True,Exact same open-to-open cash return keys and values
+test,cash,actual_trade_fee,True,Actual security trades pay the frozen single-sided 3 bps
+test,cash,cash_no_security_flows,True,Cash does not receive equity dividends or trading fees
+test,cash,cash_matches_closed_form,True,Cash NAV matches independent RF compounding
+test,cash,cash_matches_existing_strategy_reference,True,Formal cash benchmark agrees with every saved strategy's same-interval cash reference
+test,cash,cash_sharpe_na,True,No risk-premium Sharpe is reported for numerical-zero cash excess
+test,spy_buy_hold,same_phase_coverage,True,Same open and interval counts as all six strategies
+test,spy_buy_hold,cash_one_empty_start_final_flat,True,Each benchmark/phase resets and liquidates independently
+test,spy_buy_hold,cash_nonnegative_no_borrow,True,No short exposure or cash financing
+test,spy_buy_hold,return_product_and_end_fees,True,All initial/final costs enter the reconstructed return product
+test,spy_buy_hold,nav_identities,True,"Cash, price PnL, dividends, interest and fees reconcile"
+test,spy_buy_hold,prior_cash_interest,True,New dividends are not credited a preceding interval's interest
+test,spy_buy_hold,old_share_dividends,True,"Old shares earn dividends once, including final-open entitlement"
+test,spy_buy_hold,exact_adjacent_rf_keys,True,Exact same open-to-open cash return keys and values
+test,spy_buy_hold,actual_trade_fee,True,Actual security trades pay the frozen single-sided 3 bps
+test,spy_buy_hold,fixed_shares_no_reinvestment,True,Fixed SPY shares until final sale; all dividends remain cash
+test,spy_buy_hold,entry_fee_funded,True,"Initial capital funds the security and fee, without borrowing"
+test,spy_buy_hold,two_security_trades,True,Only initial purchase and final liquidation
+validation,cash,same_phase_coverage,True,Same open and interval counts as all six strategies
+validation,cash,cash_one_empty_start_final_flat,True,Each benchmark/phase resets and liquidates independently
+validation,cash,cash_nonnegative_no_borrow,True,No short exposure or cash financing
+validation,cash,return_product_and_end_fees,True,All initial/final costs enter the reconstructed return product
+validation,cash,nav_identities,True,"Cash, price PnL, dividends, interest and fees reconcile"
+validation,cash,prior_cash_interest,True,New dividends are not credited a preceding interval's interest
+validation,cash,old_share_dividends,True,"Old shares earn dividends once, including final-open entitlement"
+validation,cash,exact_adjacent_rf_keys,True,Exact same open-to-open cash return keys and values
+validation,cash,actual_trade_fee,True,Actual security trades pay the frozen single-sided 3 bps
+validation,cash,cash_no_security_flows,True,Cash does not receive equity dividends or trading fees
+validation,cash,cash_matches_closed_form,True,Cash NAV matches independent RF compounding
+validation,cash,cash_matches_existing_strategy_reference,True,Formal cash benchmark agrees with every saved strategy's same-interval cash reference
+validation,cash,cash_sharpe_na,True,No risk-premium Sharpe is reported for numerical-zero cash excess
+validation,spy_buy_hold,same_phase_coverage,True,Same open and interval counts as all six strategies
+validation,spy_buy_hold,cash_one_empty_start_final_flat,True,Each benchmark/phase resets and liquidates independently
+validation,spy_buy_hold,cash_nonnegative_no_borrow,True,No short exposure or cash financing
+validation,spy_buy_hold,return_product_and_end_fees,True,All initial/final costs enter the reconstructed return product
+validation,spy_buy_hold,nav_identities,True,"Cash, price PnL, dividends, interest and fees reconcile"
+validation,spy_buy_hold,prior_cash_interest,True,New dividends are not credited a preceding interval's interest
+validation,spy_buy_hold,old_share_dividends,True,"Old shares earn dividends once, including final-open entitlement"
+validation,spy_buy_hold,exact_adjacent_rf_keys,True,Exact same open-to-open cash return keys and values
+validation,spy_buy_hold,actual_trade_fee,True,Actual security trades pay the frozen single-sided 3 bps
+validation,spy_buy_hold,fixed_shares_no_reinvestment,True,Fixed SPY shares until final sale; all dividends remain cash
+validation,spy_buy_hold,entry_fee_funded,True,"Initial capital funds the security and fee, without borrowing"
+validation,spy_buy_hold,two_security_trades,True,Only initial purchase and final liquidation
+both,comparison,all_twelve_saved_strategies,True,All existing model/scheme/phase results retained; no strategy replay or reselection
+both,comparison,protected_history_and_code_unchanged,True,"All original inputs, registered strategy results and the eight step-11 code files keep their hashes"

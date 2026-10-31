@@ -1,0 +1,24 @@
+{
+  "identity": "e369e6e7d65247f6d6bef0c270edd9f59742b1464d77f3b66bc1baf0dbe72990",
+  "completed_utc": "2026-10-31T08:24:11.677649+00:00",
+  "outputs": [
+    {
+      "name": "elastic_net_losses",
+      "path": "checkpoints/calibration_2012-12_elastic_net_losses.csv",
+      "rows": 36,
+      "sha256": "1408e3cc8e69298945efbedb6c719e923d6bbdcc4a5c40df306ead2ffaae4027"
+    },
+    {
+      "name": "gbdt_losses",
+      "path": "checkpoints/calibration_2012-12_gbdt_losses.csv",
+      "rows": 8100,
+      "sha256": "577edf61c507c5660f6b2d077ed82de6991cef107819f705c11870ea09030967"
+    },
+    {
+      "name": "fit_audit",
+      "path": "checkpoints/calibration_2012-12_fit_audit.csv",
+      "rows": 1053,
+      "sha256": "4f7614a7b04c16681dae961d74cd08bf5b19fee1690acda8db6d26323431d91e"
+    }
+  ]
+}

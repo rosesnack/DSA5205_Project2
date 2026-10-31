@@ -1,0 +1,36 @@
+{
+  "identity": "ab3dcccbcc78a2a30c9e1d2278e438abd1c24c075327b2dc1a7f1fdb8e69becd",
+  "completed_utc": "2026-10-31T08:39:38.080194+00:00",
+  "outputs": [
+    {
+      "name": "daily",
+      "path": "checkpoints/entry_5_daily.csv",
+      "rows": 7548,
+      "sha256": "e8bc4111a20c68c929992ed6e911b84ab8b4fe593e391089a7c09725ec0cee69"
+    },
+    {
+      "name": "assets",
+      "path": "checkpoints/entry_5_assets.csv",
+      "rows": 75480,
+      "sha256": "3fc7a944d3b9bfe4c4df054782f3ae0ff6910d742556aa86ef6557381e56ae53"
+    },
+    {
+      "name": "trades",
+      "path": "checkpoints/entry_5_trades.csv",
+      "rows": 13613,
+      "sha256": "12e57ab6dc466a8e7d09cff414a32e9ca1ba14ddc909854c26420418ca24262c"
+    },
+    {
+      "name": "summary",
+      "path": "checkpoints/entry_5_summary.csv",
+      "rows": 6,
+      "sha256": "256b5eaa948508494ff5a6d74e9da635af7cd6f76b2ee0e1c7dc1606a2673495"
+    },
+    {
+      "name": "returns",
+      "path": "checkpoints/entry_5_returns.csv",
+      "rows": 7542,
+      "sha256": "70c02fb39a7c12618e2b24eed14f6110f36298933a6ab3317bc8e2e89a5dc39d"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+model,scheme,split,signal_days,complete_signal_days,evaluate_signal_days,missing_signal_close_days,scheduled_liquidation_days,outside_phase_days,panel_scoreable_rows,score_eligible_rows
+elastic_net,S0,test,939,939,937,0,1,1,8433,8433
+elastic_net,S0,validation,1259,1259,1257,0,1,1,11313,11313
+elastic_net,S1,test,939,939,937,0,1,1,8433,8433
+elastic_net,S1,validation,1259,1259,1257,0,1,1,11313,11313
+elastic_net,S2,test,939,939,937,0,1,1,8433,8433
+elastic_net,S2,validation,1259,1259,1257,0,1,1,11313,11313
+gbdt,S0,test,939,939,937,0,1,1,8433,8433
+gbdt,S0,validation,1259,1259,1257,0,1,1,11313,11313
+gbdt,S1,test,939,939,937,0,1,1,8433,8433
+gbdt,S1,validation,1259,1259,1257,0,1,1,11313,11313
+gbdt,S2,test,939,939,937,0,1,1,8433,8433
+gbdt,S2,validation,1259,1259,1257,0,1,1,11313,11313

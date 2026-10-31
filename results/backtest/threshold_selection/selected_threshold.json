@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "selection_split": "validation",
+  "selected_public_entry_bps": 15,
+  "selected_public_exit_bps": 7.5,
+  "h_in": 0.0015,
+  "h_out": 0.00075,
+  "applies_to_all_six_strategies": true,
+  "model_predictions": "original official validation/test forecasts; no diagnostic refit substitution",
+  "main_cost_parameters": {
+    "execution_bps": 3.0,
+    "borrow_annual_rate": 0.01,
+    "full_cash_rebate": false
+  },
+  "objective": "equal-weight mean of six strategy mean daily (net portfolio holding return minus same-interval cash return)",
+  "tie_rule": "exact equality of unrounded float objectives; choose larger entry_bps; never round before ranking",
+  "winning_mean_daily_cash_excess_return": 4.059082989781599e-05,
+  "design_sha256": "f27b89726f385802a7fbd2e1f00fefa5a9820144f0173e7f34449ef75a999611",
+  "run_config_sha256": "ab3dcccbcc78a2a30c9e1d2278e438abd1c24c075327b2dc1a7f1fdb8e69becd",
+  "candidate_scores_sha256": "6a8d5d9dfa6862fa0a686fc1717e26f6332edf51ac88131bb4b62088c6399898",
+  "strategy_summary_sha256": "65029a36599c51565b0e352daded73d7cc081634daa6871c43e74d6520c7e1de",
+  "test_strategy_evaluated": false,
+  "protocol_freeze_pending": true
+}

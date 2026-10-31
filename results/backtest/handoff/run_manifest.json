@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "scope": "Step 15: final inventory, documentation and handoff",
+  "status": "passed",
+  "completed_utc": "2026-10-31T12:05:33.708884+00:00",
+  "checks": [
+    {
+      "check": "existing_immutable_files_preserved",
+      "passed": true,
+      "detail": "812 baseline hashes unchanged"
+    },
+    {
+      "check": "step14_registered_sources_code_outputs",
+      "passed": true,
+      "detail": "539 sources, 12 code files, 110 outputs"
+    },
+    {
+      "check": "step_9_checks_passed",
+      "passed": true,
+      "detail": "35"
+    },
+    {
+      "check": "step_10_checks_passed",
+      "passed": true,
+      "detail": "64"
+    },
+    {
+      "check": "step_11_checks_passed",
+      "passed": true,
+      "detail": "59"
+    },
+    {
+      "check": "step_12_checks_passed",
+      "passed": true,
+      "detail": "72"
+    },
+    {
+      "check": "step_13_checks_passed",
+      "passed": true,
+      "detail": "1049"
+    },
+    {
+      "check": "step_14_checks_passed",
+      "passed": true,
+      "detail": "215"
+    },
+    {
+      "check": "frozen_public_threshold",
+      "passed": true,
+      "detail": "15 / 7.5 bps, original authority preserved"
+    },
+    {
+      "check": "main_path_coverage",
+      "passed": true,
+      "detail": "12 strategy paths + 4 benchmark paths"
+    },
+    {
+      "check": "cost_scenario_coverage",
+      "passed": true,
+      "detail": "All six strategies, both phases, eight frozen settings"
+    },
+    {
+      "check": "notebook_existing_code_and_outputs_unchanged",
+      "passed": true,
+      "detail": "17 previously executed code cells retained byte-equivalent as parsed JSON; documentation updated only"
+    },
+    {
+      "check": "notebook_native_kernel_caveat_preserved",
+      "passed": true,
+      "detail": "Sequential Python execution is recorded; no native Jupyter execution claim"
+    },
+    {
+      "check": "review_contains_reading_and_verification_entrypoints",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "check": "full_contains_original_notebooks_and_all_books",
+      "passed": true,
+      "detail": "Original 01-04 notebooks, selected validation/test/benchmark books and all 14 six-file sensitivity checkpoints"
+    },
+    {
+      "check": "documentation_local_links_resolve",
+      "passed": true,
+      "detail": "60 relative links; final manifest self-link is checked again after publication"
+    }
+  ],
+  "check_count": 16,
+  "inventory_files": 817,
+  "review_payload_files": 127,
+  "full_payload_bytes": 1029070817,
+  "review_payload_bytes": 8630680,
+  "inventory_path": "results/backtest/handoff/file_inventory.csv",
+  "outputs": [
+    {
+      "path": "results/backtest/handoff/environment_snapshot.json",
+      "sha256": "acc3d2914eca1cf586df487d43b45cd4283ec1099d1c3a6920bbb6abe5990a53"
+    },
+    {
+      "path": "results/backtest/handoff/file_inventory.csv",
+      "sha256": "00696756d432ffe576f1159661223170ed06d0ae575f490c909cdfa6f8ba143d"
+    },
+    {
+      "path": "results/backtest/handoff/handoff_checks.csv",
+      "sha256": "e4ddaad75e8f4a3b427b2b8022b512c3761e489fdfa73e663856ae9072a6e471"
+    },
+    {
+      "path": "results/backtest/handoff/sources_before_step15.json",
+      "sha256": "2c9bb743aa9c819d8a5f2736f9e8fe63ba50bf05aac66262a1b0f9941f2de1ea"
+    },
+    {
+      "path": "results/backtest/handoff/upstream_validation.json",
+      "sha256": "3f51b24aa844bba5254d553c1e3db37a6676276329c5eb4e086ac1d6b54a3ad3"
+    }
+  ],
+  "package_layout": "Sibling 5205proj2.md and DSA5205_Project2-main directory; relative paths preserved",
+  "archive_attestation": "Detached archive_manifest.json beside archives; excluded from archive payload to avoid hash cycles",
+  "source_code": "scripts/backtest_handoff.py",
+  "source_code_sha256": "e487ca1d0ab355c58100721ae925dea4c0443c329584192342f6a31435dd2af0",
+  "experiments_run_in_step15": false,
+  "portfolio_replay": false,
+  "model_retraining": false,
+  "threshold_reselection": false,
+  "step16_executed": false,
+  "prior_notebook_code_and_outputs_unchanged": true,
+  "evidence_boundary": {
+    "validation": "already used for model and threshold selection; reused evaluation is tuning evidence",
+    "test": "fixed-rule test-period strategy evaluation, not an untouched blind holdout",
+    "prior_test_predictions_and_metrics_seen": true,
+    "gbdt_provenance": "Exploratory grid; previous project test results already known",
+    "training_oof": "retrospective training-only signal-scale diagnostic; not an alternative official model",
+    "no_test_driven_changes": true,
+    "all_six_results_retained": true,
+    "freeze_timing": "frozen now before step-11 test portfolio replay; not a retrospective claim of freezing before earlier model exploration"
+  },
+  "current_status": "Steps 1-15 complete; step 16 optional and not executed",
+  "historical_manifests": "Earlier pending flags are preserved snapshots; this file owns step-15 completion status"
+}

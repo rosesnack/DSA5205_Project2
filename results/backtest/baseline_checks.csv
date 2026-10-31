@@ -1,0 +1,25 @@
+check,passed,detail
+full_export_keys_elastic_net,True,Full export and seven-column handoff contain exactly the same forecast keys
+full_export_values_elastic_net,True,Full export corresponds to the same predictions and fitting timestamps
+one_mean_per_month_sector_elastic_net,True,The delivered mean is constant across days/schemes within each monthly sector fit
+full_export_keys_gbdt,True,Full export and seven-column handoff contain exactly the same forecast keys
+full_export_values_gbdt,True,Full export corresponds to the same predictions and fitting timestamps
+one_mean_per_month_sector_gbdt,True,The delivered mean is constant across days/schemes within each monthly sector fit
+canonical_keys_unique,True,One common baseline per date/sector
+one_cutoff_per_month,True,All baseline sectors share the model schedule
+upstream_training_keys,True,All 945 month/sector training records match the upstream schedule
+upstream_training_sample_counts,True,Training and mature cross-partition sample counts match notebook 02
+upstream_training_times,True,Monthly fitting and latest included signal/label times match notebook 02
+training_labels_mature,True,Every training label was known by the monthly cutoff
+recomputed_mean_matches_elastic_net,True,Recomputed from mature training labels; max absolute difference=0
+recomputed_mean_matches_gbdt,True,Recomputed from mature training labels; max absolute difference=0
+exported_means_agree,True,Both model families delivered the same monthly mean baseline
+baseline_keys_and_zero_values,True,Two nonduplicated common baselines; every zero forecast equals zero
+identical_scoring_samples_test,True,All six model strategies and both baselines share exactly the same scoring keys
+identical_scoring_samples_validation,True,All six model strategies and both baselines share exactly the same scoring keys
+reproduce_recorded_metrics_elastic_net,True,Existing main-model error metrics reproduced without changing forecasts
+reproduce_recorded_metrics_gbdt,True,Existing main-model error metrics reproduced without changing forecasts
+hand_calculated_training_fixture,True,"Hand-calculated mean verifies warmup, invalid features/labels, future signal and maturity boundaries"
+unavailable_labels_do_not_change_mean,True,Changing all ineligible/future targets leaves the historical mean unchanged
+scoring_flags_do_not_filter_training,True,Mature historical samples can cross evaluation partitions; scoring flags are not training filters
+baseline_export_roundtrip,True,All seven baseline forecast columns survive CSV export exactly

@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "scope": "Step 1: forecast handoff intake only; no strategy backtest",
+  "sources": [
+    {
+      "path": "results/elastic_net/elastic_net_predictions.csv",
+      "sha256": "43aa2462594fecdc1f4113ca008900aabf2ff86867cec0b583d6bebd05e05abb",
+      "bytes": 5161302,
+      "rows": 59346
+    },
+    {
+      "path": "results/gbdt/gbdt_predictions.csv",
+      "sha256": "4b939ca8334b16b719d7a767e68010afbec6cbb94d8b7342f6300e5696e59cdd",
+      "bytes": 4742010,
+      "rows": 59346
+    }
+  ],
+  "strategy_count": 6,
+  "combined_prediction_rows": 118692,
+  "strategies": [
+    {
+      "model": "elastic_net",
+      "scheme": "S0",
+      "prediction_rows": 19782,
+      "signal_dates": 2198,
+      "sectors_per_date": 9,
+      "first_signal_date": "2018-01-02",
+      "last_signal_date": "2026-09-30"
+    },
+    {
+      "model": "elastic_net",
+      "scheme": "S1",
+      "prediction_rows": 19782,
+      "signal_dates": 2198,
+      "sectors_per_date": 9,
+      "first_signal_date": "2018-01-02",
+      "last_signal_date": "2026-09-30"
+    },
+    {
+      "model": "elastic_net",
+      "scheme": "S2",
+      "prediction_rows": 19782,
+      "signal_dates": 2198,
+      "sectors_per_date": 9,
+      "first_signal_date": "2018-01-02",
+      "last_signal_date": "2026-09-30"
+    },
+    {
+      "model": "gbdt",
+      "scheme": "S0",
+      "prediction_rows": 19782,
+      "signal_dates": 2198,
+      "sectors_per_date": 9,
+      "first_signal_date": "2018-01-02",
+      "last_signal_date": "2026-09-30"
+    },
+    {
+      "model": "gbdt",
+      "scheme": "S1",
+      "prediction_rows": 19782,
+      "signal_dates": 2198,
+      "sectors_per_date": 9,
+      "first_signal_date": "2018-01-02",
+      "last_signal_date": "2026-09-30"
+    },
+    {
+      "model": "gbdt",
+      "scheme": "S2",
+      "prediction_rows": 19782,
+      "signal_dates": 2198,
+      "sectors_per_date": 9,
+      "first_signal_date": "2018-01-02",
+      "last_signal_date": "2026-09-30"
+    }
+  ],
+  "checks_passed": [
+    "exact seven-column forecast schema",
+    "expected model, scheme and sector identifiers",
+    "unique date/ticker/model/scheme keys",
+    "ISO signal dates and matching model_month",
+    "timezone-aware fit_cutoff syntax",
+    "finite numeric y_hat values",
+    "all nine sectors on every exported strategy/date",
+    "identical signal-date coverage across all six strategies",
+    "identical date/ticker/scheme keys across both models",
+    "input hashes unchanged during reading",
+    "exact seven-field text roundtrip after export",
+    "source forecast hashes unchanged after export"
+  ],
+  "not_yet_checked": [
+    "shared-panel joins and expected eligible dates",
+    "fit_cutoff chronology and New York execution timestamps",
+    "signal-day versus execution-day mapping",
+    "trading eligibility and scoring eligibility",
+    "price, dividend and risk-free interval alignment"
+  ],
+  "created_utc": "2026-10-31T08:42:05.900976+00:00",
+  "python_version": "3.11.5",
+  "outputs": [
+    {
+      "path": "results/backtest/combined_predictions.csv",
+      "sha256": "e6f9a0f5c0c9f58bc22806ee9996c44726da6be2995561d253d77995b355eb73"
+    },
+    {
+      "path": "results/backtest/prediction_coverage.csv",
+      "sha256": "534616b4e6f59a909e1423c7d3e4f90c9ec246197565bd62ab55a083987be93d"
+    }
+  ]
+}

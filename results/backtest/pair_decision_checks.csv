@@ -1,0 +1,32 @@
+check,passed,detail
+weak_signals_remain_flat,True,Expected final pair directions and unchanged old state
+zero_forecasts_do_not_create_tied_portfolio,True,Expected final pair directions and unchanged old state
+strict_positive_entry_boundary,True,Expected final pair directions and unchanged old state
+strict_negative_entry_boundary,True,Expected final pair directions and unchanged old state
+just_above_entry_boundary,True,Expected final pair directions and unchanged old state
+long_retained_inside_entry_band,True,Expected final pair directions and unchanged old state
+short_retained_inside_entry_band,True,Expected final pair directions and unchanged old state
+strict_long_exit_boundary,True,Expected final pair directions and unchanged old state
+strict_short_exit_boundary,True,Expected final pair directions and unchanged old state
+below_exit_threshold_closes,True,Expected final pair directions and unchanged old state
+mixed_directions_top_four,True,Expected final pair directions and unchanged old state
+held_ninth_rank_not_forced_out,True,Expected final pair directions and unchanged old state
+retained_pairs_consume_capacity,True,Expected final pair directions and unchanged old state
+four_retained_not_replaced_by_stronger_new_signals,True,Expected final pair directions and unchanged old state
+eligible_reversal,True,Expected final pair directions and unchanged old state
+reverse_entry_boundary_requires_full_entry_rule,True,Expected final pair directions and unchanged old state
+opposite_signal_below_entry_threshold_exits_only,True,Expected final pair directions and unchanged old state
+reverse_outside_top_four_exits_only,True,Expected final pair directions and unchanged old state
+ticker_order_breaks_absolute_value_ties,True,Expected final pair directions and unchanged old state
+input_row_order_does_not_change_ties,True,Expected final pair directions and unchanged old state
+close_all_to_cash,True,Expected final pair directions and unchanged old state
+final_liquidation,True,Expected final pair directions and unchanged old state
+outside_phase_creates_no_entry,True,Expected final pair directions and unchanged old state
+missing_prediction_guard,True,Incomplete signal closes all targets before ranking
+nonfinite_prediction_guard,True,Incomplete signal closes all targets before ranking
+reversal_is_one_final_target_change,True,Expected final pair directions and unchanged old state
+future_fields_on_instruction_ignored,True,Expected final pair directions and unchanged old state
+invalid_old_direction,True,Invalid state/configuration rejected
+too_many_old_pairs,True,Invalid state/configuration rejected
+invalid_threshold,True,Invalid state/configuration rejected
+phase_replay_starts_flat,True,Test phase does not inherit validation holdings

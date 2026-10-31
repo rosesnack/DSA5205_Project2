@@ -1,0 +1,13 @@
+phase,model,scheme,scheduled_opens,independent_targets_match,engine_reference_match,input_order_and_future_fields_match,inputs_unchanged
+validation,elastic_net,S0,1258,True,True,True,True
+validation,elastic_net,S1,1258,True,True,True,True
+validation,elastic_net,S2,1258,True,True,True,True
+validation,gbdt,S0,1258,True,True,True,True
+validation,gbdt,S1,1258,True,True,True,True
+validation,gbdt,S2,1258,True,True,True,True
+test,elastic_net,S0,938,True,True,True,True
+test,elastic_net,S1,938,True,True,True,True
+test,elastic_net,S2,938,True,True,True,True
+test,gbdt,S0,938,True,True,True,True
+test,gbdt,S1,938,True,True,True,True
+test,gbdt,S2,938,True,True,True,True

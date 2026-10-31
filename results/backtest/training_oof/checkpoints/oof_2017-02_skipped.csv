@@ -1,0 +1,2 @@
+model_month,ticker,fit_cutoff,reason
+2017-02,XLF,2017-01-31 18:00:00-05:00,no common_features_valid prediction rows

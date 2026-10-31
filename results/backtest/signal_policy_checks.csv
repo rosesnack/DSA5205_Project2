@@ -1,0 +1,15 @@
+check,passed,detail
+future_fields_can_be_removed,True,"Trading policy runs with no target, label, exit or scoring columns"
+future_values_do_not_change_actions,True,All non-whitelisted panel fields changed; signals/actions identical
+one_missing_prediction,True,Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged
+other_strategies_unaffected,True,A single missing model forecast does not close other strategies
+whole_strategy_day_missing,True,Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged
+nonfinite_prediction_nan,True,Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged
+nonfinite_prediction_positive_infinity,True,Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged
+nonfinite_prediction_negative_infinity,True,Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged
+fit_after_signal,True,Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged
+invalid_feature_flag,True,Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged
+shared_input_failure_closes_six_strategies,True,Common-feature failure applies to every strategy on that date
+missing_input_row,True,Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged
+missing_label_blocks_scoring_only,True,An interior missing future label changes scoring only; trade policy unchanged
+scheduled_phase_end_actions,True,Prespecified dates control final liquidation and no-order days without future labels

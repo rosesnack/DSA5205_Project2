@@ -1,0 +1,2546 @@
+{
+  "schema_version": 1,
+  "scope": "Step 14: full metrics, plots and eight prespecified cost cases",
+  "status": "passed",
+  "completed_utc": "2026-10-31T11:37:44.961013+00:00",
+  "design_registered_utc": "2026-10-31T11:29:42.351109+00:00",
+  "run_config_sha256": "6d669e7b8d517321fb79b92be11ccba35a2eeb8ae0035f58f313ce0aba979139",
+  "checks": [
+    {
+      "phase": "fixture",
+      "scenario_id": "metric",
+      "check": "initial_fee_drawdown_precedes_first_return",
+      "passed": true,
+      "detail": "Using only real-interval cumulative returns would miss the initial -1% drawdown"
+    },
+    {
+      "phase": "fixture",
+      "scenario_id": "metric",
+      "check": "no_initial_zero_length_return",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "fixture",
+      "scenario_id": "metric",
+      "check": "sample_net_volatility",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "fixture",
+      "scenario_id": "metric",
+      "check": "holding_uses_interval_start",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "fixture",
+      "scenario_id": "metric",
+      "check": "two_sided_turnover_keeps_both_ends",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "fixture",
+      "scenario_id": "metric",
+      "check": "zero_variance_cash_sharpe_na",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "inputs",
+      "check": "fixed_phase_opens",
+      "passed": true,
+      "detail": "Exact protocol endpoints, not inferred from future labels"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "inputs",
+      "check": "six_original_signal_groups",
+      "passed": true,
+      "detail": "All six models/schemes, no performance selection"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "inputs",
+      "check": "signal_day_split",
+      "passed": true,
+      "detail": "Respect the existing signal-day split"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "inputs",
+      "check": "scheduled_actions_cover_each_open",
+      "passed": true,
+      "detail": "Exactly one action at every phase open for each strategy"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "inputs",
+      "check": "observed_execution_quotes",
+      "passed": true,
+      "detail": "Ten observed open/dividend quotes per execution date; no adjusted prices or fills"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "inputs",
+      "check": "exact_available_cash_intervals",
+      "passed": true,
+      "detail": "All adjacent phase opens have exported cash returns available at entry"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "inputs",
+      "check": "official_predictions_exact",
+      "passed": true,
+      "detail": "Trading y_hat exactly equals the original delivered forecast, with no refitting"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "inputs",
+      "check": "no_future_scoring_fields",
+      "passed": true,
+      "detail": "Replay receives no common_scoreable, future target, label_valid or label_within_split"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_elastic_net_S0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_elastic_net_S1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_elastic_net_S2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_gbdt_S0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_gbdt_S1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_gbdt_S2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_0",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_0",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_0",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_0",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_0",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_0",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_0",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_0",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_0",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_0",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_1",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_1",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_1",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_1",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_1",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_1",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_1",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_1",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_1",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_1",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_5",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_5",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_5",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_5",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_5",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_5",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_5",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_5",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_5",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "execution_5",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_0",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_0",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_0",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_0",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_0",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_0",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_0",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_0",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_0",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_0",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_2",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_2",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_2",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_2",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_2",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_2",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_2",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_2",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_2",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_2",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_3",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_3",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_3",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_3",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_3",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_3",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_3",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_3",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_3",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "borrow_3",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "full_cash_rebate",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "full_cash_rebate",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "full_cash_rebate",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "full_cash_rebate",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "full_cash_rebate",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "full_cash_rebate",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "full_cash_rebate",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "full_cash_rebate",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "full_cash_rebate",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "full_cash_rebate",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "inputs",
+      "check": "fixed_phase_opens",
+      "passed": true,
+      "detail": "Exact protocol endpoints, not inferred from future labels"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "inputs",
+      "check": "six_original_signal_groups",
+      "passed": true,
+      "detail": "All six models/schemes, no performance selection"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "inputs",
+      "check": "signal_day_split",
+      "passed": true,
+      "detail": "Respect the existing signal-day split"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "inputs",
+      "check": "scheduled_actions_cover_each_open",
+      "passed": true,
+      "detail": "Exactly one action at every phase open for each strategy"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "inputs",
+      "check": "observed_execution_quotes",
+      "passed": true,
+      "detail": "Ten observed open/dividend quotes per execution date; no adjusted prices or fills"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "inputs",
+      "check": "exact_available_cash_intervals",
+      "passed": true,
+      "detail": "All adjacent phase opens have exported cash returns available at entry"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "inputs",
+      "check": "official_predictions_exact",
+      "passed": true,
+      "detail": "Trading y_hat exactly equals the original delivered forecast, with no refitting"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "inputs",
+      "check": "no_future_scoring_fields",
+      "passed": true,
+      "detail": "Replay receives no common_scoreable, future target, label_valid or label_within_split"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_elastic_net_S0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_elastic_net_S1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_elastic_net_S2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_gbdt_S0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_gbdt_S1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "main",
+      "check": "main_metrics_match_prior_gbdt_S2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_0",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_0",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_0",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_0",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_0",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_0",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_0",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_0",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_0",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_0",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_1",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_1",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_1",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_1",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_1",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_1",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_1",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_1",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_1",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_1",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_5",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_5",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_5",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_5",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_5",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_5",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_5",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_5",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_5",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "execution_5",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_0",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_0",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_0",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_0",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_0",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_0",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_0",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_0",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_0",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_0",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_2",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_2",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_2",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_2",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_2",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_2",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_2",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_2",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_2",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_2",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_3",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_3",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_3",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_3",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_3",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_3",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_3",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_3",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_3",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "borrow_3",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "full_cash_rebate",
+      "check": "six_complete_phase_paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "full_cash_rebate",
+      "check": "cash_reset_and_final_liquidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "full_cash_rebate",
+      "check": "same_pairs_and_weights_as_main",
+      "passed": true,
+      "detail": "Only NAV-dependent share amounts change; no threshold or pair-rule retuning"
+    },
+    {
+      "phase": "test",
+      "scenario_id": "full_cash_rebate",
+      "check": "actual_net_execution_fee",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "full_cash_rebate",
+      "check": "scenario_cash_interest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "full_cash_rebate",
+      "check": "scenario_natural_day_borrow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "full_cash_rebate",
+      "check": "nav_identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "full_cash_rebate",
+      "check": "all_intervals_and_initial_final_fees",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "full_cash_rebate",
+      "check": "full_phase_pnl_reconstruction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "full_cash_rebate",
+      "check": "frozen_threshold_and_only_current_scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "benchmark",
+      "check": "metrics_match_prior_cash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "test",
+      "scenario_id": "benchmark",
+      "check": "metrics_match_prior_spy_buy_hold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "benchmark",
+      "check": "metrics_match_prior_cash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "validation",
+      "scenario_id": "benchmark",
+      "check": "metrics_match_prior_spy_buy_hold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "both",
+      "scenario_id": "all",
+      "check": "all_ninety_six_prespecified_strategy_cases",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "both",
+      "scenario_id": "all",
+      "check": "all_sixteen_main_paths_reported",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "both",
+      "scenario_id": "all",
+      "check": "one_factor_settings_match_frozen_policy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "both",
+      "scenario_id": "all",
+      "check": "all_previous_registered_inputs_results_and_code_unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "01_nav_and_cash_relative_png_valid",
+      "passed": true,
+      "detail": "PNG decoded, dimensions checked"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "01_nav_and_cash_relative_svg_valid",
+      "passed": true,
+      "detail": "SVG parsed"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "02_drawdowns_png_valid",
+      "passed": true,
+      "detail": "PNG decoded, dimensions checked"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "02_drawdowns_svg_valid",
+      "passed": true,
+      "detail": "SVG parsed"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "03_main_metrics_png_valid",
+      "passed": true,
+      "detail": "PNG decoded, dimensions checked"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "03_main_metrics_svg_valid",
+      "passed": true,
+      "detail": "SVG parsed"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "04_cost_return_sensitivity_png_valid",
+      "passed": true,
+      "detail": "PNG decoded, dimensions checked"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "04_cost_return_sensitivity_svg_valid",
+      "passed": true,
+      "detail": "SVG parsed"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "05_cost_sharpe_sensitivity_png_valid",
+      "passed": true,
+      "detail": "PNG decoded, dimensions checked"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "05_cost_sharpe_sensitivity_svg_valid",
+      "passed": true,
+      "detail": "SVG parsed"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "06_calendar_year_returns_png_valid",
+      "passed": true,
+      "detail": "PNG decoded, dimensions checked"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "figure",
+      "check": "06_calendar_year_returns_svg_valid",
+      "passed": true,
+      "detail": "SVG parsed"
+    },
+    {
+      "phase": "both",
+      "scenario_id": "report",
+      "check": "chinese_report_created",
+      "passed": true,
+      "detail": "All 16 main paths and all 12 sensitivity ranges included"
+    }
+  ],
+  "protected_file_count": 539,
+  "source_hashes": {
+    "data/processed/panel_spec.json": "a5587fd3d669097bf94df7c8444ec41edd77f46d23e549a56c4e94f4cd0d7327",
+    "data/processed/model_panel.csv": "3e15a99d21e0d088768058b956540a384c00c3caef04163d9d4069f14189e4be",
+    "data/interim/etf_prices_aligned.csv": "c09a1ff66e321732b3c4ee189dbe8d6792fe7c4fe9895422de18a5849773099e",
+    "notebooks/panel_checks/monthly_training_eligibility.csv": "13d3ec29fd128384d483ba5ec9f37420c4fa0aa9cd55190c8a051addf1ea5536",
+    "results/backtest/combined_predictions.csv": "e6f9a0f5c0c9f58bc22806ee9996c44726da6be2995561d253d77995b355eb73",
+    "results/elastic_net/elastic_net_predictions.csv": "43aa2462594fecdc1f4113ca008900aabf2ff86867cec0b583d6bebd05e05abb",
+    "results/gbdt/gbdt_predictions.csv": "4b939ca8334b16b719d7a767e68010afbec6cbb94d8b7342f6300e5696e59cdd",
+    "notebooks/02_features_panel_data.ipynb": "cdfdb60dd038961db5fe1920c4212e7e94cd4c2e5dd98e427fd7557f11cc4354",
+    "notebooks/03_elastic_net.ipynb": "a60992f898b860a4045e58ea8d7e7cb825df03e98e29bec5737d2262ec65090e",
+    "notebooks/04_gbdt.ipynb": "dd69c86afcfd652dd8a3d421bd8b30c738b824f594434b185a90bba167c04081",
+    "results/backtest/predictions_with_panel.csv": "a63020918e55376976ce354eee4f6299f992f31eb3d7014e560dfdfc7ed5b5aa",
+    "results/backtest/panel_alignment_summary.csv": "dcd0592e7195df904b15dd0e05dbe8165fe99dcb7f1168954767725b7a7457fc",
+    "results/backtest/monthly_time_checks.csv": "2132e34bc59da79f0343cefd709908aa8712cfd819d227c129feffdea3c2556a",
+    "results/backtest/signal_calendar.csv": "d642677743d4e851c1adb9b88f1c7896f001522eee65b8544e79d7da1a617580",
+    "results/backtest/time_alignment_examples.csv": "bdf189ff0266c456754c17fff774e2b513b0193a6f0105b4708f91b88b6c2b15",
+    "notebooks/01_download_clean_data.ipynb": "d939dac768f0a51c57665ae2a01a2f6e93abbb3c70f44812cc54aedb7d8b00fc",
+    "results/backtest/trading_signal_inputs.csv": "58dcd618718a28d1e9ea6cb76f189ce88ca12a4cead244031eaac1992f1f69d3",
+    "results/backtest/daily_signal_status.csv": "480b6f938f93fa8dd12cec159732828089b4e2ab572d0969746df39094b9f269",
+    "results/backtest/scoring_eligibility.csv": "d415d5fb975860f81068cca30ed8550c87adff4eddfbc252f1428a598024d662",
+    "results/backtest/eligibility_summary.csv": "dbbeb877995e7148e473d442fcb2801613995a11c6ce871d8085d3c27b97a200",
+    "results/backtest/signal_status_examples.csv": "83f19ec706fe225c158305f71ac1a930893cba63e6561d95aabc05b7d390c3a9",
+    "results/backtest/signal_policy_checks.csv": "54905e921c20dbc188c33d0a5f4f21196ee7d026ee5ee9e21ab15d014a1a633a",
+    "results/elastic_net/elastic_net_predictions_full.csv": "c9342f032b192272e0936099b8c48cea8c7e3fbf4c388f1f1427b1cd1ead391b",
+    "results/elastic_net/forecast_metrics.csv": "44a008e6223aac2e6d131b303c16a869c28c819073e269bacc27dd29e0284b25",
+    "results/gbdt/gbdt_predictions_full.csv": "adcedb9cba1e47c4f17f4ab276f55e62c8e12fbdaad7e9f3091ab4f4cfd9bb26",
+    "results/gbdt/forecast_metrics.csv": "f3326fd220bef4a17b6ed1757e0a1083e90c6c77f73db59178d7b4edea7349f5",
+    "results/backtest/baseline_predictions.csv": "b56ef7bfc90da91ff24a4b8fe5df1194e708370b1bfbeb6825c732ef8c5e40b7",
+    "results/backtest/monthly_baseline_audit.csv": "af6e680b99d90cd1ccbefc4db6754a43ee13830aecad4045c27540f49d673972",
+    "results/backtest/baseline_forecast_metrics.csv": "d4588ae242c785e2b245ee44b58481c7f2aa9080038bde4f05d4258786095e5a",
+    "results/backtest/prediction_comparison_metrics.csv": "d001ab11f67ead324ff199267344a10a9c0f6d3a046a9ea79754b3b7e943214c",
+    "results/backtest/sector_baseline_metrics.csv": "0cf792e16b77df7811948a97c950b2c99a18fb6ea96b0c953daab28adccd9552",
+    "results/backtest/baseline_checks.csv": "3d70a51da419a7de3f6050161ba191ca49f93c7dc5177dc8f8780769e52d8300",
+    "../5205proj2.md": "7db7be7d3861b57b1a9f53e7daed0f9dd37c236514b4a4d00dcc64f19f8e5ed6",
+    "results/backtest/pair_decision_checks.csv": "0a8bff6270c894507f78899340618b93f8df51438559f2d9f114be4648e2ddad",
+    "results/backtest/pair_decision_demo_daily.csv": "59ec92faf694ebbfaf74a7378c3dbd07d653d49381238192cb0e9c0727926f17",
+    "results/backtest/pair_decision_demo_sectors.csv": "db7bfe030f1c17ecdf94e1ede4b5ad931c18eda1fcae9ec0897c09e36783286f",
+    "results/backtest/execution_checks.csv": "e28d98e76e3b424b198165642bddf56e18941f752c25753558c2886fec60f7ab",
+    "results/backtest/net_trade_worked_examples.csv": "e6999593e22d920184af7c2cbc7785e0f8e3506ce3782e45dcf6e1d7ff4e1a47",
+    "results/backtest/execution_target_demo_daily.csv": "44bb1acdcb300df55b2796e7812a72b6c4ab8f1a837b06227b50305efe49da5a",
+    "results/backtest/execution_target_demo_assets.csv": "0f6a9a126ac12334d2048fe83316735672916b3e62d6f2020489f11660c98125",
+    "data/interim/risk_free_open_intervals.csv": "874e49b3fea6674b02dbad78aa615890e831cab29a7224e1f257cc51df6a9896",
+    "results/backtest/ledger_checks.csv": "713b18515bc38158405937ede126702075b0f32326cd110224742a41d0a79e77",
+    "results/backtest/ledger_worked_examples.csv": "5fcc0c10bda7678d31c6fc41502239cf111e9e33133c63051fcef032ae9c1604",
+    "results/backtest/ledger_replay_fixture.csv": "879cb17d66abeeec4a8b218bf033daaf38921905f6df9e2d92430b91b0cd8bd8",
+    "results/backtest/ledger_demo_daily.csv": "0397705c9711fb3cda4585d894c9c775162040439213cb2b100c48301bfb61e4",
+    "results/backtest/ledger_demo_assets.csv": "2129084c9b44add14ce774c2ac6c3f2b0e8e7b6bb63065794c419896c73dbaee",
+    "results/backtest/ledger_demo_trades.csv": "5ec7e708af14d7d7a75c9a0e1f06bad3f6576dee773182d17c137056ce37c3bc",
+    "results/backtest/ledger_rate_alignment.csv": "4f6ca521538d399f303a6f114d4052b345502e949a66c5105093ad8e7b3dc373",
+    "results/backtest/cost_settings.json": "d3cd3eeaa68260ef075c6d739fcd8a569a4dde2b30ba96cdf57bef40d2aecae6",
+    "results/backtest/cost_scenarios.csv": "d6856c482b826a705f7e900113f0c2f369fc6bc683aced31a666bd90d6dc1abf",
+    "results/backtest/cost_checks.csv": "a1b2063e5541c7db8fb96828008d161edc35859d86c9f4a3da89cadac5f06d58",
+    "results/backtest/cost_preview_summary.csv": "0786fd57e2a8f9806c22f2d5ceb60995876b600a117695b5293f1b6a83fb320f",
+    "results/backtest/cost_preview_daily.csv": "dbe3ca57efb4a8079d8d4144cc377bbe397c888ef12c964199b27cdd8f500aaf",
+    "results/backtest/cost_preview_assets.csv": "362303f9edf9d40811f044337d9d5b7e0b7e92db0a7c0bc2901ed9e79cf7641f",
+    "results/backtest/cost_preview_trades.csv": "813e9a81cc33adf20e58c0dd78bbb190e7ff51c50dfd26851df0fd326185a6fe",
+    "results/backtest/cost_synthetic_summary.csv": "8ca9d4fe050eff8ecd86a718c59759deee5bafdd817ef565ba24e9053e4da918",
+    "results/backtest/cost_synthetic_daily.csv": "b536fb1d58745396bd596a70c11b8b6fefc2f70673184eac988863d4db1fd67e",
+    "data/interim/dgs3mo_observations.csv": "c3726fa6b6ec227b7c5524d6d5b27997eb7057951fc643db6298ef36101a7c3f",
+    "data/interim/etf_base_returns.csv": "ef256a8c73d3d3ae3b8559f286f39c589f31ced637ed2eefa91103e29124a826",
+    "data/interim/feature_validity.csv": "bb02d8f71e1c7c33bcba50e579005bf1f9a957232aab37575f6a50ac9b772145",
+    "data/interim/prediction_targets.csv": "6b8d65fcd434dd068f28d19562791b802cdbf88c363ec7b21d0262f7344fbdc0",
+    "data/interim/sector_features.csv.gz": "7c1ee73ee98ae786e4ce8340116632df82ca4581da9a5579e24ba7b422b09764",
+    "data/interim/vix_aligned.csv": "3d7760de475d69a3bc2dfaf861f91b35311b178df52ba365695f7249f003e031",
+    "data/processed/model_inputs/XLB_S0.csv": "86cd63ddc552d2121564b11ab57e59d4449d1a5b9e3881f25e87bc81d19836d3",
+    "data/processed/model_inputs/XLB_S1.csv": "51def19bd436dbefebff9e5cb06289c31263348a6fae48eea9bc91b6a0ea54ed",
+    "data/processed/model_inputs/XLB_S2.csv": "71631b31667ff9250ec29136b50505e1fc6dcb3d7269ae4b6946bd3162534084",
+    "data/processed/model_inputs/XLE_S0.csv": "4403d64f2a8d9be676410a2859b2804f47fec4e3a7120aee0559958cf5310488",
+    "data/processed/model_inputs/XLE_S1.csv": "316deef89707f7ced71b25921add7aeea6a5e004a33f15b92a5f2914c3d30cfd",
+    "data/processed/model_inputs/XLE_S2.csv": "1b06fab7d447e94e6fde50fd7ac475d0bc240ff788872c2ad3be94ee2a702143",
+    "data/processed/model_inputs/XLF_S0.csv": "e7084cd286f586c913a10ad8f97133b1d85f6687899178c8d03221eaf8ebac37",
+    "data/processed/model_inputs/XLF_S1.csv": "f1c9425d3a8224bf414d0a1cb0657b75e2dffd736101e936785861071f84d787",
+    "data/processed/model_inputs/XLF_S2.csv": "6df2bfcce3c884437e98515f815773bc0157e0fdbad92b3874c5572acc335b5a",
+    "data/processed/model_inputs/XLI_S0.csv": "7c23a5781f8fa894246c3094755c6218750dfdc1b1e1dfd2843f47b38d5f5633",
+    "data/processed/model_inputs/XLI_S1.csv": "12daafe9e3eefc428bf3bd411cb3ab26bbcea2de942d6aa6a37041f921732711",
+    "data/processed/model_inputs/XLI_S2.csv": "19a45f10894a7532ee7007450d9be21d9dd86a3fc3b27d7e03493aa47345b2bd",
+    "data/processed/model_inputs/XLK_S0.csv": "184b92b1f10310dd7ecedad0594ef55784f5bf3a21ac8fb67a6729987fae26c2",
+    "data/processed/model_inputs/XLK_S1.csv": "fcd932db4055e4df5907d4fde3a9143ba0c1b13eb161437eb993a8cab0d5b621",
+    "data/processed/model_inputs/XLK_S2.csv": "e84829d9435dcc0c47a67c28d7d8c0212eae259a3106276fdab873fc3cf74063",
+    "data/processed/model_inputs/XLP_S0.csv": "0e13eba2305c7db849f68db70d42128f27b4904dace0adbe5b4ac4c8d0b03dc3",
+    "data/processed/model_inputs/XLP_S1.csv": "7001ac55beac1855a6b07c3fa5f99b8c198b653f45920f4b486b70d484477869",
+    "data/processed/model_inputs/XLP_S2.csv": "9d0fca66f8f01c0e824c1bfa0f32569535f295e8cacde247b04772232f383086",
+    "data/processed/model_inputs/XLU_S0.csv": "7595a10207625221e1778494c68136a75339d19ce819410fded05582efc4b93b",
+    "data/processed/model_inputs/XLU_S1.csv": "2bf1dd466862a5e02f0e07cfff5ac8711d3c5459f5bed38c169988e4f500d5a2",
+    "data/processed/model_inputs/XLU_S2.csv": "4976a31e422b5ee14bfd44c1b8a2196a29823024d01811879012771383dc417f",
+    "data/processed/model_inputs/XLV_S0.csv": "d61ee26987d800405a8633c2cfa845b4f1277be7e4677f6b9b93c8dfbcde5ab6",
+    "data/processed/model_inputs/XLV_S1.csv": "53d3b542edf3ca44b92079780741e74d89562f3d2dd4d57f0c0a763791e98ae5",
+    "data/processed/model_inputs/XLV_S2.csv": "f82ed72fb2ca9bc118ffbd13748e95d067ec86e23f5823851a482107d241a77a",
+    "data/processed/model_inputs/XLY_S0.csv": "e0fa54b45969ae7ae1a391ad7f812a0c23ea06d7b59b5cb06c07e811068996b3",
+    "data/processed/model_inputs/XLY_S1.csv": "e480043307b74e31ab372cb193dbb49a4dc26f639e967f7fe182ed1d9d3593ca",
+    "data/processed/model_inputs/XLY_S2.csv": "0e011406bd812fd2565277867d4303e448d79abeff9b01f0148f4e13d9278622",
+    "data/raw/DGS3MO_2006-01-01_2026-09-30_fred.csv": "c1a3d217f168520ed28f2a95ae285b0d9f29289ed4607b1bf2771d63b3866a53",
+    "data/raw/GLD_2006-01-01_2026-09-30_yahoo_chart.json": "685cefafb6698e4c56eb3a5b49ee00d079766eebd3726a4040d365c78fd49bfc",
+    "data/raw/GLD_2006-01-01_2026-09-30_yfinance_adjusted.csv": "bb6fced99757584ca5c76824cb1840711aad4627606f3c583d0a3bc33415c6cb",
+    "data/raw/GLD_2006-01-01_2026-09-30_yfinance_raw.csv": "47667834787b6f17c77581df4e1c1632cec0c3d224ca493e6e5107e42b8e9e2c",
+    "data/raw/HYG_2006-01-01_2026-09-30_yahoo_chart.json": "1c4fb55c0c9063afd0970acbe084f1e47bd0b1184b1c31824adefd66fb712e78",
+    "data/raw/HYG_2006-01-01_2026-09-30_yfinance_adjusted.csv": "f5a220eac009806c89a5765197fd0e0902960ed8f50d8f48474e3520df18b129",
+    "data/raw/HYG_2006-01-01_2026-09-30_yfinance_raw.csv": "05728cb330c5b4ffd2c038644a679320a7428faecb7b45ae5280f4d3ddd20d18",
+    "data/raw/IEF_2006-01-01_2026-09-30_yahoo_chart.json": "ec2cb186874f6a97d0a25163c7f09ad208dbf1a5b68227e58c7fe9a4e85aafba",
+    "data/raw/IEF_2006-01-01_2026-09-30_yfinance_adjusted.csv": "fa457a1cdd561b7663619d49e6b7929f71d8da0228b95bcbc6f91f24abb24021",
+    "data/raw/IEF_2006-01-01_2026-09-30_yfinance_raw.csv": "bdfa16761def4e3d1f3f1bc2bcf4d012d7d9d27a64ec9aaca2a33d22ff6e09ee",
+    "data/raw/LQD_2006-01-01_2026-09-30_yahoo_chart.json": "37547fe75baca9d373e1071a04060f8b0511910cbcbc6b46d943e4a92c311618",
+    "data/raw/LQD_2006-01-01_2026-09-30_yfinance_adjusted.csv": "105789301ac551d603ea65c40f77c398752ef4c1d62a57dcd3997600a470a40e",
+    "data/raw/LQD_2006-01-01_2026-09-30_yfinance_raw.csv": "376053a5c8647f9610ca15927b486930651c7da7280fae706c43f2910c449313",
+    "data/raw/SPY_2006-01-01_2026-09-30_yahoo_chart.json": "acf9006263f44572161e546870bf493677c012c0671bc11fd3bdc139d8a0e016",
+    "data/raw/SPY_2006-01-01_2026-09-30_yfinance_adjusted.csv": "a64f08139e705cff4b05a7931b631c0f54302d795521ccb373298c9bd363fb8e",
+    "data/raw/SPY_2006-01-01_2026-09-30_yfinance_raw.csv": "3a31154dcc35e3c7da98c795e8f5961ff4602cb49a15ef0b33c68e179b9b95d2",
+    "data/raw/TLT_2006-01-01_2026-09-30_yahoo_chart.json": "21ef233bc12f569cf8e490a50da65be5f69e3c3aab82aa35c1df8dcb88399bc6",
+    "data/raw/TLT_2006-01-01_2026-09-30_yfinance_adjusted.csv": "ac00787829333421e41a73230d5e90e895744418f84db276a814c0f879aa9e16",
+    "data/raw/TLT_2006-01-01_2026-09-30_yfinance_raw.csv": "d3cf60ad793f4f9c6e65288b4d67bd98651479452a3a6f52682c2393e8f22c1c",
+    "data/raw/VIX_2006-01-01_2026-09-30_cboe.csv": "306703fd5b6a9ef7b4ecac66753cc29560a3ec510ba4cfc3602f430d953e58ab",
+    "data/raw/XLB_2006-01-01_2026-09-30_yahoo_chart.json": "30c342042d4cf822147f119b9c21f5f2a0e51d643aa001754185537efb210b51",
+    "data/raw/XLB_2006-01-01_2026-09-30_yfinance_adjusted.csv": "f0bd13ecdf8865575046a31c1703842c97d2aeaeda8dcf2eb89852edbca3b0f7",
+    "data/raw/XLB_2006-01-01_2026-09-30_yfinance_raw.csv": "076dd4f3f630495f1ba5c9275a3c1811ee728c6416d6f64aac008e72b6c42aee",
+    "data/raw/XLE_2006-01-01_2026-09-30_yahoo_chart.json": "1eac3557ee579bc280538ad0a504c50d9d90492788e05677271c2bc5bbd7fd9f",
+    "data/raw/XLE_2006-01-01_2026-09-30_yfinance_adjusted.csv": "b01579525c1a1e093c3840a5347c67d89145b0809fa6e21917eb890544c0ccae",
+    "data/raw/XLE_2006-01-01_2026-09-30_yfinance_raw.csv": "82ad944238a0a4ee18ded32c9dbe1871dda24874bfd9ea32f06f32723d75d09b",
+    "data/raw/XLF_2006-01-01_2026-09-30_yahoo_chart.json": "7718e298a9eb42118230abbeeeddcc881296fb2c8c6478e701f3ed4211911470",
+    "data/raw/XLF_2006-01-01_2026-09-30_yfinance_adjusted.csv": "df4733151bd918c0a529052f259beea3d280272fc4efa0a763a17c3a19bb7ce2",
+    "data/raw/XLF_2006-01-01_2026-09-30_yfinance_raw.csv": "8fa9f46931a04c73f573b9d8b471715764881481635555d1966e573b4fba9e90",
+    "data/raw/XLI_2006-01-01_2026-09-30_yahoo_chart.json": "e571ba8674e4de59ae5f6f8c28f2cf5caaaa4a2df65807b1c599fa058e831515",
+    "data/raw/XLI_2006-01-01_2026-09-30_yfinance_adjusted.csv": "e0d4b8eff612cdd3d9c4ffd9569be07e833f7cf81c1f83b5bfd08ed6fb30e5f8",
+    "data/raw/XLI_2006-01-01_2026-09-30_yfinance_raw.csv": "7dc44b027df47a945e30823b978adac6aad5a0fc6aacee93cba8695c1de10b9a",
+    "data/raw/XLK_2006-01-01_2026-09-30_yahoo_chart.json": "40180a03c4e2ec17e630c5aba96fae61b12e3d1ff2a191246f4e7957f9c8c86e",
+    "data/raw/XLK_2006-01-01_2026-09-30_yfinance_adjusted.csv": "0d5eabb61ed1ce934e5faf62c4fe01d654e1d4054ce05dd5bec642f102b5c054",
+    "data/raw/XLK_2006-01-01_2026-09-30_yfinance_raw.csv": "70bbb583630d9d2af0eb9f0588f43b2ed10fcf17a5b1677267d25fb34cac55c4",
+    "data/raw/XLP_2006-01-01_2026-09-30_yahoo_chart.json": "cbe523748f36b8d07183d950d059bff648feb7bc73ed399f811a9a8ea92744f7",
+    "data/raw/XLP_2006-01-01_2026-09-30_yfinance_adjusted.csv": "3c299d69fd0425dab0b62bbed05e5f657ad69c82747145daf92b18731d39551a",
+    "data/raw/XLP_2006-01-01_2026-09-30_yfinance_raw.csv": "e56119d823d92f320e6d5e30b8c435a500e72df8a2eb17fc04492baf3970bf23",
+    "data/raw/XLU_2006-01-01_2026-09-30_yahoo_chart.json": "78567888ed1138f2b6bbcc905909c423697c186a7594885ba635241c4be8c3f0",
+    "data/raw/XLU_2006-01-01_2026-09-30_yfinance_adjusted.csv": "4b218933a8b8bdb669b24502c0b9371eb665ebf1e4ceea7c1ca5cb116ebbef7a",
+    "data/raw/XLU_2006-01-01_2026-09-30_yfinance_raw.csv": "0d387be46a5459b334118dfb1a3fa459dee6cf8cea14836385385b4c7a3953f7",
+    "data/raw/XLV_2006-01-01_2026-09-30_yahoo_chart.json": "db163eebbc24223efd6a35c9636b54a0002c471996c8fcb53b733106c9fb8b22",
+    "data/raw/XLV_2006-01-01_2026-09-30_yfinance_adjusted.csv": "7a80cbf577405707390fd23efe08b7dc7572289e52471ebda53d7373b923037b",
+    "data/raw/XLV_2006-01-01_2026-09-30_yfinance_raw.csv": "c258ce75b66c33d6068434da9a06b1ab8e9ecee27b11453f413f3a73e6ff23a9",
+    "data/raw/XLY_2006-01-01_2026-09-30_yahoo_chart.json": "639e4295b3872e8d4142aa59dfb176d5680ad54c8a812ac0407c25b204942e4a",
+    "data/raw/XLY_2006-01-01_2026-09-30_yfinance_adjusted.csv": "e545103a45623306fb0b8d2a51449976327dd455bdbbb44233861da567b98418",
+    "data/raw/XLY_2006-01-01_2026-09-30_yfinance_raw.csv": "cc5044439a8f7183cbec63069743b22657f6e31180cfbd9173a7112f8edcf81b",
+    "results/elastic_net/design_config.json": "dc4933c542de7cbce8b02123518502bf74c7a7edef085b3cd92b0cb13f567b44",
+    "results/elastic_net/locked_selection.json": "8fce5494dec87d6925e6e8e3522d23d7838b1cc9b00cd08ea84d27b9a97865a8",
+    "results/elastic_net/run_manifest.json": "1bc6638d0b332f8dd7cd09369e9a7cb37e6f6adb3d78d06ded2b4fc30ec53ee8",
+    "results/elastic_net/selected_hyperparameters.csv": "e12fbd53e0cf98169731697bf91581a7de9c52169b182bdbca15d5262cc788df",
+    "results/gbdt/model_config.json": "322f7fc404685b3dc039af3f94ef760214ed37fe6fbcac434388871da4127626",
+    "results/gbdt/selected_hyperparameters.csv": "3aa59a891814590f016ce8a933d46eec023d178a37069cc7373e9012a86d66e8",
+    "results/backtest/training_oof/calibration_fit_audit.csv": "ecfc67307bb8ae13eff3d1cc13d6934a1acadceb7a712196322ba911d1c1140f",
+    "results/backtest/training_oof/complete_day_top4.csv": "632210cf4aca75fed5956b4b9a4f716ecbe1e37f4b2d57d41bee10f0df8b50e8",
+    "results/backtest/training_oof/daily_signal_coverage.csv": "5db28aab4379cacd4f756919e91e7b5a20f24178087e2a7b160a3ea5a7a9fa1f",
+    "results/backtest/training_oof/design_config.json": "e369e6e7d65247f6d6bef0c270edd9f59742b1464d77f3b66bc1baf0dbe72990",
+    "results/backtest/training_oof/elastic_net_calibration_grid.csv": "e189f367442f16d684a0058efc4d3cc4bd9addef74385d710b51ac7dd50118e5",
+    "results/backtest/training_oof/elastic_net_calibration_monthly_losses.csv": "8cfaaada3e2cec66fb25be0f55a0b0c08effd2f3500e2a3bf4ec889d7d365ec3",
+    "results/backtest/training_oof/elastic_net_selected_diagnostic.csv": "d87206aaf9e6800a764cce618f48e089099f06a78a5a83439d041671052d6689",
+    "results/backtest/training_oof/execution_config.json": "64689afda30771f59baf382cb8066dc314ef86b2111b8241640dcfb64760ab26",
+    "results/backtest/training_oof/gbdt_calibration_grid.csv": "73762bd3159b70d94060cc53cb6dcb7801b71bf75e6ed80f88a50df3fa12e216",
+    "results/backtest/training_oof/gbdt_calibration_monthly_losses.csv": "b24506e6166971bbe101c8551b75b5feb556c0d66b2b4e5dcdefc8ed5c1e7193",
+    "results/backtest/training_oof/gbdt_calibration_round_curve.csv": "ace9383ed52a1fc836a07c3e6327d3b2429b3e65d769c1b0c8024b75a1489c2d",
+    "results/backtest/training_oof/gbdt_selected_diagnostic.csv": "26988425cd5ec65835c76b94c7279015dfb41a213232d9614587aad8d7e9ada0",
+    "results/backtest/training_oof/oof_checks.csv": "7193d74c473c3a3b5f0f6fba7dc62799ec59cb5321809e55a4fc6b3588b4cc29",
+    "results/backtest/training_oof/oof_fit_audit.csv": "76ea1cc9cf8691dc172b72296016e8f9fc88321d613074d229ee1e02068fcdea",
+    "results/backtest/training_oof/provenance/empty_month_fix_migration.json": "e69b2df64dc3aeaf6d131b4943e1d3fe34762c4eb56ae657f009ed31aa689129",
+    "results/backtest/training_oof/provenance/execution_config_v1.json": "b0566ed5fc22e848a0ecd0efec4ed233f3fb279651255c374dfc63ce9e2f6491",
+    "results/backtest/training_oof/provenance/model_implementation_v1.py": "2c5d34a35a1ef2b8b564a8eb687ddce3ceff90e7b66a8344430a4e9a87a55787",
+    "results/backtest/training_oof/provenance/preregistered_design_v1.json": "8cbf493a7cab2f3c48e2514b45f0c2293d22b0c6e76204e5c7b16bd21325888d",
+    "results/backtest/training_oof/selected_diagnostic_config.json": "3a2655740c9c9d2cb7bbe5791e7031be8c9d8b7ac6d283785f5b16e2176f6345",
+    "results/backtest/training_oof/signal_quantiles.csv": "0d1bd998004911e88609ab9bd56eaca9a51b7b5db9a714cbe61dd70212d71207",
+    "results/backtest/training_oof/skipped_sector_months.csv": "7af0753c821d8f49102fd931566fadffc8b7c3300950816f9d258d4953192fcb",
+    "results/backtest/training_oof/threshold_candidates.csv": "3157b245182e7cf8a8d9bfd4d6812c99d776c2d7c5872af8fab15b3ffb97a5a0",
+    "results/backtest/training_oof/threshold_exceedance.csv": "3b995258769148676288eece5850893abefc364b55025662b5885406ac5c6629",
+    "results/backtest/training_oof/training_oof_predictions.csv": "b90619e23f173b784b06815edb901790f91e621ee0c8995d6a7ded6bcea2b5b6",
+    "results/backtest/training_oof_calendar_coverage.csv": "fe955028eadc882ad47e5ed986a8f82c6b7eee9e31a7484e8ef970edd906ab52",
+    "results/backtest/training_oof/run_manifest.json": "057ff3521d731d74bddce63ed00124140d74764939762c4c66dfeb8e61204638",
+    "results/backtest/baseline_manifest.json": "11ae96b0b42da7770996b9326f46d7a656d331fdb8df5e1766995aec650c7108",
+    "results/backtest/cost_manifest.json": "ed37a88eedcc7ac077e84580865ae6e5e0f596750589aaf77c45343ea0a7f35b",
+    "results/backtest/execution_manifest.json": "a8b284433ed7a6a47477b388b012a8c1cb6dc71aa34c44c2f3e4388f251a5ccc",
+    "results/backtest/input_manifest.json": "cc005c0a8f46387181d1ba9223b82e9be39ce1cc267d0c3ba893f85ba6ad873f",
+    "results/backtest/ledger_manifest.json": "cd7c4b38bd2a65603e6cccd0f01f0fa021bf3c778cf8eb0fd9a4355a375e3398",
+    "results/backtest/pair_decision_manifest.json": "bf14e13331aea1e823f58e828529d46aab15a82547e1a313877a5159c7b8df19",
+    "results/backtest/panel_alignment_manifest.json": "9ede7b52d964c5d1d5b9f5971007f75a46a525ae9c44a7c9541781d022d6e8ff",
+    "results/backtest/prediction_coverage.csv": "534616b4e6f59a909e1423c7d3e4f90c9ec246197565bd62ab55a083987be93d",
+    "results/backtest/signal_policy_manifest.json": "88add6b2cdded0af27f8f06ab94647f17f52e961eee1ae5303b97557aa5d0543",
+    "results/backtest/threshold_selection/checkpoints/entry_10.json": "9291bab6568f9c900b2cec668c8648d4af579fbd9d61f53bc0a07ce9849aae00",
+    "results/backtest/threshold_selection/checkpoints/entry_10_assets.csv": "3a013d117e496a0aa1c115dba350e7858ccc7ee73d432ee50c991416a5289a3e",
+    "results/backtest/threshold_selection/checkpoints/entry_10_daily.csv": "de55b27de560ec14851a5e3adb8632cd49826c826acc6347843ff3736367bad9",
+    "results/backtest/threshold_selection/checkpoints/entry_10_returns.csv": "3b31b610073e50e0e6afe498e699cbcb66ab1ee6af217b4b0ad73096d43a7caf",
+    "results/backtest/threshold_selection/checkpoints/entry_10_summary.csv": "a8b84824bbcfbc9158f5533938be73227d7b4247f323ad02c059a8b8ddb8723a",
+    "results/backtest/threshold_selection/checkpoints/entry_10_trades.csv": "d0a2b75adbf2be2fbbbce2ead6b5d07e96b5fa9f469adef1dfc3f4e853151eb1",
+    "results/backtest/threshold_selection/checkpoints/entry_15.json": "dbf179ff20dde13c97cf18549e6724bd2d7ab5ecfa2e5012af52d4df7b70e159",
+    "results/backtest/threshold_selection/checkpoints/entry_15_assets.csv": "4536cf7ca38cc5fa4ba4e7ef819b380ab03fa8b33718e567d2ad637844c80d68",
+    "results/backtest/threshold_selection/checkpoints/entry_15_daily.csv": "0232bb14bac90ed875663f2d6edff881f14b9c677f3f6bc8ffbbf4f05cfadb0b",
+    "results/backtest/threshold_selection/checkpoints/entry_15_returns.csv": "58b276c83c21993f5b7f2bf38a650aed69ee7c7648ed88feb31a950b39a5884b",
+    "results/backtest/threshold_selection/checkpoints/entry_15_summary.csv": "bb27b7554c79112db6d3bb343116b0716515757ee1039b674f1cb8a778a18ed6",
+    "results/backtest/threshold_selection/checkpoints/entry_15_trades.csv": "f9ad075a01d0d1a0b7a1bd09ea15fe9c53a4108876855c0a255965a70971abc8",
+    "results/backtest/threshold_selection/checkpoints/entry_20.json": "379eed668cb5e1ec778f715a388622170037ba20978c0fcabc707dc0df92080e",
+    "results/backtest/threshold_selection/checkpoints/entry_20_assets.csv": "22e76ff49d734eb9674a70eb34aa4a27cce6db1636b6597c60ed7705a9748523",
+    "results/backtest/threshold_selection/checkpoints/entry_20_daily.csv": "3351600a6df0881321f07195d640a7837a712f342e2f9433ef04210b8bf9f123",
+    "results/backtest/threshold_selection/checkpoints/entry_20_returns.csv": "aae62e5fdcc261cf8dbadd63bba2c4fbfe259764850c31068dc44fee763dbe6b",
+    "results/backtest/threshold_selection/checkpoints/entry_20_summary.csv": "edfb80df4721c33a48d2a6c85e0792a32644d48c8df09129b12ea4f216ea0708",
+    "results/backtest/threshold_selection/checkpoints/entry_20_trades.csv": "27de506dc2b3cd98df4ccbdd8d43e3e7fdf5f17930e686c4817fef861b631f50",
+    "results/backtest/threshold_selection/checkpoints/entry_30.json": "f7cde0bfedc2d002b7bb1f5cca45fbae1d28381b014c9820c8876e12a5103269",
+    "results/backtest/threshold_selection/checkpoints/entry_30_assets.csv": "fcdf735ad979199905f890b09065e6dc41bdbe1a9f1d12808d490100863bf9ea",
+    "results/backtest/threshold_selection/checkpoints/entry_30_daily.csv": "08858e142c0f6b7d73ec037ed366a8243e18c7d4addfec7db2405294ff9342dd",
+    "results/backtest/threshold_selection/checkpoints/entry_30_returns.csv": "78fb71adf59da8fd8dcfa9a02452234d80212d09cdeaed1abda4d19852fcf8fa",
+    "results/backtest/threshold_selection/checkpoints/entry_30_summary.csv": "3c0c9d23b806f92b250f52d65e9d48671f6edd2114591ef94ad1c5d1164642cb",
+    "results/backtest/threshold_selection/checkpoints/entry_30_trades.csv": "f1df7dc2aae56a4fa0ca64522b2edda79e60c53a26aafdd17861d28bdfdbda5e",
+    "results/backtest/threshold_selection/checkpoints/entry_5.json": "66a098b57338d0dd1e97e1474e04439e0e23617cd457add6db7c4ecf266770a2",
+    "results/backtest/threshold_selection/checkpoints/entry_5_assets.csv": "3fc7a944d3b9bfe4c4df054782f3ae0ff6910d742556aa86ef6557381e56ae53",
+    "results/backtest/threshold_selection/checkpoints/entry_5_daily.csv": "e8bc4111a20c68c929992ed6e911b84ab8b4fe593e391089a7c09725ec0cee69",
+    "results/backtest/threshold_selection/checkpoints/entry_5_returns.csv": "70c02fb39a7c12618e2b24eed14f6110f36298933a6ab3317bc8e2e89a5dc39d",
+    "results/backtest/threshold_selection/checkpoints/entry_5_summary.csv": "256b5eaa948508494ff5a6d74e9da635af7cd6f76b2ee0e1c7dc1606a2673495",
+    "results/backtest/threshold_selection/checkpoints/entry_5_trades.csv": "12e57ab6dc466a8e7d09cff414a32e9ca1ba14ddc909854c26420418ca24262c",
+    "results/backtest/threshold_selection/design_config.json": "f27b89726f385802a7fbd2e1f00fefa5a9820144f0173e7f34449ef75a999611",
+    "results/backtest/threshold_selection/run_config.json": "ab3dcccbcc78a2a30c9e1d2278e438abd1c24c075327b2dc1a7f1fdb8e69becd",
+    "results/backtest/threshold_selection/run_manifest.json": "1299c172aa84fc47fc1792b2c2bd22b1c44dc3e26746a3ed79c9941c50603041",
+    "results/backtest/threshold_selection/selected_threshold.json": "af4ca951f9f17406c5a29bf83e7fa4a2a01982111a2ab786ce4d789dbe402d5f",
+    "results/backtest/threshold_selection/selection_checks.csv": "795b8ba37e5503e0e830ad63309e50c616d4e76efe26e358cf01cbfd8dfd7eeb",
+    "results/backtest/threshold_selection/selection_logic_checks.csv": "f3a9346918f47df58b7db6f9bf475923e8a05d7ba528c34ba94e9638667488cd",
+    "results/backtest/threshold_selection/validation_candidate_scores.csv": "6a8d5d9dfa6862fa0a686fc1717e26f6332edf51ac88131bb4b62088c6399898",
+    "results/backtest/threshold_selection/validation_daily_returns.csv": "33c1560ad51026957ea9a76726a65f294039146ff2df9d612d72d57ec64b92df",
+    "results/backtest/threshold_selection/validation_strategy_summary.csv": "65029a36599c51565b0e352daded73d7cc081634daa6871c43e74d6520c7e1de",
+    "results/backtest/training_oof/checkpoints/calibration_2012-01.json": "4243de2210440b3da27e13921fa5ba5b551da6065e6612a81de6bca2dc3a957e",
+    "results/backtest/training_oof/checkpoints/calibration_2012-01_elastic_net_losses.csv": "d66d04cc4f0fa3ffd4a79db2783382ddabe5e6954a4b2f2f64268b627ffee826",
+    "results/backtest/training_oof/checkpoints/calibration_2012-01_fit_audit.csv": "022e72bf0cc5282121020a586e1a2fc0e967535b902258d3cc7c2181f958d11e",
+    "results/backtest/training_oof/checkpoints/calibration_2012-01_gbdt_losses.csv": "c6cb88db5b24c86e9f8b766a4331ce64f847bf1c373c7fc3dd0e225293745911",
+    "results/backtest/training_oof/checkpoints/calibration_2012-02.json": "dea4c0c81895ce70324f16f3d7d97587b08be8b9c0322dfde5e4ea6d66ff8f12",
+    "results/backtest/training_oof/checkpoints/calibration_2012-02_elastic_net_losses.csv": "59f67c0494e3af9406691586921ef602e3ddd4dcf4768bdf7a35da7a3c43d889",
+    "results/backtest/training_oof/checkpoints/calibration_2012-02_fit_audit.csv": "e4bebe52a4ae8fac43137da8874ec4f47bb21ae0373e2f0db07a6a6c6c6b73b5",
+    "results/backtest/training_oof/checkpoints/calibration_2012-02_gbdt_losses.csv": "08940a0458a87c9b75e3eeb693bd222c435286ba361d374a3af6a2156fa53646",
+    "results/backtest/training_oof/checkpoints/calibration_2012-03.json": "577e5cba5e0db2d6be7bb74e034d74074a87dc18e0005e68a164d43ea7ecba4a",
+    "results/backtest/training_oof/checkpoints/calibration_2012-03_elastic_net_losses.csv": "e2a0192c55547bde9b34b22c274705d3d5e6e41a90d4d91284b277ee65346e4b",
+    "results/backtest/training_oof/checkpoints/calibration_2012-03_fit_audit.csv": "5c625c8ac842f422f8a89bd776b59bbceb39e583172b80f9725ccdbc69a66965",
+    "results/backtest/training_oof/checkpoints/calibration_2012-03_gbdt_losses.csv": "54a56650662b42dffaaf2bc394bc0f24897f6013d3dc6ecce49f7ef2024f363c",
+    "results/backtest/training_oof/checkpoints/calibration_2012-04.json": "2545144b810c1006954aa0149f8d536600f125a71f1ed94e7e86160ea855911e",
+    "results/backtest/training_oof/checkpoints/calibration_2012-04_elastic_net_losses.csv": "1d9b98f33af7b0bf6190463538f2e8dff54db44f9a3a14729418e6b559e33121",
+    "results/backtest/training_oof/checkpoints/calibration_2012-04_fit_audit.csv": "2eae53869378b981af9ad071cf0129060f214c80ded837750f3279b93e7c7137",
+    "results/backtest/training_oof/checkpoints/calibration_2012-04_gbdt_losses.csv": "6a55f085f82597d6d21c0ae5f9786da26041884527cc82e67702a0749d47c1c7",
+    "results/backtest/training_oof/checkpoints/calibration_2012-05.json": "33885e1e8a4eaa0218ce99c41fe44923bd88441d33a82655a1ffe67f2d8cffdf",
+    "results/backtest/training_oof/checkpoints/calibration_2012-05_elastic_net_losses.csv": "feb2ebb5f451b68d360bfccc7548b01e7c060abb143baa5458ba651a78b4206c",
+    "results/backtest/training_oof/checkpoints/calibration_2012-05_fit_audit.csv": "13f545f9ea2822a27b9dd301065681ace191da685d086beb02d3da8ae1679df1",
+    "results/backtest/training_oof/checkpoints/calibration_2012-05_gbdt_losses.csv": "11f6a8d7b301b53257c76343532d164a20374b3ae0edd2700350ac86ef64924f",
+    "results/backtest/training_oof/checkpoints/calibration_2012-06.json": "5ea7d45cc3a8454824ee5abd67266211ef4846bec683bc782401d890c2766e29",
+    "results/backtest/training_oof/checkpoints/calibration_2012-06_elastic_net_losses.csv": "dd15675d20d6e62f8355be9f1a953fca79417bec19bacb46026e2793d5ae6ac6",
+    "results/backtest/training_oof/checkpoints/calibration_2012-06_fit_audit.csv": "2b21a79e71860287c86271e50d15ec7da06470e283f13d4d93efd53e08ca5868",
+    "results/backtest/training_oof/checkpoints/calibration_2012-06_gbdt_losses.csv": "cbebc97c53a77b8c9e8466f04f21858e33da7b588dcca8a458008599299171f3",
+    "results/backtest/training_oof/checkpoints/calibration_2012-07.json": "26b0803353b7df4614cfb2603cacbd3b6b7ed1bdcd34d11d233cfbf33ce938dc",
+    "results/backtest/training_oof/checkpoints/calibration_2012-07_elastic_net_losses.csv": "8b77ed7c8b610d0826abf21195937e07e3d02a9236a8c82addcbde7371351c9d",
+    "results/backtest/training_oof/checkpoints/calibration_2012-07_fit_audit.csv": "eb8be507284ae63b398c331e0d671eab86769cf0bb5182326afd5516d9d80232",
+    "results/backtest/training_oof/checkpoints/calibration_2012-07_gbdt_losses.csv": "1def8be99990a57740ff86814a11dc6e178dccaaccc0a44714525f6f5f74c5b3",
+    "results/backtest/training_oof/checkpoints/calibration_2012-08.json": "01f5f209271ac052090ed88759def6a61f387cd7016b891079139af196cd5c66",
+    "results/backtest/training_oof/checkpoints/calibration_2012-08_elastic_net_losses.csv": "0e542782dd46c698a5b1e94b9d8bdfc2ae3a0bfe6755f8f3ac29af9fdb609da6",
+    "results/backtest/training_oof/checkpoints/calibration_2012-08_fit_audit.csv": "9735725990137aebc8a8849f2a4b2edd290a7334232fab0b36b65526dfa66e89",
+    "results/backtest/training_oof/checkpoints/calibration_2012-08_gbdt_losses.csv": "5fa3bdf4b2688e7de0d8875fba3d9d23ded92e2b475bfcd6db6f9257a8343776",
+    "results/backtest/training_oof/checkpoints/calibration_2012-09.json": "ce2cf4d14e6fd6eae9583b4122037ee26321882103beba8fe41651bc0c1c4040",
+    "results/backtest/training_oof/checkpoints/calibration_2012-09_elastic_net_losses.csv": "f0a7dc01db8090d85cf2684f6fd8ab32f703c2a4b9f15bfdedd411ce03747805",
+    "results/backtest/training_oof/checkpoints/calibration_2012-09_fit_audit.csv": "84c34d3313b208db6a34ffbf11de05d0e9af5852154b79c5f3e0f4bfdd42b126",
+    "results/backtest/training_oof/checkpoints/calibration_2012-09_gbdt_losses.csv": "8265f5bc89fc693935a82117486ad4dd70785ecaa7dd026889e7117442a84014",
+    "results/backtest/training_oof/checkpoints/calibration_2012-10.json": "6760eb65677c49cd98c9d5c02ea52c850e40798669a5bf2d4857ba1d21e976b7",
+    "results/backtest/training_oof/checkpoints/calibration_2012-10_elastic_net_losses.csv": "b95d5647d52bbde1a77e6eb18a384cff0484ef9ae9a1c887cca5ad75550adf15",
+    "results/backtest/training_oof/checkpoints/calibration_2012-10_fit_audit.csv": "4fa94b848bcbbbfe30cc7a28049d7c2f88eac4d472338318519ec1d5175d7c04",
+    "results/backtest/training_oof/checkpoints/calibration_2012-10_gbdt_losses.csv": "f12f20586e1cda0e8a879d1eefe3b420d8a0d84ada2ec5fa425a62d7c5543664",
+    "results/backtest/training_oof/checkpoints/calibration_2012-11.json": "2bbcc6b17b46ff3d01369a352fbcf2215b67615dba97e6ca0e2993c6e78fa766",
+    "results/backtest/training_oof/checkpoints/calibration_2012-11_elastic_net_losses.csv": "a5e9eb411ff9696250c95d7a65cbeaa2fdc1f499a469c61c15775f4eb5632d7e",
+    "results/backtest/training_oof/checkpoints/calibration_2012-11_fit_audit.csv": "cff726d0c4f962dbb6b971e7f47a829fd635191efe12fffff9cb800de5f7d410",
+    "results/backtest/training_oof/checkpoints/calibration_2012-11_gbdt_losses.csv": "b9b378d29e2bdcad88840e6fd454b2d2a3381115a3ca820abe8f24602b9be873",
+    "results/backtest/training_oof/checkpoints/calibration_2012-12.json": "61f81d8e8ae1730bdf0f2bffc39bf9f5c77d5b1f895943cd13eb7d1438015138",
+    "results/backtest/training_oof/checkpoints/calibration_2012-12_elastic_net_losses.csv": "1408e3cc8e69298945efbedb6c719e923d6bbdcc4a5c40df306ead2ffaae4027",
+    "results/backtest/training_oof/checkpoints/calibration_2012-12_fit_audit.csv": "4f7614a7b04c16681dae961d74cd08bf5b19fee1690acda8db6d26323431d91e",
+    "results/backtest/training_oof/checkpoints/calibration_2012-12_gbdt_losses.csv": "577edf61c507c5660f6b2d077ed82de6991cef107819f705c11870ea09030967",
+    "results/backtest/training_oof/checkpoints/oof_2013-01.json": "63b11d1f826c57b10cd2869f18bba2c05ae5494a06309f92dde177dc251006fb",
+    "results/backtest/training_oof/checkpoints/oof_2013-01_fit_audit.csv": "6be51144e31161091cce68cf19af502d0e2cc1a5f422698225e01fe385b4db11",
+    "results/backtest/training_oof/checkpoints/oof_2013-01_predictions.csv": "c1b064d5c8c4aa49572f6b0f41fe7ac243c4928c70e4448e0c918ecdf5f5eef1",
+    "results/backtest/training_oof/checkpoints/oof_2013-01_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2013-02.json": "9e6fcb5240bc8789273dfe5454d97c2ccfa35e06024c480c3c2ccd48c468ceed",
+    "results/backtest/training_oof/checkpoints/oof_2013-02_fit_audit.csv": "86d54d0d1573c396203db6947181cf68e4567dcef150b39f94eb436f4f2b4f0d",
+    "results/backtest/training_oof/checkpoints/oof_2013-02_predictions.csv": "4300f90da9cff2cf3c49cb36f88884083bd65e3249d2a6e842b3682a3f99f35e",
+    "results/backtest/training_oof/checkpoints/oof_2013-02_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2013-03.json": "9b09618c5ecf67518dce64313b05dd567f913d009d768116d603469e1530f1c5",
+    "results/backtest/training_oof/checkpoints/oof_2013-03_fit_audit.csv": "0879a469dbc55eab763146465cdb247d07a83dd6d62c88a8b7e46ae6aaedc547",
+    "results/backtest/training_oof/checkpoints/oof_2013-03_predictions.csv": "1c68987d64c6edab59dd09fb540c025481ac267d919836c2621f887174a223dd",
+    "results/backtest/training_oof/checkpoints/oof_2013-03_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2013-04.json": "5a2aae5ab7c4408ed72138d06e44c2b2f6b95a2edbaf63cb47a89422940dcbfe",
+    "results/backtest/training_oof/checkpoints/oof_2013-04_fit_audit.csv": "b08ce4fb1046b2d1e47f0881ab56e53ca05d823823c99bb07baf30646ef923ef",
+    "results/backtest/training_oof/checkpoints/oof_2013-04_predictions.csv": "806cf03be80e0879af6ef9965adf443c5f2957ebee91663fa0e1322be900d639",
+    "results/backtest/training_oof/checkpoints/oof_2013-04_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2013-05.json": "48bdf983440a7f2348bb2e684d9419149a093369ba58eff628d0dfed8236e371",
+    "results/backtest/training_oof/checkpoints/oof_2013-05_fit_audit.csv": "f999e9dd9036e194d9b464041839172d1b79eee4272f6babf4d647cd2d4ab841",
+    "results/backtest/training_oof/checkpoints/oof_2013-05_predictions.csv": "5d28b03fd6b7e4443912c6cb35df72d6e1d3014bb7afe0e1329bc1ba27dc824d",
+    "results/backtest/training_oof/checkpoints/oof_2013-05_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2013-06.json": "0587e1849400574b543310c05d419c7c46118a56e5780a89b6dc35c188da5fef",
+    "results/backtest/training_oof/checkpoints/oof_2013-06_fit_audit.csv": "37911342acf3a8ef6bf9f6de834a5daf85e149e0f3fcf9def6ba195f841605f9",
+    "results/backtest/training_oof/checkpoints/oof_2013-06_predictions.csv": "3761383b2952a3dba8bf2b45379d2e1d7dcbd0ec2fada0e7cbd87229198cd65c",
+    "results/backtest/training_oof/checkpoints/oof_2013-06_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2013-07.json": "f501aa4c0bd7457b3590c9ef55832ba439643593416331f1c2780fba2dba004d",
+    "results/backtest/training_oof/checkpoints/oof_2013-07_fit_audit.csv": "5a8ca4a878f325c7851d25767f5375918c2688091834957338feef6b83c98966",
+    "results/backtest/training_oof/checkpoints/oof_2013-07_predictions.csv": "8144bc42ffe3476dfb68d724767cf475434ae3c2e76c20834e634f95d8c5d027",
+    "results/backtest/training_oof/checkpoints/oof_2013-07_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2013-08.json": "d886db6857b32d5a4b7ed12effc10468774731b62916be41dd8319bb5b8fe713",
+    "results/backtest/training_oof/checkpoints/oof_2013-08_fit_audit.csv": "555c7d7e89171d59951d8e4c576b19a712954ada171fecac9181c89d306ccdd4",
+    "results/backtest/training_oof/checkpoints/oof_2013-08_predictions.csv": "9a88695f5fe6320c353f7046c7d49f3fb5db70b94a2fa1a0150aa299ef4cd0a5",
+    "results/backtest/training_oof/checkpoints/oof_2013-08_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2013-09.json": "72fd5fdfd977d7cb7195b2873d6a7aee02b6e148f18c532170a02d9c2410bc78",
+    "results/backtest/training_oof/checkpoints/oof_2013-09_fit_audit.csv": "880408e96489048d2cd0a7d1191e6da9746b405872dfd9a2cd796a4c20a9c494",
+    "results/backtest/training_oof/checkpoints/oof_2013-09_predictions.csv": "6dd775cf07c635ede9c05b2971ba9648b448b7a582d8c129d0ccab2f5d03c3df",
+    "results/backtest/training_oof/checkpoints/oof_2013-09_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2013-10.json": "827224976d7348193665a74a6fcd348e5b6c678afc2d9540470edebd2b920470",
+    "results/backtest/training_oof/checkpoints/oof_2013-10_fit_audit.csv": "9a55ed1e812961a89e1a5c7e3cdfa664ccc723516b79ab3c32d958820284041a",
+    "results/backtest/training_oof/checkpoints/oof_2013-10_predictions.csv": "e62dd51f0988de42b150a9802c8a191faf957cf6fa37b6203def98193dad7119",
+    "results/backtest/training_oof/checkpoints/oof_2013-10_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2013-11.json": "218278a94900d327cec66be0e2be6769efef3e0bd171a057bf362096eb03ea1f",
+    "results/backtest/training_oof/checkpoints/oof_2013-11_fit_audit.csv": "1311bea70e92dd40c4b0839306cf6b064ee3a52cd9a3e29b48c7ba7612b3be66",
+    "results/backtest/training_oof/checkpoints/oof_2013-11_predictions.csv": "7a52500e621b15aae188bac8214ca19009944938f5e45ee5fe95c53e968f1378",
+    "results/backtest/training_oof/checkpoints/oof_2013-11_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2013-12.json": "6f930f58bd888b74b411213df5f4df84c1b4a355e6819b7b25671d9029d2498a",
+    "results/backtest/training_oof/checkpoints/oof_2013-12_fit_audit.csv": "696ddb860e08228e66fbac51716a7c1c38bef83fe608fd851e2090f5d9a57e8f",
+    "results/backtest/training_oof/checkpoints/oof_2013-12_predictions.csv": "4001eb69be948f8e23eed7d64faea0309d734fe1d2a5d6a15be52a94eb39c1d4",
+    "results/backtest/training_oof/checkpoints/oof_2013-12_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-01.json": "8106f5d35d297ec58dbc3a071d46435f914fc79c84df6a33508f1ec9498e9bbe",
+    "results/backtest/training_oof/checkpoints/oof_2014-01_fit_audit.csv": "db782166799352d2720fa47bfec79dcbb7df9f77566d83ab21ad36e346522ac0",
+    "results/backtest/training_oof/checkpoints/oof_2014-01_predictions.csv": "8d5ebf94f4d0e9874db9c1754995719e1c97909b95ba65e68d7a5da63caf3a7d",
+    "results/backtest/training_oof/checkpoints/oof_2014-01_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-02.json": "4e85de61a78bc5e7db541e15e82e04fbf5165baf5f364d472e50d4a4adfd2862",
+    "results/backtest/training_oof/checkpoints/oof_2014-02_fit_audit.csv": "6e1e11546a4211e4da05098607d2e8346c48cb14d198dec3949286727f5b318b",
+    "results/backtest/training_oof/checkpoints/oof_2014-02_predictions.csv": "fc0916ec3830f078571eba0344e717ba08de16a9c8b9054481918268e9ae8667",
+    "results/backtest/training_oof/checkpoints/oof_2014-02_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-03.json": "d84a94d269df55b8e8259f75313690e8069d86a6d276835e0bce65c43353687f",
+    "results/backtest/training_oof/checkpoints/oof_2014-03_fit_audit.csv": "57d82f5f61e07f179943579938ad8dbc76e06be8d75edd7c41b50e7bdfb6bd05",
+    "results/backtest/training_oof/checkpoints/oof_2014-03_predictions.csv": "fb46d1423098116c35af41c1b2748a28ac9bb3000bbc823aee84985d65ffc62b",
+    "results/backtest/training_oof/checkpoints/oof_2014-03_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-04.json": "3a9661b27bb98cffe25051fc060a3319e9adb358ef83637997fdb72ae64c1d2d",
+    "results/backtest/training_oof/checkpoints/oof_2014-04_fit_audit.csv": "314132079d4d7ebb6bdb96fa100ef3845e069f0f0d7ca7b6067e9d6ac4db2768",
+    "results/backtest/training_oof/checkpoints/oof_2014-04_predictions.csv": "86b39b8b6b3f6965b9a9ee161a797d5df73790e271079584988866f350ec5a26",
+    "results/backtest/training_oof/checkpoints/oof_2014-04_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-05.json": "369e1e33d239bdd58c7fe91990aadd5b362f91fcbb63c4dfe68ea9ad9f99777c",
+    "results/backtest/training_oof/checkpoints/oof_2014-05_fit_audit.csv": "9d3e959a3ab6ace3279bf1dc26710f151684e5de5b78d4168422c05b76122727",
+    "results/backtest/training_oof/checkpoints/oof_2014-05_predictions.csv": "93895db69d90a9781ee8d60d057ff709d5bd586791524357bd80855c76d6b7bc",
+    "results/backtest/training_oof/checkpoints/oof_2014-05_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-06.json": "46fb2be2d190ba8582a67c7d99124e136bfda8d0945bad3f33b10d529f5c6480",
+    "results/backtest/training_oof/checkpoints/oof_2014-06_fit_audit.csv": "729255714fd4f8df537c35a9d168024aa75037daebca6f803649235cc8955404",
+    "results/backtest/training_oof/checkpoints/oof_2014-06_predictions.csv": "d068dbc7305b817f9c55cde74dde3053045cfe205f15bc86f8b74f8469ec97d6",
+    "results/backtest/training_oof/checkpoints/oof_2014-06_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-07.json": "9f8a6080c692157b9a3c55a99ccb404f42ed4aae6775c0335e19f627868f8c48",
+    "results/backtest/training_oof/checkpoints/oof_2014-07_fit_audit.csv": "4f4543cebb50a14e99724c1e8b3396f5014bd0be7b899714785c48c04592d35b",
+    "results/backtest/training_oof/checkpoints/oof_2014-07_predictions.csv": "09fe8202444372e68210baa0add4fbc837b38d7dbbf4fefc891f9969e3232147",
+    "results/backtest/training_oof/checkpoints/oof_2014-07_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-08.json": "4a57cbe0aedec78942b30b9b538e66dfc127a208cdc227240a5d92eed3b17a68",
+    "results/backtest/training_oof/checkpoints/oof_2014-08_fit_audit.csv": "8a800656640be2d507ff031df7569c79dfbe4cab53387a3af15b61eb46d6fd12",
+    "results/backtest/training_oof/checkpoints/oof_2014-08_predictions.csv": "1f1acdb90eff1e82bb8fa91760dc54b15c1358675df815faeb3fcfc14b7656e5",
+    "results/backtest/training_oof/checkpoints/oof_2014-08_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-09.json": "5558ed1ea6849b59da510ffe61381788ce6a2dbd12d8e81e55c9340ce2d650c8",
+    "results/backtest/training_oof/checkpoints/oof_2014-09_fit_audit.csv": "acb6263637ad514f644479483c7b029a5d31a076a5975e16c460bc018c95f5ad",
+    "results/backtest/training_oof/checkpoints/oof_2014-09_predictions.csv": "bf31c96474b00ecaffd9d063dd0c08cd9ff3e45f68d9c2bb96c0b2624deb2c9d",
+    "results/backtest/training_oof/checkpoints/oof_2014-09_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-10.json": "aeb61581a7041c9b66ff20e5c9b96480af4f9e44188c613942859f7cc01f882d",
+    "results/backtest/training_oof/checkpoints/oof_2014-10_fit_audit.csv": "596521b4232a6736ac1e4a820cfdae14e5ddebd1699f5bdaac0ed7eda8be4ac7",
+    "results/backtest/training_oof/checkpoints/oof_2014-10_predictions.csv": "d30ffd348ba1dcd110f369ab10ac3c88215bc5d6928abd7f576b8015da1473ef",
+    "results/backtest/training_oof/checkpoints/oof_2014-10_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-11.json": "26a6aed6e094231ab7670a775bda0ce320b6d54ea6d10dc1f71eea4c5412b235",
+    "results/backtest/training_oof/checkpoints/oof_2014-11_fit_audit.csv": "5dae59bd92e4f0255333aa33512fb655b4d7e3c94ab17ea39fd1bb2a41a09822",
+    "results/backtest/training_oof/checkpoints/oof_2014-11_predictions.csv": "de1aad8362160f85e1760310fd21312b32c7d6e563e1992d61032e8fe8543c66",
+    "results/backtest/training_oof/checkpoints/oof_2014-11_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2014-12.json": "f70c6a58005fcd311630c4099523f7f862dd576a55492c6dad4112dcd7690cb7",
+    "results/backtest/training_oof/checkpoints/oof_2014-12_fit_audit.csv": "7815a06ae610339c050858047bd8b6973c5187df3bccab18a09344ca61a5cdd2",
+    "results/backtest/training_oof/checkpoints/oof_2014-12_predictions.csv": "837844cb1494a52c22ecac5c8e9c6422ac7b1128e81e937d089d5d1c36a8e1fe",
+    "results/backtest/training_oof/checkpoints/oof_2014-12_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-01.json": "9eb77fe68cf71688bf57e71753004d7cad00562041fb97afeb974620a0bbf813",
+    "results/backtest/training_oof/checkpoints/oof_2015-01_fit_audit.csv": "6943dbcb581ca20350d09c569ba4e0aa89dccf885b6287c7f9cd387306595541",
+    "results/backtest/training_oof/checkpoints/oof_2015-01_predictions.csv": "20f21866513317fb4cca51a89cfbf6d4ae66c91788cdd1539257b00571e62038",
+    "results/backtest/training_oof/checkpoints/oof_2015-01_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-02.json": "71d1b545b00b9c4d558f7a5cc0770b8c020c46c0962f766202021177bc19f7f1",
+    "results/backtest/training_oof/checkpoints/oof_2015-02_fit_audit.csv": "3bd21fb3e35dd97f155a2bdfd8f9a61633acb9bc09f818679fc2ef07b8ab1283",
+    "results/backtest/training_oof/checkpoints/oof_2015-02_predictions.csv": "8f0b6f4943aa548a5b6673b502a664c732c11016cca061218f1c8b4d1c9ea98e",
+    "results/backtest/training_oof/checkpoints/oof_2015-02_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-03.json": "5553d13ec5b9f95c5d76af329f8e2a64db0ee844b9476ec382de3b14ae72ca25",
+    "results/backtest/training_oof/checkpoints/oof_2015-03_fit_audit.csv": "7bb3c2d740359528abc5a88ac8dabbe538bb34952e6c1aca7e405caf0f2b535a",
+    "results/backtest/training_oof/checkpoints/oof_2015-03_predictions.csv": "e692d8d881c705d9a2e35c7a31c5ac419ced0cdd3f172fc41392edcf63141fe4",
+    "results/backtest/training_oof/checkpoints/oof_2015-03_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-04.json": "819ad48de740dc4a2c80bc03e255ad7c802d53ad6156e064073956bf7e1e7c2e",
+    "results/backtest/training_oof/checkpoints/oof_2015-04_fit_audit.csv": "66d3be41535303ce176fd78c70c013939ce0ca43ea5d83cf2cea0320c999c49b",
+    "results/backtest/training_oof/checkpoints/oof_2015-04_predictions.csv": "394bf0899b2f558ec90503bd38eff288469c467655a7b62c7945f4e0aa878cb4",
+    "results/backtest/training_oof/checkpoints/oof_2015-04_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-05.json": "8e3d9fecc22beb357c0293745f017da945fec8d6ad72f58042e07891aa582204",
+    "results/backtest/training_oof/checkpoints/oof_2015-05_fit_audit.csv": "f66e7bbe67336d2f81ffc73a383f2299bd418fb7ebd43b6ae14061547cc5f704",
+    "results/backtest/training_oof/checkpoints/oof_2015-05_predictions.csv": "fefdebb6166e208703ab72e308693e25e4a63e1db5ce9263816c92e37da2c279",
+    "results/backtest/training_oof/checkpoints/oof_2015-05_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-06.json": "4f263ddd69c3ca11e69c1979bf5af8d35b49ceb84e22566a8df7d1aa210204d4",
+    "results/backtest/training_oof/checkpoints/oof_2015-06_fit_audit.csv": "ee11f286b5a69b229f258db00a06b77f573da25a8ae5b7f74e37866526136d20",
+    "results/backtest/training_oof/checkpoints/oof_2015-06_predictions.csv": "52b299c6c5bbe1ffd2f3b5006bd9a2b4c6719f5c898f6ea560001a536c613f26",
+    "results/backtest/training_oof/checkpoints/oof_2015-06_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-07.json": "29920ac2938960bb618d99b45cd236a77d36e2c3ab23537266f6e55695c4c290",
+    "results/backtest/training_oof/checkpoints/oof_2015-07_fit_audit.csv": "4c4bc3e5590312728ef3541c73fea6f5975f305b88e1af1ef8aaf3b5066484ab",
+    "results/backtest/training_oof/checkpoints/oof_2015-07_predictions.csv": "44330bc4bd3f801233fa4671cc8d03d242687b87c6b0b4770cdd0b352b20724b",
+    "results/backtest/training_oof/checkpoints/oof_2015-07_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-08.json": "6841be9888f52b7245ad94795ea34a82229c80b3d0064fea6b450ddae9a096ee",
+    "results/backtest/training_oof/checkpoints/oof_2015-08_fit_audit.csv": "b0333e2b5650ef73c6adbb136dcfbfb29a871689101d6ccd887ecb9f1cce8d95",
+    "results/backtest/training_oof/checkpoints/oof_2015-08_predictions.csv": "5317e8fc277e9a3bab81ce695a31e51f0dc39e7b4d2421e5b7993757a020003f",
+    "results/backtest/training_oof/checkpoints/oof_2015-08_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-09.json": "d90dfd37163dc31f3ae608284e02091df6ef16e149912dcee3af8dec01e1a907",
+    "results/backtest/training_oof/checkpoints/oof_2015-09_fit_audit.csv": "5b0dd84000e0fa31b603026e769a663e541871cc8d0d69d0ac0f02e93ad6096e",
+    "results/backtest/training_oof/checkpoints/oof_2015-09_predictions.csv": "4a6bcd220f90ef29f410f6ee13fa10362885f01dcda5a27ec676bd2b088be955",
+    "results/backtest/training_oof/checkpoints/oof_2015-09_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-10.json": "515e63f2adcd6aadbf0d32d7acc8649dcb39d94bbbeb0d9c09eb7d1833918f83",
+    "results/backtest/training_oof/checkpoints/oof_2015-10_fit_audit.csv": "2fca657c9b2630b05154ab31763b2c07acfd5502cf9d85e404df30e82db4dce6",
+    "results/backtest/training_oof/checkpoints/oof_2015-10_predictions.csv": "609fb8609103582f430d7351d690537d459bda17ef7fb87acc2f4f338e0bdf1e",
+    "results/backtest/training_oof/checkpoints/oof_2015-10_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-11.json": "0eae357a8cd12303c27566c44fe2083b63808e476537ad318df73cee303e4be3",
+    "results/backtest/training_oof/checkpoints/oof_2015-11_fit_audit.csv": "c78795dfe9700734c0b47080de7081d4680e3d535dfb1e3eff61580a5af7696e",
+    "results/backtest/training_oof/checkpoints/oof_2015-11_predictions.csv": "432b30ed3fbe8ee88963eb242d47fdfcce4dde9d37861bcfad19e81f8d9b4ba5",
+    "results/backtest/training_oof/checkpoints/oof_2015-11_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2015-12.json": "9e0aadf25a72cfe2de5e193e1220e71c949a491267ab86142033e00b057a405c",
+    "results/backtest/training_oof/checkpoints/oof_2015-12_fit_audit.csv": "4315dd0840b0d2d2e663e0dc23aab662a3d6b5ac7cbbdddf5f25b441100f1b89",
+    "results/backtest/training_oof/checkpoints/oof_2015-12_predictions.csv": "35a899a486fdbcd038b3b1792ef052a636e161d87f8790a3484c38e000cf8ce5",
+    "results/backtest/training_oof/checkpoints/oof_2015-12_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2016-01.json": "087f116c4c71a9f04c5e3b78891644b8416be14959c9932e92e22dd6185f4fa9",
+    "results/backtest/training_oof/checkpoints/oof_2016-01_fit_audit.csv": "92ed76922abfa1cb986e606b08c3809f8dd3831f87c86f3993a2040c293e626c",
+    "results/backtest/training_oof/checkpoints/oof_2016-01_predictions.csv": "1b6702d67a67d0cb07c082abf14ce7104d451e1be567abd70939569b2253fdc4",
+    "results/backtest/training_oof/checkpoints/oof_2016-01_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2016-02.json": "91881a48d2f215c606f6833d8b0bf43a1389f61af0646a6dc7b33b6bc575c8ea",
+    "results/backtest/training_oof/checkpoints/oof_2016-02_fit_audit.csv": "98a1c16c3e5ec3aa94b687e7c7bc25fc870171a0b76cadbe948fc1df6787061c",
+    "results/backtest/training_oof/checkpoints/oof_2016-02_predictions.csv": "c86aa18a33e2ecc8ee607484dff4da7ad3b29ef844910d0bd07f3facfaeb8074",
+    "results/backtest/training_oof/checkpoints/oof_2016-02_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2016-03.json": "6e98b19d9d2894e7dff8580ae5622dfc4e2f0e0f9e260cf78f3901de68d31612",
+    "results/backtest/training_oof/checkpoints/oof_2016-03_fit_audit.csv": "a817774aa57eb8a0a9133e3eb0e0a1b70828d6455de5d9e9a76e44c7a1fad9c0",
+    "results/backtest/training_oof/checkpoints/oof_2016-03_predictions.csv": "5fadd2e78da1af1bc64eaa6466bbaef360efe856ba6d9f8c7fe5b1cb585d52b1",
+    "results/backtest/training_oof/checkpoints/oof_2016-03_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2016-04.json": "61efe78aff3699267accd462a20994b8954842fb66f98fe3109ab659a0fc1b82",
+    "results/backtest/training_oof/checkpoints/oof_2016-04_fit_audit.csv": "bbb33d0ba1027b7baf3a5d86b75c9c2247d7ef2d7210f5157cef004363ae8206",
+    "results/backtest/training_oof/checkpoints/oof_2016-04_predictions.csv": "153a59f2ff2254627571f254f972e28348cdb86496445d3d52471b1965a3eaab",
+    "results/backtest/training_oof/checkpoints/oof_2016-04_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2016-05.json": "eb0b22f2cfe4f345d9b77c3c37f182071ad48205dfaf91ccf56cd754cca03283",
+    "results/backtest/training_oof/checkpoints/oof_2016-05_fit_audit.csv": "697483f4d0a8b327fdb73e14e7fd708616310f2e70e65faa7a405e226caa2d53",
+    "results/backtest/training_oof/checkpoints/oof_2016-05_predictions.csv": "151f767a5726b2e21365101fc4d59cd2effe5ffb7b71183678197a516db361b0",
+    "results/backtest/training_oof/checkpoints/oof_2016-05_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2016-06.json": "36b89f8ca495ec793bc957721c4ac0f1afcfc0070a175243a2d8f1bac2a3ef46",
+    "results/backtest/training_oof/checkpoints/oof_2016-06_fit_audit.csv": "118d6696a7bd7e6a9d276b341acbd6d346451f2b0059c3024c3c933feda5d62d",
+    "results/backtest/training_oof/checkpoints/oof_2016-06_predictions.csv": "06be40c03b5e391889bb6ed7d2f730e500251f1916ac493de089ec4881d94b76",
+    "results/backtest/training_oof/checkpoints/oof_2016-06_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2016-07.json": "ee120f32da307803c4e03471f58fcfce213e5b2af9cb9dbadb5143995c953fcb",
+    "results/backtest/training_oof/checkpoints/oof_2016-07_fit_audit.csv": "eb848b9927fa0889b7046bf46c7195a515899188370f928707076280ce9bb402",
+    "results/backtest/training_oof/checkpoints/oof_2016-07_predictions.csv": "315f4a43fec671fcd5c53b855aa6df9ed328fd6dddb0d8cbdabca8c6533b5821",
+    "results/backtest/training_oof/checkpoints/oof_2016-07_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2016-08.json": "ff99f4e09309c254af30a70773d0e5bfe9ba087b1421f92a08c3515b04c52465",
+    "results/backtest/training_oof/checkpoints/oof_2016-08_fit_audit.csv": "f2606f7a392ad03246e67031c52cb858ced673684193adfc743f521e93b227bf",
+    "results/backtest/training_oof/checkpoints/oof_2016-08_predictions.csv": "cf879aaad37c3770ffb210214786e4fde8edce49c4307a6bcc25fa3a3149b842",
+    "results/backtest/training_oof/checkpoints/oof_2016-08_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2016-09.json": "8e01ec33a6cd8d6e74852725cd297ce49fedae771e5088c51d54feed7501fc31",
+    "results/backtest/training_oof/checkpoints/oof_2016-09_fit_audit.csv": "a77e8cd3e6d4d82ad91d67d0882bfc3a22f1eb5ace6a4ae0510279c19d84f304",
+    "results/backtest/training_oof/checkpoints/oof_2016-09_predictions.csv": "981ec04235fcacbef8defdf87ca16eb835e9fcca7f31e8b42e79fd3babef53a4",
+    "results/backtest/training_oof/checkpoints/oof_2016-09_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2016-10.json": "91bdc9f89b6ab26d5ee0c6fa4a7cfbad3499dd0c2494d8eb963c7323c8803221",
+    "results/backtest/training_oof/checkpoints/oof_2016-10_fit_audit.csv": "e4b4950eaf8ac432da83c5bd481e93247b87e5ff9913caa8008292c6655ab2bf",
+    "results/backtest/training_oof/checkpoints/oof_2016-10_predictions.csv": "7348d5836798b0c4f29a15086eaf590aeed5eff0befb4ace18e258c18c52bb5c",
+    "results/backtest/training_oof/checkpoints/oof_2016-10_skipped.csv": "fe2182dbee595ff5feb6cf93dffda93155d7ae25d05a8b7d6630a88eed1309c5",
+    "results/backtest/training_oof/checkpoints/oof_2016-11.json": "5e371bc57aecbfc04a0117847224b958418a2977501727477c4e11306d062d22",
+    "results/backtest/training_oof/checkpoints/oof_2016-11_fit_audit.csv": "e4b4950eaf8ac432da83c5bd481e93247b87e5ff9913caa8008292c6655ab2bf",
+    "results/backtest/training_oof/checkpoints/oof_2016-11_predictions.csv": "7348d5836798b0c4f29a15086eaf590aeed5eff0befb4ace18e258c18c52bb5c",
+    "results/backtest/training_oof/checkpoints/oof_2016-11_skipped.csv": "010857aba3187b8bb61999a8b87c7e4de189d56eb529dbb5c10c9532cde09ea8",
+    "results/backtest/training_oof/checkpoints/oof_2016-12.json": "7a7ed95ae92821438fa2c159927422001dd87adb0d14b75d0d3c1f5a3ffdabf3",
+    "results/backtest/training_oof/checkpoints/oof_2016-12_fit_audit.csv": "b38503c29ad7b7df59ef865095de6ba933896a08f568a491fd9b5aa5ff2a42db",
+    "results/backtest/training_oof/checkpoints/oof_2016-12_predictions.csv": "9d20824d40fd6fce2085ddb2f0be4482a1b64f67f0051a5357fad722fce8451c",
+    "results/backtest/training_oof/checkpoints/oof_2016-12_skipped.csv": "69f297deb723d0be59222548ee54da15ab85b7d899dfc57499c6294e59a06917",
+    "results/backtest/training_oof/checkpoints/oof_2017-01.json": "d2baca6d3f4eab23519c305299bd5da87a87a2b6c30ad5e7ed810383f4b52403",
+    "results/backtest/training_oof/checkpoints/oof_2017-01_fit_audit.csv": "b0008fd0229a4d332d5e8e05539425192ac1749d7c41a5eee76788d3055743f6",
+    "results/backtest/training_oof/checkpoints/oof_2017-01_predictions.csv": "7722fa82053c553f29ec2c1afa9b64f7f034bb849a020624d15cdc181cf47edc",
+    "results/backtest/training_oof/checkpoints/oof_2017-01_skipped.csv": "e720b46f638ef4b031611858d5e93dd8bcb5452fd6f283450bdfa73c00f740cf",
+    "results/backtest/training_oof/checkpoints/oof_2017-02.json": "970f2fd8787ab62d93c5e4c4c822e0b36d87f3e4a16667ef9e9125524226932c",
+    "results/backtest/training_oof/checkpoints/oof_2017-02_fit_audit.csv": "0ecc5d3346eb70774f68d87ac9b71b9c05608df2e3e8e0a3b3ade50136058c88",
+    "results/backtest/training_oof/checkpoints/oof_2017-02_predictions.csv": "c6596af38c85dfddd8bd8f9699425513f9ea9ecaf4e1424396daa99e799c12fa",
+    "results/backtest/training_oof/checkpoints/oof_2017-02_skipped.csv": "55deb0debdeba6a5191d0b115f41e4529a7ec2ccb831c9aec3a9b213084a34ee",
+    "results/backtest/training_oof/checkpoints/oof_2017-03.json": "ff386f4d159d0acbd7f6a70fb1de2f4acb02b9fe86e24d164100d5a588a72aae",
+    "results/backtest/training_oof/checkpoints/oof_2017-03_fit_audit.csv": "93c5eaac48c8a0f6a721f91612462fc0dac83a0e7d8054a9da13c7ae970192ef",
+    "results/backtest/training_oof/checkpoints/oof_2017-03_predictions.csv": "db259ebd74dba83320a19bdcdd07463e1f0c3f65f134026fc2593ad3562cb410",
+    "results/backtest/training_oof/checkpoints/oof_2017-03_skipped.csv": "887ec6da8e949de4f599bdddd848a7cb464e8348523134c9a34285b43c41c364",
+    "results/backtest/training_oof/checkpoints/oof_2017-04.json": "c20e5b9c3cf651b276f157fcebf9b7aad1614255ac7d26571362d377db3cbf13",
+    "results/backtest/training_oof/checkpoints/oof_2017-04_fit_audit.csv": "d18ae32b1e1e696e1bea7d590fcd326e02b7f997d7875e8fc700ffdf6c3a9871",
+    "results/backtest/training_oof/checkpoints/oof_2017-04_predictions.csv": "d91ffaa29db6f8d990b391ab4b168c0e4539f4f446746c8e6891e9055e0f39cf",
+    "results/backtest/training_oof/checkpoints/oof_2017-04_skipped.csv": "8db311dd7eedfc506f376f7ad8de4ae7aa3459379a0d26bf914c8869b70a9ecd",
+    "results/backtest/training_oof/checkpoints/oof_2017-05.json": "28c4ad649e4863a8d3c9f43d6f61585024ea890b3d540992d792c1023ed7a145",
+    "results/backtest/training_oof/checkpoints/oof_2017-05_fit_audit.csv": "9dd63e796c102640580c3dbfc17c0290ebddbb53f75925b160248cf953072126",
+    "results/backtest/training_oof/checkpoints/oof_2017-05_predictions.csv": "35c7d8035deef0bc476fd801fc5a0df04e2107e3574a18e9844bcc8d07a15d8d",
+    "results/backtest/training_oof/checkpoints/oof_2017-05_skipped.csv": "64a98e8458d86ad70927b1af6eb41c3c15236b481ba7cfca2c3f434d895adec6",
+    "results/backtest/training_oof/checkpoints/oof_2017-06.json": "5c13fb999bd02434fb7cd43131c982fc24914ea48f69157bd9e566d05f004f8e",
+    "results/backtest/training_oof/checkpoints/oof_2017-06_fit_audit.csv": "a39762bda84f89c3bcb6d199abb3c1a912df826a1b4e354e4da4ce567abf3281",
+    "results/backtest/training_oof/checkpoints/oof_2017-06_predictions.csv": "3401fd771f59297b93494aa1df8fbb31f3f76d3c5e9c552df7abf80f33eef18b",
+    "results/backtest/training_oof/checkpoints/oof_2017-06_skipped.csv": "e45afab84761a81ceb54ebed0c3e716530a871ae401ca35f8e03eaa3138c086a",
+    "results/backtest/training_oof/checkpoints/oof_2017-07.json": "4671b5889dec1ee76ad4072d199eb6f5777bbe7f647c60a61727f760f2823da3",
+    "results/backtest/training_oof/checkpoints/oof_2017-07_fit_audit.csv": "426b3e0cd72aa4fdeaa05e07498df8c810a53070c82f2746e1417a83d554c1e0",
+    "results/backtest/training_oof/checkpoints/oof_2017-07_predictions.csv": "50e35bfa97787f3bf03ebc8362d7b91cb49693362abfbdac42efd91595bac035",
+    "results/backtest/training_oof/checkpoints/oof_2017-07_skipped.csv": "b412b5a6b84a39fd3f3776d349f59230297c8f46b137bf50c69e2c842233a0e8",
+    "results/backtest/training_oof/checkpoints/oof_2017-08.json": "bfd25b11c374da5e7c751a802050c5127ff0de649d38bdfff546e010b4d8b2ba",
+    "results/backtest/training_oof/checkpoints/oof_2017-08_fit_audit.csv": "a71987ea50e687e7704cc20946af948581a71c899bee730750894834bd19b593",
+    "results/backtest/training_oof/checkpoints/oof_2017-08_predictions.csv": "07707ef9a2d5445f6926b6dbbc7e50f7cf609ebd2c81d31566b0e68b06a7c6db",
+    "results/backtest/training_oof/checkpoints/oof_2017-08_skipped.csv": "236063fb6923049492fa0b289db4bd6d9183beef798c5ddc66cec7265a9b586f",
+    "results/backtest/training_oof/checkpoints/oof_2017-09.json": "31817c14c59993bc5be5d2d062738539ff1996ebcca549a19fe5fe85bfccf4b6",
+    "results/backtest/training_oof/checkpoints/oof_2017-09_fit_audit.csv": "c4687bb2559b0fbd0f5e63eab1a8569b4d533983d9cba4c29d2a5800fe8421a2",
+    "results/backtest/training_oof/checkpoints/oof_2017-09_predictions.csv": "87882d1aa96eaa20e9d886c1b39128070e5477e259ffaadce3dfc331e5a0c422",
+    "results/backtest/training_oof/checkpoints/oof_2017-09_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2017-10.json": "7c60d6862dfae09aa5830f2214e49e20eebf46621eaad75a3660749d4d63e2f1",
+    "results/backtest/training_oof/checkpoints/oof_2017-10_fit_audit.csv": "1600c3d7bc6f4cebc3634880910e957eb1fc605c2188520594c107af0b99c82a",
+    "results/backtest/training_oof/checkpoints/oof_2017-10_predictions.csv": "c890219cf5a7c2c9f87eeaf1ab9e0068070d25d27b17ab4ed7d557fb046c4e58",
+    "results/backtest/training_oof/checkpoints/oof_2017-10_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2017-11.json": "5869ce596177b4df2d70d49e968e0a99224412b3aa71f054e5eb3695e8bb017d",
+    "results/backtest/training_oof/checkpoints/oof_2017-11_fit_audit.csv": "a3a101b55a9cb1b581db6392b9d1dd7bd7fffeab525d10390e9c69b940ffe97e",
+    "results/backtest/training_oof/checkpoints/oof_2017-11_predictions.csv": "af79d67d6f0caa3aff79270049302787d1664689ac4f3e8585068cd35edf5e7e",
+    "results/backtest/training_oof/checkpoints/oof_2017-11_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof/checkpoints/oof_2017-12.json": "e041f15b09013a285f69678d7d45f4369f56e4f03bb57f380f56e6dad7501ba8",
+    "results/backtest/training_oof/checkpoints/oof_2017-12_fit_audit.csv": "735c7e6b45c2f90b976cc01374dfd88e994e1512388589182fb64800d268ee89",
+    "results/backtest/training_oof/checkpoints/oof_2017-12_predictions.csv": "756a159dd203e319b6cbac87d0634dab11e3e835653d90295dae9d9d0d1b78c3",
+    "results/backtest/training_oof/checkpoints/oof_2017-12_skipped.csv": "7de59a7ff3107a5aa9d33084cd6ce84e93fbed61e271fbd5e92bec24f7f1c9a3",
+    "results/backtest/training_oof_manifest.json": "547a87137de687869f3120a0e7d3789b62e37e63196d8bd644d6c9ce8701987f",
+    "results/backtest/phase_evaluation/evaluation_checks.csv": "d45c61eeab93742b1f2ac49f78d46584c7197dd2148b8f6cc58a64069184295d",
+    "results/backtest/phase_evaluation/phase_summary.csv": "d32445fb4b50b6101f6dd346ff569efd1b5ab39d3f4e2c340c017583cb7e33f3",
+    "results/backtest/phase_evaluation/protocol_config.json": "37bc856ca8a1ccfc002174d5517af95c1b5d4b6ce3e3bccb3678ea9f10bcf8f6",
+    "results/backtest/phase_evaluation/run_config.json": "cfdc3abc7fc9233bcd35a3b5fdcdb5ba420a0ebce5f2b79e503b43e021784fd4",
+    "results/backtest/phase_evaluation/test_assets.csv": "c763c27bfe885f95f84ca4d684c51afa5795960671df73a1713dac31581f5662",
+    "results/backtest/phase_evaluation/test_checkpoint.json": "2d67fd13641136efa8f805155b576ad4707d4e57c35c8f8931e839db22226285",
+    "results/backtest/phase_evaluation/test_daily.csv": "32cb19aecc72c1566ef710100558ec776d192276580a4a8cfbdf814aeb0db95f",
+    "results/backtest/phase_evaluation/test_returns.csv": "6d8f0b34b065307e73c9a87bd776702073145d8c33907e2cc26f70a73ecce891",
+    "results/backtest/phase_evaluation/test_summary.csv": "709cff9a658c2f225faf29b8ecca94034b83c2e8b2ddeaf30542832d59d5b574",
+    "results/backtest/phase_evaluation/test_trades.csv": "4967e54f52df0c425684506748145a1276592c3ddb43ffbabc1e7843200c7a14",
+    "results/backtest/phase_evaluation/validation_reuse.json": "6bb1890c0f7eedf2544e5af2407b7143917b3e0d121c5f500066fa37a0eeb1fa",
+    "results/backtest/phase_evaluation/run_manifest.json": "483bc4cf39bf43ab1cfbe3a1d5e4bf3f01a48203db0983e5c2a7ca947237e935",
+    "results/backtest/investment_benchmarks/benchmark_checks.csv": "1cad0e535d398298bc74310c4496acc16de7feed037d646f1fc05fdf5e7f0638",
+    "results/backtest/investment_benchmarks/benchmark_daily.csv": "a68791f45339b82abee2fe9b3b692b181b92d6db7b92262cb10f9785f5bd3741",
+    "results/backtest/investment_benchmarks/benchmark_returns.csv": "10f5356e23bdf6ed9b594cb809481ae55f2f9da7be08cc7e9c0d24021b4dd027",
+    "results/backtest/investment_benchmarks/benchmark_summary.csv": "6309e9ec1678c879250de79aeb3e84197775c0c6d6849c176485dfbbf361f123",
+    "results/backtest/investment_benchmarks/benchmark_trades.csv": "127d8be53d1b6bd36f660eaa83c053495deb199d56d92e7d48164bad68d6d481",
+    "results/backtest/investment_benchmarks/design_config.json": "9227cae6f83778a6b11159c456d1720f835d79b8383ad15791ffd8f2ecc36a5b",
+    "results/backtest/investment_benchmarks/logic_checks.csv": "006ed5a0cda339ff7709b350ef0bacc171316f6cc74bfb510a244b1f1d303e0c",
+    "results/backtest/investment_benchmarks/run_config.json": "13c4fc2d9924366a96572dc1a3ee3e8752cf007d65a437c01e4f055aeb40000d",
+    "results/backtest/investment_benchmarks/strategy_benchmark_comparison.csv": "b3070ba22ff68177fdafc702d1307dd56418d27eb72d630218b33967a4e8964f",
+    "results/backtest/investment_benchmarks/run_manifest.json": "d71a6d3c9854c4ae819bb4387bde70803cd5bfb6a1371e2c5a276ba5b48025db",
+    "results/backtest/consistency_audit/audit_checks.csv": "24a25105c1667ae01dd00e02485bfca26b1ae3c368fd460d50e3502b54dc5af7",
+    "results/backtest/consistency_audit/benchmark_reconciliation.csv": "cb6fb3054045741a48fe8ed82d23de1fa6f0902cbd20ff0171ddf212a16679cb",
+    "results/backtest/consistency_audit/coverage_inventory.csv": "3539384d573a183cca9c5d8a3ba010bb641651b169ac46883b329444814c976a",
+    "results/backtest/consistency_audit/design_config.json": "b7e38f09e868012f52ddbf0d8328d11f68977a747af093a2ad238cdfbed57ffe",
+    "results/backtest/consistency_audit/determinism_cases.csv": "087566cad1460ba70c2eb21ac7abd7d15489623b2ea25f5ff6e1e699762c0688",
+    "results/backtest/consistency_audit/determinism_checks.csv": "afb5f5983004c34448b1821172e11d8e9e6ef092c8901dab898771852f3a7d86",
+    "results/backtest/consistency_audit/identical_prediction_pairs.csv": "919a7379a633623378e4c82690990d452d07ceeaf6bdcc0dd48966f9a8750d9e",
+    "results/backtest/consistency_audit/run_config.json": "f4b9aa55541aa2608ebe5bc30488a132a3e96d4a45de38fb476b1e51235ff082",
+    "results/backtest/consistency_audit/signal_rule_checks.csv": "138c4f474cda68f0809f994b202fc1bf60a0146a35a414680d3f54e6f095c23c",
+    "results/backtest/consistency_audit/strategy_reconciliation.csv": "48121df03a346c789728b24c1acc2ba16634fef203b545efbafe6e60c37cce9e",
+    "results/backtest/consistency_audit/run_manifest.json": "43b25ff2b1a336ee2d0065b1b873a8b64bd856b1f468bde14cd95318f26f07d2"
+  },
+  "code_hashes": {
+    "scripts/backtest_signal_policy.py": "40f2d52f8115a0ac6618331d3a51021fa03602cce39cb8920339aaa2df80de04",
+    "scripts/backtest_pair_decisions.py": "e4f3c31cc93671e3870b80d9690ddac24546d9bed63550de4bdca6b5eed942fc",
+    "scripts/backtest_execution.py": "2362214cd46421e1714fb090ba0c5876f899c0dc6cf3dc1affad1284a0b6e4de",
+    "scripts/backtest_ledger.py": "abd37ef8afd66c5e550498d72bbba539741c2eab8d4af76b8b5a1ae125fcf476",
+    "scripts/backtest_costs.py": "1204666ded31363a626bebdb5b82ff1872d7af9a7e5019751f204584b4715d09",
+    "scripts/backtest_threshold_selection.py": "4ba3e2f2fc45de85e05aa392d9f073807e5f10940ee67ae0153e008c0fb4e4bd",
+    "scripts/backtest_phase_evaluation.py": "1ed8f4625e6d2dc6408e39165aea66f58d45090f62b3d9a74071c8ab8bc8e12b",
+    "scripts/prepare_backtest_inputs.py": "ad7539a8261962b2270199393b42e1088ab90acb7aed2213c4a2bb60f198abca",
+    "scripts/backtest_investment_benchmarks.py": "17de67c61a8c4aeeea7d41b45c127e0270e07c757674352b302865762f383302",
+    "scripts/backtest_consistency_audit.py": "cc386e588c2e927799257b42ff97655f3c6a13ec9014acd0a328127dcaba927d",
+    "scripts/backtest_reporting.py": "e5c215ecedb6180146d662bfbd8ceae73000ae11242fe8e69321284cc3d97d47",
+    "scripts/backtest_report_figures.py": "3a94626bdbee16f65170c728511f0da01f76ae069ca0e1095dae4e93656e05d8"
+  },
+  "python_version": "3.11.5",
+  "numpy_version": "1.24.3",
+  "pandas_version": "2.0.3",
+  "main_paths_reused": 16,
+  "sensitivity_strategy_paths": 96,
+  "new_alternative_strategy_paths": 84,
+  "new_phase_scenario_batches": 14,
+  "model_retraining": false,
+  "threshold_reselection": false,
+  "main_strategy_replay": false,
+  "cost_settings_selected_by_performance": false,
+  "outputs": [
+    {
+      "path": "results/backtest/reporting/calendar_year_returns.csv",
+      "sha256": "f3293a69a36a1bfeece071a453a91209a3e8f5d837dd473b82c1a09fa6d2975f"
+    },
+    {
+      "path": "results/backtest/reporting/cost_robustness.csv",
+      "sha256": "30435c8b6faa75c73899c5a534060e381a0283404093cf07ea0accdb071190d2"
+    },
+    {
+      "path": "results/backtest/reporting/cost_scenarios.csv",
+      "sha256": "ac9a1300011b6b7bab6361080b4706c853c704d0cbf9342b03ab1fe4b499da45"
+    },
+    {
+      "path": "results/backtest/reporting/design_config.json",
+      "sha256": "d6a9499b35750eada1d27ffb2b55b599264f24d0e5bc0a459e2cca569a319b48"
+    },
+    {
+      "path": "results/backtest/reporting/figures/01_nav_and_cash_relative.png",
+      "sha256": "edfa01ad3331568da53393630dc1299c0965c36b1d76e7689003d5396d6c8087"
+    },
+    {
+      "path": "results/backtest/reporting/figures/01_nav_and_cash_relative.svg",
+      "sha256": "e42d6c5a845a39ff14b95bf37675de85763611008335e2a1d5c3385d9979aa1c"
+    },
+    {
+      "path": "results/backtest/reporting/figures/02_drawdowns.png",
+      "sha256": "52f4112ccb137894966af46553558b2253ca722f5188b339ec247e0ec7124580"
+    },
+    {
+      "path": "results/backtest/reporting/figures/02_drawdowns.svg",
+      "sha256": "d2f3722c58080c0b3c874a1df8ffbd95bf222519e0696de37f9c772912476746"
+    },
+    {
+      "path": "results/backtest/reporting/figures/03_main_metrics.png",
+      "sha256": "730ce28621c4a5739e778862c4f7a66fc07a724768b706ed33ef9eb77f725a74"
+    },
+    {
+      "path": "results/backtest/reporting/figures/03_main_metrics.svg",
+      "sha256": "fccfe11128fbb4e4216546086af0d1fc08b3910598714bca984e4754cc7442d6"
+    },
+    {
+      "path": "results/backtest/reporting/figures/04_cost_return_sensitivity.png",
+      "sha256": "5d64eec88281add16224b085733e8f4955e2e7ad16f579f4413b0e4fc2adf541"
+    },
+    {
+      "path": "results/backtest/reporting/figures/04_cost_return_sensitivity.svg",
+      "sha256": "c5a86589b5eade11e267672a9b9d8996bf391a600458c460d3f6ce1b6ad63828"
+    },
+    {
+      "path": "results/backtest/reporting/figures/05_cost_sharpe_sensitivity.png",
+      "sha256": "0188fe5baa500afeb731e0bcc48b6cb1ce13f1ccf5b981d60460849e9a11d2e7"
+    },
+    {
+      "path": "results/backtest/reporting/figures/05_cost_sharpe_sensitivity.svg",
+      "sha256": "4696fc9fff510a2473e7335af4844c9a0b978cc0c9d3975498afca401eef2f91"
+    },
+    {
+      "path": "results/backtest/reporting/figures/06_calendar_year_returns.png",
+      "sha256": "a8a517ebf1aeb6e470ce0f9f6396d9b1466fcbab40b021a0d0c8c13de74a4027"
+    },
+    {
+      "path": "results/backtest/reporting/figures/06_calendar_year_returns.svg",
+      "sha256": "1cd7de56b016a8a15bd226fe8237a88ed6e81e04d93837b990e83de1bef46965"
+    },
+    {
+      "path": "results/backtest/reporting/logic_checks.csv",
+      "sha256": "0723b71c1b65cee51da866ba1b1da112b1218e32f70a3a2919384b3e5db1a435"
+    },
+    {
+      "path": "results/backtest/reporting/main_curves.csv",
+      "sha256": "9ca86351b3cbb9254dd390706ef4e919aa8b677785577afdb3774f1aa7121ac4"
+    },
+    {
+      "path": "results/backtest/reporting/main_metrics.csv",
+      "sha256": "39dcf7a36be0ce23e19baf9ba3e4c82ff7b877cf89549578ad2864a91d9d97a5"
+    },
+    {
+      "path": "results/backtest/reporting/main_reuse.json",
+      "sha256": "9cdef00002890fa92a36f18a9c95db9158e2bac689880ebe657552ada60a916e"
+    },
+    {
+      "path": "results/backtest/reporting/numeric_checks.csv",
+      "sha256": "a0306769e569d8de45d79537c8875bd30ba7f433de5282e21ffff985f6ace9b2"
+    },
+    {
+      "path": "results/backtest/reporting/numeric_manifest.json",
+      "sha256": "5e468f8ebdd9b85d711b973df2ef5e7c6ab68868e7484969da9e713e78a1a766"
+    },
+    {
+      "path": "results/backtest/reporting/pnl_decomposition.csv",
+      "sha256": "1ce1bb57bccde7e3807f5c4b0c61a4bb4ee485c8ab2fe173c63624dece56c3b7"
+    },
+    {
+      "path": "results/backtest/reporting/report_中文.md",
+      "sha256": "ec5b5a9ccf9d356bc85afb81197abbc6c4f0d50902c36d5e3484952883e204e5"
+    },
+    {
+      "path": "results/backtest/reporting/run_config.json",
+      "sha256": "6d669e7b8d517321fb79b92be11ccba35a2eeb8ae0035f58f313ce0aba979139"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_0.json",
+      "sha256": "195c3c27ed60a0819c3e2c3c64a05fdbdcfc0790d7c003b6fcd5e4780a999b63"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_0_assets.csv",
+      "sha256": "c1921595ef62db63c7698c53b2e0f37ed97bbf66233bd1cdcdf2969052076222"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_0_daily.csv",
+      "sha256": "93c783fd51e0d2861c3a0662516bb949ebf11409e7e54f4bba1383503800e16e"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_0_metrics.csv",
+      "sha256": "1880c5f5902cafa1ecaca2901356c1a13355e308ee40138c6d457d0721cf17e2"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_0_returns.csv",
+      "sha256": "666686cdad387f1167f52ead0736e5341944a7f8c1bce1f33c2013fe862880f5"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_0_trades.csv",
+      "sha256": "44a8d3c061e5ee73439e5f5ca8b1939c80929de458a66b3350a0bed5bc5564ef"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_2.json",
+      "sha256": "878d48ea7773e220e811c271517f36328dfb36dc0723403f029ac5da3020cbcb"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_2_assets.csv",
+      "sha256": "a805a9b3a8a3262fbd664d18ad9e3d7d26fcb4b692033f7d0aa35a010f8163ec"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_2_daily.csv",
+      "sha256": "e3a28ba5ddd8fe4cfc1025ac92f5cf1189f15fe2962b8200aad68bf92bdcdb8b"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_2_metrics.csv",
+      "sha256": "af44c7fdbfce01f32a840ebeb864d89feddf85ec67a0722538c0eb8b1334678a"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_2_returns.csv",
+      "sha256": "c2e9f3139a0b3b907cb3598ef82a860fb8ee29bb213a06ebf0e1228806befc9d"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_2_trades.csv",
+      "sha256": "66823152f0a211dc23b6003f5d605a282a3ae33cb1b0c56d6fcf981e9d2baccd"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_3.json",
+      "sha256": "3a9deed3767bcb0932eef7088d321bdca2681fcda6c444c2846da823619c9be5"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_3_assets.csv",
+      "sha256": "9427f33c52f2d046b176052cedcc59ff32a1612b04f83f951a5ba059772db2bf"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_3_daily.csv",
+      "sha256": "09311e9f9644e23ee1f6aa95645d4aa33e31e1e73f3bf07b1e8a1c0abb116460"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_3_metrics.csv",
+      "sha256": "f32cc4640375b5937495975373f3af53de148ae64f9579add8eb566dfc6afa31"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_3_returns.csv",
+      "sha256": "18114b9193bc80f44d5f329c9551d809866818be287081bd11732d4ebe5398e1"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_3_trades.csv",
+      "sha256": "fbc14b0a7ff476c22bc6864d705370dbc2e044de62d6b044101adf94d7ca0390"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_0.json",
+      "sha256": "7565344a2b5e0a4f8b83acbebdf16007a5357921a99f58995a7af37e4b0a3ebc"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_0_assets.csv",
+      "sha256": "dcc59f5a56cc31b4e81ca225f394ebb9dad323a5792c598824a4bf73feeb8ce3"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_0_daily.csv",
+      "sha256": "cebfdebc39fd83a3877554625e2ace0e2fc6d290b149a961da54547b210c9ce3"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_0_metrics.csv",
+      "sha256": "d21f00a13bbdb75ad089117d129ba50f12bb90727e19517ce4d4e87b0daeab60"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_0_returns.csv",
+      "sha256": "22b69a1cee80f53edfa5685f0e2c9aa27a1f3317c0515c304bbf6a803483ce7e"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_0_trades.csv",
+      "sha256": "32a1ba2b7dca9cd3404849e6dc3c62f5849eb2af535f4665a1f453815d32dcfb"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_1.json",
+      "sha256": "885b6f5feb466148c318d30c5f0c2135ccc1e68e98c541456a15928259afa1d6"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_1_assets.csv",
+      "sha256": "431b1adc98d4c7204f01a267dcd33aeabe96b0ebdeec7617e75f73ed20e5896a"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_1_daily.csv",
+      "sha256": "ed2711aa68445b92e78e19c49030fa46350565dc6df1758e5b6ac147b35cd234"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_1_metrics.csv",
+      "sha256": "bfe9fab2db1ee7b74e65fc837a441593284a0432b4afba28ca26d2bb0893bac3"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_1_returns.csv",
+      "sha256": "7b9f9a50911cb245621722852223985e42ed93022ad7f069a5ea6a71c64a8789"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_1_trades.csv",
+      "sha256": "378fc2ecd7d6e09e7b112139b30e0714dc24c6aedefbda6bde058f86df830c2b"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_5.json",
+      "sha256": "c91940a39b053d8be8688a042b810fea4419fc96ecc3b0ff97e322a7653c98eb"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_5_assets.csv",
+      "sha256": "d3c75ce539fe828740e0774c74109aa8008003d6e2adcc518a5ab3b62d26e1c5"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_5_daily.csv",
+      "sha256": "07826ebd3ae314c15909ff26c366b0ca3a420c83f924c32ec31b17e2a68a102b"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_5_metrics.csv",
+      "sha256": "683e21f396845112c4789d5c22e5c004c8dc489ea3c0501f776fdb4765a4bed7"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_5_returns.csv",
+      "sha256": "ad228e574e470d4c25fb93316004454e9da8a4470d6314b9b9f81e41885e3e9b"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_execution_5_trades.csv",
+      "sha256": "77c640b5650f02df33429a8d870b9e74803488ffcc7a10bba5c669757eeeb4a0"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_full_cash_rebate.json",
+      "sha256": "339a700951256e6973f1dbe154171732027da98cd2850ce0bc1c10cd555495b4"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_full_cash_rebate_assets.csv",
+      "sha256": "b64c710cc995d04b8e049599d04aa0a5d3e7673b20062f8adc6f4d080d276534"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_full_cash_rebate_daily.csv",
+      "sha256": "36aef775d44e2ad0b29963561d3816dc86ef9e5af9240aec5f03befda154b1d6"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_full_cash_rebate_metrics.csv",
+      "sha256": "70e01ad0d1ecf2652cd9cea756dd26306f4c89bf764055303fd65e4c5cc690b7"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_full_cash_rebate_returns.csv",
+      "sha256": "e338d753c1d2a824a501dbe0b72c6ab63b8dc1ab589767599d971d2e574a2317"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_full_cash_rebate_trades.csv",
+      "sha256": "e4adf3fb643ecd080b26169712edd9f7feda3f4760b14dd31f93658d4393be1f"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_0.json",
+      "sha256": "1b1f2bf4bd59918c018e8ff4f4aef08bf14d085bf1af692bb6ada9333d899b7d"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_0_assets.csv",
+      "sha256": "a6babaa3662398f5abb59d3137c3673ddf25f1e84979489f271aa2c3e0e88b6d"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_0_daily.csv",
+      "sha256": "8049f7ce39537aaf41fa0811a1a677d228d84eba97fd741aa113e2170e49e38c"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_0_metrics.csv",
+      "sha256": "ad5f07664ac92298cedd9e9eee2a6103bd9013b2dcc3ebe52134b12f34d77446"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_0_returns.csv",
+      "sha256": "1a26bd7b98773f6ee77b1f7f478261b0af59131b7fa073ca3e523ea2cc086ac0"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_0_trades.csv",
+      "sha256": "e88304b80a4a3d44a34235eedad4bf151c051582b05f5ea07f14cd3a679469c8"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_2.json",
+      "sha256": "c3341c4ffa55fcf181a19b9ed3bbb991d94748067a8d01332e8ad1cd55ff439a"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_2_assets.csv",
+      "sha256": "cddf8af9f0608e7ca95be67f6c21e7230e33100118d3540ea27913e041178c64"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_2_daily.csv",
+      "sha256": "de376110b7073600e5b67715d22bfc0913f7b80a97507d40654d93412b551fa6"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_2_metrics.csv",
+      "sha256": "b7c897c80a40831b0146e3097c81b6dc78a1deda74b709c636b22d686c0a13f1"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_2_returns.csv",
+      "sha256": "265cbef15cf615d18409a8cfb3ca7ae1dd3278b2e8de0cbd2f0de3b89a4b7fd0"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_2_trades.csv",
+      "sha256": "3bb043697a5049b220ace289b5abb02cc02fe5bd60816bb845acd57dcabf64d0"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_3.json",
+      "sha256": "2600a2028b308f9267b35596607d7e3c7a8dd4320d3021c2d8a703bf9dbcdd36"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_3_assets.csv",
+      "sha256": "578d3f8b71fc02dd0ee91fbf1b435c140c843fe8985efd8cc1cff93a52ff4488"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_3_daily.csv",
+      "sha256": "a64188eb49d0bd369c6ef95768056a7798b9f1e9270e46df13d22221a1ab3c60"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_3_metrics.csv",
+      "sha256": "e6d4819b21b9ff6ff09db4c50140f1fdf219ea42472b951b4c53f3e513518dfd"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_3_returns.csv",
+      "sha256": "0e58727d05a88c2e294748d516f1fa684e783828d0553e14db7f9ea38ae7fbfc"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_borrow_3_trades.csv",
+      "sha256": "a9b48a506f1257b6495b53d8253fccb3c8f18e60a21dc4cd60082c586e7809bb"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_0.json",
+      "sha256": "a210ad1ceff8b2d109b19e80b70d6ec6cc2ca4e7a3ba80ccd6a733c864e79c70"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_0_assets.csv",
+      "sha256": "30025ada809d9214d98752cd0fdbf6b35b148e8e7c18afdbd7964b69102b910c"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_0_daily.csv",
+      "sha256": "9d17f06ce047270146a4bd5309709c44039937328f4a4e91dc5e3a7fc89e21a8"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_0_metrics.csv",
+      "sha256": "ab5013afd7faae63f7bb9b82b2abeb28cf54a8a1bf67f398c0e054f0cfff20ce"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_0_returns.csv",
+      "sha256": "17cf11206a5de2cf3ff13d028f107b24d0b420619176ff12419ae2d06fceba44"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_0_trades.csv",
+      "sha256": "cb3c7458a7614a6a8952b26965af3844dec84aa466359360209e287d70b27a75"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_1.json",
+      "sha256": "a400ad95176b14cee8f26bc966c2d69a70d9ea2679642dd9451b153dac676785"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_1_assets.csv",
+      "sha256": "5fd81b73461fb6ef8e288d679f29d94b4798b1fef57c83391fd4da88f954ca6e"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_1_daily.csv",
+      "sha256": "af91c57c5dd9abd91563c1e4708eb5ce904ec90f3de7a9a332ee78f2b1340a3b"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_1_metrics.csv",
+      "sha256": "21a5ed729f25177f6ab1cd1ef2282522fed12dc057d0734208e4b49dc2b13f91"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_1_returns.csv",
+      "sha256": "00b4cbb49577be7bb74b7e5e4a60b5d76e61537aea14d53de2cfbe860d2e77e0"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_1_trades.csv",
+      "sha256": "50149d7af57b99b90725e194aa0c0fd3027386ad70857e164799de0e9a743f2d"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_5.json",
+      "sha256": "d8f2cc63db0c12f7aa8e2a83d206cdbb8c7869002ec39e437c4cba1619d779d3"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_5_assets.csv",
+      "sha256": "2839071b85a8dd2b002e6a2aba215179f0eb26dd419531d1f460ccfd92df7809"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_5_daily.csv",
+      "sha256": "43a06df903485f8ff6adbba39a2057e1be246d7e15a3ab15f90680b9e1111df3"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_5_metrics.csv",
+      "sha256": "6f5a61a4a320b6197c96ebb66496d49e3cc77203ad682c1347ce40ee43818fe5"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_5_returns.csv",
+      "sha256": "6f4b113be856b97e5c74722934d8d5c39ffcdbe4361c0b656da639ac0537e4fe"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_execution_5_trades.csv",
+      "sha256": "b1be072d3a7e6b9d18ff9af694b27a795205e4463f96b426f5a2fbc4ec723930"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_full_cash_rebate.json",
+      "sha256": "d5f211cfca38fbc7f6383b18b5eff115e8713d05f0b7e6e867ed690e5f82274f"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_full_cash_rebate_assets.csv",
+      "sha256": "a1e890d4ef087cfebe644324cde979f7f919122fbbd181a37a2a2f9dba927c15"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_full_cash_rebate_daily.csv",
+      "sha256": "bb4a019097d4ec7b898e96d8d5638b83e550123dc32701bdcd36c4363b5c8640"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_full_cash_rebate_metrics.csv",
+      "sha256": "cc3ba6e82425c6595cfd62e0ad194cfe83a15bf956afd5f3d4e44ec58563e7a4"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_full_cash_rebate_returns.csv",
+      "sha256": "dcb05754e97094800c0ccc6ed35be0d42cd9ed39dcd809eb6bae5b40a2169def"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity/checkpoints/validation_full_cash_rebate_trades.csv",
+      "sha256": "5f97426a8bdeb009b026ac6a81910a4321769747da3bb81f53dbfdfd1b7f8967"
+    },
+    {
+      "path": "results/backtest/reporting/sensitivity_metrics.csv",
+      "sha256": "0bb963d64a495c6a777f43a8ffb7fae11e6a6a94c349e09b661d69d146649dfc"
+    }
+  ],
+  "elapsed_seconds": 412.79722180007957,
+  "notes": [
+    "Zero execution fee still has the main 1% annual borrow and collateral policy",
+    "All sensitivity scenarios independently replay NAV-dependent shares and financing; no fixed gross-curve cost subtraction",
+    "Eight scenario extrema describe a fixed set of assumptions and do not select a new main model or cost setting",
+    "Validation is tuning evidence; earlier test prediction evaluation and exploratory provenance remain disclosed"
+  ],
+  "figures": [
+    "01_nav_and_cash_relative",
+    "02_drawdowns",
+    "03_main_metrics",
+    "04_cost_return_sensitivity",
+    "05_cost_sharpe_sensitivity",
+    "06_calendar_year_returns"
+  ],
+  "matplotlib_version": "3.7.2",
+  "report": "results/backtest/reporting/report_中文.md",
+  "numeric_manifest_sha256": "5e468f8ebdd9b85d711b973df2ef5e7c6ab68868e7484969da9e713e78a1a766",
+  "not_yet_checked": [
+    "step 15: final package and handoff",
+    "step 16: optional extensions only if separately requested"
+  ]
+}
