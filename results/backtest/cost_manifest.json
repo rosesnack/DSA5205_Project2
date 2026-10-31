@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "scope": "Step 8: centralized protocol cost policy and engineering sensitivity checks",
+  "created_utc": "2026-10-31T08:43:14.103506+00:00",
+  "python_version": "3.11.5",
+  "pandas_version": "2.0.3",
+  "main_cost_parameters": {
+    "execution_bps": 3.0,
+    "borrow_annual_rate": 0.01,
+    "full_cash_rebate": false
+  },
+  "scenario_count": 8,
+  "settings_written_before_replay": true,
+  "settings_selected_by_performance": false,
+  "example_entry_bps": 10,
+  "threshold_selection_performed": false,
+  "example_only": true,
+  "truncated_preview": true,
+  "formal_phase_evaluation": false,
+  "market_preview_summary_rows": 48,
+  "market_preview_daily_rows": 240,
+  "market_preview_asset_rows": 2400,
+  "market_preview_trade_rows": 32,
+  "synthetic_summary_rows": 8,
+  "synthetic_daily_rows": 32,
+  "market_financing_exposed_intervals": 0,
+  "max_accounting_residual": 0.0,
+  "checks": [
+    {
+      "check": "protocol_main_parameters",
+      "passed": true,
+      "detail": "Main settings are the supplied protocol, not a performance-selected scenario"
+    },
+    {
+      "check": "eight_unique_predefined_scenarios",
+      "passed": true,
+      "detail": "Main plus seven predefined one-factor comparisons"
+    },
+    {
+      "check": "one_factor_at_a_time",
+      "passed": true,
+      "detail": "No unrequested factorial grid or simultaneous parameter change"
+    },
+    {
+      "check": "execution_values_match_protocol",
+      "passed": true,
+      "detail": "Execution costs are 0/1/3/5 bps"
+    },
+    {
+      "check": "borrow_values_match_protocol",
+      "passed": true,
+      "detail": "Borrow rates are decimal annual 0%/1%/2%/3%"
+    },
+    {
+      "check": "main_settings_cannot_be_mutated_through_copy",
+      "passed": true,
+      "detail": "Callers receive independent settings dictionaries"
+    },
+    {
+      "check": "public_threshold_remains_unselected",
+      "passed": true,
+      "detail": "Cost scenarios do not select the trading threshold"
+    },
+    {
+      "check": "same_entry_threshold_every_scenario",
+      "passed": true,
+      "detail": "Every scenario receives the same explicit entry threshold"
+    },
+    {
+      "check": "execution_fee_parameter_wired",
+      "passed": true,
+      "detail": "Each scene charges actual net trading amounts at its own explicit bps"
+    },
+    {
+      "check": "borrow_parameter_and_day_count_wired",
+      "passed": true,
+      "detail": "Borrow uses starting actual shorts and natural days"
+    },
+    {
+      "check": "interest_policy_wired_once",
+      "passed": true,
+      "detail": "Interest policy changes the correct base without duplicate rate/day-count conversion"
+    },
+    {
+      "check": "zero_execution_does_not_zero_other_costs",
+      "passed": true,
+      "detail": "Zero execution cost retains the main borrow and interest assumptions"
+    },
+    {
+      "check": "scenario_accounting_conserves_nav",
+      "passed": true,
+      "detail": "Ending wealth reconciles with price/dividend/interest/borrow/execution components"
+    },
+    {
+      "check": "logical_pair_rules_unchanged",
+      "passed": true,
+      "detail": "Cost changes do not retune entries, exits, rankings or logical pair targets"
+    },
+    {
+      "check": "hand_borrow_borrow_0",
+      "passed": true,
+      "detail": "First holding interval: short value 0.125, three natural days, explicit annual rate"
+    },
+    {
+      "check": "hand_borrow_main",
+      "passed": true,
+      "detail": "First holding interval: short value 0.125, three natural days, explicit annual rate"
+    },
+    {
+      "check": "hand_borrow_borrow_2",
+      "passed": true,
+      "detail": "First holding interval: short value 0.125, three natural days, explicit annual rate"
+    },
+    {
+      "check": "hand_borrow_borrow_3",
+      "passed": true,
+      "detail": "First holding interval: short value 0.125, three natural days, explicit annual rate"
+    },
+    {
+      "check": "hand_full_rebate_increment",
+      "passed": true,
+      "detail": "Rebating collateral adds exactly collateral times the exported interval return"
+    },
+    {
+      "check": "fixture_has_real_financing_exposure",
+      "passed": true,
+      "detail": "Synthetic comparisons include three intervals with nonzero short collateral"
+    },
+    {
+      "check": "fixture_includes_final_liquidation",
+      "passed": true,
+      "detail": "Every synthetic scenario includes a complete final exit"
+    },
+    {
+      "check": "main_case_reproduces_step7_exactly",
+      "passed": true,
+      "detail": "Centralized main settings reproduce every existing preview cash/NAV/fee value exactly"
+    },
+    {
+      "check": "all_eight_cases_for_six_strategies",
+      "passed": true,
+      "detail": "All strategies share the same eight comparison settings"
+    },
+    {
+      "check": "fixed_threshold_and_market_window",
+      "passed": true,
+      "detail": "Same five validation signals, initial capital and threshold; no test-period replay"
+    },
+    {
+      "check": "preview_accounting_reconciles",
+      "passed": true,
+      "detail": "Every preview case accounts for all price/dividend/interest/borrow/execution changes"
+    },
+    {
+      "check": "asset_fees_sum_to_portfolio_fees",
+      "passed": true,
+      "detail": "Fees use actual net asset trades with no duplicated SPY costs"
+    },
+    {
+      "check": "market_pair_targets_not_retuned",
+      "passed": true,
+      "detail": "Same entry/exit and pair directions across real-data cost comparisons; NAV-dependent shares may differ"
+    },
+    {
+      "check": "policy_snapshot_unchanged_by_outcomes",
+      "passed": true,
+      "detail": "Configuration remains the protocol-defined main policy after comparison runs"
+    }
+  ],
+  "source_hashes": {
+    "data/processed/panel_spec.json": "a5587fd3d669097bf94df7c8444ec41edd77f46d23e549a56c4e94f4cd0d7327",
+    "data/processed/model_panel.csv": "3e15a99d21e0d088768058b956540a384c00c3caef04163d9d4069f14189e4be",
+    "data/interim/etf_prices_aligned.csv": "c09a1ff66e321732b3c4ee189dbe8d6792fe7c4fe9895422de18a5849773099e",
+    "notebooks/panel_checks/monthly_training_eligibility.csv": "13d3ec29fd128384d483ba5ec9f37420c4fa0aa9cd55190c8a051addf1ea5536",
+    "results/backtest/combined_predictions.csv": "e6f9a0f5c0c9f58bc22806ee9996c44726da6be2995561d253d77995b355eb73",
+    "results/elastic_net/elastic_net_predictions.csv": "43aa2462594fecdc1f4113ca008900aabf2ff86867cec0b583d6bebd05e05abb",
+    "results/gbdt/gbdt_predictions.csv": "4b939ca8334b16b719d7a767e68010afbec6cbb94d8b7342f6300e5696e59cdd",
+    "notebooks/02_features_panel_data.ipynb": "cdfdb60dd038961db5fe1920c4212e7e94cd4c2e5dd98e427fd7557f11cc4354",
+    "notebooks/03_elastic_net.ipynb": "a60992f898b860a4045e58ea8d7e7cb825df03e98e29bec5737d2262ec65090e",
+    "notebooks/04_gbdt.ipynb": "dd69c86afcfd652dd8a3d421bd8b30c738b824f594434b185a90bba167c04081",
+    "results/backtest/predictions_with_panel.csv": "a63020918e55376976ce354eee4f6299f992f31eb3d7014e560dfdfc7ed5b5aa",
+    "results/backtest/panel_alignment_summary.csv": "dcd0592e7195df904b15dd0e05dbe8165fe99dcb7f1168954767725b7a7457fc",
+    "results/backtest/monthly_time_checks.csv": "2132e34bc59da79f0343cefd709908aa8712cfd819d227c129feffdea3c2556a",
+    "results/backtest/signal_calendar.csv": "d642677743d4e851c1adb9b88f1c7896f001522eee65b8544e79d7da1a617580",
+    "results/backtest/time_alignment_examples.csv": "bdf189ff0266c456754c17fff774e2b513b0193a6f0105b4708f91b88b6c2b15",
+    "notebooks/01_download_clean_data.ipynb": "d939dac768f0a51c57665ae2a01a2f6e93abbb3c70f44812cc54aedb7d8b00fc",
+    "results/backtest/trading_signal_inputs.csv": "58dcd618718a28d1e9ea6cb76f189ce88ca12a4cead244031eaac1992f1f69d3",
+    "results/backtest/daily_signal_status.csv": "480b6f938f93fa8dd12cec159732828089b4e2ab572d0969746df39094b9f269",
+    "results/backtest/scoring_eligibility.csv": "d415d5fb975860f81068cca30ed8550c87adff4eddfbc252f1428a598024d662",
+    "results/backtest/eligibility_summary.csv": "dbbeb877995e7148e473d442fcb2801613995a11c6ce871d8085d3c27b97a200",
+    "results/backtest/signal_status_examples.csv": "83f19ec706fe225c158305f71ac1a930893cba63e6561d95aabc05b7d390c3a9",
+    "results/backtest/signal_policy_checks.csv": "54905e921c20dbc188c33d0a5f4f21196ee7d026ee5ee9e21ab15d014a1a633a",
+    "results/elastic_net/elastic_net_predictions_full.csv": "c9342f032b192272e0936099b8c48cea8c7e3fbf4c388f1f1427b1cd1ead391b",
+    "results/elastic_net/forecast_metrics.csv": "44a008e6223aac2e6d131b303c16a869c28c819073e269bacc27dd29e0284b25",
+    "results/gbdt/gbdt_predictions_full.csv": "adcedb9cba1e47c4f17f4ab276f55e62c8e12fbdaad7e9f3091ab4f4cfd9bb26",
+    "results/gbdt/forecast_metrics.csv": "f3326fd220bef4a17b6ed1757e0a1083e90c6c77f73db59178d7b4edea7349f5",
+    "results/backtest/baseline_predictions.csv": "b56ef7bfc90da91ff24a4b8fe5df1194e708370b1bfbeb6825c732ef8c5e40b7",
+    "results/backtest/monthly_baseline_audit.csv": "af6e680b99d90cd1ccbefc4db6754a43ee13830aecad4045c27540f49d673972",
+    "results/backtest/baseline_forecast_metrics.csv": "d4588ae242c785e2b245ee44b58481c7f2aa9080038bde4f05d4258786095e5a",
+    "results/backtest/prediction_comparison_metrics.csv": "d001ab11f67ead324ff199267344a10a9c0f6d3a046a9ea79754b3b7e943214c",
+    "results/backtest/sector_baseline_metrics.csv": "0cf792e16b77df7811948a97c950b2c99a18fb6ea96b0c953daab28adccd9552",
+    "results/backtest/baseline_checks.csv": "3d70a51da419a7de3f6050161ba191ca49f93c7dc5177dc8f8780769e52d8300",
+    "../5205proj2.md": "7db7be7d3861b57b1a9f53e7daed0f9dd37c236514b4a4d00dcc64f19f8e5ed6",
+    "results/backtest/pair_decision_checks.csv": "0a8bff6270c894507f78899340618b93f8df51438559f2d9f114be4648e2ddad",
+    "results/backtest/pair_decision_demo_daily.csv": "59ec92faf694ebbfaf74a7378c3dbd07d653d49381238192cb0e9c0727926f17",
+    "results/backtest/pair_decision_demo_sectors.csv": "db7bfe030f1c17ecdf94e1ede4b5ad931c18eda1fcae9ec0897c09e36783286f",
+    "results/backtest/execution_checks.csv": "e28d98e76e3b424b198165642bddf56e18941f752c25753558c2886fec60f7ab",
+    "results/backtest/net_trade_worked_examples.csv": "e6999593e22d920184af7c2cbc7785e0f8e3506ce3782e45dcf6e1d7ff4e1a47",
+    "results/backtest/execution_target_demo_daily.csv": "44bb1acdcb300df55b2796e7812a72b6c4ab8f1a837b06227b50305efe49da5a",
+    "results/backtest/execution_target_demo_assets.csv": "0f6a9a126ac12334d2048fe83316735672916b3e62d6f2020489f11660c98125",
+    "data/interim/risk_free_open_intervals.csv": "874e49b3fea6674b02dbad78aa615890e831cab29a7224e1f257cc51df6a9896",
+    "results/backtest/ledger_checks.csv": "713b18515bc38158405937ede126702075b0f32326cd110224742a41d0a79e77",
+    "results/backtest/ledger_worked_examples.csv": "5fcc0c10bda7678d31c6fc41502239cf111e9e33133c63051fcef032ae9c1604",
+    "results/backtest/ledger_replay_fixture.csv": "879cb17d66abeeec4a8b218bf033daaf38921905f6df9e2d92430b91b0cd8bd8",
+    "results/backtest/ledger_demo_daily.csv": "0397705c9711fb3cda4585d894c9c775162040439213cb2b100c48301bfb61e4",
+    "results/backtest/ledger_demo_assets.csv": "2129084c9b44add14ce774c2ac6c3f2b0e8e7b6bb63065794c419896c73dbaee",
+    "results/backtest/ledger_demo_trades.csv": "5ec7e708af14d7d7a75c9a0e1f06bad3f6576dee773182d17c137056ce37c3bc",
+    "results/backtest/ledger_rate_alignment.csv": "4f6ca521538d399f303a6f114d4052b345502e949a66c5105093ad8e7b3dc373"
+  },
+  "code_hashes": {
+    "scripts/prepare_backtest_inputs.py": "f98dae5caaf987c10fefff898a19e849a085c6acdb16be5f2deeda3da617a698",
+    "scripts/backtest_costs.py": "1204666ded31363a626bebdb5b82ff1872d7af9a7e5019751f204584b4715d09",
+    "scripts/backtest_ledger.py": "abd37ef8afd66c5e550498d72bbba539741c2eab8d4af76b8b5a1ae125fcf476"
+  },
+  "outputs": [
+    {
+      "path": "results/backtest/cost_settings.json",
+      "sha256": "d3cd3eeaa68260ef075c6d739fcd8a569a4dde2b30ba96cdf57bef40d2aecae6"
+    },
+    {
+      "path": "results/backtest/cost_scenarios.csv",
+      "rows": 8,
+      "sha256": "d6856c482b826a705f7e900113f0c2f369fc6bc683aced31a666bd90d6dc1abf"
+    },
+    {
+      "path": "results/backtest/cost_checks.csv",
+      "rows": 28,
+      "sha256": "a1b2063e5541c7db8fb96828008d161edc35859d86c9f4a3da89cadac5f06d58"
+    },
+    {
+      "path": "results/backtest/cost_preview_summary.csv",
+      "rows": 48,
+      "sha256": "0786fd57e2a8f9806c22f2d5ceb60995876b600a117695b5293f1b6a83fb320f"
+    },
+    {
+      "path": "results/backtest/cost_preview_daily.csv",
+      "rows": 240,
+      "sha256": "dbe3ca57efb4a8079d8d4144cc377bbe397c888ef12c964199b27cdd8f500aaf"
+    },
+    {
+      "path": "results/backtest/cost_preview_assets.csv",
+      "rows": 2400,
+      "sha256": "362303f9edf9d40811f044337d9d5b7e0b7e92db0a7c0bc2901ed9e79cf7641f"
+    },
+    {
+      "path": "results/backtest/cost_preview_trades.csv",
+      "rows": 32,
+      "sha256": "813e9a81cc33adf20e58c0dd78bbb190e7ff51c50dfd26851df0fd326185a6fe"
+    },
+    {
+      "path": "results/backtest/cost_synthetic_summary.csv",
+      "rows": 8,
+      "sha256": "8ca9d4fe050eff8ecd86a718c59759deee5bafdd817ef565ba24e9053e4da918"
+    },
+    {
+      "path": "results/backtest/cost_synthetic_daily.csv",
+      "rows": 32,
+      "sha256": "b536fb1d58745396bd596a70c11b8b6fefc2f70673184eac988863d4db1fd67e"
+    }
+  ],
+  "notes": [
+    "One code-owned main cost policy is shared by all model/scheme strategies",
+    "Sensitivity changes one provided cost/financing assumption at a time; main case is not selected by NAV",
+    "Every case starts independently and replays actual shares; fees are not merely subtracted from fixed gross returns",
+    "The same threshold and forecasts are used; only NAV-based share quantities may change with costs",
+    "Preview financing exposure is recorded separately; nonzero borrow/rebate effects are additionally verified on the synthetic fixture",
+    "Synthetic and market preview tables are engineering records, not full validation/test strategy evidence"
+  ],
+  "not_yet_checked": [
+    "training-period OOF signal-scale material and recorded threshold grid (step 9)",
+    "public threshold selection using validation only (step 10)",
+    "frozen full-phase cost/financing comparisons and strategy reporting"
+  ]
+}

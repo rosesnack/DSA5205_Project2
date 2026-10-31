@@ -1,0 +1,10 @@
+model_month,ticker,fit_cutoff,reason
+2016-10,XLB,2016-09-30 18:00:00-04:00,no common_features_valid prediction rows
+2016-10,XLE,2016-09-30 18:00:00-04:00,no common_features_valid prediction rows
+2016-10,XLF,2016-09-30 18:00:00-04:00,no common_features_valid prediction rows
+2016-10,XLI,2016-09-30 18:00:00-04:00,no common_features_valid prediction rows
+2016-10,XLK,2016-09-30 18:00:00-04:00,no common_features_valid prediction rows
+2016-10,XLP,2016-09-30 18:00:00-04:00,no common_features_valid prediction rows
+2016-10,XLU,2016-09-30 18:00:00-04:00,no common_features_valid prediction rows
+2016-10,XLV,2016-09-30 18:00:00-04:00,no common_features_valid prediction rows
+2016-10,XLY,2016-09-30 18:00:00-04:00,no common_features_valid prediction rows

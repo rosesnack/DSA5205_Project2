@@ -1,0 +1,85 @@
+{
+  "version": "5205-costs-v1",
+  "source": "../5205proj2.md: sections 3.6 and 3.7",
+  "main": {
+    "execution_bps": 3.0,
+    "borrow_annual_rate": 0.01,
+    "full_cash_rebate": false
+  },
+  "scenarios": [
+    {
+      "scenario_id": "main",
+      "variation": "main",
+      "is_main": true,
+      "execution_bps": 3.0,
+      "borrow_annual_rate": 0.01,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "execution_0",
+      "variation": "execution_bps",
+      "is_main": false,
+      "execution_bps": 0.0,
+      "borrow_annual_rate": 0.01,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "execution_1",
+      "variation": "execution_bps",
+      "is_main": false,
+      "execution_bps": 1.0,
+      "borrow_annual_rate": 0.01,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "execution_5",
+      "variation": "execution_bps",
+      "is_main": false,
+      "execution_bps": 5.0,
+      "borrow_annual_rate": 0.01,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "borrow_0",
+      "variation": "borrow_annual_rate",
+      "is_main": false,
+      "execution_bps": 3.0,
+      "borrow_annual_rate": 0.0,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "borrow_2",
+      "variation": "borrow_annual_rate",
+      "is_main": false,
+      "execution_bps": 3.0,
+      "borrow_annual_rate": 0.02,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "borrow_3",
+      "variation": "borrow_annual_rate",
+      "is_main": false,
+      "execution_bps": 3.0,
+      "borrow_annual_rate": 0.03,
+      "full_cash_rebate": false
+    },
+    {
+      "scenario_id": "full_cash_rebate",
+      "variation": "full_cash_rebate",
+      "is_main": false,
+      "execution_bps": 3.0,
+      "borrow_annual_rate": 0.01,
+      "full_cash_rebate": true
+    }
+  ],
+  "sensitivity_design": "one factor at a time; main plus seven predefined comparisons",
+  "shared_across_models_and_schemes": true,
+  "scenario_selection_by_performance": false,
+  "selected_public_entry_bps": null,
+  "execution_basis": "sum of actual absolute net share changes times observed opens, after SPY netting",
+  "borrow_basis": "starting actual net short market value times annual rate times natural days / 365",
+  "main_interest_basis": "max(previous post-trade cash minus starting short collateral, 0)",
+  "full_rebate_interest_basis": "previous post-trade cash, counted once",
+  "cash_rate_basis": "exported open-to-open interval return, with no additional day-count division",
+  "thresholds": "same public threshold for every cost scenario; never reselected per scenario"
+}

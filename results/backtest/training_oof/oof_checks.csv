@@ -1,0 +1,36 @@
+check,passed,detail
+unique_seven_column_forecasts,True,"Separate interface, no label fields"
+only_2013_2017_diagnostic_signals,True,No validation/test signals used as diagnostic forecasts
+all_six_strategies,True,No model/specification selected or removed
+exact_valid_coverage_elastic_net_S0,True,Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows
+exact_valid_coverage_elastic_net_S1,True,Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows
+exact_valid_coverage_elastic_net_S2,True,Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows
+exact_valid_coverage_gbdt_S0,True,Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows
+exact_valid_coverage_gbdt_S1,True,Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows
+exact_valid_coverage_gbdt_S2,True,Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows
+calibration_mature_labels_only,True,Every fitted target available by monthly cutoff
+calibration_past_signals_only,True,Every fitted feature row existed by cutoff
+calibration_future_prediction_rows,True,Forecasts strictly after fit cutoff
+calibration_training_since_2008,True,Same minimum history and start as original fits
+calibration_training_only_scaler,True,Scaler sample count equals eligible training count
+calibration_en_convergence,True,Convergence warnings rejected or numerically retried
+oof_mature_labels_only,True,Every fitted target available by monthly cutoff
+oof_past_signals_only,True,Every fitted feature row existed by cutoff
+oof_future_prediction_rows,True,Forecasts strictly after fit cutoff
+oof_training_since_2008,True,Same minimum history and start as original fits
+oof_training_only_scaler,True,Scaler sample count equals eligible training count
+oof_en_convergence,True,Convergence warnings rejected or numerically retried
+calibration_labels_known_before_2013,True,Late-December labels not yet mature at selection are excluded
+elastic_net_identical_pooled_scoring_rows,True,Selected candidates score identical mature 2012 rows across nine sectors
+frozen_config_elastic_net_S0,True,All 2013-2017 fits use frozen 2012-only parameters
+frozen_config_elastic_net_S1,True,All 2013-2017 fits use frozen 2012-only parameters
+frozen_config_elastic_net_S2,True,All 2013-2017 fits use frozen 2012-only parameters
+gbdt_identical_pooled_scoring_rows,True,Selected candidates score identical mature 2012 rows across nine sectors
+frozen_config_gbdt_S0,True,All 2013-2017 fits use frozen 2012-only parameters
+frozen_config_gbdt_S1,True,All 2013-2017 fits use frozen 2012-only parameters
+frozen_config_gbdt_S2,True,All 2013-2017 fits use frozen 2012-only parameters
+exact_monthly_cutoffs,True,Every prediction cutoff equals prior SPY trading day 18:00 NY
+top4_only_complete_nine_sector_dates,True,Partial dates retained separately and never used for nine-sector ranking
+threshold_grid_not_selected,True,Fixed protocol candidates; no portfolio-return evaluation
+invalid_months_explicit,True,No valid-row month silently filled
+empty_months_have_no_fits_or_forecasts,True,Wholly invalid months create header-only checkpoints and nine skip records

@@ -1,0 +1,49 @@
+check,passed,detail
+initial_entry_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+short_proceeds_are_not_profit,True,Equal long/short principal cash flows preserve initial capital
+initial_entry_fee_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+entry_fee_and_pre_fee_sizing,True,"Size from NAV_pre, deduct the initial fee once afterward"
+no_buy_day_dividend_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+new_positions_receive_no_ex_day_dividend,True,"Dividends apply only to old shares, never newly purchased shares"
+long_ex_dividend_exit_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+old_long_dividend_offsets_ex_price_drop,True,Old long earns dividend even when sold at the ex-date open; no double counting
+short_ex_dividend_exit_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+old_short_pays_dividend,True,Short dividends are signed expenses
+spy_dividend_expense_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+short_spy_dividend_is_included,True,SPY short dividends are treated like any other short asset
+own_cash_interest_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+collateral_excluded_from_main_interest,True,Use starting cash minus starting actual short market value; no second day-count division
+full_cash_rebate_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+full_cash_rebate_not_double_interest,True,Full rebate accrues on total book cash once
+own_available_cash_floor_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+negative_own_available_cash_does_not_earn_interest,True,"Main interest base is max(cash minus collateral, zero)"
+weekend_borrow_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+borrow_uses_starting_short_and_natural_days,True,"Borrow uses interval-start collateral, not the changed end-open short value"
+netted_short_collateral_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+financing_uses_actual_netted_holdings,True,Opposing SPY legs create no phantom collateral or borrow expense
+fee_driven_small_rebalance_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+small_rebalance_fee_is_not_omitted,True,Retained pair rebalances after prior fee reduces NAV
+final_liquidation_fee_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+initial_and_final_fees_both_in_nav,True,Round trip at unchanged prices loses exactly both 7.5 fees
+cash_compound_one_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+cash_compound_two_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+cash_interest_compounds,True,Interest uses last post-trade cash
+valid_zero_rate_reconciles,True,Self-financing NAV identity holds and input states are unchanged
+zero_cash_rate_remains_valid,True,"Zero is a valid rate, not a missing-value sentinel"
+missing_old_dividend,True,Incomplete accounting inputs/configuration rejected
+missing_old_open,True,Incomplete accounting inputs/configuration rejected
+invalid_interval_rate,True,Incomplete accounting inputs/configuration rejected
+negative_execution_fee,True,Incomplete accounting inputs/configuration rejected
+negative_borrow_rate,True,Incomplete accounting inputs/configuration rejected
+invalid_calendar_days,True,Incomplete accounting inputs/configuration rejected
+zero_day_old_shares,True,Incomplete accounting inputs/configuration rejected
+return_product_includes_both_end_fees,True,Initial entry fee is included in the first actual holding return
+phase_cash_shares_and_pairs_reset,True,"Test begins from independent unit cash, without validation holdings"
+first_open_has_no_holding_interval,True,No zero-length synthetic daily return is inserted before first holding interval
+final_trade_logged_once_per_asset,True,Final exit records the two actual net trades
+future_outcomes_do_not_enter_ledger,True,Future-label fields added to signals leave all ledger records unchanged
+full_phase_requires_final_liquidation,True,Complete validation fixture exits all shares at its scheduled final open
+missing_exact_rate_interval,True,Rate alignment/availability error stops the ledger instead of skipping or filling it
+rate_not_known_at_entry,True,Rate alignment/availability error stops the ledger instead of skipping or filling it
+mismatched_rate_day_count,True,Rate alignment/availability error stops the ledger instead of skipping or filling it
+truncated_phase_rejected_as_formal_full_run,True,The test fixture is deliberately incomplete and cannot be labeled a completed full phase

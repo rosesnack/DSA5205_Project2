@@ -1,0 +1,37 @@
+{
+  "run_config_sha256": "cfdc3abc7fc9233bcd35a3b5fdcdb5ba420a0ebce5f2b79e503b43e021784fd4",
+  "replay_started_utc": "2026-10-31T09:45:10.066560+00:00",
+  "replay_completed_utc": "2026-10-31T09:45:32.151291+00:00",
+  "outputs": [
+    {
+      "name": "daily",
+      "path": "results/backtest/phase_evaluation/test_daily.csv",
+      "rows": 5628,
+      "sha256": "32cb19aecc72c1566ef710100558ec776d192276580a4a8cfbdf814aeb0db95f"
+    },
+    {
+      "name": "assets",
+      "path": "results/backtest/phase_evaluation/test_assets.csv",
+      "rows": 56280,
+      "sha256": "c763c27bfe885f95f84ca4d684c51afa5795960671df73a1713dac31581f5662"
+    },
+    {
+      "name": "trades",
+      "path": "results/backtest/phase_evaluation/test_trades.csv",
+      "rows": 1255,
+      "sha256": "4967e54f52df0c425684506748145a1276592c3ddb43ffbabc1e7843200c7a14"
+    },
+    {
+      "name": "summary",
+      "path": "results/backtest/phase_evaluation/test_summary.csv",
+      "rows": 6,
+      "sha256": "709cff9a658c2f225faf29b8ecca94034b83c2e8b2ddeaf30542832d59d5b574"
+    },
+    {
+      "name": "returns",
+      "path": "results/backtest/phase_evaluation/test_returns.csv",
+      "rows": 5622,
+      "sha256": "6d8f0b34b065307e73c9a87bd776702073145d8c33907e2cc26f70a73ecce891"
+    }
+  ]
+}

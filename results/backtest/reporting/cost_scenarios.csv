@@ -1,0 +1,9 @@
+scenario_id,variation,is_main,execution_bps,borrow_annual_rate,full_cash_rebate
+main,main,True,3,0.01,False
+execution_0,execution_bps,False,0,0.01,False
+execution_1,execution_bps,False,1,0.01,False
+execution_5,execution_bps,False,5,0.01,False
+borrow_0,borrow_annual_rate,False,3,0,False
+borrow_2,borrow_annual_rate,False,3,0.02,False
+borrow_3,borrow_annual_rate,False,3,0.029999999999999999,False
+full_cash_rebate,full_cash_rebate,False,3,0.01,True

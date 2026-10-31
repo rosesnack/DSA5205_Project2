@@ -1,0 +1,359 @@
+category,phase,identity,check,passed,rows,max_abs_error,atol,rtol,detail
+determinism,validation,elastic_net/S0/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S0/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S0/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S0/2018-02-06,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-02-06,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S0/2018-02-06,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S0/2018-02-06,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-02-06,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S0/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S0/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S0/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S0/2020-03-20,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2020-03-20,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S0/2020-03-20,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S0/2020-03-20,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2020-03-20,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S0/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S0/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S0/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S0/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S1/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S1/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S1/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S1/2018-02-06,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-02-06,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S1/2018-02-06,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S1/2018-02-06,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-02-06,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S1/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S1/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S1/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S1/2020-03-20,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2020-03-20,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S1/2020-03-20,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S1/2020-03-20,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2020-03-20,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S1/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S1/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S1/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S1/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S2/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S2/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S2/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S2/2018-02-06,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-02-06,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S2/2018-02-06,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S2/2018-02-06,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-02-06,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S2/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S2/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S2/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S2/2020-03-20,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2020-03-20,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S2/2020-03-20,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S2/2020-03-20,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2020-03-20,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,elastic_net/S2/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,elastic_net/S2/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,elastic_net/S2/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,elastic_net/S2/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-02-06,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-06,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-02-06,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-02-06,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-06,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-02-08,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-08,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-02-08,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-02-08,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-02-08,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-10-15,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-10-15,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-10-15,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-10-15,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-10-15,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2018-12-21,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-12-21,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2018-12-21,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2018-12-21,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2018-12-21,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S0/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S0/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S0/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S0/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2018-03-27,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-03-27,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2018-03-27,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2018-03-27,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-03-27,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2018-10-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-10-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2018-10-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2018-10-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2018-10-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2020-02-27,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2020-02-27,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2020-02-27,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2020-02-27,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2020-02-27,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2020-03-23,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2020-03-23,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2020-03-23,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2020-03-23,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2020-03-23,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S1/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S1/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S1/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S1/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2018-01-03,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-01-03,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2018-01-03,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2018-01-03,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-01-03,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2018-02-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-02-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2018-02-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2018-02-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-02-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2018-03-27,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-03-27,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2018-03-27,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2018-03-27,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-03-27,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2018-11-01,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-11-01,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2018-11-01,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2018-11-01,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2018-11-01,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2020-02-27,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2020-02-27,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2020-02-27,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2020-02-27,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2020-02-27,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2020-03-23,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2020-03-23,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2020-03-23,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2020-03-23,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2020-03-23,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,validation,gbdt/S2/2022-12-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2022-12-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,validation,gbdt/S2/2022-12-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,validation,gbdt/S2/2022-12-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,validation,gbdt/S2/2022-12-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S0/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S0/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S0/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S0/2023-03-13,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-03-13,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S0/2023-03-13,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S0/2023-03-13,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-03-13,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S0/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S0/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S0/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S0/2025-04-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2025-04-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S0/2025-04-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S0/2025-04-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2025-04-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S0/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S0/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S0/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S0/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S1/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S1/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S1/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S1/2023-03-13,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-03-13,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S1/2023-03-13,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S1/2023-03-13,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-03-13,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S1/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S1/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S1/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S1/2025-04-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2025-04-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S1/2025-04-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S1/2025-04-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2025-04-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S1/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S1/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S1/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S1/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S2/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S2/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S2/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S2/2023-03-13,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-03-13,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S2/2023-03-13,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S2/2023-03-13,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-03-13,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S2/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S2/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S2/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S2/2025-04-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2025-04-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S2/2025-04-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S2/2025-04-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2025-04-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S2/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,elastic_net/S2/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,elastic_net/S2/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,elastic_net/S2/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2023-01-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-01-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2023-01-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2023-01-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-01-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2023-03-15,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-03-15,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2023-03-15,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2023-03-15,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-03-15,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2024-08-07,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2024-08-07,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2024-08-07,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2024-08-07,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2024-08-07,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S0/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S0/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S0/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S0/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-01-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-01-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-01-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-01-11,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-11,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-01-11,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-01-11,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-01-11,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-03-15,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-15,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-03-15,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-03-15,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-15,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2023-03-20,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-20,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2023-03-20,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2023-03-20,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2023-03-20,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S1/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S1/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S1/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S1/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2023-01-04,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-01-04,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2023-01-04,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2023-01-04,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-01-04,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2023-01-10,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-01-10,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2023-01-10,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2023-01-10,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-01-10,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2023-03-15,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-15,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2023-03-15,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2023-03-15,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-15,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2023-03-17,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-17,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2023-03-17,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2023-03-17,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-17,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2023-03-20,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-20,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2023-03-20,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2023-03-20,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2023-03-20,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,gbdt/S2/2026-09-30,planner_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2026-09-30,planner_matches_saved_asset_plan,True,10,,,,Within registered numeric tolerances
+determinism,test,gbdt/S2/2026-09-30,ledger_state_exact_under_dictionary_order,True,1,,,,
+determinism,test,gbdt/S2/2026-09-30,ledger_asset_rows_exact_under_dictionary_order,True,10,,,,Exact value equality
+determinism,test,gbdt/S2/2026-09-30,isolated_settlement_matches_saved_open,True,22,0,9.9999999999999998e-13,9.9999999999999998e-13,
+determinism,test,elastic_net/S0 = elastic_net/S1,identical_predictions_give_exact_daily,True,938,,,,Exact value equality
+determinism,test,elastic_net/S0 = elastic_net/S1,identical_predictions_give_exact_assets,True,9380,,,,Exact value equality
+determinism,test,elastic_net/S0 = elastic_net/S2,identical_predictions_give_exact_daily,True,938,,,,Exact value equality
+determinism,test,elastic_net/S0 = elastic_net/S2,identical_predictions_give_exact_assets,True,9380,,,,Exact value equality
+determinism,test,elastic_net/S1 = elastic_net/S2,identical_predictions_give_exact_daily,True,938,,,,Exact value equality
+determinism,test,elastic_net/S1 = elastic_net/S2,identical_predictions_give_exact_assets,True,9380,,,,Exact value equality
+determinism,fixture,spy_buy_hold,three_open_benchmark_exact_under_input_row_order,True,3,,,,Exact value equality
+determinism,fixture,cash,three_open_benchmark_exact_under_input_row_order,True,3,,,,Exact value equality

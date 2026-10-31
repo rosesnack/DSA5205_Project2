@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "scope": "Step 3: scoring and signal-time trading eligibility",
+  "created_utc": "2026-10-31T08:42:47.989656+00:00",
+  "python_version": "3.11.5",
+  "pandas_version": "2.0.3",
+  "sector_signal_rows": 118692,
+  "daily_strategy_rows": 13188,
+  "score_eligible_rows": 118476,
+  "action_counts": {
+    "EVALUATE_SIGNAL": 13164,
+    "FINAL_LIQUIDATION": 12,
+    "NO_ORDER_OUTSIDE_PHASE": 12
+  },
+  "phase_opens": {
+    "validation": [
+      "2018-01-03",
+      "2022-12-30"
+    ],
+    "test": [
+      "2023-01-04",
+      "2026-09-30"
+    ]
+  },
+  "trading_panel_fields": [
+    "date",
+    "ticker",
+    "common_features_valid"
+  ],
+  "trading_forecast_fields": [
+    "date",
+    "ticker",
+    "model",
+    "scheme",
+    "model_month",
+    "fit_cutoff",
+    "y_hat"
+  ],
+  "trading_calendar_fields": [
+    "date",
+    "split",
+    "signal_at",
+    "entry_date",
+    "entry_at"
+  ],
+  "checks": [
+    {
+      "check": "future_fields_can_be_removed",
+      "passed": true,
+      "detail": "Trading policy runs with no target, label, exit or scoring columns"
+    },
+    {
+      "check": "future_values_do_not_change_actions",
+      "passed": true,
+      "detail": "All non-whitelisted panel fields changed; signals/actions identical"
+    },
+    {
+      "check": "one_missing_prediction",
+      "passed": true,
+      "detail": "Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged"
+    },
+    {
+      "check": "other_strategies_unaffected",
+      "passed": true,
+      "detail": "A single missing model forecast does not close other strategies"
+    },
+    {
+      "check": "whole_strategy_day_missing",
+      "passed": true,
+      "detail": "Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged"
+    },
+    {
+      "check": "nonfinite_prediction_nan",
+      "passed": true,
+      "detail": "Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged"
+    },
+    {
+      "check": "nonfinite_prediction_positive_infinity",
+      "passed": true,
+      "detail": "Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged"
+    },
+    {
+      "check": "nonfinite_prediction_negative_infinity",
+      "passed": true,
+      "detail": "Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged"
+    },
+    {
+      "check": "fit_after_signal",
+      "passed": true,
+      "detail": "Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged"
+    },
+    {
+      "check": "invalid_feature_flag",
+      "passed": true,
+      "detail": "Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged"
+    },
+    {
+      "check": "shared_input_failure_closes_six_strategies",
+      "passed": true,
+      "detail": "Common-feature failure applies to every strategy on that date"
+    },
+    {
+      "check": "missing_input_row",
+      "passed": true,
+      "detail": "Affected strategy requests next-open flat targets; date/universe retained; original pair state unchanged"
+    },
+    {
+      "check": "missing_label_blocks_scoring_only",
+      "passed": true,
+      "detail": "An interior missing future label changes scoring only; trade policy unchanged"
+    },
+    {
+      "check": "scheduled_phase_end_actions",
+      "passed": true,
+      "detail": "Prespecified dates control final liquidation and no-order days without future labels"
+    }
+  ],
+  "source_hashes": {
+    "data/processed/panel_spec.json": "a5587fd3d669097bf94df7c8444ec41edd77f46d23e549a56c4e94f4cd0d7327",
+    "data/processed/model_panel.csv": "3e15a99d21e0d088768058b956540a384c00c3caef04163d9d4069f14189e4be",
+    "data/interim/etf_prices_aligned.csv": "c09a1ff66e321732b3c4ee189dbe8d6792fe7c4fe9895422de18a5849773099e",
+    "notebooks/panel_checks/monthly_training_eligibility.csv": "13d3ec29fd128384d483ba5ec9f37420c4fa0aa9cd55190c8a051addf1ea5536",
+    "results/backtest/combined_predictions.csv": "e6f9a0f5c0c9f58bc22806ee9996c44726da6be2995561d253d77995b355eb73",
+    "results/elastic_net/elastic_net_predictions.csv": "43aa2462594fecdc1f4113ca008900aabf2ff86867cec0b583d6bebd05e05abb",
+    "results/gbdt/gbdt_predictions.csv": "4b939ca8334b16b719d7a767e68010afbec6cbb94d8b7342f6300e5696e59cdd",
+    "notebooks/02_features_panel_data.ipynb": "cdfdb60dd038961db5fe1920c4212e7e94cd4c2e5dd98e427fd7557f11cc4354",
+    "notebooks/03_elastic_net.ipynb": "a60992f898b860a4045e58ea8d7e7cb825df03e98e29bec5737d2262ec65090e",
+    "notebooks/04_gbdt.ipynb": "dd69c86afcfd652dd8a3d421bd8b30c738b824f594434b185a90bba167c04081",
+    "results/backtest/predictions_with_panel.csv": "a63020918e55376976ce354eee4f6299f992f31eb3d7014e560dfdfc7ed5b5aa",
+    "results/backtest/panel_alignment_summary.csv": "dcd0592e7195df904b15dd0e05dbe8165fe99dcb7f1168954767725b7a7457fc",
+    "results/backtest/monthly_time_checks.csv": "2132e34bc59da79f0343cefd709908aa8712cfd819d227c129feffdea3c2556a",
+    "results/backtest/signal_calendar.csv": "d642677743d4e851c1adb9b88f1c7896f001522eee65b8544e79d7da1a617580",
+    "results/backtest/time_alignment_examples.csv": "bdf189ff0266c456754c17fff774e2b513b0193a6f0105b4708f91b88b6c2b15",
+    "notebooks/01_download_clean_data.ipynb": "d939dac768f0a51c57665ae2a01a2f6e93abbb3c70f44812cc54aedb7d8b00fc"
+  },
+  "code_hashes": {
+    "scripts/prepare_backtest_inputs.py": "f98dae5caaf987c10fefff898a19e849a085c6acdb16be5f2deeda3da617a698",
+    "scripts/backtest_signal_policy.py": "40f2d52f8115a0ac6618331d3a51021fa03602cce39cb8920339aaa2df80de04"
+  },
+  "outputs": [
+    {
+      "path": "results/backtest/trading_signal_inputs.csv",
+      "rows": 118692,
+      "sha256": "58dcd618718a28d1e9ea6cb76f189ce88ca12a4cead244031eaac1992f1f69d3"
+    },
+    {
+      "path": "results/backtest/daily_signal_status.csv",
+      "rows": 13188,
+      "sha256": "480b6f938f93fa8dd12cec159732828089b4e2ab572d0969746df39094b9f269"
+    },
+    {
+      "path": "results/backtest/scoring_eligibility.csv",
+      "rows": 118692,
+      "sha256": "d415d5fb975860f81068cca30ed8550c87adff4eddfbc252f1428a598024d662"
+    },
+    {
+      "path": "results/backtest/eligibility_summary.csv",
+      "rows": 12,
+      "sha256": "dbbeb877995e7148e473d442fcb2801613995a11c6ce871d8085d3c27b97a200"
+    },
+    {
+      "path": "results/backtest/signal_status_examples.csv",
+      "rows": 42,
+      "sha256": "83f19ec706fe225c158305f71ac1a930893cba63e6561d95aabc05b7d390c3a9"
+    },
+    {
+      "path": "results/backtest/signal_policy_checks.csv",
+      "rows": 14,
+      "sha256": "54905e921c20dbc188c33d0a5f4f21196ee7d026ee5ee9e21ab15d014a1a633a"
+    }
+  ],
+  "notes": [
+    "Fault cases use in-memory copies, never modified source CSVs",
+    "CLOSE_ALL_TO_CASH and FINAL_LIQUIDATION request empty target pairs at action_at",
+    "EVALUATE_SIGNAL means input readiness, not an actual entry or holding decision",
+    "Scoring flags and targets are excluded from the trading-policy input whitelist"
+  ],
+  "not_yet_checked": [
+    "prediction/investment baselines",
+    "threshold and ranking position logic",
+    "actual trades, prices, dividends, financing, costs and returns"
+  ]
+}

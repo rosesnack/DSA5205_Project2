@@ -1,0 +1,44 @@
+{
+  "run_config_sha256": "6d669e7b8d517321fb79b92be11ccba35a2eeb8ae0035f58f313ce0aba979139",
+  "scenario": {
+    "scenario_id": "borrow_3",
+    "variation": "borrow_annual_rate",
+    "is_main": false,
+    "execution_bps": 3.0,
+    "borrow_annual_rate": 0.03,
+    "full_cash_rebate": false
+  },
+  "completed_utc": "2026-10-31T11:36:03.536363+00:00",
+  "outputs": [
+    {
+      "name": "daily",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_3_daily.csv",
+      "rows": 5628,
+      "sha256": "09311e9f9644e23ee1f6aa95645d4aa33e31e1e73f3bf07b1e8a1c0abb116460"
+    },
+    {
+      "name": "assets",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_3_assets.csv",
+      "rows": 56280,
+      "sha256": "9427f33c52f2d046b176052cedcc59ff32a1612b04f83f951a5ba059772db2bf"
+    },
+    {
+      "name": "trades",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_3_trades.csv",
+      "rows": 1255,
+      "sha256": "fbc14b0a7ff476c22bc6864d705370dbc2e044de62d6b044101adf94d7ca0390"
+    },
+    {
+      "name": "returns",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_3_returns.csv",
+      "rows": 5622,
+      "sha256": "18114b9193bc80f44d5f329c9551d809866818be287081bd11732d4ebe5398e1"
+    },
+    {
+      "name": "metrics",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_borrow_3_metrics.csv",
+      "rows": 6,
+      "sha256": "f32cc4640375b5937495975373f3af53de148ae64f9579add8eb566dfc6afa31"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+phase,scenario_id,check,passed,detail
+fixture,metric,initial_fee_drawdown_precedes_first_return,True,Using only real-interval cumulative returns would miss the initial -1% drawdown
+fixture,metric,no_initial_zero_length_return,True,
+fixture,metric,sample_net_volatility,True,
+fixture,metric,holding_uses_interval_start,True,
+fixture,metric,two_sided_turnover_keeps_both_ends,True,
+fixture,metric,zero_variance_cash_sharpe_na,True,

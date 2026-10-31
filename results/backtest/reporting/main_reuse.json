@@ -1,0 +1,21 @@
+{
+  "run_config_sha256": "6d669e7b8d517321fb79b92be11ccba35a2eeb8ae0035f58f313ce0aba979139",
+  "main_strategy_sources": [
+    {
+      "phase": "validation",
+      "source_prefix": "threshold_selection/checkpoints/entry_15_",
+      "original_main_replayed": false,
+      "daily_rows": 7548,
+      "asset_rows": 75480
+    },
+    {
+      "phase": "test",
+      "source_prefix": "phase_evaluation/test_",
+      "original_main_replayed": false,
+      "daily_rows": 5628,
+      "asset_rows": 56280
+    }
+  ],
+  "benchmark_source": "results/backtest/investment_benchmarks/benchmark_daily.csv",
+  "original_main_replayed": false
+}

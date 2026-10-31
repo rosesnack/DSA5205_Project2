@@ -1,0 +1,13 @@
+model,scheme,split,prediction_rows,signal_dates,scoreable_rows,missing_entry_rows,missing_exit_rows,first_signal_date,last_signal_date,unscoreable_rows
+elastic_net,S0,validation,11331,1259,11313,0,0,2018-01-02,2022-12-30,18
+elastic_net,S1,validation,11331,1259,11313,0,0,2018-01-02,2022-12-30,18
+elastic_net,S2,validation,11331,1259,11313,0,0,2018-01-02,2022-12-30,18
+gbdt,S0,validation,11331,1259,11313,0,0,2018-01-02,2022-12-30,18
+gbdt,S1,validation,11331,1259,11313,0,0,2018-01-02,2022-12-30,18
+gbdt,S2,validation,11331,1259,11313,0,0,2018-01-02,2022-12-30,18
+elastic_net,S0,test,8451,939,8433,9,18,2023-01-03,2026-09-30,18
+elastic_net,S1,test,8451,939,8433,9,18,2023-01-03,2026-09-30,18
+elastic_net,S2,test,8451,939,8433,9,18,2023-01-03,2026-09-30,18
+gbdt,S0,test,8451,939,8433,9,18,2023-01-03,2026-09-30,18
+gbdt,S1,test,8451,939,8433,9,18,2023-01-03,2026-09-30,18
+gbdt,S2,test,8451,939,8433,9,18,2023-01-03,2026-09-30,18

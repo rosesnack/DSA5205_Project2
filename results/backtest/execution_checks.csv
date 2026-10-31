@@ -1,0 +1,32 @@
+check,passed,detail
+pair_direction_and_hedge,True,Each sector and its opposite SPY leg have +/-12.5% weights
+opposite_spy_legs_cancel,True,Two opposite pairs have 25% combined gross after SPY cancellation
+four_same_direction_pairs_cap_gross,True,Four pairs have at most 100% target gross; dollar net equals zero
+four_mixed_pairs_can_have_lower_gross,True,No rescaling after SPY netting reduces gross
+initial_entry_inputs_unchanged,True,"Planning does not mutate target pairs, old shares or observed quotes"
+initial_shares_from_pretrade_nav,True,"NAV 100,000: buy 125 at 100 and short 62.5 SPY at 200"
+few_pairs_not_rescaled_or_short_proceeds_reinvested,True,One pair retains 12.5% per leg; short cash does not increase the NAV basis
+unchanged_prices_and_nav_inputs_unchanged,True,"Planning does not mutate target pairs, old shares or observed quotes"
+unchanged_shares_no_redundant_round_trip,True,No close-and-reopen when current and target shares agree
+retained_pair_rebalanced_inputs_unchanged,True,"Planning does not mutate target pairs, old shares or observed quotes"
+retained_pair_rebalanced_at_every_open,True,Same pair: new prices/NAV require actual small share adjustments
+no_small_trade_tolerance_band,True,"A nonzero share difference is retained, without a minimum trade band"
+pair_reversal_inputs_unchanged,True,"Planning does not mutate target pairs, old shares or observed quotes"
+reversal_as_one_net_delta_per_asset,True,Long-to-short reversal is one signed share change per asset
+sector_rotation_spy_unchanged_inputs_unchanged,True,"Planning does not mutate target pairs, old shares or observed quotes"
+spy_netted_before_trade_amounts,True,Sector rotation does not charge fictitious SPY closing/opening notional
+opposite_pairs_close_old_spy_inputs_unchanged,True,"Planning does not mutate target pairs, old shares or observed quotes"
+net_zero_spy_target_still_closes_old_spy,True,An old SPY holding is closed when the combined target is zero
+final_liquidation_inputs_unchanged,True,"Planning does not mutate target pairs, old shares or observed quotes"
+final_and_missing_signal_liquidation,True,Empty final targets close all signed old shares
+flat_cash_requires_no_irrelevant_quotes,True,Unheld zero-target assets do not require execution quotes
+fractional_shares_not_rounded,True,Fractional shares preserve exact percentage targets
+missing_required_quote,True,"Invalid shares, execution quote or target configuration rejected"
+zero_required_quote,True,"Invalid shares, execution quote or target configuration rejected"
+nonfinite_required_quote,True,"Invalid shares, execution quote or target configuration rejected"
+old_holding_also_requires_quote,True,"Invalid shares, execution quote or target configuration rejected"
+unknown_old_asset,True,"Invalid shares, execution quote or target configuration rejected"
+nonfinite_old_shares,True,"Invalid shares, execution quote or target configuration rejected"
+invalid_nav,True,"Invalid shares, execution quote or target configuration rejected"
+too_many_target_pairs,True,"Invalid shares, execution quote or target configuration rejected"
+invalid_target_direction,True,"Invalid shares, execution quote or target configuration rejected"

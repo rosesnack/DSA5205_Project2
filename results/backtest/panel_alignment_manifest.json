@@ -1,0 +1,729 @@
+{
+  "schema_version": 1,
+  "scope": "Step 2: shared-panel and time-interface alignment only",
+  "created_utc": "2026-10-31T08:42:29.987021+00:00",
+  "python_version": "3.11.5",
+  "pandas_version": "2.0.3",
+  "timezone": "America/New_York",
+  "panel_rows": 46962,
+  "calendar_dates": 5218,
+  "joined_prediction_rows": 118692,
+  "monthly_strategy_checks": 630,
+  "upstream_month_sector_checks": 945,
+  "source_hashes": {
+    "data/processed/panel_spec.json": "a5587fd3d669097bf94df7c8444ec41edd77f46d23e549a56c4e94f4cd0d7327",
+    "data/processed/model_panel.csv": "3e15a99d21e0d088768058b956540a384c00c3caef04163d9d4069f14189e4be",
+    "data/interim/etf_prices_aligned.csv": "c09a1ff66e321732b3c4ee189dbe8d6792fe7c4fe9895422de18a5849773099e",
+    "notebooks/panel_checks/monthly_training_eligibility.csv": "13d3ec29fd128384d483ba5ec9f37420c4fa0aa9cd55190c8a051addf1ea5536",
+    "results/backtest/combined_predictions.csv": "e6f9a0f5c0c9f58bc22806ee9996c44726da6be2995561d253d77995b355eb73",
+    "results/elastic_net/elastic_net_predictions.csv": "43aa2462594fecdc1f4113ca008900aabf2ff86867cec0b583d6bebd05e05abb",
+    "results/gbdt/gbdt_predictions.csv": "4b939ca8334b16b719d7a767e68010afbec6cbb94d8b7342f6300e5696e59cdd",
+    "notebooks/02_features_panel_data.ipynb": "cdfdb60dd038961db5fe1920c4212e7e94cd4c2e5dd98e427fd7557f11cc4354",
+    "notebooks/03_elastic_net.ipynb": "a60992f898b860a4045e58ea8d7e7cb825df03e98e29bec5737d2262ec65090e",
+    "notebooks/04_gbdt.ipynb": "dd69c86afcfd652dd8a3d421bd8b30c738b824f594434b185a90bba167c04081"
+  },
+  "checks": [
+    {
+      "check": "current_intake_hashes",
+      "passed": true,
+      "detail": "The combined forecasts and both sources match the step-1 manifest"
+    },
+    {
+      "check": "shared_panel_schema",
+      "passed": true,
+      "detail": "The shared panel retains the schema declared by panel_spec.json"
+    },
+    {
+      "check": "unique_panel_keys",
+      "passed": true,
+      "detail": "One row per date/ticker"
+    },
+    {
+      "check": "panel_boolean_flags",
+      "passed": true,
+      "detail": "Flags are booleans, not nonempty strings"
+    },
+    {
+      "check": "panel_sector_ids",
+      "passed": true,
+      "detail": "The same nine sectors"
+    },
+    {
+      "check": "shared_spy_calendar",
+      "passed": true,
+      "detail": "Panel dates match the 5,218-date aligned SPY calendar"
+    },
+    {
+      "check": "rectangular_panel",
+      "passed": true,
+      "detail": "All nine sectors are retained on every calendar date"
+    },
+    {
+      "check": "data_cutoff",
+      "passed": true,
+      "detail": "Calendar ends at the declared data cutoff"
+    },
+    {
+      "check": "calendar_mapping_split",
+      "passed": true,
+      "detail": "Matches next/second-next SPY date and New York local clock, including missing endpoints"
+    },
+    {
+      "check": "calendar_mapping_entry_date",
+      "passed": true,
+      "detail": "Matches next/second-next SPY date and New York local clock, including missing endpoints"
+    },
+    {
+      "check": "calendar_mapping_exit_date",
+      "passed": true,
+      "detail": "Matches next/second-next SPY date and New York local clock, including missing endpoints"
+    },
+    {
+      "check": "calendar_mapping_signal_at",
+      "passed": true,
+      "detail": "Matches next/second-next SPY date and New York local clock, including missing endpoints"
+    },
+    {
+      "check": "calendar_mapping_entry_at",
+      "passed": true,
+      "detail": "Matches next/second-next SPY date and New York local clock, including missing endpoints"
+    },
+    {
+      "check": "calendar_mapping_label_available_at",
+      "passed": true,
+      "detail": "Matches next/second-next SPY date and New York local clock, including missing endpoints"
+    },
+    {
+      "check": "many_to_one_panel_join",
+      "passed": true,
+      "detail": "All 118,692 forecasts match the shared panel"
+    },
+    {
+      "check": "eligible_coverage_elastic_net_S0",
+      "passed": true,
+      "detail": "Exactly all common_features_valid validation/test keys; no scoreability filtering"
+    },
+    {
+      "check": "eligible_coverage_elastic_net_S1",
+      "passed": true,
+      "detail": "Exactly all common_features_valid validation/test keys; no scoreability filtering"
+    },
+    {
+      "check": "eligible_coverage_elastic_net_S2",
+      "passed": true,
+      "detail": "Exactly all common_features_valid validation/test keys; no scoreability filtering"
+    },
+    {
+      "check": "eligible_coverage_gbdt_S0",
+      "passed": true,
+      "detail": "Exactly all common_features_valid validation/test keys; no scoreability filtering"
+    },
+    {
+      "check": "eligible_coverage_gbdt_S1",
+      "passed": true,
+      "detail": "Exactly all common_features_valid validation/test keys; no scoreability filtering"
+    },
+    {
+      "check": "eligible_coverage_gbdt_S2",
+      "passed": true,
+      "detail": "Exactly all common_features_valid validation/test keys; no scoreability filtering"
+    },
+    {
+      "check": "prior_date_2018-01",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2018-02",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2018-03",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2018-04",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2018-05",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2018-06",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2018-07",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2018-08",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2018-09",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2018-10",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2018-11",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2018-12",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-01",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-02",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-03",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-04",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-05",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-06",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-07",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-08",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-09",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-10",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-11",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2019-12",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-01",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-02",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-03",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-04",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-05",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-06",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-07",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-08",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-09",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-10",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-11",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2020-12",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-01",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-02",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-03",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-04",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-05",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-06",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-07",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-08",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-09",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-10",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-11",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2021-12",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-01",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-02",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-03",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-04",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-05",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-06",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-07",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-08",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-09",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-10",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-11",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2022-12",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-01",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-02",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-03",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-04",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-05",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-06",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-07",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-08",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-09",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-10",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-11",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2023-12",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-01",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-02",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-03",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-04",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-05",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-06",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-07",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-08",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-09",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-10",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-11",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2024-12",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-01",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-02",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-03",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-04",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-05",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-06",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-07",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-08",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-09",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-10",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-11",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2025-12",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2026-01",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2026-02",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2026-03",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2026-04",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2026-05",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2026-06",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2026-07",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2026-08",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "prior_date_2026-09",
+      "passed": true,
+      "detail": "Prior SPY date exists for monthly fit"
+    },
+    {
+      "check": "monthly_fit_cutoffs",
+      "passed": true,
+      "detail": "Every model/scheme uses prior SPY trading day 18:00 for its signal month"
+    },
+    {
+      "check": "cutoff_before_signal",
+      "passed": true,
+      "detail": "Historical fitting cutoff precedes every forecast signal"
+    },
+    {
+      "check": "signal_before_entry",
+      "passed": true,
+      "detail": "Signals precede all known entry opens"
+    },
+    {
+      "check": "entry_before_label_available",
+      "passed": true,
+      "detail": "Labels mature at the later open"
+    },
+    {
+      "check": "upstream_monthly_coverage",
+      "passed": true,
+      "detail": "All 945 upstream month/sector prediction and scoring counts agree"
+    },
+    {
+      "check": "upstream_monthly_schedule",
+      "passed": true,
+      "detail": "Monthly cutoff and first signal dates agree with the notebook-02 audit"
+    },
+    {
+      "check": "forecast_value_roundtrip",
+      "passed": true,
+      "detail": "All seven forecast columns survive joined CSV export exactly"
+    },
+    {
+      "check": "source_hashes_unchanged",
+      "passed": true,
+      "detail": "Data, source forecasts, combined intake and reference notebooks are unchanged"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "results/backtest/predictions_with_panel.csv",
+      "rows": 118692,
+      "sha256": "a63020918e55376976ce354eee4f6299f992f31eb3d7014e560dfdfc7ed5b5aa"
+    },
+    {
+      "path": "results/backtest/panel_alignment_summary.csv",
+      "rows": 12,
+      "sha256": "dcd0592e7195df904b15dd0e05dbe8165fe99dcb7f1168954767725b7a7457fc"
+    },
+    {
+      "path": "results/backtest/monthly_time_checks.csv",
+      "rows": 630,
+      "sha256": "2132e34bc59da79f0343cefd709908aa8712cfd819d227c129feffdea3c2556a"
+    },
+    {
+      "path": "results/backtest/signal_calendar.csv",
+      "rows": 5218,
+      "sha256": "d642677743d4e851c1adb9b88f1c7896f001522eee65b8544e79d7da1a617580"
+    },
+    {
+      "path": "results/backtest/time_alignment_examples.csv",
+      "rows": 10,
+      "sha256": "bdf189ff0266c456754c17fff774e2b513b0193a6f0105b4708f91b88b6c2b15"
+    }
+  ],
+  "not_yet_checked": [
+    "trading eligibility and missing-signal actions",
+    "execution prices, dividends and risk-free interval alignment",
+    "positions, trading thresholds, costs and portfolio returns"
+  ]
+}

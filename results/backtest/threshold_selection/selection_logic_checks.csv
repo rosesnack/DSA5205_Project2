@@ -1,0 +1,9 @@
+check,passed,detail
+cash_fixture_keeps_all_intervals,True,Zero signals retain weekend/cash holding intervals
+cash_fixture_no_trades_or_positions,True,Zero trading is an admissible result
+cash_fixture_zero_excess_sharpe_na,True,Floating-point cash subtraction cannot produce a spurious Sharpe
+exact_tie_chooses_higher_threshold,True,A completely flat/cash grid ties in favor of the largest candidate
+no_rounding_before_ranking,True,Distinct unrounded objectives are not treated as ties
+six_strategies_equal_weight_including_zeros,True,Weak and zero-trade strategies are not omitted from the public objective
+reject_missing_strategy,True,Invalid candidate comparison must stop
+reject_duplicate_strategy,True,Invalid candidate comparison must stop

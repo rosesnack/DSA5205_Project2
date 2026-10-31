@@ -1,0 +1,44 @@
+{
+  "run_config_sha256": "6d669e7b8d517321fb79b92be11ccba35a2eeb8ae0035f58f313ce0aba979139",
+  "scenario": {
+    "scenario_id": "full_cash_rebate",
+    "variation": "full_cash_rebate",
+    "is_main": false,
+    "execution_bps": 3.0,
+    "borrow_annual_rate": 0.01,
+    "full_cash_rebate": true
+  },
+  "completed_utc": "2026-10-31T11:36:28.399899+00:00",
+  "outputs": [
+    {
+      "name": "daily",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_full_cash_rebate_daily.csv",
+      "rows": 5628,
+      "sha256": "36aef775d44e2ad0b29963561d3816dc86ef9e5af9240aec5f03befda154b1d6"
+    },
+    {
+      "name": "assets",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_full_cash_rebate_assets.csv",
+      "rows": 56280,
+      "sha256": "b64c710cc995d04b8e049599d04aa0a5d3e7673b20062f8adc6f4d080d276534"
+    },
+    {
+      "name": "trades",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_full_cash_rebate_trades.csv",
+      "rows": 1255,
+      "sha256": "e4adf3fb643ecd080b26169712edd9f7feda3f4760b14dd31f93658d4393be1f"
+    },
+    {
+      "name": "returns",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_full_cash_rebate_returns.csv",
+      "rows": 5622,
+      "sha256": "e338d753c1d2a824a501dbe0b72c6ab63b8dc1ab589767599d971d2e574a2317"
+    },
+    {
+      "name": "metrics",
+      "path": "results/backtest/reporting/sensitivity/checkpoints/test_full_cash_rebate_metrics.csv",
+      "rows": 6,
+      "sha256": "70e01ad0d1ecf2652cd9cea756dd26306f4c89bf764055303fd65e4c5cc690b7"
+    }
+  ]
+}

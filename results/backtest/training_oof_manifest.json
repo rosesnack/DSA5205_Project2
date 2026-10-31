@@ -1,0 +1,550 @@
+{
+  "schema_version": 1,
+  "scope": "Step 9: completed training-only forward signal-scale diagnostics",
+  "completed_utc": "2026-10-31T08:28:17.834292+00:00",
+  "runtime": {
+    "python": "3.11.5",
+    "numpy": "1.24.3",
+    "pandas": "2.0.3",
+    "scipy": "1.11.1",
+    "sklearn": "1.3.0",
+    "threadpoolctl": "2.2.0"
+  },
+  "design_sha256": "e369e6e7d65247f6d6bef0c270edd9f59742b1464d77f3b66bc1baf0dbe72990",
+  "selected_diagnostic_config_sha256": "3a2655740c9c9d2cb7bbe5791e7031be8c9d8b7ac6d283785f5b16e2176f6345",
+  "selected_diagnostic_configs": {
+    "elastic_net": {
+      "S0": {
+        "alpha": 0.001,
+        "l1_ratio": 0.8
+      },
+      "S1": {
+        "alpha": 0.001,
+        "l1_ratio": 0.8
+      },
+      "S2": {
+        "alpha": 0.001,
+        "l1_ratio": 0.8
+      }
+    },
+    "gbdt": {
+      "S0": {
+        "max_leaf_nodes": 5,
+        "min_samples_leaf": 50,
+        "l2_regularization": 0.0,
+        "max_iter": 1
+      },
+      "S1": {
+        "max_leaf_nodes": 5,
+        "min_samples_leaf": 20,
+        "l2_regularization": 0.0,
+        "max_iter": 1
+      },
+      "S2": {
+        "max_leaf_nodes": 5,
+        "min_samples_leaf": 20,
+        "l2_regularization": 0.0,
+        "max_iter": 1
+      }
+    }
+  },
+  "calibration_fit_count": 12636,
+  "oof_fit_count": 3078,
+  "prediction_rows": 63594,
+  "first_signal_date": "2013-01-02",
+  "last_signal_date": "2017-12-29",
+  "skipped_sector_months": 27,
+  "complete_nine_sector_days_per_strategy": 1007,
+  "valid_sector_rows_per_strategy": 10599,
+  "checks": [
+    {
+      "check": "unique_seven_column_forecasts",
+      "passed": true,
+      "detail": "Separate interface, no label fields"
+    },
+    {
+      "check": "only_2013_2017_diagnostic_signals",
+      "passed": true,
+      "detail": "No validation/test signals used as diagnostic forecasts"
+    },
+    {
+      "check": "all_six_strategies",
+      "passed": true,
+      "detail": "No model/specification selected or removed"
+    },
+    {
+      "check": "exact_valid_coverage_elastic_net_S0",
+      "passed": true,
+      "detail": "Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows"
+    },
+    {
+      "check": "exact_valid_coverage_elastic_net_S1",
+      "passed": true,
+      "detail": "Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows"
+    },
+    {
+      "check": "exact_valid_coverage_elastic_net_S2",
+      "passed": true,
+      "detail": "Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows"
+    },
+    {
+      "check": "exact_valid_coverage_gbdt_S0",
+      "passed": true,
+      "detail": "Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows"
+    },
+    {
+      "check": "exact_valid_coverage_gbdt_S1",
+      "passed": true,
+      "detail": "Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows"
+    },
+    {
+      "check": "exact_valid_coverage_gbdt_S2",
+      "passed": true,
+      "detail": "Exactly valid common-feature rows; no imputed XLF or discarded valid individual-sector rows"
+    },
+    {
+      "check": "calibration_mature_labels_only",
+      "passed": true,
+      "detail": "Every fitted target available by monthly cutoff"
+    },
+    {
+      "check": "calibration_past_signals_only",
+      "passed": true,
+      "detail": "Every fitted feature row existed by cutoff"
+    },
+    {
+      "check": "calibration_future_prediction_rows",
+      "passed": true,
+      "detail": "Forecasts strictly after fit cutoff"
+    },
+    {
+      "check": "calibration_training_since_2008",
+      "passed": true,
+      "detail": "Same minimum history and start as original fits"
+    },
+    {
+      "check": "calibration_training_only_scaler",
+      "passed": true,
+      "detail": "Scaler sample count equals eligible training count"
+    },
+    {
+      "check": "calibration_en_convergence",
+      "passed": true,
+      "detail": "Convergence warnings rejected or numerically retried"
+    },
+    {
+      "check": "oof_mature_labels_only",
+      "passed": true,
+      "detail": "Every fitted target available by monthly cutoff"
+    },
+    {
+      "check": "oof_past_signals_only",
+      "passed": true,
+      "detail": "Every fitted feature row existed by cutoff"
+    },
+    {
+      "check": "oof_future_prediction_rows",
+      "passed": true,
+      "detail": "Forecasts strictly after fit cutoff"
+    },
+    {
+      "check": "oof_training_since_2008",
+      "passed": true,
+      "detail": "Same minimum history and start as original fits"
+    },
+    {
+      "check": "oof_training_only_scaler",
+      "passed": true,
+      "detail": "Scaler sample count equals eligible training count"
+    },
+    {
+      "check": "oof_en_convergence",
+      "passed": true,
+      "detail": "Convergence warnings rejected or numerically retried"
+    },
+    {
+      "check": "calibration_labels_known_before_2013",
+      "passed": true,
+      "detail": "Late-December labels not yet mature at selection are excluded"
+    },
+    {
+      "check": "elastic_net_identical_pooled_scoring_rows",
+      "passed": true,
+      "detail": "Selected candidates score identical mature 2012 rows across nine sectors"
+    },
+    {
+      "check": "frozen_config_elastic_net_S0",
+      "passed": true,
+      "detail": "All 2013-2017 fits use frozen 2012-only parameters"
+    },
+    {
+      "check": "frozen_config_elastic_net_S1",
+      "passed": true,
+      "detail": "All 2013-2017 fits use frozen 2012-only parameters"
+    },
+    {
+      "check": "frozen_config_elastic_net_S2",
+      "passed": true,
+      "detail": "All 2013-2017 fits use frozen 2012-only parameters"
+    },
+    {
+      "check": "gbdt_identical_pooled_scoring_rows",
+      "passed": true,
+      "detail": "Selected candidates score identical mature 2012 rows across nine sectors"
+    },
+    {
+      "check": "frozen_config_gbdt_S0",
+      "passed": true,
+      "detail": "All 2013-2017 fits use frozen 2012-only parameters"
+    },
+    {
+      "check": "frozen_config_gbdt_S1",
+      "passed": true,
+      "detail": "All 2013-2017 fits use frozen 2012-only parameters"
+    },
+    {
+      "check": "frozen_config_gbdt_S2",
+      "passed": true,
+      "detail": "All 2013-2017 fits use frozen 2012-only parameters"
+    },
+    {
+      "check": "exact_monthly_cutoffs",
+      "passed": true,
+      "detail": "Every prediction cutoff equals prior SPY trading day 18:00 NY"
+    },
+    {
+      "check": "top4_only_complete_nine_sector_dates",
+      "passed": true,
+      "detail": "Partial dates retained separately and never used for nine-sector ranking"
+    },
+    {
+      "check": "threshold_grid_not_selected",
+      "passed": true,
+      "detail": "Fixed protocol candidates; no portfolio-return evaluation"
+    },
+    {
+      "check": "invalid_months_explicit",
+      "passed": true,
+      "detail": "No valid-row month silently filled"
+    },
+    {
+      "check": "empty_months_have_no_fits_or_forecasts",
+      "passed": true,
+      "detail": "Wholly invalid months create header-only checkpoints and nine skip records"
+    },
+    {
+      "check": "full_calendar_coverage_elastic_net_S0",
+      "passed": true,
+      "detail": "All calendar dates checked, including zero-valid-sector dates"
+    },
+    {
+      "check": "full_calendar_coverage_elastic_net_S1",
+      "passed": true,
+      "detail": "All calendar dates checked, including zero-valid-sector dates"
+    },
+    {
+      "check": "full_calendar_coverage_elastic_net_S2",
+      "passed": true,
+      "detail": "All calendar dates checked, including zero-valid-sector dates"
+    },
+    {
+      "check": "full_calendar_coverage_gbdt_S0",
+      "passed": true,
+      "detail": "All calendar dates checked, including zero-valid-sector dates"
+    },
+    {
+      "check": "full_calendar_coverage_gbdt_S1",
+      "passed": true,
+      "detail": "All calendar dates checked, including zero-valid-sector dates"
+    },
+    {
+      "check": "full_calendar_coverage_gbdt_S2",
+      "passed": true,
+      "detail": "All calendar dates checked, including zero-valid-sector dates"
+    }
+  ],
+  "threshold_candidates_bps": [
+    5,
+    10,
+    15,
+    20,
+    30
+  ],
+  "selected_public_entry_bps": null,
+  "threshold_selection_performed": false,
+  "portfolio_returns_computed": false,
+  "official_predictions_overwritten": false,
+  "source_hashes": {
+    "data/processed/panel_spec.json": "a5587fd3d669097bf94df7c8444ec41edd77f46d23e549a56c4e94f4cd0d7327",
+    "data/processed/model_panel.csv": "3e15a99d21e0d088768058b956540a384c00c3caef04163d9d4069f14189e4be",
+    "data/interim/etf_prices_aligned.csv": "c09a1ff66e321732b3c4ee189dbe8d6792fe7c4fe9895422de18a5849773099e",
+    "notebooks/panel_checks/monthly_training_eligibility.csv": "13d3ec29fd128384d483ba5ec9f37420c4fa0aa9cd55190c8a051addf1ea5536",
+    "results/backtest/combined_predictions.csv": "e6f9a0f5c0c9f58bc22806ee9996c44726da6be2995561d253d77995b355eb73",
+    "results/elastic_net/elastic_net_predictions.csv": "43aa2462594fecdc1f4113ca008900aabf2ff86867cec0b583d6bebd05e05abb",
+    "results/gbdt/gbdt_predictions.csv": "4b939ca8334b16b719d7a767e68010afbec6cbb94d8b7342f6300e5696e59cdd",
+    "notebooks/02_features_panel_data.ipynb": "cdfdb60dd038961db5fe1920c4212e7e94cd4c2e5dd98e427fd7557f11cc4354",
+    "notebooks/03_elastic_net.ipynb": "a60992f898b860a4045e58ea8d7e7cb825df03e98e29bec5737d2262ec65090e",
+    "notebooks/04_gbdt.ipynb": "dd69c86afcfd652dd8a3d421bd8b30c738b824f594434b185a90bba167c04081",
+    "results/backtest/predictions_with_panel.csv": "a63020918e55376976ce354eee4f6299f992f31eb3d7014e560dfdfc7ed5b5aa",
+    "results/backtest/panel_alignment_summary.csv": "dcd0592e7195df904b15dd0e05dbe8165fe99dcb7f1168954767725b7a7457fc",
+    "results/backtest/monthly_time_checks.csv": "2132e34bc59da79f0343cefd709908aa8712cfd819d227c129feffdea3c2556a",
+    "results/backtest/signal_calendar.csv": "d642677743d4e851c1adb9b88f1c7896f001522eee65b8544e79d7da1a617580",
+    "results/backtest/time_alignment_examples.csv": "bdf189ff0266c456754c17fff774e2b513b0193a6f0105b4708f91b88b6c2b15",
+    "notebooks/01_download_clean_data.ipynb": "d939dac768f0a51c57665ae2a01a2f6e93abbb3c70f44812cc54aedb7d8b00fc",
+    "results/backtest/trading_signal_inputs.csv": "58dcd618718a28d1e9ea6cb76f189ce88ca12a4cead244031eaac1992f1f69d3",
+    "results/backtest/daily_signal_status.csv": "480b6f938f93fa8dd12cec159732828089b4e2ab572d0969746df39094b9f269",
+    "results/backtest/scoring_eligibility.csv": "d415d5fb975860f81068cca30ed8550c87adff4eddfbc252f1428a598024d662",
+    "results/backtest/eligibility_summary.csv": "dbbeb877995e7148e473d442fcb2801613995a11c6ce871d8085d3c27b97a200",
+    "results/backtest/signal_status_examples.csv": "83f19ec706fe225c158305f71ac1a930893cba63e6561d95aabc05b7d390c3a9",
+    "results/backtest/signal_policy_checks.csv": "54905e921c20dbc188c33d0a5f4f21196ee7d026ee5ee9e21ab15d014a1a633a",
+    "results/elastic_net/elastic_net_predictions_full.csv": "c9342f032b192272e0936099b8c48cea8c7e3fbf4c388f1f1427b1cd1ead391b",
+    "results/elastic_net/forecast_metrics.csv": "44a008e6223aac2e6d131b303c16a869c28c819073e269bacc27dd29e0284b25",
+    "results/gbdt/gbdt_predictions_full.csv": "adcedb9cba1e47c4f17f4ab276f55e62c8e12fbdaad7e9f3091ab4f4cfd9bb26",
+    "results/gbdt/forecast_metrics.csv": "f3326fd220bef4a17b6ed1757e0a1083e90c6c77f73db59178d7b4edea7349f5",
+    "results/backtest/baseline_predictions.csv": "b56ef7bfc90da91ff24a4b8fe5df1194e708370b1bfbeb6825c732ef8c5e40b7",
+    "results/backtest/monthly_baseline_audit.csv": "af6e680b99d90cd1ccbefc4db6754a43ee13830aecad4045c27540f49d673972",
+    "results/backtest/baseline_forecast_metrics.csv": "d4588ae242c785e2b245ee44b58481c7f2aa9080038bde4f05d4258786095e5a",
+    "results/backtest/prediction_comparison_metrics.csv": "d001ab11f67ead324ff199267344a10a9c0f6d3a046a9ea79754b3b7e943214c",
+    "results/backtest/sector_baseline_metrics.csv": "0cf792e16b77df7811948a97c950b2c99a18fb6ea96b0c953daab28adccd9552",
+    "results/backtest/baseline_checks.csv": "3d70a51da419a7de3f6050161ba191ca49f93c7dc5177dc8f8780769e52d8300",
+    "../5205proj2.md": "7db7be7d3861b57b1a9f53e7daed0f9dd37c236514b4a4d00dcc64f19f8e5ed6",
+    "results/backtest/pair_decision_checks.csv": "0a8bff6270c894507f78899340618b93f8df51438559f2d9f114be4648e2ddad",
+    "results/backtest/pair_decision_demo_daily.csv": "59ec92faf694ebbfaf74a7378c3dbd07d653d49381238192cb0e9c0727926f17",
+    "results/backtest/pair_decision_demo_sectors.csv": "db7bfe030f1c17ecdf94e1ede4b5ad931c18eda1fcae9ec0897c09e36783286f",
+    "results/backtest/execution_checks.csv": "e28d98e76e3b424b198165642bddf56e18941f752c25753558c2886fec60f7ab",
+    "results/backtest/net_trade_worked_examples.csv": "e6999593e22d920184af7c2cbc7785e0f8e3506ce3782e45dcf6e1d7ff4e1a47",
+    "results/backtest/execution_target_demo_daily.csv": "44bb1acdcb300df55b2796e7812a72b6c4ab8f1a837b06227b50305efe49da5a",
+    "results/backtest/execution_target_demo_assets.csv": "0f6a9a126ac12334d2048fe83316735672916b3e62d6f2020489f11660c98125",
+    "data/interim/risk_free_open_intervals.csv": "874e49b3fea6674b02dbad78aa615890e831cab29a7224e1f257cc51df6a9896",
+    "results/backtest/ledger_checks.csv": "713b18515bc38158405937ede126702075b0f32326cd110224742a41d0a79e77",
+    "results/backtest/ledger_worked_examples.csv": "5fcc0c10bda7678d31c6fc41502239cf111e9e33133c63051fcef032ae9c1604",
+    "results/backtest/ledger_replay_fixture.csv": "879cb17d66abeeec4a8b218bf033daaf38921905f6df9e2d92430b91b0cd8bd8",
+    "results/backtest/ledger_demo_daily.csv": "0397705c9711fb3cda4585d894c9c775162040439213cb2b100c48301bfb61e4",
+    "results/backtest/ledger_demo_assets.csv": "2129084c9b44add14ce774c2ac6c3f2b0e8e7b6bb63065794c419896c73dbaee",
+    "results/backtest/ledger_demo_trades.csv": "5ec7e708af14d7d7a75c9a0e1f06bad3f6576dee773182d17c137056ce37c3bc",
+    "results/backtest/ledger_rate_alignment.csv": "4f6ca521538d399f303a6f114d4052b345502e949a66c5105093ad8e7b3dc373",
+    "results/backtest/cost_settings.json": "d3cd3eeaa68260ef075c6d739fcd8a569a4dde2b30ba96cdf57bef40d2aecae6",
+    "results/backtest/cost_scenarios.csv": "d6856c482b826a705f7e900113f0c2f369fc6bc683aced31a666bd90d6dc1abf",
+    "results/backtest/cost_checks.csv": "a1b2063e5541c7db8fb96828008d161edc35859d86c9f4a3da89cadac5f06d58",
+    "results/backtest/cost_preview_summary.csv": "0786fd57e2a8f9806c22f2d5ceb60995876b600a117695b5293f1b6a83fb320f",
+    "results/backtest/cost_preview_daily.csv": "dbe3ca57efb4a8079d8d4144cc377bbe397c888ef12c964199b27cdd8f500aaf",
+    "results/backtest/cost_preview_assets.csv": "362303f9edf9d40811f044337d9d5b7e0b7e92db0a7c0bc2901ed9e79cf7641f",
+    "results/backtest/cost_preview_trades.csv": "813e9a81cc33adf20e58c0dd78bbb190e7ff51c50dfd26851df0fd326185a6fe",
+    "results/backtest/cost_synthetic_summary.csv": "8ca9d4fe050eff8ecd86a718c59759deee5bafdd817ef565ba24e9053e4da918",
+    "results/backtest/cost_synthetic_daily.csv": "b536fb1d58745396bd596a70c11b8b6fefc2f70673184eac988863d4db1fd67e",
+    "data/interim/dgs3mo_observations.csv": "c3726fa6b6ec227b7c5524d6d5b27997eb7057951fc643db6298ef36101a7c3f",
+    "data/interim/etf_base_returns.csv": "ef256a8c73d3d3ae3b8559f286f39c589f31ced637ed2eefa91103e29124a826",
+    "data/interim/feature_validity.csv": "bb02d8f71e1c7c33bcba50e579005bf1f9a957232aab37575f6a50ac9b772145",
+    "data/interim/prediction_targets.csv": "6b8d65fcd434dd068f28d19562791b802cdbf88c363ec7b21d0262f7344fbdc0",
+    "data/interim/sector_features.csv.gz": "7c1ee73ee98ae786e4ce8340116632df82ca4581da9a5579e24ba7b422b09764",
+    "data/interim/vix_aligned.csv": "3d7760de475d69a3bc2dfaf861f91b35311b178df52ba365695f7249f003e031",
+    "data/processed/model_inputs/XLB_S0.csv": "86cd63ddc552d2121564b11ab57e59d4449d1a5b9e3881f25e87bc81d19836d3",
+    "data/processed/model_inputs/XLB_S1.csv": "51def19bd436dbefebff9e5cb06289c31263348a6fae48eea9bc91b6a0ea54ed",
+    "data/processed/model_inputs/XLB_S2.csv": "71631b31667ff9250ec29136b50505e1fc6dcb3d7269ae4b6946bd3162534084",
+    "data/processed/model_inputs/XLE_S0.csv": "4403d64f2a8d9be676410a2859b2804f47fec4e3a7120aee0559958cf5310488",
+    "data/processed/model_inputs/XLE_S1.csv": "316deef89707f7ced71b25921add7aeea6a5e004a33f15b92a5f2914c3d30cfd",
+    "data/processed/model_inputs/XLE_S2.csv": "1b06fab7d447e94e6fde50fd7ac475d0bc240ff788872c2ad3be94ee2a702143",
+    "data/processed/model_inputs/XLF_S0.csv": "e7084cd286f586c913a10ad8f97133b1d85f6687899178c8d03221eaf8ebac37",
+    "data/processed/model_inputs/XLF_S1.csv": "f1c9425d3a8224bf414d0a1cb0657b75e2dffd736101e936785861071f84d787",
+    "data/processed/model_inputs/XLF_S2.csv": "6df2bfcce3c884437e98515f815773bc0157e0fdbad92b3874c5572acc335b5a",
+    "data/processed/model_inputs/XLI_S0.csv": "7c23a5781f8fa894246c3094755c6218750dfdc1b1e1dfd2843f47b38d5f5633",
+    "data/processed/model_inputs/XLI_S1.csv": "12daafe9e3eefc428bf3bd411cb3ab26bbcea2de942d6aa6a37041f921732711",
+    "data/processed/model_inputs/XLI_S2.csv": "19a45f10894a7532ee7007450d9be21d9dd86a3fc3b27d7e03493aa47345b2bd",
+    "data/processed/model_inputs/XLK_S0.csv": "184b92b1f10310dd7ecedad0594ef55784f5bf3a21ac8fb67a6729987fae26c2",
+    "data/processed/model_inputs/XLK_S1.csv": "fcd932db4055e4df5907d4fde3a9143ba0c1b13eb161437eb993a8cab0d5b621",
+    "data/processed/model_inputs/XLK_S2.csv": "e84829d9435dcc0c47a67c28d7d8c0212eae259a3106276fdab873fc3cf74063",
+    "data/processed/model_inputs/XLP_S0.csv": "0e13eba2305c7db849f68db70d42128f27b4904dace0adbe5b4ac4c8d0b03dc3",
+    "data/processed/model_inputs/XLP_S1.csv": "7001ac55beac1855a6b07c3fa5f99b8c198b653f45920f4b486b70d484477869",
+    "data/processed/model_inputs/XLP_S2.csv": "9d0fca66f8f01c0e824c1bfa0f32569535f295e8cacde247b04772232f383086",
+    "data/processed/model_inputs/XLU_S0.csv": "7595a10207625221e1778494c68136a75339d19ce819410fded05582efc4b93b",
+    "data/processed/model_inputs/XLU_S1.csv": "2bf1dd466862a5e02f0e07cfff5ac8711d3c5459f5bed38c169988e4f500d5a2",
+    "data/processed/model_inputs/XLU_S2.csv": "4976a31e422b5ee14bfd44c1b8a2196a29823024d01811879012771383dc417f",
+    "data/processed/model_inputs/XLV_S0.csv": "d61ee26987d800405a8633c2cfa845b4f1277be7e4677f6b9b93c8dfbcde5ab6",
+    "data/processed/model_inputs/XLV_S1.csv": "53d3b542edf3ca44b92079780741e74d89562f3d2dd4d57f0c0a763791e98ae5",
+    "data/processed/model_inputs/XLV_S2.csv": "f82ed72fb2ca9bc118ffbd13748e95d067ec86e23f5823851a482107d241a77a",
+    "data/processed/model_inputs/XLY_S0.csv": "e0fa54b45969ae7ae1a391ad7f812a0c23ea06d7b59b5cb06c07e811068996b3",
+    "data/processed/model_inputs/XLY_S1.csv": "e480043307b74e31ab372cb193dbb49a4dc26f639e967f7fe182ed1d9d3593ca",
+    "data/processed/model_inputs/XLY_S2.csv": "0e011406bd812fd2565277867d4303e448d79abeff9b01f0148f4e13d9278622",
+    "data/raw/DGS3MO_2006-01-01_2026-09-30_fred.csv": "c1a3d217f168520ed28f2a95ae285b0d9f29289ed4607b1bf2771d63b3866a53",
+    "data/raw/GLD_2006-01-01_2026-09-30_yahoo_chart.json": "685cefafb6698e4c56eb3a5b49ee00d079766eebd3726a4040d365c78fd49bfc",
+    "data/raw/GLD_2006-01-01_2026-09-30_yfinance_adjusted.csv": "bb6fced99757584ca5c76824cb1840711aad4627606f3c583d0a3bc33415c6cb",
+    "data/raw/GLD_2006-01-01_2026-09-30_yfinance_raw.csv": "47667834787b6f17c77581df4e1c1632cec0c3d224ca493e6e5107e42b8e9e2c",
+    "data/raw/HYG_2006-01-01_2026-09-30_yahoo_chart.json": "1c4fb55c0c9063afd0970acbe084f1e47bd0b1184b1c31824adefd66fb712e78",
+    "data/raw/HYG_2006-01-01_2026-09-30_yfinance_adjusted.csv": "f5a220eac009806c89a5765197fd0e0902960ed8f50d8f48474e3520df18b129",
+    "data/raw/HYG_2006-01-01_2026-09-30_yfinance_raw.csv": "05728cb330c5b4ffd2c038644a679320a7428faecb7b45ae5280f4d3ddd20d18",
+    "data/raw/IEF_2006-01-01_2026-09-30_yahoo_chart.json": "ec2cb186874f6a97d0a25163c7f09ad208dbf1a5b68227e58c7fe9a4e85aafba",
+    "data/raw/IEF_2006-01-01_2026-09-30_yfinance_adjusted.csv": "fa457a1cdd561b7663619d49e6b7929f71d8da0228b95bcbc6f91f24abb24021",
+    "data/raw/IEF_2006-01-01_2026-09-30_yfinance_raw.csv": "bdfa16761def4e3d1f3f1bc2bcf4d012d7d9d27a64ec9aaca2a33d22ff6e09ee",
+    "data/raw/LQD_2006-01-01_2026-09-30_yahoo_chart.json": "37547fe75baca9d373e1071a04060f8b0511910cbcbc6b46d943e4a92c311618",
+    "data/raw/LQD_2006-01-01_2026-09-30_yfinance_adjusted.csv": "105789301ac551d603ea65c40f77c398752ef4c1d62a57dcd3997600a470a40e",
+    "data/raw/LQD_2006-01-01_2026-09-30_yfinance_raw.csv": "376053a5c8647f9610ca15927b486930651c7da7280fae706c43f2910c449313",
+    "data/raw/SPY_2006-01-01_2026-09-30_yahoo_chart.json": "acf9006263f44572161e546870bf493677c012c0671bc11fd3bdc139d8a0e016",
+    "data/raw/SPY_2006-01-01_2026-09-30_yfinance_adjusted.csv": "a64f08139e705cff4b05a7931b631c0f54302d795521ccb373298c9bd363fb8e",
+    "data/raw/SPY_2006-01-01_2026-09-30_yfinance_raw.csv": "3a31154dcc35e3c7da98c795e8f5961ff4602cb49a15ef0b33c68e179b9b95d2",
+    "data/raw/TLT_2006-01-01_2026-09-30_yahoo_chart.json": "21ef233bc12f569cf8e490a50da65be5f69e3c3aab82aa35c1df8dcb88399bc6",
+    "data/raw/TLT_2006-01-01_2026-09-30_yfinance_adjusted.csv": "ac00787829333421e41a73230d5e90e895744418f84db276a814c0f879aa9e16",
+    "data/raw/TLT_2006-01-01_2026-09-30_yfinance_raw.csv": "d3cf60ad793f4f9c6e65288b4d67bd98651479452a3a6f52682c2393e8f22c1c",
+    "data/raw/VIX_2006-01-01_2026-09-30_cboe.csv": "306703fd5b6a9ef7b4ecac66753cc29560a3ec510ba4cfc3602f430d953e58ab",
+    "data/raw/XLB_2006-01-01_2026-09-30_yahoo_chart.json": "30c342042d4cf822147f119b9c21f5f2a0e51d643aa001754185537efb210b51",
+    "data/raw/XLB_2006-01-01_2026-09-30_yfinance_adjusted.csv": "f0bd13ecdf8865575046a31c1703842c97d2aeaeda8dcf2eb89852edbca3b0f7",
+    "data/raw/XLB_2006-01-01_2026-09-30_yfinance_raw.csv": "076dd4f3f630495f1ba5c9275a3c1811ee728c6416d6f64aac008e72b6c42aee",
+    "data/raw/XLE_2006-01-01_2026-09-30_yahoo_chart.json": "1eac3557ee579bc280538ad0a504c50d9d90492788e05677271c2bc5bbd7fd9f",
+    "data/raw/XLE_2006-01-01_2026-09-30_yfinance_adjusted.csv": "b01579525c1a1e093c3840a5347c67d89145b0809fa6e21917eb890544c0ccae",
+    "data/raw/XLE_2006-01-01_2026-09-30_yfinance_raw.csv": "82ad944238a0a4ee18ded32c9dbe1871dda24874bfd9ea32f06f32723d75d09b",
+    "data/raw/XLF_2006-01-01_2026-09-30_yahoo_chart.json": "7718e298a9eb42118230abbeeeddcc881296fb2c8c6478e701f3ed4211911470",
+    "data/raw/XLF_2006-01-01_2026-09-30_yfinance_adjusted.csv": "df4733151bd918c0a529052f259beea3d280272fc4efa0a763a17c3a19bb7ce2",
+    "data/raw/XLF_2006-01-01_2026-09-30_yfinance_raw.csv": "8fa9f46931a04c73f573b9d8b471715764881481635555d1966e573b4fba9e90",
+    "data/raw/XLI_2006-01-01_2026-09-30_yahoo_chart.json": "e571ba8674e4de59ae5f6f8c28f2cf5caaaa4a2df65807b1c599fa058e831515",
+    "data/raw/XLI_2006-01-01_2026-09-30_yfinance_adjusted.csv": "e0d4b8eff612cdd3d9c4ffd9569be07e833f7cf81c1f83b5bfd08ed6fb30e5f8",
+    "data/raw/XLI_2006-01-01_2026-09-30_yfinance_raw.csv": "7dc44b027df47a945e30823b978adac6aad5a0fc6aacee93cba8695c1de10b9a",
+    "data/raw/XLK_2006-01-01_2026-09-30_yahoo_chart.json": "40180a03c4e2ec17e630c5aba96fae61b12e3d1ff2a191246f4e7957f9c8c86e",
+    "data/raw/XLK_2006-01-01_2026-09-30_yfinance_adjusted.csv": "0d5eabb61ed1ce934e5faf62c4fe01d654e1d4054ce05dd5bec642f102b5c054",
+    "data/raw/XLK_2006-01-01_2026-09-30_yfinance_raw.csv": "70bbb583630d9d2af0eb9f0588f43b2ed10fcf17a5b1677267d25fb34cac55c4",
+    "data/raw/XLP_2006-01-01_2026-09-30_yahoo_chart.json": "cbe523748f36b8d07183d950d059bff648feb7bc73ed399f811a9a8ea92744f7",
+    "data/raw/XLP_2006-01-01_2026-09-30_yfinance_adjusted.csv": "3c299d69fd0425dab0b62bbed05e5f657ad69c82747145daf92b18731d39551a",
+    "data/raw/XLP_2006-01-01_2026-09-30_yfinance_raw.csv": "e56119d823d92f320e6d5e30b8c435a500e72df8a2eb17fc04492baf3970bf23",
+    "data/raw/XLU_2006-01-01_2026-09-30_yahoo_chart.json": "78567888ed1138f2b6bbcc905909c423697c186a7594885ba635241c4be8c3f0",
+    "data/raw/XLU_2006-01-01_2026-09-30_yfinance_adjusted.csv": "4b218933a8b8bdb669b24502c0b9371eb665ebf1e4ceea7c1ca5cb116ebbef7a",
+    "data/raw/XLU_2006-01-01_2026-09-30_yfinance_raw.csv": "0d387be46a5459b334118dfb1a3fa459dee6cf8cea14836385385b4c7a3953f7",
+    "data/raw/XLV_2006-01-01_2026-09-30_yahoo_chart.json": "db163eebbc24223efd6a35c9636b54a0002c471996c8fcb53b733106c9fb8b22",
+    "data/raw/XLV_2006-01-01_2026-09-30_yfinance_adjusted.csv": "7a80cbf577405707390fd23efe08b7dc7572289e52471ebda53d7373b923037b",
+    "data/raw/XLV_2006-01-01_2026-09-30_yfinance_raw.csv": "c258ce75b66c33d6068434da9a06b1ab8e9ecee27b11453f413f3a73e6ff23a9",
+    "data/raw/XLY_2006-01-01_2026-09-30_yahoo_chart.json": "639e4295b3872e8d4142aa59dfb176d5680ad54c8a812ac0407c25b204942e4a",
+    "data/raw/XLY_2006-01-01_2026-09-30_yfinance_adjusted.csv": "e545103a45623306fb0b8d2a51449976327dd455bdbbb44233861da567b98418",
+    "data/raw/XLY_2006-01-01_2026-09-30_yfinance_raw.csv": "cc5044439a8f7183cbec63069743b22657f6e31180cfbd9173a7112f8edcf81b",
+    "results/elastic_net/design_config.json": "dc4933c542de7cbce8b02123518502bf74c7a7edef085b3cd92b0cb13f567b44",
+    "results/elastic_net/locked_selection.json": "8fce5494dec87d6925e6e8e3522d23d7838b1cc9b00cd08ea84d27b9a97865a8",
+    "results/elastic_net/run_manifest.json": "1bc6638d0b332f8dd7cd09369e9a7cb37e6f6adb3d78d06ded2b4fc30ec53ee8",
+    "results/elastic_net/selected_hyperparameters.csv": "e12fbd53e0cf98169731697bf91581a7de9c52169b182bdbca15d5262cc788df",
+    "results/gbdt/model_config.json": "322f7fc404685b3dc039af3f94ef760214ed37fe6fbcac434388871da4127626",
+    "results/gbdt/selected_hyperparameters.csv": "3aa59a891814590f016ce8a933d46eec023d178a37069cc7373e9012a86d66e8"
+  },
+  "code_hashes": {
+    "scripts/backtest_training_oof.py": "08eb2080be8d49db3ac0fc8ddcc9c5ea88016fdda3d2305fcc02dd2c702f38bc",
+    "scripts/prepare_backtest_inputs.py": "f98dae5caaf987c10fefff898a19e849a085c6acdb16be5f2deeda3da617a698",
+    "scripts/backtest_oof_parallel.py": "ea2c2ac0c95b875c71dc80f68bbc402f2f686419fd784142d573dd99ea6fa283"
+  },
+  "outputs": [
+    {
+      "path": "results/backtest/training_oof/calibration_fit_audit.csv",
+      "sha256": "ecfc67307bb8ae13eff3d1cc13d6934a1acadceb7a712196322ba911d1c1140f"
+    },
+    {
+      "path": "results/backtest/training_oof/complete_day_top4.csv",
+      "sha256": "632210cf4aca75fed5956b4b9a4f716ecbe1e37f4b2d57d41bee10f0df8b50e8"
+    },
+    {
+      "path": "results/backtest/training_oof/daily_signal_coverage.csv",
+      "sha256": "5db28aab4379cacd4f756919e91e7b5a20f24178087e2a7b160a3ea5a7a9fa1f"
+    },
+    {
+      "path": "results/backtest/training_oof/design_config.json",
+      "sha256": "e369e6e7d65247f6d6bef0c270edd9f59742b1464d77f3b66bc1baf0dbe72990"
+    },
+    {
+      "path": "results/backtest/training_oof/elastic_net_calibration_grid.csv",
+      "sha256": "e189f367442f16d684a0058efc4d3cc4bd9addef74385d710b51ac7dd50118e5"
+    },
+    {
+      "path": "results/backtest/training_oof/elastic_net_calibration_monthly_losses.csv",
+      "sha256": "8cfaaada3e2cec66fb25be0f55a0b0c08effd2f3500e2a3bf4ec889d7d365ec3"
+    },
+    {
+      "path": "results/backtest/training_oof/elastic_net_selected_diagnostic.csv",
+      "sha256": "d87206aaf9e6800a764cce618f48e089099f06a78a5a83439d041671052d6689"
+    },
+    {
+      "path": "results/backtest/training_oof/execution_config.json",
+      "sha256": "64689afda30771f59baf382cb8066dc314ef86b2111b8241640dcfb64760ab26"
+    },
+    {
+      "path": "results/backtest/training_oof/gbdt_calibration_grid.csv",
+      "sha256": "73762bd3159b70d94060cc53cb6dcb7801b71bf75e6ed80f88a50df3fa12e216"
+    },
+    {
+      "path": "results/backtest/training_oof/gbdt_calibration_monthly_losses.csv",
+      "sha256": "b24506e6166971bbe101c8551b75b5feb556c0d66b2b4e5dcdefc8ed5c1e7193"
+    },
+    {
+      "path": "results/backtest/training_oof/gbdt_calibration_round_curve.csv",
+      "sha256": "ace9383ed52a1fc836a07c3e6327d3b2429b3e65d769c1b0c8024b75a1489c2d"
+    },
+    {
+      "path": "results/backtest/training_oof/gbdt_selected_diagnostic.csv",
+      "sha256": "26988425cd5ec65835c76b94c7279015dfb41a213232d9614587aad8d7e9ada0"
+    },
+    {
+      "path": "results/backtest/training_oof/oof_checks.csv",
+      "sha256": "7193d74c473c3a3b5f0f6fba7dc62799ec59cb5321809e55a4fc6b3588b4cc29"
+    },
+    {
+      "path": "results/backtest/training_oof/oof_fit_audit.csv",
+      "sha256": "76ea1cc9cf8691dc172b72296016e8f9fc88321d613074d229ee1e02068fcdea"
+    },
+    {
+      "path": "results/backtest/training_oof/provenance/empty_month_fix_migration.json",
+      "sha256": "e69b2df64dc3aeaf6d131b4943e1d3fe34762c4eb56ae657f009ed31aa689129"
+    },
+    {
+      "path": "results/backtest/training_oof/provenance/execution_config_v1.json",
+      "sha256": "b0566ed5fc22e848a0ecd0efec4ed233f3fb279651255c374dfc63ce9e2f6491"
+    },
+    {
+      "path": "results/backtest/training_oof/provenance/model_implementation_v1.py",
+      "sha256": "2c5d34a35a1ef2b8b564a8eb687ddce3ceff90e7b66a8344430a4e9a87a55787"
+    },
+    {
+      "path": "results/backtest/training_oof/provenance/preregistered_design_v1.json",
+      "sha256": "8cbf493a7cab2f3c48e2514b45f0c2293d22b0c6e76204e5c7b16bd21325888d"
+    },
+    {
+      "path": "results/backtest/training_oof/selected_diagnostic_config.json",
+      "sha256": "3a2655740c9c9d2cb7bbe5791e7031be8c9d8b7ac6d283785f5b16e2176f6345"
+    },
+    {
+      "path": "results/backtest/training_oof/signal_quantiles.csv",
+      "sha256": "0d1bd998004911e88609ab9bd56eaca9a51b7b5db9a714cbe61dd70212d71207"
+    },
+    {
+      "path": "results/backtest/training_oof/skipped_sector_months.csv",
+      "sha256": "7af0753c821d8f49102fd931566fadffc8b7c3300950816f9d258d4953192fcb"
+    },
+    {
+      "path": "results/backtest/training_oof/threshold_candidates.csv",
+      "sha256": "3157b245182e7cf8a8d9bfd4d6812c99d776c2d7c5872af8fab15b3ffb97a5a0"
+    },
+    {
+      "path": "results/backtest/training_oof/threshold_exceedance.csv",
+      "sha256": "3b995258769148676288eece5850893abefc364b55025662b5885406ac5c6629"
+    },
+    {
+      "path": "results/backtest/training_oof/training_oof_predictions.csv",
+      "sha256": "b90619e23f173b784b06815edb901790f91e621ee0c8995d6a7ded6bcea2b5b6"
+    },
+    {
+      "path": "results/backtest/training_oof_calendar_coverage.csv",
+      "rows": 1259,
+      "sha256": "fe955028eadc882ad47e5ed986a8f82c6b7eee9e31a7484e8ef970edd906ab52"
+    },
+    {
+      "path": "results/backtest/training_oof/run_manifest.json",
+      "sha256": "057ff3521d731d74bddce63ed00124140d74764939762c4c66dfeb8e61204638"
+    }
+  ],
+  "elapsed_seconds": 92.1558299001772,
+  "notes": [
+    "2012 is a calibration year, not included in the final OOF scale summary",
+    "Each monthly fit uses only labels mature at its cutoff; calibration scores also mature before 2013",
+    "Parameters selected by 2018-2022 official validation are never imported into diagnostic fitting",
+    "Feature definitions and candidate grids were already designed; this is a retrospective training diagnostic, not an untouched historical holdout",
+    "Actual local software versions are recorded; cross-version bitwise equivalence to official models is not claimed",
+    "Grid unchanged regardless of diagnostic exceedance; no profitability claim follows from exceeding a threshold"
+  ],
+  "not_yet_checked": [
+    "public threshold selection on validation under main costs (step 10)",
+    "protocol freeze and full validation/test strategy evaluation (steps 11-14)"
+  ],
+  "calendar_dates": 1259,
+  "zero_valid_sector_dates": 60,
+  "partial_sector_dates": 192
+}

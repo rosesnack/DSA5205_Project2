@@ -1,0 +1,57 @@
+{
+  "stages": [
+    {
+      "step": 9,
+      "path": "results/backtest/training_oof/run_manifest.json",
+      "sha256": "057ff3521d731d74bddce63ed00124140d74764939762c4c66dfeb8e61204638",
+      "check_count": 35,
+      "all_passed": true,
+      "completed_utc": "2026-10-31T08:28:17.834292+00:00"
+    },
+    {
+      "step": 10,
+      "path": "results/backtest/threshold_selection/run_manifest.json",
+      "sha256": "1299c172aa84fc47fc1792b2c2bd22b1c44dc3e26746a3ed79c9941c50603041",
+      "check_count": 64,
+      "all_passed": true,
+      "completed_utc": "2026-10-31T08:41:32.256213+00:00"
+    },
+    {
+      "step": 11,
+      "path": "results/backtest/phase_evaluation/run_manifest.json",
+      "sha256": "483bc4cf39bf43ab1cfbe3a1d5e4bf3f01a48203db0983e5c2a7ca947237e935",
+      "check_count": 59,
+      "all_passed": true,
+      "completed_utc": "2026-10-31T09:45:34.929915+00:00"
+    },
+    {
+      "step": 12,
+      "path": "results/backtest/investment_benchmarks/run_manifest.json",
+      "sha256": "d71a6d3c9854c4ae819bb4387bde70803cd5bfb6a1371e2c5a276ba5b48025db",
+      "check_count": 72,
+      "all_passed": true,
+      "completed_utc": "2026-10-31T09:57:12.655093+00:00"
+    },
+    {
+      "step": 13,
+      "path": "results/backtest/consistency_audit/run_manifest.json",
+      "sha256": "43b25ff2b1a336ee2d0065b1b873a8b64bd856b1f468bde14cd95318f26f07d2",
+      "check_count": 1049,
+      "all_passed": true,
+      "completed_utc": "2026-10-31T10:15:31.835836+00:00"
+    },
+    {
+      "step": 14,
+      "path": "results/backtest/reporting/run_manifest.json",
+      "sha256": "9d00a68d65239eb50f43feca938e9d237b5dc0dfe8dfe9f1d5b0db28299db937",
+      "check_count": 215,
+      "all_passed": true,
+      "completed_utc": "2026-10-31T11:37:44.961013+00:00"
+    }
+  ],
+  "step14_protected_files": 539,
+  "step14_code_files": 12,
+  "step14_outputs": 110,
+  "immutable_baseline_files": 812,
+  "note": "Counts are per-stage acceptance checks, not independent replications; historical pending flags are not rewritten"
+}
