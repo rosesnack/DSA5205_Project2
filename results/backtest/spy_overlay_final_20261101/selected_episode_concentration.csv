@@ -1,0 +1,3 @@
+split,series_id,entry_bps,model,scheme,completed_episodes,positive_episodes,total_positive_paired_contribution,total_negative_paired_contribution,top1_share_of_positive,top5_share_of_positive,top10_share_of_positive
+validation,overlay_15_gbdt_S1,15,gbdt,S1,183,104,0.30199310344116154,-0.15422516075709874,0.073816047204312341,0.23731340460162439,0.35355072301204832
+test,overlay_15_gbdt_S1,15,gbdt,S1,74,41,0.12580684671857248,-0.078053373385337743,0.081302829806200502,0.29786475623500536,0.48004401243035927

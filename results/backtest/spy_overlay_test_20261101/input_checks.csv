@@ -1,0 +1,9 @@
+phase,check,passed,detail
+test,fixed_phase_opens,True,"Exact protocol endpoints, not inferred from future labels"
+test,six_original_signal_groups,True,"All six models/schemes, no performance selection"
+test,signal_day_split,True,Respect the existing signal-day split
+test,scheduled_actions_cover_each_open,True,Exactly one action at every phase open for each strategy
+test,observed_execution_quotes,True,Ten observed open/dividend quotes per execution date; no adjusted prices or fills
+test,exact_available_cash_intervals,True,All adjacent phase opens have exported cash returns available at entry
+test,official_predictions_exact,True,"Trading y_hat exactly equals the original delivered forecast, with no refitting"
+test,no_future_scoring_fields,True,"Replay receives no common_scoreable, future target, label_valid or label_within_split"

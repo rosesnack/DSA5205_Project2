@@ -1,0 +1,9 @@
+# Frozen data and result hashes depend on exact bytes, including line endings.
+# Disable automatic CRLF/LF conversion; this does not disable text diffs.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve archived research artifacts verbatim rather than reformatting them.
+results/backtest/spy_overlay_validation_20261101/** -whitespace
+results/backtest/spy_overlay_test_20261101/** -whitespace
+results/backtest/spy_overlay_final_20261101/** -whitespace
+results/backtest/github_sync_20261101/document_snapshots/** -whitespace

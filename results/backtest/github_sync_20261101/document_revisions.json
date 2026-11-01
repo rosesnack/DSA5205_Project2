@@ -1,0 +1,32 @@
+{
+  "README.md": {
+    "before_sha256": "de04890064017fbc5ed0bd61f76a1e5a471f57258146fb163e22a8bbbaa57e77",
+    "snapshot": "results/backtest/github_sync_20261101/document_snapshots/README.md",
+    "after_sha256": "661fdf35f500c0840a547d2ba8e86836a26a19680b8ac6f7f4acd4d59dad2a51",
+    "reason": "User-authorized integration into the existing GitHub structure; documentation and ignore rules only"
+  },
+  ".gitignore": {
+    "before_sha256": "5b6b54a76bc96e05c69245e0d61379b5156c9c5a4f5104a4703a2721ed90a6f6",
+    "snapshot": "results/backtest/github_sync_20261101/document_snapshots/.gitignore",
+    "after_sha256": "21649b93065d2b1a1cc875dd17f70cf2503403da162cb25d05343e33d1c56000",
+    "reason": "User-authorized integration into the existing GitHub structure; documentation and ignore rules only"
+  },
+  "最终回测交接说明_yae.md": {
+    "before_sha256": "9c3058e2674d10dc279209ca4d49e9ce92e6a652b309977c4b671e5a6b0acb91",
+    "snapshot": "results/backtest/github_sync_20261101/document_snapshots/最终回测交接说明_yae.md",
+    "after_sha256": "34d78728a7589af35c009a010c0ece8ada50cb15007ba94babb87cf014c8052c",
+    "reason": "User-authorized integration into the existing GitHub structure; documentation and ignore rules only"
+  },
+  "回测进度与说明_yae.md": {
+    "before_sha256": "9ea8b7b31ace6d5312ef1f3ff07e079925b392657707e02c490446ddffe939a1",
+    "snapshot": "results/backtest/github_sync_20261101/document_snapshots/回测进度与说明_yae.md",
+    "after_sha256": "2f5c5086621408f818ab49e46b663145ade853dd1f63e0ed1737ffb29d60b9f0",
+    "reason": "User-authorized integration into the existing GitHub structure; documentation and ignore rules only"
+  },
+  "SPY增强策略_最终结果与交接_20261101.md": {
+    "before_sha256": "6d40b8ae6e6f609c042a8727c279bede48d9a89d519bc6876fb0ca702ee96f67",
+    "snapshot": "results/backtest/github_sync_20261101/document_snapshots/SPY增强策略_最终结果与交接_20261101.md",
+    "after_sha256": "1ecbf6e5078eef75e80469ec403bcd087a49e1faf88706c24d4a03ad48205b99",
+    "reason": "User-authorized integration into the existing GitHub structure; documentation and ignore rules only"
+  }
+}

@@ -2,9 +2,29 @@
 
 This project studies whether cross-sector information improves forecasts of sector ETF returns relative to SPY. It provides a complete workflow for data acquisition, cleaning, feature construction, monthly model fitting, forecast evaluation and prediction export. Elastic Net supplies a regularized linear benchmark; Gradient Boosted Decision Trees (GBDT) capture nonlinear relationships and feature interactions.
 
-**Current handoff (2026-10-31): yae's steps 1-15 are complete.** Both phases, investment benchmarks, independent accounting audit, full metrics, six comparison figures and eight fixed cost cases are saved. Start with [the final backtest handoff](最终回测交接说明_yae.md) and [the Chinese results report](results/backtest/reporting/report_中文.md). Step 16 optional extensions have not been run.
+## Current SPY-core extension (2026-11-01)
 
-For read-only verification from the repository root, using Python's standard library:
+The new work is integrated into the existing repository folders: Python code in `scripts/`, the saved-results reader in `notebooks/06_spy_overlay_final_results.ipynb`, and validation, test, and final outputs under `results/backtest/spy_overlay_*_20261101/`. Upload these files directly with Git; a ZIP archive is not the synchronization method.
+
+The final presentation configuration is **GBDT S1, 15 / 7.5 bps**, selected ex post as the highest test net CAGR among all twelve completed overlay combinations. Test net CAGR is **22.723%**, versus **22.019%** for dividend-reinvestment SPY; maximum drawdown is **-19.303%**. All results include the specified execution, borrow and financing costs. Other candidates and the earlier cash-based strategy remain available. This is exploratory, test-selected evidence, not an untouched holdout estimate.
+
+Start with [the current SPY handoff](SPY增强策略_最终结果与交接_20261101.md), [the final report](results/backtest/spy_overlay_final_20261101/report_中文.md), [all twelve candidates](results/backtest/spy_overlay_final_20261101/all_12_candidates_ranked.csv), and [the GitHub upload guide](results/backtest/github_sync_20261101/GitHub上传步骤_中文.md).
+
+Current-checkout verification is read-only and uses the Python standard library:
+
+```powershell
+python -B scripts/verify_spy_overlay_delivery.py
+```
+
+Historical experiment hashes are retained. Five documentation revisions are recorded with their exact before/after hashes and archived pre-edit bytes in `results/backtest/github_sync_20261101/`. Data, forecasts, trading engines, numerical books, tables, figures, and notebook 01-05 are not changed by this synchronization preparation. `.gitattributes` preserves exact file bytes across line-ending settings.
+
+Notebook 06 has six saved code-cell outputs verified sequentially in the current Python process; native Jupyter kernel execution is not claimed. Optional fresh replay uses `scripts/replay_spy_overlay_frozen.py` and a new output directory outside the repository; it never overwrites the saved experiments. The historical production commands below belong to their original snapshots, rather than the current verification route.
+
+## Historical dollar-neutral backtest (2026-10-31)
+
+**Historical handoff (2026-10-31): yae's steps 1-15 are complete.** Both phases, investment benchmarks, independent accounting audit, full metrics, six comparison figures and eight fixed cost cases are saved. Start with [the final backtest handoff](最终回测交接说明_yae.md) and [the Chinese results report](results/backtest/reporting/report_中文.md). Step 16 optional extensions have not been run.
+
+For verification of the exact archived 2026-10-31 snapshot only, use the historical command below. For this updated checkout use `verify_spy_overlay_delivery.py` above:
 
 ```powershell
 python -B scripts\backtest_handoff.py --verify-only
@@ -23,6 +43,15 @@ The selected public entry/exit thresholds are **15 / 7.5 bps**. Main costs remai
 | [03_elastic_net.ipynb](notebooks/03_elastic_net.ipynb) | Elastic Net validation search, monthly forecasts, evaluation and coefficient diagnostics |
 | [04_gbdt.ipynb](notebooks/04_gbdt.ipynb) | GBDT validation search with early stopping, monthly forecasts, evaluation and group permutation importance |
 | [05_portfolio_backtest.ipynb](notebooks/05_portfolio_backtest.ipynb) | yae's saved steps 1-14, current step-15 handoff links and verified completed caches; 17 executed code cells |
+| [06_spy_overlay_final_results.ipynb](notebooks/06_spy_overlay_final_results.ipynb) | Current selected overlay result, all 12 candidates, benchmarks and saved figures; no fitting or replay |
+| [backtest_spy_overlay.py](scripts/backtest_spy_overlay.py) / [backtest_spy_overlay_test.py](scripts/backtest_spy_overlay_test.py) | Frozen SPY-core portfolio, financing and original validation/test experiment drivers |
+| [diagnose_spy_overlay.py](scripts/diagnose_spy_overlay.py) / [finalize_spy_overlay.py](scripts/finalize_spy_overlay.py) | Saved-book attribution and final test-best presentation record; historical production drivers |
+| [verify_spy_overlay_delivery.py](scripts/verify_spy_overlay_delivery.py) | Current read-only integrity check, including explicitly registered documentation revisions |
+| [replay_spy_overlay_frozen.py](scripts/replay_spy_overlay_frozen.py) | Optional fresh replay of unchanged rules into a new directory; no model training |
+| `results/backtest/spy_overlay_validation_20261101/` | Both validation thresholds, six forecasts each, complete ledgers and comparisons |
+| `results/backtest/spy_overlay_test_20261101/` | Both exploratory test thresholds, reinvestment SPY benchmark and attribution |
+| `results/backtest/spy_overlay_final_20261101/` | Final selection, full candidate ranking, selected metrics, report and exportable figures |
+| `results/backtest/github_sync_20261101/` | Upload pathspec, instructions, delivery hashes and exact documentation revision history |
 | [prepare_backtest_inputs.py](scripts/prepare_backtest_inputs.py) | Staged preparation/verification and engineering previews called by notebook 05 |
 | [backtest_signal_policy.py](scripts/backtest_signal_policy.py) | Signal-time eligibility, missing-signal close-all instructions and in-memory fault checks |
 | [backtest_baselines.py](scripts/backtest_baselines.py) | Zero/mean prediction baselines, mature-label sample verification and common forecast evaluation |

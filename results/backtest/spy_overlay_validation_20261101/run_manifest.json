@@ -1,0 +1,30 @@
+{
+  "completed_utc": "2026-11-01T06:27:19.734620+00:00",
+  "phase": "validation",
+  "completed_entry_bps": [
+    15,
+    10
+  ],
+  "new_strategy_count": 12,
+  "summary_rows": 20,
+  "protected_file_count": 822,
+  "original_files_unchanged": true,
+  "test_executed": false,
+  "model_retrained": false,
+  "threshold_selected": false,
+  "outputs": {
+    "cumulative_nav.png": "16d709e2047b2ac2d2184a3e261679181715603f43b9624264bbad10c04ccdd5",
+    "cumulative_nav.svg": "9b0ab1149eb27f90afd2f4b3924000c086b095fb6be4658688755ba738683d98",
+    "experiment_config.json": "335a64b428fee707b603e688186bcba0a30f9ba9bc7d39db638e61f2ff7e66c8",
+    "final_audit.json": "8853666a5db32247c82f62a50a69a248ad26d9bdf1aa2519682a38d478fe91e5",
+    "holding_episodes.csv": "7ed0f5c0c094b6af602b4f2d1bb3d5ef5ede1b6629c20436844f407e74d29dca",
+    "nav_curves.csv": "2c4df559b216400180ae8b8b7179cfc9deacb347f643663388bf9a7c37a43d95",
+    "report.html": "b55b0d902a99785929e30cfcd9fa601da9ecf2ff2e650aab569a31d8f1fbbd63",
+    "report_中文.md": "5992ed8cda94c769189dfef86ace68fb0298043460229a214a3017f6c1e7bca7",
+    "summary.csv": "979f83f3fe70e7a378953be51e6cd9374b6530a5d6754d5ffb858e0275fced00",
+    "threshold_paired_comparison.csv": "768db1d2689fc9c65ade5302b7c736c4b007e7a27dacf985515cbf975a03f5cf",
+    "validation_rate_alignment.csv": "b231d379551164d4c41c6bfb60242752803244aa171bdae4867f2a6883e32ea4",
+    "实验结论与复现说明_中文.md": "b25477f4242157c36561c2431083995933c1a504ef3bc6703c2daed74b197baf"
+  },
+  "final_audit": "final_audit.json"
+}
