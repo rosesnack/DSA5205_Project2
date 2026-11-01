@@ -1,0 +1,62 @@
+check,passed,detail
+six_complete_strategies,True,All delivered forecasts retained
+15_elastic_net_S0_coverage,True,No dropped missing-signal or cash dates
+15_elastic_net_S0_reset_and_liquidation,True,Independent initial capital and charged terminal exit
+15_elastic_net_S0_return_product,True,Initial/final costs included once
+15_elastic_net_S0_target_and_actual_caps,True,Target and actual post-fee gross at most 150%
+15_elastic_net_S0_carry_formulas,True,"Restricted proceeds, financing and borrow are separate"
+15_elastic_net_S0_funding_rate,True,Same known DGS3MO interval plus fixed 1 percentage point spread
+15_elastic_net_S0_unique_net_trades,True,SPY netted before actual trade fee
+15_elastic_net_S0_incomplete_signal_fallback,True,"Missing inputs restore SPY, never omit the day"
+15_elastic_net_S0_no_signal_spy_core,True,No eligible sector still holds 100% SPY
+15_elastic_net_S0_accounting,True,Daily settled balances reconcile
+15_elastic_net_S1_coverage,True,No dropped missing-signal or cash dates
+15_elastic_net_S1_reset_and_liquidation,True,Independent initial capital and charged terminal exit
+15_elastic_net_S1_return_product,True,Initial/final costs included once
+15_elastic_net_S1_target_and_actual_caps,True,Target and actual post-fee gross at most 150%
+15_elastic_net_S1_carry_formulas,True,"Restricted proceeds, financing and borrow are separate"
+15_elastic_net_S1_funding_rate,True,Same known DGS3MO interval plus fixed 1 percentage point spread
+15_elastic_net_S1_unique_net_trades,True,SPY netted before actual trade fee
+15_elastic_net_S1_incomplete_signal_fallback,True,"Missing inputs restore SPY, never omit the day"
+15_elastic_net_S1_no_signal_spy_core,True,No eligible sector still holds 100% SPY
+15_elastic_net_S1_accounting,True,Daily settled balances reconcile
+15_elastic_net_S2_coverage,True,No dropped missing-signal or cash dates
+15_elastic_net_S2_reset_and_liquidation,True,Independent initial capital and charged terminal exit
+15_elastic_net_S2_return_product,True,Initial/final costs included once
+15_elastic_net_S2_target_and_actual_caps,True,Target and actual post-fee gross at most 150%
+15_elastic_net_S2_carry_formulas,True,"Restricted proceeds, financing and borrow are separate"
+15_elastic_net_S2_funding_rate,True,Same known DGS3MO interval plus fixed 1 percentage point spread
+15_elastic_net_S2_unique_net_trades,True,SPY netted before actual trade fee
+15_elastic_net_S2_incomplete_signal_fallback,True,"Missing inputs restore SPY, never omit the day"
+15_elastic_net_S2_no_signal_spy_core,True,No eligible sector still holds 100% SPY
+15_elastic_net_S2_accounting,True,Daily settled balances reconcile
+15_gbdt_S0_coverage,True,No dropped missing-signal or cash dates
+15_gbdt_S0_reset_and_liquidation,True,Independent initial capital and charged terminal exit
+15_gbdt_S0_return_product,True,Initial/final costs included once
+15_gbdt_S0_target_and_actual_caps,True,Target and actual post-fee gross at most 150%
+15_gbdt_S0_carry_formulas,True,"Restricted proceeds, financing and borrow are separate"
+15_gbdt_S0_funding_rate,True,Same known DGS3MO interval plus fixed 1 percentage point spread
+15_gbdt_S0_unique_net_trades,True,SPY netted before actual trade fee
+15_gbdt_S0_incomplete_signal_fallback,True,"Missing inputs restore SPY, never omit the day"
+15_gbdt_S0_no_signal_spy_core,True,No eligible sector still holds 100% SPY
+15_gbdt_S0_accounting,True,Daily settled balances reconcile
+15_gbdt_S1_coverage,True,No dropped missing-signal or cash dates
+15_gbdt_S1_reset_and_liquidation,True,Independent initial capital and charged terminal exit
+15_gbdt_S1_return_product,True,Initial/final costs included once
+15_gbdt_S1_target_and_actual_caps,True,Target and actual post-fee gross at most 150%
+15_gbdt_S1_carry_formulas,True,"Restricted proceeds, financing and borrow are separate"
+15_gbdt_S1_funding_rate,True,Same known DGS3MO interval plus fixed 1 percentage point spread
+15_gbdt_S1_unique_net_trades,True,SPY netted before actual trade fee
+15_gbdt_S1_incomplete_signal_fallback,True,"Missing inputs restore SPY, never omit the day"
+15_gbdt_S1_no_signal_spy_core,True,No eligible sector still holds 100% SPY
+15_gbdt_S1_accounting,True,Daily settled balances reconcile
+15_gbdt_S2_coverage,True,No dropped missing-signal or cash dates
+15_gbdt_S2_reset_and_liquidation,True,Independent initial capital and charged terminal exit
+15_gbdt_S2_return_product,True,Initial/final costs included once
+15_gbdt_S2_target_and_actual_caps,True,Target and actual post-fee gross at most 150%
+15_gbdt_S2_carry_formulas,True,"Restricted proceeds, financing and borrow are separate"
+15_gbdt_S2_funding_rate,True,Same known DGS3MO interval plus fixed 1 percentage point spread
+15_gbdt_S2_unique_net_trades,True,SPY netted before actual trade fee
+15_gbdt_S2_incomplete_signal_fallback,True,"Missing inputs restore SPY, never omit the day"
+15_gbdt_S2_no_signal_spy_core,True,No eligible sector still holds 100% SPY
+15_gbdt_S2_accounting,True,Daily settled balances reconcile

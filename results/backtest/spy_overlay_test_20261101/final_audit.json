@@ -1,0 +1,36 @@
+{
+  "completed_utc": "2026-11-01T08:03:47.394938+00:00",
+  "steps_completed": [
+    1,
+    2,
+    3
+  ],
+  "parameter_changes": false,
+  "model_refitting": false,
+  "primary_entry_bps": 10,
+  "reference_entry_bps": 15,
+  "evidence": "Exploratory, previously inspected test period",
+  "protected_file_count": 863,
+  "all_protected_files_unchanged": true,
+  "trading_engine_unchanged": true,
+  "reinvestment_unit_tests": 6,
+  "test_runtime_checks": 122,
+  "attribution_logic_checks": 4,
+  "attribution_strategy_phase_reconciliations": 24,
+  "test_summary_rows": 21,
+  "summary_accounting_max_error": 1.5543122344752192e-15,
+  "attribution_max_daily_error": 9.402201239794294e-16,
+  "same_direction_rebalance_fee_share_range": [
+    0.00344369124491,
+    0.0059821341564174
+  ],
+  "source_hashes": {
+    "backtest_spy_overlay_test.py": "021b3598ca639f1646cdd0491c13fe553680c9279d7e522b60c0df78c9be7120",
+    "check_spy_overlay_test.py": "ab1bde2c4838b3c9d444ae7fc1a749ac1362066be1864596554984287bc3806b",
+    "diagnose_spy_overlay.py": "e8e475d67845fd8463305c95eb75f56c6b052118b2bf7cb8b8fa35f6f201fbef"
+  },
+  "figures_visually_reviewed": [
+    "step2_diagnostics/test_nav_comparison.png",
+    "step2_diagnostics/test_relative_to_spy_reinvest.png"
+  ]
+}

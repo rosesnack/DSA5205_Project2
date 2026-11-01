@@ -1,0 +1,31 @@
+{
+  "completed_utc": "2026-11-01T08:33:03.718282+00:00",
+  "selected_series_id": "overlay_15_gbdt_S1",
+  "selection_is_ex_post": true,
+  "no_parameter_tuning": true,
+  "no_model_refitting": true,
+  "no_trading_replay": true,
+  "historical_protected_files": 863,
+  "all_historical_inputs_outputs_unchanged": true,
+  "candidate_count": 12,
+  "selected_benchmark_rows": 8,
+  "current_process_executed_cells": 6,
+  "native_jupyter_kernel_verified": false,
+  "code_sha256": "3731d5e493062f4ac3c393aecac2118597b7f2cea218e52caf3ff650db487d30",
+  "outputs": {
+    "results/backtest/spy_overlay_final_20261101/all_12_candidates_ranked.csv": "30c8924203f395c180915c54b52ba5cddb573b07457188987f8f81da0ce247a1",
+    "results/backtest/spy_overlay_final_20261101/report_English.md": "9ac7030e16446b2800606eb046a97ebc69b1c2440aa8835e2b585660d0eef20c",
+    "results/backtest/spy_overlay_final_20261101/report_中文.md": "0f33cd89f15078607a48dbd6a14061f2508bfde967a518ba45a75fdc8a0a7f8f",
+    "results/backtest/spy_overlay_final_20261101/selected_and_benchmarks.csv": "c1b4e7c6eafbb4f9bbfaacda0f7e8b1f42738087c4ce1c8dd628c984889c0089",
+    "results/backtest/spy_overlay_final_20261101/selected_cost_decomposition.csv": "779a0dadbb60c249651a9656abe35cda538ff2cf745fc0f154fd5506700e7c00",
+    "results/backtest/spy_overlay_final_20261101/selected_episode_concentration.csv": "262761bc61c6fe88c06860235298ab0d2066f2065c03031ba1d7b2a9ab44d8a3",
+    "results/backtest/spy_overlay_final_20261101/selected_nav_curves.csv": "06738e554fd46646c3baeaf982a2822fd38fc52f60eabede1dcbb472c12f8816",
+    "results/backtest/spy_overlay_final_20261101/selected_sector_contributions.csv": "02f12c6c7f609f9077eadae20adf07c8c1d4dc102f4015f2359c20c0bfa1cd54",
+    "results/backtest/spy_overlay_final_20261101/selected_strategy.png": "d6d90dbc3b1ca656c822056ea8401461fc8aaa71a73febeaa133497c97092d35",
+    "results/backtest/spy_overlay_final_20261101/selected_strategy.svg": "f14f8943a145844eb335586eed2bbb7ecaa6a4b0210ceca50a8127ed5ea60db4",
+    "results/backtest/spy_overlay_final_20261101/selected_yearly_returns.csv": "c9677dae62e25a17e1042154b933db86867e47a714dbc9a7512834334649b20a",
+    "results/backtest/spy_overlay_final_20261101/selection_record.json": "070fd61c1d38a3286859d73e08db9ab41f208ed0c7994b8c10ba674025f0777b",
+    "SPY增强策略_最终结果与交接_20261101.md": "6d40b8ae6e6f609c042a8727c279bede48d9a89d519bc6876fb0ca702ee96f67",
+    "notebooks/06_spy_overlay_final_results.ipynb": "7f26768d8a083411fe988a1d717f252f09039ea098a8c04eedb5fa02ad462ca8"
+  }
+}

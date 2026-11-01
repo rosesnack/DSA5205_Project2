@@ -1,0 +1,33 @@
+{
+  "independent_unit_tests_passed": 17,
+  "run_checks_passed_by_entry_bps": {
+    "15": 61,
+    "10": 61
+  },
+  "summary_rows": 20,
+  "new_strategy_rows": 12,
+  "original_reconciliation_max_absolute_errors": {
+    "ending_nav": 0.0,
+    "annualized_net_return": 1.1102230246251565e-16,
+    "annualized_net_volatility": 0.0,
+    "max_drawdown": 0.0,
+    "annualized_two_sided_turnover": 0.0,
+    "total_execution_fee": 0.0,
+    "total_borrow_fee": 0.0,
+    "total_cash_interest": 0.0,
+    "total_dividend_cash": 0.0
+  },
+  "summary_accounting_max_error": 5.995204332975845e-15,
+  "protected_file_count": 822,
+  "all_protected_files_unchanged": true,
+  "elastic_net_S1_S2_same_targets_by_entry_bps": {
+    "15": true,
+    "10": true
+  },
+  "figures_visually_reviewed": true,
+  "test_replayed": false,
+  "source_hashes": {
+    "backtest_spy_overlay.py": "48843ef00eb8741a9d2061b11cb62bd1afba7e8acfaff5faa04b692270d8488e",
+    "check_spy_overlay.py": "2a8b54c09d005e2f2927d992373b0ef550b852db277bf189a3ce5fb1033e4620"
+  }
+}

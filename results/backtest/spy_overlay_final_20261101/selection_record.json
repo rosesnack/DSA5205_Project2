@@ -1,0 +1,22 @@
+{
+  "selected_utc": "2026-11-01T08:32:43.740315+00:00",
+  "authority": "User instruction: no further parameter changes; choose the best final test result",
+  "selection_criterion": "Highest test-period net annualized return after execution, borrow and financing costs",
+  "candidate_universe": "All 12 previously evaluated SPY-overlay model/scheme/threshold combinations",
+  "candidate_count": 12,
+  "series_id": "overlay_15_gbdt_S1",
+  "model": "gbdt",
+  "scheme": "S1",
+  "entry_bps": 15.0,
+  "exit_bps": 7.5,
+  "test_net_annualized_return": 0.2272340939363897,
+  "test_driven_selection": true,
+  "ex_post_selection": true,
+  "independent_test_validation_claim": false,
+  "new_parameter_values_tried": false,
+  "model_refitted": false,
+  "strategy_replayed": false,
+  "previous_labels": "10/5 bp was the planned main comparison; 15/7.5 bp was the fixed reference. These were reporting roles, not performance rankings.",
+  "current_label": "Selected final presentation strategy; all other results retained",
+  "source_summary_sha256": "e92055bb09d32b05969dd804f7b5f9c9c602b65dd68ef131d17d0620b50cd71b"
+}

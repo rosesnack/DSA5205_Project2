@@ -970,3 +970,14 @@ python -B scripts\backtest_handoff.py --verify-only --archives-dir "..\交接打
 - [ ] 16. 有余力再开展 Ridge 或九行业等权多头等可选扩展。
 
 统一交易规则以仓库上一层的 `5205proj2.md` 第三、四部分为依据；两位建模负责人的交接说明用于确认正式预测和模型边界。
+
+
+## 2026-11-01：SPY 基础持仓扩展及 GitHub 原结构同步（已完成）
+
+- 复用六组预测，完成验证期与测试期各 12 个组合：15／7.5 bp 和 10／5 bp；计入单边 3 bp 交易费、年化 1% 借券费及 DGS3MO＋1 个百分点融资成本。
+- 代码留在 `scripts/`，原始逐日结果及诊断留在 `results/backtest/spy_overlay_validation_20261101/`、`spy_overlay_test_20261101/`；当前报告、选择记录、全部候选排序和 PNG/SVG 留在 `spy_overlay_final_20261101/`。
+- 按用户最新决定，从已有 12 组测试结果中选净年化最高的 GBDT S1、15／7.5 bp 作最终展示。测试净年化 22.72%，再投分红 SPY 22.02%；这是事后展示选择，完整保留其他组合。
+- 新增 `notebooks/06_spy_overlay_final_results.ipynb`，六个只读单元顺序 Python 执行并保存输出；不声称原生 Jupyter 内核验证。Notebook 01—05 均保持原样。
+- README 和两份原交接/进度说明接入新增内容；五份文档更新有独立的前后哈希及原字节快照。原交易引擎和全部数值结果不改，旧 manifest 不改写。
+- 当前只读验证：`python -B scripts/verify_spy_overlay_delivery.py`。可选复现入口 `replay_spy_overlay_frozen.py` 复用原交易函数，将结果写入仓库外的新目录，不覆盖存量结果；本次没有运行新的交易回放。
+- 本次 GitHub 同步直接提交原目录中的源文件，使用 [上传清单与步骤](results/backtest/github_sync_20261101/GitHub上传步骤_中文.md)，不上传单独汇报 ZIP，不自动 commit、push 或合并。

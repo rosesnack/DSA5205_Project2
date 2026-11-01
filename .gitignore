@@ -3,3 +3,7 @@
 __pycache__/
 .DS_Store
 /data/interim/sector_features.csv
+
+# Local handoff archives are not the GitHub synchronization payload.
+/交接打包*/
+/*.zip
