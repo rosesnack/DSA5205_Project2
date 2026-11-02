@@ -194,7 +194,7 @@ $$
 
 The search uses `max_leaf_nodes = [3, 5, 7]`, `min_samples_leaf = [10, 20, 50]` and `l2_regularization = [0, 1, 10]`: 27 configurations per scheme, or 81 across S0/S1/S2. Fixed settings are learning rate **0.03**, maximum depth **4**, maximum histogram bins **127** and random seed **5205**.
 
-Boosting rounds are selected using the pooled 2018–2022 validation MSE curve, with **100 maximum rounds**, **patience 10** and **tolerance 1e-8**. Monthly models first compute their complete boosting paths. The selection code scans each pooled curve until ten rounds pass without a significant improvement and retains the lowest-MSE round visited. It then selects the best leaf-count/minimum-leaf-size/L2 configuration for each scheme. Exact ties prefer fewer leaves, fewer rounds, larger L2 and larger minimum leaf size, in that order.
+Boosting rounds are selected using the pooled 2018–2022 validation MSE curve, with **50 maximum rounds**, **patience 10** and **tolerance 1e-8**. Monthly models first compute their complete boosting paths. The selection code scans each pooled curve until ten rounds pass without a significant improvement and retains the lowest-MSE round visited. It then selects the best leaf-count/minimum-leaf-size/L2 configuration for each scheme. Exact ties prefer fewer leaves, fewer rounds, larger L2 and larger minimum leaf size, in that order.
 
 This uses the existing chronological validation period. The estimator's internal early stopping is disabled, and the selected model is refitted on all eligible historical observations each month. Forecasts are exported under the model name `gbdt`.
 
