@@ -2,7 +2,50 @@
 
 This project studies whether cross-sector information improves forecasts of sector ETF returns relative to SPY. It provides a complete workflow for data acquisition, cleaning, feature construction, monthly model fitting, forecast evaluation and prediction export. Elastic Net supplies a regularized linear benchmark; Gradient Boosted Decision Trees (GBDT) capture nonlinear relationships and feature interactions.
 
-## Current SPY-core extension (2026-11-01)
+## Fresh end-to-end notebook execution (2026-11-02)
+
+Finish notebooks **01 → 02 → 03 → 04**, then run **05 → 06** from top to bottom using the project's Python 3.12 environment. All six notebooks locate the project from the current directory or its ancestors; Jupyter can start at the project root or in `notebooks/`. Select the local environment's kernel on each computer. Wait for notebook 04 to finish exporting its files before starting 05.
+
+On a new Windows computer, create a local environment rather than copying `.venv/`:
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m ipykernel install --user --name dsa5205 --display-name "Python (DSA5205)"
+.\.venv\Scripts\python.exe -m notebook
+```
+
+Choose **Python (DSA5205)** in Jupyter. Download or clone the complete repository, including `data/raw/`, its `notebooks/download_manifest.json`, all six notebooks and `scripts/`. Notebook 01 verifies existing source snapshots and reuses them; it computes cleaning and checks again. Subsequent notebooks regenerate features, predictions and portfolio results. This preserves the frozen research inputs while rerunning the calculations.
+
+Portable execution uses UTF-8 text/JSON files and forward slashes in exported relative paths. Notebook 02 also accepts older Windows manifest paths and verifies their hashes. Notebook 04 uses scikit-learn's paired `Parallel`/`delayed` interfaces with four thread workers to propagate its configuration. Model grids, random seeds, selection rules and financial rules are unchanged.
+
+Fresh 06 relative-risk columns are explicitly named `annualized_tracking_error_vs_spy_reinvest`, `information_ratio_vs_spy_reinvest` and `cumulative_return_difference_vs_spy_reinvest`. They use dividend-reinvestment SPY, as recorded by `relative_performance_benchmark`; historical unsuffixed columns can use a different benchmark.
+
+For GitHub synchronization, update `notebooks/01–06`, all Python files in `scripts/`, this README, `requirements.txt`, `.gitignore` and `.gitattributes`. Clear notebook outputs in a separate upload copy first: repeated historical warning logs can make saved notebooks very large. Keep the completed local notebooks as the recording reference. Do not upload `.venv/`, caches or `results/reproduction/`. Saved output from a notebook's earlier execution does not certify edited source; run the updated notebooks in order for the recording. After changing scripts, rerun 05 before 06 because completed runs intentionally verify their source-code hashes.
+
+- **05** now reads the current upstream data/predictions, generates new trading signals, independently verifies monthly prediction baselines, executes engine/fault checks, replays all five validation threshold candidates, selects the common threshold, evaluates both phases, computes SPY/cash benchmarks and replays all eight cost cases by default. It creates new accounting checks, yearly tables and figures.
+- **06** verifies the completed fresh 05 run, then actually replays all 12 SPY-core overlay candidates in both phases, computes reinvestment SPY and generates rankings, metrics and figures. The original test-best final presentation rule remains explicitly exploratory and ex post; no historical winning model is hardcoded.
+- Calculations reuse the existing financial engines through `scripts/fresh_backtest_pipeline.py`. Neither notebook loads historical backtest caches or requires a sibling `5205proj2.md`. Run configuration, current input/code hashes and the executable portfolio protocol are registered for each run.
+- New outputs are isolated in `results/reproduction/<unique_run_id>/`; each 06 execution creates a new child overlay run. Notebook 06 can use the latest completed new 05 run or an explicit run path. Changed upstream inputs or engines cause an error rather than silently mixing runs. Existing historical results are preserved.
+- The separate training-only OOF model-refitting research extension is not part of this portfolio execution; no old OOF results are displayed. Its former fixed threshold-grid dependency is now declared directly before the fresh validation replay. All main calculations and default full cost sensitivities are recomputed.
+
+The same pipeline can be run from the project root without opening Jupyter:
+
+```powershell
+.\.venv\Scripts\python.exe -B scripts/fresh_backtest_pipeline.py --stage all
+```
+
+`--stage pair` runs 05's calculations; `--stage overlay` requires a completed fresh pair run. The explicit `--skip-cost-sensitivities` flag shortens the run and records that those scenarios were skipped. Notebook 05 defaults to **including** them.
+
+Checks for fresh-run wiring, accounting corruption, stale-input rejection and absent historical results:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover -s scripts -p test_fresh_backtest_pipeline.py -v
+```
+
+The following sections document archived experiments. Their snapshot-specific verification/upload commands and descriptions of notebooks 05/06 belong to those historical versions, not the new execution route above.
+
+## Archived SPY-core extension (2026-11-01)
 
 The new work is integrated into the existing repository folders: Python code in `scripts/`, the saved-results reader in `notebooks/06_spy_overlay_final_results.ipynb`, and validation, test, and final outputs under `results/backtest/spy_overlay_*_20261101/`. Upload these files directly with Git; a ZIP archive is not the synchronization method.
 
