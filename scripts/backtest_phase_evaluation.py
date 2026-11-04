@@ -128,7 +128,6 @@ def register_protocol(root, out):
             validation="already used for model and threshold selection; reused evaluation is tuning evidence",
             test="fixed-rule test-period strategy evaluation, not an untouched blind holdout",
             prior_test_predictions_and_metrics_seen=True,
-            gbdt_provenance="Exploratory grid; previous project test results already known",
             training_oof="retrospective training-only signal-scale diagnostic; not an alternative official model",
             no_test_driven_changes=True, all_six_results_retained=True,
             freeze_timing="frozen now before step-11 test portfolio replay; not a retrospective claim of freezing before earlier model exploration"),

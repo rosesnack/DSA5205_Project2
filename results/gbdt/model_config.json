@@ -159,7 +159,6 @@
   "validation": "2018-2022",
   "test": "2023-2026-09",
   "selection": "pooled validation MSE per scheme; ties: fewer leaves, fewer rounds, larger L2, larger minimum leaf size",
-  "provenance": "Exploratory grid; previous project test results already known",
   "primary_scheme": "S1",
   "selected": [
     {

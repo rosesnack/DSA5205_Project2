@@ -112,7 +112,6 @@
     "validation": "already used for model and threshold selection; reused evaluation is tuning evidence",
     "test": "fixed-rule test-period strategy evaluation, not an untouched blind holdout",
     "prior_test_predictions_and_metrics_seen": true,
-    "gbdt_provenance": "Exploratory grid; previous project test results already known",
     "training_oof": "retrospective training-only signal-scale diagnostic; not an alternative official model",
     "no_test_driven_changes": true,
     "all_six_results_retained": true,
