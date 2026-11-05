@@ -2,6 +2,19 @@
 
 This project studies whether cross-sector information improves forecasts of sector ETF returns relative to SPY. It provides a complete workflow for data acquisition, cleaning, feature construction, monthly model fitting, forecast evaluation and prediction export. Elastic Net supplies a regularized linear benchmark; Gradient Boosted Decision Trees (GBDT) capture nonlinear relationships and feature interactions.
 
+## Report artifact correspondence
+
+These paths identify the saved experiments used in the integrated report (numerical snapshot `bc7b92f`). Fresh executions produce separate outputs under `results/reproduction/`; they do not overwrite the archived portfolio runs listed below. All paths are relative to the repository root.
+
+| Report evidence | Saved artifacts |
+|---|---|
+| Source identity and data timing | `notebooks/download_manifest.json`; `notebooks/cleaning_checks/`; `notebooks/panel_checks/`; `data/processed/panel_spec.json`. |
+| Elastic Net parameters and metrics | `results/elastic_net/selected_hyperparameters.csv`; `results/elastic_net/forecast_metrics.csv`; `results/elastic_net/fit_audit.csv`. |
+| Elastic Net supplementary diagnostics | `results/elastic_net/exploratory_validation/`; `results/elastic_net/xlf_diagnostics/`; `results/elastic_net/loss_difference_uncertainty.csv`. |
+| GBDT selection and metrics | `results/gbdt/model_config.json`; `results/gbdt/validation_grid.csv`; `results/gbdt/selected_hyperparameters.csv`; `results/gbdt/forecast_metrics.csv`; `results/gbdt/group_permutation_importance.csv`. |
+| Original pair threshold and results | `results/backtest/threshold_selection/validation_candidate_scores.csv`; `results/backtest/reporting/main_metrics.csv`; `results/backtest/reporting/sensitivity_metrics.csv`. |
+| Overlay comparison and final presentation | `results/backtest/spy_overlay_final_20261101/all_12_candidates_ranked.csv`; `results/backtest/spy_overlay_final_20261101/selected_and_benchmarks.csv`; `results/backtest/spy_overlay_final_20261101/selected_cost_decomposition.csv`; `results/backtest/spy_overlay_final_20261101/selection_record.json`. |
+
 ## Fresh end-to-end notebook execution (2026-11-02)
 
 Finish notebooks **01 → 02 → 03 → 04**, then run **05 → 06** from top to bottom using the project's Python 3.12 environment. All six notebooks locate the project from the current directory or its ancestors; Jupyter can start at the project root or in `notebooks/`. Select the local environment's kernel on each computer. Wait for notebook 04 to finish exporting its files before starting 05.
