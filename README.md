@@ -2,30 +2,59 @@
 
 This project studies whether cross-sector information improves forecasts of sector ETF returns relative to SPY. It provides a complete workflow for data acquisition, cleaning, feature construction, monthly model fitting, forecast evaluation and prediction export. Elastic Net supplies a regularized linear benchmark; Gradient Boosted Decision Trees (GBDT) capture nonlinear relationships and feature interactions.
 
-## Report artifact correspondence
+## Report artifacts and fresh-run outputs
 
-These paths identify the saved experiments used in the integrated report (numerical snapshot `bc7b92f`). Fresh executions produce separate outputs under `results/reproduction/`; they do not overwrite the archived portfolio runs listed below. All paths are relative to the repository root.
+The table below maps the saved files included in the repository to their evidence. All paths are relative to the repository root. Cite the CSV/JSON files and their experiment/run identifiers when using numerical results in a report. For a rerun, cite the completed fresh run's own files.
 
-| Report evidence | Saved artifacts |
+| Evidence | Saved artifacts in this checkout |
 |---|---|
-| Source identity and data timing | `notebooks/download_manifest.json`; `notebooks/cleaning_checks/`; `notebooks/panel_checks/`; `data/processed/panel_spec.json`. |
-| Elastic Net parameters and metrics | `results/elastic_net/selected_hyperparameters.csv`; `results/elastic_net/forecast_metrics.csv`; `results/elastic_net/fit_audit.csv`. |
-| Elastic Net supplementary diagnostics | `results/elastic_net/exploratory_validation/`; `results/elastic_net/xlf_diagnostics/`; `results/elastic_net/loss_difference_uncertainty.csv`. |
-| GBDT selection and metrics | `results/gbdt/model_config.json`; `results/gbdt/validation_grid.csv`; `results/gbdt/selected_hyperparameters.csv`; `results/gbdt/forecast_metrics.csv`; `results/gbdt/group_permutation_importance.csv`. |
-| Original pair threshold and results | `results/backtest/threshold_selection/validation_candidate_scores.csv`; `results/backtest/reporting/main_metrics.csv`; `results/backtest/reporting/sensitivity_metrics.csv`. |
-| Overlay comparison and final presentation | `results/backtest/spy_overlay_final_20261101/all_12_candidates_ranked.csv`; `results/backtest/spy_overlay_final_20261101/selected_and_benchmarks.csv`; `results/backtest/spy_overlay_final_20261101/selected_cost_decomposition.csv`; `results/backtest/spy_overlay_final_20261101/selection_record.json`. |
+| Source snapshots and quality checks | `data/raw/`; `notebooks/download_manifest.json`; `notebooks/quality_checks/`; `notebooks/cleaning_checks/` |
+| Features, target timing and model samples | `data/processed/panel_spec.json`; `data/processed/model_panel.csv`; `notebooks/feature_checks/`; `notebooks/panel_checks/` |
+| Elastic Net selection, forecasts and metrics | `results/elastic_net/selected_hyperparameters.csv`; `validation_grid.csv`; `elastic_net_predictions.csv`; `forecast_metrics.csv`; `fit_audit.csv` (all under `results/elastic_net/`) |
+| Elastic Net supplementary diagnostics | `results/elastic_net/exploratory_validation/`; `results/elastic_net/xlf_diagnostics/`; `results/elastic_net/loss_difference_uncertainty.csv` |
+| GBDT selection, forecasts and metrics | `results/gbdt/model_config.json`; `selected_hyperparameters.csv`; `validation_grid.csv`; `validation_round_curve.csv`; `gbdt_predictions.csv`; `forecast_metrics.csv`; `fit_audit.csv` (all under `results/gbdt/`) |
+| GBDT interpretation and uncertainty | `results/gbdt/group_permutation_importance.csv`; `results/gbdt/loss_difference_uncertainty.csv`; `results/gbdt/model_comparison_metrics.csv` |
+| Archived dollar-neutral threshold selection and results | `results/backtest/threshold_selection/selected_threshold.json`; `results/backtest/threshold_selection/validation_candidate_scores.csv`; `results/backtest/reporting/main_metrics.csv`; `results/backtest/reporting/sensitivity_metrics.csv` |
+| Archived SPY-core comparison and final presentation | `results/backtest/spy_overlay_final_20261101/all_12_candidates_ranked.csv`; `selected_and_benchmarks.csv`; `selected_cost_decomposition.csv`; `selection_record.json`; `report_中文.md` (all under that same directory) |
 
-## Fresh end-to-end notebook execution (2026-11-02)
+Current notebooks 05 and 06 recompute portfolios through `scripts/fresh_backtest_pipeline.py`; they do not read the archived portfolio results above. Their generated output is ignored by Git and may be absent in a clone. A fresh run is complete only when its `complete.json` records completion; the archived numbers below describe the saved historical experiments.
+
+For a completed rerun, let `PAIR` mean `results/reproduction/<run_id>/` and `OVERLAY` mean `PAIR/overlay/<overlay_run_id>/`. These are path placeholders, not literal directory names.
+
+| Fresh-run evidence | Generated paths |
+|---|---|
+| Run configuration, runtime and input/code hashes | `PAIR/run_config.json`; `PAIR/complete.json` |
+| Current forecast intake and baseline verification | `PAIR/inputs/`; `PAIR/baselines/`; `PAIR/checks/engine_checks.csv` |
+| Validation-selected common pair threshold | `PAIR/thresholds/validation_candidate_scores.csv`; `PAIR/thresholds/selected_threshold.json` |
+| Pair results, ledgers and accounting | `PAIR/pair/main_metrics.csv`; `PAIR/pair/{validation,test}/`; `PAIR/checks/pair_accounting.csv`; `PAIR/pair/yearly_returns.csv` |
+| Benchmarks, cost sensitivities and figures | `PAIR/benchmarks/`; `PAIR/sensitivities/metrics.csv` (when included); `PAIR/figures/` |
+| All 12 overlay candidates and final selection | `OVERLAY/all_metrics.csv`; `OVERLAY/all_12_candidates_ranked.csv`; `OVERLAY/selected_and_benchmarks.csv`; `OVERLAY/selection_record.json` |
+| Overlay audit, yearly results and figures | `OVERLAY/{validation,test}/`; `OVERLAY/checks.csv`; `OVERLAY/yearly_returns.csv`; `OVERLAY/selected_{validation,test}.png`; `OVERLAY/report.md`; `OVERLAY/complete.json` |
+
+`results/reproduction/latest_pair_run.json` points to the latest completed 05 run. Notebook 06 verifies its parent run's inputs, code, runtime and output hashes before use. Each 06 execution creates a separate overlay directory. Cite the run IDs and completion records with any newly reported results.
+
+## Current setup and end-to-end execution
 
 Finish notebooks **01 → 02 → 03 → 04**, then run **05 → 06** from top to bottom using the project's Python 3.12 environment. All six notebooks locate the project from the current directory or its ancestors; Jupyter can start at the project root or in `notebooks/`. Select the local environment's kernel on each computer. Wait for notebook 04 to finish exporting its files before starting 05.
 
-On a new Windows computer, create a local environment rather than copying `.venv/`:
+Create a local Python 3.12 environment on each computer rather than copying `.venv/`. `requirements.txt` pins the modeling/Jupyter dependencies; the older backtest environment is documented separately below.
+
+**Windows PowerShell**
 
 ```powershell
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m ipykernel install --user --name dsa5205 --display-name "Python (DSA5205)"
+.\.venv\Scripts\python.exe -m ipykernel install --sys-prefix --name dsa5205 --display-name "Python (DSA5205)"
 .\.venv\Scripts\python.exe -m notebook
+```
+
+**macOS / Linux**
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m ipykernel install --sys-prefix --name dsa5205 --display-name "Python (DSA5205)"
+.venv/bin/python -m notebook
 ```
 
 Choose **Python (DSA5205)** in Jupyter. Download or clone the complete repository, including `data/raw/`, its `notebooks/download_manifest.json`, all six notebooks and `scripts/`. Notebook 01 verifies existing source snapshots and reuses them; it computes cleaning and checks again. Subsequent notebooks regenerate features, predictions and portfolio results. This preserves the frozen research inputs while rerunning the calculations.
@@ -34,7 +63,7 @@ Portable execution uses UTF-8 text/JSON files and forward slashes in exported re
 
 Fresh 06 relative-risk columns are explicitly named `annualized_tracking_error_vs_spy_reinvest`, `information_ratio_vs_spy_reinvest` and `cumulative_return_difference_vs_spy_reinvest`. They use dividend-reinvestment SPY, as recorded by `relative_performance_benchmark`; historical unsuffixed columns can use a different benchmark.
 
-For GitHub synchronization, update `notebooks/01–06`, all Python files in `scripts/`, this README, `requirements.txt`, `.gitignore` and `.gitattributes`. Clear notebook outputs in a separate upload copy first: repeated historical warning logs can make saved notebooks very large. Keep the completed local notebooks as the recording reference. Do not upload `.venv/`, caches or `results/reproduction/`. Saved output from a notebook's earlier execution does not certify edited source; run the updated notebooks in order for the recording. After changing scripts, rerun 05 before 06 because completed runs intentionally verify their source-code hashes.
+For GitHub synchronization, review the Git diff and commit the intended source/documentation changes. `.gitignore` excludes `.venv/`, caches, `results/reproduction/`, test fixtures and local handoff archives. Notebook outputs can be large; if clearing them for distribution, use a separate copy and retain any needed execution record. Saved output from an earlier execution does not certify edited source. After changing inputs, engines or runtime, rerun 05 before 06 because completed runs verify those values and hashes.
 
 - **05** now reads the current upstream data/predictions, generates new trading signals, independently verifies monthly prediction baselines, executes engine/fault checks, replays all five validation threshold candidates, selects the common threshold, evaluates both phases, computes SPY/cash benchmarks and replays all eight cost cases by default. It creates new accounting checks, yearly tables and figures.
 - **06** verifies the completed fresh 05 run, then actually replays all 12 SPY-core overlay candidates in both phases, computes reinvestment SPY and generates rankings, metrics and figures. The original test-best final presentation rule remains explicitly exploratory and ex post; no historical winning model is hardcoded.
@@ -42,11 +71,13 @@ For GitHub synchronization, update `notebooks/01–06`, all Python files in `scr
 - New outputs are isolated in `results/reproduction/<unique_run_id>/`; each 06 execution creates a new child overlay run. Notebook 06 can use the latest completed new 05 run or an explicit run path. Changed upstream inputs or engines cause an error rather than silently mixing runs. Existing historical results are preserved.
 - The separate training-only OOF model-refitting research extension is not part of this portfolio execution; no old OOF results are displayed. Its former fixed threshold-grid dependency is now declared directly before the fresh validation replay. All main calculations and default full cost sensitivities are recomputed.
 
-The same pipeline can be run from the project root without opening Jupyter:
+After upstream outputs from 01–04 are available, run the portfolio pipeline from the project root without opening Jupyter:
 
 ```powershell
 .\.venv\Scripts\python.exe -B scripts/fresh_backtest_pipeline.py --stage all
 ```
+
+On macOS/Linux, use `.venv/bin/python -B scripts/fresh_backtest_pipeline.py --stage all`. This command runs the portfolio stages only; it does not execute notebooks 01–04 or retrain the forecasting models.
 
 `--stage pair` runs 05's calculations; `--stage overlay` requires a completed fresh pair run. The explicit `--skip-cost-sensitivities` flag shortens the run and records that those scenarios were skipped. Notebook 05 defaults to **including** them.
 
@@ -56,31 +87,25 @@ Checks for fresh-run wiring, accounting corruption, stale-input rejection and ab
 .\.venv\Scripts\python.exe -B -m unittest discover -s scripts -p test_fresh_backtest_pipeline.py -v
 ```
 
-The following sections document archived experiments. Their snapshot-specific verification/upload commands and descriptions of notebooks 05/06 belong to those historical versions, not the new execution route above.
+The next two sections document saved historical experiments. Their figures and metrics describe those saved runs; they do not certify a fresh execution of the current source.
 
 ## Archived SPY-core extension (2026-11-01)
 
-The new work is integrated into the existing repository folders: Python code in `scripts/`, the saved-results reader in `notebooks/06_spy_overlay_final_results.ipynb`, and validation, test, and final outputs under `results/backtest/spy_overlay_*_20261101/`. Upload these files directly with Git; a ZIP archive is not the synchronization method.
+The archived SPY-core experiments are saved under `results/backtest/spy_overlay_*_20261101/`. Historical drivers remain in `scripts/`; the current notebook 06 is the fresh replay described above.
 
 The final presentation configuration is **GBDT S1, 15 / 7.5 bps**, selected ex post as the highest test net CAGR among all twelve completed overlay combinations. Test net CAGR is **22.723%**, versus **22.019%** for dividend-reinvestment SPY; maximum drawdown is **-19.303%**. All results include the specified execution, borrow and financing costs. Other candidates and the earlier cash-based strategy remain available. This is exploratory, test-selected evidence, not an untouched holdout estimate.
 
-Start with [the current SPY handoff](SPY增强策略_最终结果与交接_20261101.md), [the final report](results/backtest/spy_overlay_final_20261101/report_中文.md), [all twelve candidates](results/backtest/spy_overlay_final_20261101/all_12_candidates_ranked.csv), and [the GitHub upload guide](results/backtest/github_sync_20261101/GitHub上传步骤_中文.md).
+Start with [the archived SPY handoff](SPY增强策略_最终结果与交接_20261101.md), [the final report](results/backtest/spy_overlay_final_20261101/report_中文.md), [all twelve candidates](results/backtest/spy_overlay_final_20261101/all_12_candidates_ranked.csv), and [the GitHub upload guide](results/backtest/github_sync_20261101/GitHub上传步骤_中文.md).
 
-Current-checkout verification is read-only and uses the Python standard library:
+`scripts/verify_spy_overlay_delivery.py` is a standard-library, read-only checker for the exact historical delivery, including registered document hashes and the old six-code-cell notebook 06. It is not a general verifier for this evolved checkout. It currently rejects `README.md` because that file has changed; later source/notebook and documentation edits can also conflict with its frozen hashes. Do not treat that mismatch alone as evidence of changed numerical results, or rewrite historical manifests to make a new checkout appear to be the original delivery.
 
-```powershell
-python -B scripts/verify_spy_overlay_delivery.py
-```
-
-Historical experiment hashes are retained. Five documentation revisions are recorded with their exact before/after hashes and archived pre-edit bytes in `results/backtest/github_sync_20261101/`. Data, forecasts, trading engines, numerical books, tables, figures, and notebook 01-05 are not changed by this synchronization preparation. `.gitattributes` preserves exact file bytes across line-ending settings.
-
-Notebook 06 has six saved code-cell outputs verified sequentially in the current Python process; native Jupyter kernel execution is not claimed. Optional fresh replay uses `scripts/replay_spy_overlay_frozen.py` and a new output directory outside the repository; it never overwrites the saved experiments. The historical production commands below belong to their original snapshots, rather than the current verification route.
+The upload guide and registered document snapshots under `results/backtest/github_sync_20261101/` describe that historical package. For current code, use the fresh execution route and its per-run checks/completion records. `scripts/replay_spy_overlay_frozen.py` remains a separate historical replay utility; it does not train forecasting models.
 
 ## Historical dollar-neutral backtest (2026-10-31)
 
 **Historical handoff (2026-10-31): yae's steps 1-15 are complete.** Both phases, investment benchmarks, independent accounting audit, full metrics, six comparison figures and eight fixed cost cases are saved. Start with [the final backtest handoff](最终回测交接说明_yae.md) and [the Chinese results report](results/backtest/reporting/report_中文.md). Step 16 optional extensions have not been run.
 
-For verification of the exact archived 2026-10-31 snapshot only, use the historical command below. For this updated checkout use `verify_spy_overlay_delivery.py` above:
+For verification of the exact archived 2026-10-31 snapshot only, its historical command is:
 
 ```powershell
 python -B scripts\backtest_handoff.py --verify-only
@@ -88,7 +113,7 @@ python -B scripts\backtest_handoff.py --verify-only
 
 The full archive preserves the repository and the sibling `5205proj2.md`; the review archive contains selected documentation, tables, figures and code, and cannot run the complete notebook. Each archive includes a profile marker, so the verification command automatically checks its intended payload. Archive-level hashes are in the detached `archive_manifest.json` beside the ZIP files. See the handoff for locations and verification commands.
 
-The selected public entry/exit thresholds are **15 / 7.5 bps**. Main costs remain 3 bps single-sided execution, 1% annual borrow and no interest on short collateral. Test net CAGR is 4.688% for all Elastic Net schemes, 4.420% / 5.534% / 5.440% for GBDT S0/S1/S2, 4.808% for cash and 21.672% for fixed-share SPY. Exposures differ. Validation was used for selection; test forecast results and exploratory GBDT work were previously seen, so this is not an untouched blind holdout. No model, threshold or main cost was changed after these results.
+The selected public entry/exit thresholds are **15 / 7.5 bps**. Main costs remain 3 bps single-sided execution, 1% annual borrow and no interest on short collateral. Test net CAGR is 4.688% for all Elastic Net schemes, 4.420% / 5.534% / 5.440% for GBDT S0/S1/S2, 4.808% for cash and 21.672% for fixed-share SPY. Exposures differ. Validation was used for selection. The saved portfolio protocol describes this as fixed-rule test-period strategy evaluation, not an untouched blind holdout. No model, threshold or main cost was changed after these results.
 
 ## Project structure
 
@@ -98,17 +123,20 @@ The selected public entry/exit thresholds are **15 / 7.5 bps**. Main costs remai
 | [02_features_panel_data.ipynb](notebooks/02_features_panel_data.ipynb) | Features, prediction targets, sample eligibility and model input files |
 | [03_elastic_net.ipynb](notebooks/03_elastic_net.ipynb) | Elastic Net validation search, monthly forecasts, evaluation and coefficient diagnostics |
 | [04_gbdt.ipynb](notebooks/04_gbdt.ipynb) | GBDT validation search with early stopping, monthly forecasts, evaluation and group permutation importance |
-| [05_portfolio_backtest.ipynb](notebooks/05_portfolio_backtest.ipynb) | yae's saved steps 1-14, current step-15 handoff links and verified completed caches; 17 executed code cells |
-| [06_spy_overlay_final_results.ipynb](notebooks/06_spy_overlay_final_results.ipynb) | Current selected overlay result, all 12 candidates, benchmarks and saved figures; no fitting or replay |
+| [05_portfolio_backtest.ipynb](notebooks/05_portfolio_backtest.ipynb) | Fresh pair replay from current forecasts, validation threshold selection, accounting checks, benchmarks and default full cost sensitivities |
+| [06_spy_overlay_final_results.ipynb](notebooks/06_spy_overlay_final_results.ipynb) | Fresh replay of all 12 overlay candidates in validation/test, reinvestment SPY, ex-post presentation selection and figures |
 | [backtest_spy_overlay.py](scripts/backtest_spy_overlay.py) / [backtest_spy_overlay_test.py](scripts/backtest_spy_overlay_test.py) | Frozen SPY-core portfolio, financing and original validation/test experiment drivers |
 | [diagnose_spy_overlay.py](scripts/diagnose_spy_overlay.py) / [finalize_spy_overlay.py](scripts/finalize_spy_overlay.py) | Saved-book attribution and final test-best presentation record; historical production drivers |
-| [verify_spy_overlay_delivery.py](scripts/verify_spy_overlay_delivery.py) | Current read-only integrity check, including explicitly registered documentation revisions |
+| [verify_spy_overlay_delivery.py](scripts/verify_spy_overlay_delivery.py) | Read-only check of the exact archived delivery; frozen hashes/old notebook structure do not match all current files |
 | [replay_spy_overlay_frozen.py](scripts/replay_spy_overlay_frozen.py) | Optional fresh replay of unchanged rules into a new directory; no model training |
 | `results/backtest/spy_overlay_validation_20261101/` | Both validation thresholds, six forecasts each, complete ledgers and comparisons |
 | `results/backtest/spy_overlay_test_20261101/` | Both exploratory test thresholds, reinvestment SPY benchmark and attribution |
 | `results/backtest/spy_overlay_final_20261101/` | Final selection, full candidate ranking, selected metrics, report and exportable figures |
 | `results/backtest/github_sync_20261101/` | Upload pathspec, instructions, delivery hashes and exact documentation revision history |
-| [prepare_backtest_inputs.py](scripts/prepare_backtest_inputs.py) | Staged preparation/verification and engineering previews called by notebook 05 |
+| [fresh_backtest_pipeline.py](scripts/fresh_backtest_pipeline.py) | Current shared execution for notebooks 05/06 and CLI; isolated run directories and hash checks |
+| [test_fresh_backtest_pipeline.py](scripts/test_fresh_backtest_pipeline.py) | Integration/fault checks for fresh-run wiring, accounting and stale-input rejection |
+| `results/reproduction/` | Generated fresh-run outputs, ignored by Git; see the run-output index above |
+| [prepare_backtest_inputs.py](scripts/prepare_backtest_inputs.py) | Legacy staged preparation/verification and engineering previews; historical stage entry point |
 | [backtest_signal_policy.py](scripts/backtest_signal_policy.py) | Signal-time eligibility, missing-signal close-all instructions and in-memory fault checks |
 | [backtest_baselines.py](scripts/backtest_baselines.py) | Zero/mean prediction baselines, mature-label sample verification and common forecast evaluation |
 | [backtest_pair_decisions.py](scripts/backtest_pair_decisions.py) | Pair retention, exit, reversal and top-four entry rules; no share or cash accounting |
@@ -128,47 +156,22 @@ The selected public entry/exit thresholds are **15 / 7.5 bps**. Main costs remai
 | `results/gbdt/` | GBDT predictions, validation curves, selected parameters, metrics and figures |
 | `results/backtest/` | Historical preparation plus completed threshold selection, formal phase books, benchmarks, audit, reporting and handoff manifests |
 | [yae progress notes](回测进度与说明_yae.md) | Chronological completed steps 1-15 and optional step 16 (Chinese) |
-| [final handoff](最终回测交接说明_yae.md) | Current results, authority map, ledger locations, environment and safe verification instructions |
-| [requirements.txt](requirements.txt) | Original modeling dependency specification; preserved, not the observed backtest environment lockfile |
+| [final handoff](最终回测交接说明_yae.md) | Historical pair results, authority map, ledger locations and archived environment/verification instructions |
+| [requirements.txt](requirements.txt) | Pinned Python 3.12 modeling/Jupyter dependencies; distinct from the archived backtest environment |
 
-## Original modeling setup and execution
+## Environment records and partial reruns
 
-The original modeling instructions below specify Python 3.12. They describe upstream regeneration, not the verification route for the accepted backtest snapshot. The actual backtest environment is Python 3.11.5 / numpy 1.24.3 / pandas 2.0.3 / matplotlib 3.7.2; the training-only diagnostic used sklearn 1.3.0. No dependencies were installed or changed for the final handoff. [environment_snapshot.json](results/backtest/handoff/environment_snapshot.json) records observed installed versions. Cross-version bitwise reproducibility is not claimed. Use the read-only command above to check saved results without fitting or replaying anything.
+Use the Python 3.12 setup above for current execution. The archived backtest environment was Python 3.11.5 / numpy 1.24.3 / pandas 2.0.3 / matplotlib 3.7.2; its training-only diagnostic used sklearn 1.3.0. [environment_snapshot.json](results/backtest/handoff/environment_snapshot.json) records those observed versions. It is historical evidence, not the current dependency specification. Cross-version bitwise reproducibility is not claimed; fresh runs record their runtime.
 
-For a separately authorized upstream rerun, the original instructions are:
+The supplied `data/raw/` snapshots and `notebooks/download_manifest.json` define the submitted dataset. Notebook 01 verifies and reuses existing snapshots, then recomputes cleaning/checks; notebooks 02–04 use local files. To rerun only the forecasting models with the supplied processed data, execute 03 then 04. Notebook 04 reads 03's prediction export for comparisons. Editing 04's parameter cell and rerunning changes its selection tables, forecasts, metrics and figures; downstream 05/06 must then be rerun before comparing fresh portfolio results.
 
-**Windows PowerShell**
-
-```powershell
-py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\Activate.ps1
-```
-
-**macOS / Linux**
+For noninteractive execution, after registering the `dsa5205` kernel, run each notebook in order with nbconvert (replace `NOTEBOOK.ipynb` with each actual filename):
 
 ```bash
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
+python -m nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=dsa5205 --ExecutePreprocessor.timeout=-1 notebooks/NOTEBOOK.ipynb
 ```
 
-Register the environment as a Jupyter kernel, then execute the notebooks in order:
-
-```bash
-python -m ipykernel install --sys-prefix --name dsa5205 --display-name "Python (DSA5205)"
-cd notebooks
-python -m nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=dsa5205 --ExecutePreprocessor.timeout=-1 01_download_clean_data.ipynb
-python -m nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=dsa5205 --ExecutePreprocessor.timeout=-1 02_features_panel_data.ipynb
-python -m nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=dsa5205 --ExecutePreprocessor.timeout=-1 03_elastic_net.ipynb
-python -m nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=dsa5205 --ExecutePreprocessor.timeout=-1 04_gbdt.ipynb
-```
-
-For interactive execution, run `python -m notebook` from the `notebooks/` directory, open a notebook and select **Python (DSA5205)**. Execute its cells from top to bottom. Notebook 04 reads the Elastic Net prediction export produced by notebook 03 for model comparisons.
-
-The supplied `data/raw/` snapshots and `notebooks/download_manifest.json` define the submitted dataset. Notebook 01 verifies and reuses these snapshots; notebooks 02–04 work from local files. To rerun only the models, use the supplied processed data and execute notebooks 03 and 04. Editing the parameter cell and rerunning notebook 04 updates its selection tables, forecasts, metrics and figures.
-
-The intermediate feature table is stored as `data/interim/sector_features.csv.gz`. Notebook 02 regenerates the uncompressed CSV; the 27 final model-input tables are ordinary CSV files.
+Use the environment's Python executable (`.venv/bin/python` on macOS/Linux or `.\.venv\Scripts\python.exe` on Windows). The intermediate feature table is regenerated by notebook 02; `/data/interim/sector_features.csv` is ignored by Git.
 
 ## Data and prediction target
 
@@ -272,7 +275,7 @@ R^2_{\mathrm{OOS}}=1-
 {\sum_{i,t}(y_{i,t}-\overline y_{i,\mathrm{train}(t)})^2}.
 $$
 
-The submitted results are shown below. **All values are decimals, not percentages.**
+The saved `results/elastic_net/forecast_metrics.csv` and `results/gbdt/forecast_metrics.csv` values are shown below. These are saved forecast results, not metrics from a newly executed run. **All values are decimals, not percentages.**
 
 | Model | Scheme | Validation $R^2$ | Test $R^2$ | Test RMSE | Test direction accuracy |
 |---|---|---:|---:|---:|---:|
@@ -318,7 +321,7 @@ The GBDT figures cover model comparison (`01`), sector performance (`02`), annua
 
 ## Historical implementation notes (yae, steps 1-10)
 
-This section preserves how the early outputs were produced. Its preview thresholds, pending flags and step-specific notebook cell counts describe those historical stages. It is not the current status or a request to regenerate them. The current Notebook 05 reads and verifies steps 1-10, then uses verified completed caches for steps 11-14. Its 17 code cells were executed sequentially in one Python process with saved tables and two embedded figures; native Jupyter kernel execution remains unverified. Only documentation was changed for step 15. Use the final handoff and current manifests for the accepted full results.
+This section preserves the historical implementation log for steps 1–10. Its preview thresholds, pending flags, stage-specific commands and notebook cell counts describe those earlier stages only. Archived completed results for the later stages are indexed above. Current notebook 05 has 10 code cells and recomputes portfolios; current notebook 06 has 7 code cells and replays overlays. Use the current execution instructions for a new run. The legacy commands below may overwrite historical stage files and can depend on the sibling `5205proj2.md`; the fresh pipeline does not require that sibling file.
 
 From the repository root, run:
 
