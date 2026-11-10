@@ -1,5 +1,0 @@
-.venv/
-.ipynb_checkpoints/
-__pycache__/
-.DS_Store
-/data/interim/sector_features.csv
