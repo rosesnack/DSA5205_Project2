@@ -1,11 +1,5 @@
-# spy_overlay_validation_20261101
+# Archived SPY-core validation results
 
-验证期两组门槛、六组预测的完整结果。summary.csv 为 20 行比较表，experiment_10bp/ 和 experiment_15bp/ 保留逐日账本、持仓、决策与成交。原结果和 manifest 不改。
+These files record the validation runs for the 10 bp and 15 bp entry thresholds across the six model and feature-set combinations. The [summary table](summary.csv) compares the saved results. The [10 bp](experiment_10bp/) and [15 bp](experiment_15bp/) directories contain the daily ledgers, positions, decisions and trades.
 
-当前完整性校验在仓库根目录运行：
-
-```powershell
-python -B scripts/verify_spy_overlay_delivery.py
-```
-
-本目录参与 GitHub 原结构同步，包含源文件而非单独汇报 ZIP。
+The [run manifest](run_manifest.json) records the archived experiment. Use the [main reproduction instructions](../../../README.md#reproduction) for a fresh run.
