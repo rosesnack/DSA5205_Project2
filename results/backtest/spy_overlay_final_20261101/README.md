@@ -1,11 +1,12 @@
-# spy_overlay_final_20261101
+# Archived SPY-core presentation results
 
-当前最终展示方案 GBDT S1、15／7.5 bp，按已有测试净年化收益最高者事后选出。report_中文.md 为主报告，all_12_candidates_ranked.csv 保留全部组合，selected_strategy.png/.svg 可用于报告。
+The presentation configuration is GBDT S1 with 15 bp entry and 7.5 bp exit thresholds. It was selected by test-period net annualized return from the [12 completed candidates](all_12_candidates_ranked.csv), so the comparison is exploratory.
 
-当前完整性校验在仓库根目录运行：
+- [Selected strategy and benchmarks](selected_and_benchmarks.csv)
+- [Cost decomposition](selected_cost_decomposition.csv)
+- [Selection record](selection_record.json)
+- [Strategy figure](selected_strategy.png)
+- [English result summary](report_English.md)
+- [Archived output manifest](final_manifest.json)
 
-```powershell
-python -B scripts/verify_spy_overlay_delivery.py
-```
-
-本目录参与 GitHub 原结构同步，包含源文件而非单独汇报 ZIP。
+Use the [main reproduction instructions](../../../README.md#reproduction) to generate a fresh comparison.
